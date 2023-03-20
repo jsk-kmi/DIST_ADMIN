@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>예약일정관리</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/ico/favicon.ico" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <script src="../../lib/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- [ mod(220602) ] -->
+    <div class="skip-navigation">
+        <p><a href="#container" tabindex="1">본문 바로가기</a></p>
+        <p><a href="#sideNav" tabindex="1">주메뉴 바로가기</a></p>
+    </div>
+    <!-- [ // mod(220602) ] -->
+
+    <div id="container">
+        <!-- Side Navigation -->
+        <nav id="sideNav">
+            <!-- Sidebar -->
+            <div class="sidenav-wrapper">
+                <div class="top-area">
+                    <div class="top-logo">
+                        <!-- [ mod(220602) ]
+					- h1 태그 수정
+				-->
+                        <h1 class="logo">
+                            <a href="javascript:;"><img src="../../images/logo/withkmi_w_logo.svg" alt="WITH KMI" /></a>
+                        </h1>
+                        <!-- [ // mod(220602) ] -->
+                    </div>
+                </div>
+
+                <div class="sidebar-wrap">
+                    <ul class="sidebar-menu">
+                        <li>
+                            <a href="javascript:;">
+                                <span>고객사</span>
+                            </a>
+                            <ul class="sidebar-sub-menu">
+                                <li><a href="javascript:;" class="on">고객사 조회 등록</a></li>
+                                <li><a href="javascript:;">검진 정책 등록</a></li>
+                                <li><a href="javascript:;">검진 상품 관리</a></li>
+                                <li><a href="javascript:;">일괄 예약 등록</a></li>
+                                <li><a href="javascript:;">검진 대상자 관리</a></li>
+                                <li><a href="javascript:;">공지관리</a></li>
+                                <li><a href="javascript:;">법적자료</a></li>
+                                <li><a href="javascript:;">임직원 결과 관리</a></li>
+                                <li><a href="javascript:;">고객사 조회 등록</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span>협력병원</span>
+                            </a>
+                            <ul class="sidebar-sub-menu">
+                                <li><a href="javascript:;">Text Text Text Text Text Text Text Text</a></li>
+                                <li><a href="javascript:;">Menu</a></li>
+                                <li><a href="javascript:;">Menu</a></li>
+                                <li><a href="javascript:;">Menu</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span>검사항목</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span>상품관리</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span>검진채용</span>
+                            </a>
+                            <ul class="sidebar-sub-menu">
+                                <li><a href="javascript:;">Menu</a></li>
+                                <li><a href="javascript:;">Menu</a></li>
+                                <li><a href="javascript:;">Menu</a></li>
+                                <li><a href="javascript:;">Menu</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span>회원정보</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span>예약현황</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span>정산관리</span>
+                            </a>
+                            <ul class="sidebar-sub-menu">
+                                <li><a href="javascript:;">Menu</a></li>
+                                <li><a href="javascript:;">Menu</a></li>
+                                <li><a href="javascript:;">Menu</a></li>
+                                <li><a href="javascript:;">Menu</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span>공지사항</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span>결과상담</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span>콘텐츠</span>
+                            </a>
+                            <ul class="sidebar-sub-menu">
+                                <li><a href="javascript:;">Menu</a></li>
+                                <li><a href="javascript:;">Menu</a></li>
+                                <li><a href="javascript:;">Menu</a></li>
+                                <li><a href="javascript:;">Menu</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span>서비스문의</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- // Side Navigation -->
+        </nav>
+
+        <!-- Content-Wrapper -->
+        <div class="content-wrapper">
+            <!-- Header-->
+            <header class="header">
+                <div class="wrap">
+                    <div class="top-left">
+                        <button class="sidebar-toggle" type="button">
+                            <span class="ico-type01 t-i-menu is-blind">사이드메뉴</span>
+                        </button>
+                        <div class="total-search">
+                            <i class="ico-search"></i>
+                            <input type="text" placeholder="검색" class="search-input" />
+                            <!-- - 검색어 입력에 따른 연관 검색어 노출 처리 -->
+                            <div class="search-related-field" style="display: none">
+                                <ul class="search-list">
+                                    <li><a href="javascript:;">검진정책관리</a></li>
+                                    <li><a href="javascript:;">검진상품관리</a></li>
+                                    <li><a href="javascript:;">검진항목관리</a></li>
+                                    <li class="on"><a href="javascript:;">검진상품승인관리</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-right">
+                        <!-- [ mod(221031) ] 
+				- 부서, 로그아웃 버튼 추가
+			-->
+                        <div class="user-team">운영지원팀</div>
+                        <div class="user-infobox">
+                            <a href="javascript:;" role="button" class="c-top-usercontrol btn-open-usercontrol">
+                                <div class="user-name">
+                                    <p>홍길동님</p>
+                                </div>
+                                <div class="user-img"><img src="../../images/ico/ico_user_profile.svg" alt="" /></div>
+                            </a>
+                            <div class="user-control">
+                                <ul>
+                                    <li><a href="javascript:;">로그아웃</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- // Header-->
+
+            <!-- Contents -->
+            <section class="contents">
+                <div class="c-panel top_head">
+                    <nav class="c-breadcrumb" aria-label="breadcrumb">
+                        <ol class="breadcrumb-list">
+                            <li>협력병원</li>
+                            <li class="on" aria-current="page">예약일정관리</li>
+                        </ol>
+                    </nav>
+                    <div class="c-title-field">
+                        <h1 class="title-lg">예약일정관리</h1>
+                    </div>
+                </div>
+
+                <div class="c-panel">그 외 부분 guide 소스 결합하여 사용</div>
+                <div class="c-panel">
+                    <div class="c-field">
+                        <div class="c-input-search">
+                            <input type="text" id="inputSearch" placeholder="고객사 검색" />
+                            <button type="button" class="btn-search"><span class="skip">검색</span></button>
+                        </div>
+                        <div class="buttons">
+                            <button class="c-btn bg-blue-1" type="button"><span>일정 설정</span></button>
+                        </div>
+                    </div>
+                    <div class="c-calendar-container">
+                        <div class="c-calendar-wrap">
+                            <div class="top-field">
+                                <div class="c-controls">
+                                    <button type="button" class="btn-prev"><span class="skip">이전달</span></button>
+                                    <div class="year-month">
+                                        <p>2055.05</p>
+                                    </div>
+                                    <button type="button" class="btn-next"><span class="skip">다음달</span></button>
+                                </div>
+                                <ul class="c-badge-info">
+                                    <li><i class="bg-blue-1"></i><span>예약가능</span></li>
+                                    <li><i class="bg-orange-1"></i><span>휴일</span></li>
+                                    <li><i class="bg-gray-3"></i><span>예약불가능일</span></li>
+                                    <li><i class="bg-navy-1"></i><span>예약마감</span></li>
+                                </ul>
+                            </div>
+                            <div class="calendar-body">
+                                <ul class="weekdays">
+                                    <li class="txt-sun">일</li>
+                                    <li>월</li>
+                                    <li>화</li>
+                                    <li>수</li>
+                                    <li>목</li>
+                                    <li>금</li>
+                                    <li>토</li>
+                                </ul>
+                                <ul class="calendar_days">
+                                    <li class="sunday is-holiday">
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day txt-sun">27</span>
+                                                <div class="state">
+                                                    <span class="holiday">휴일</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="is-reserve-unable">
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">28</span>
+                                                <div class="state">
+                                                    <span class="reserve-unable">예약불가능</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="is-reserve-unable">
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">29</span>
+                                                <div class="state">
+                                                    <span class="reserve-unable">예약불가능</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="is-reserve-unable">
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">30</span>
+                                                <div class="state">
+                                                    <span class="reserve-unable">예약불가능</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="is-reserve-unable">
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">31</span>
+                                                <div class="state">
+                                                    <span class="reserve-unable">예약불가능</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">1</span>
+                                            </div>
+                                            <div class="day-cont">
+                                                <ul class="reserve-list">
+                                                    <li>
+                                                        <!-- - 마감 선택 팝업 연결 (width: 720) -->
+                                                        <button type="button" title="팝업열기"><span class="c-bs-link">VIP종합(2F)</span></button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">2</span>
+                                            </div>
+                                            <div class="day-cont">
+                                                <ul class="reserve-list">
+                                                    <li>
+                                                        <button type="button" title="팝업열기"><span class="c-bs-link">VIP종합(2F)</span></button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="sunday is-holiday">
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day txt-sun">3</span>
+                                                <div class="state">
+                                                    <span class="holiday">휴일</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">4</span>
+                                            </div>
+                                            <div class="day-cont">
+                                                <ul class="reserve-list">
+                                                    <li>
+                                                        <button type="button" title="팝업열기"><span class="c-bs-link">VIP종합(2F)</span></button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">5</span>
+                                            </div>
+                                            <div class="day-cont">
+                                                <ul class="reserve-list">
+                                                    <li>
+                                                        <button type="button" title="팝업열기"><span class="c-bs-link">VIP종합(2F)</span></button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="is-reserve-closed">
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">6</span>
+                                                <div class="state">
+                                                    <span class="reserve-closed">예약마감</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="is-reserve-unable">
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">7</span>
+                                                <div class="state">
+                                                    <span class="reserve-unable">예약불가능</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="is-reserve-unable">
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">8</span>
+                                                <div class="state">
+                                                    <span class="reserve-unable">예약불가능</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="is-reserve-closed">
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">9</span>
+                                                <div class="state">
+                                                    <span class="reserve-closed">예약마감</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="sunday is-holiday">
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day txt-sun">10</span>
+                                                <div class="state">
+                                                    <span class="holiday">휴일</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">11</span>
+                                            </div>
+                                            <div class="day-cont">
+                                                <ul class="reserve-list">
+                                                    <li>
+                                                        <button type="button" title="팝업열기"><span class="c-bs-link">VIP종합(2F)</span></button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="is-reserve-closed">
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">12</span>
+                                                <div class="state">
+                                                    <span class="reserve-closed">예약마감</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">13</span>
+                                            </div>
+                                            <div class="day-cont">
+                                                <ul class="reserve-list">
+                                                    <li>
+                                                        <button type="button" title="팝업열기"><span class="c-bs-link">VIP종합(2F)</span></button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">14</span>
+                                            </div>
+                                            <div class="day-cont">
+                                                <ul class="reserve-list">
+                                                    <li>
+                                                        <button type="button" title="팝업열기"><span class="c-bs-link">VIP종합(2F)</span></button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">15</span>
+                                            </div>
+                                            <div class="day-cont">
+                                                <ul class="reserve-list">
+                                                    <li>
+                                                        <button type="button" title="팝업열기"><span class="c-bs-link">VIP종합(2F)</span></button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">16</span>
+                                            </div>
+                                            <div class="day-cont">
+                                                <ul class="reserve-list">
+                                                    <li>
+                                                        <button type="button" title="팝업열기"><span class="c-bs-link">VIP종합(2F)</span></button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="sunday is-holiday">
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day txt-sun">17</span>
+                                                <div class="state">
+                                                    <span class="holiday">휴일</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="sunday is-holiday">
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day txt-sun">18</span>
+                                                <div class="state">
+                                                    <span class="holiday">휴일</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="sunday is-holiday">
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day txt-sun">19</span>
+                                                <div class="state">
+                                                    <span class="holiday">휴일</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="sunday is-holiday">
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day txt-sun">20</span>
+                                                <div class="state">
+                                                    <span class="holiday">휴일</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">21</span>
+                                            </div>
+                                            <div class="day-cont">
+                                                <ul class="reserve-list">
+                                                    <li>
+                                                        <button type="button" title="팝업열기"><span class="c-bs-link">VIP종합(2F)</span></button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">22</span>
+                                            </div>
+                                            <div class="day-cont">
+                                                <ul class="reserve-list">
+                                                    <li>
+                                                        <button type="button" title="팝업열기"><span class="c-bs-link">VIP종합(2F)</span></button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">23</span>
+                                            </div>
+                                            <div class="day-cont">
+                                                <ul class="reserve-list">
+                                                    <li>
+                                                        <button type="button" title="팝업열기"><span class="c-bs-link">VIP종합(2F)</span></button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="sunday is-holiday">
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day txt-sun">24</span>
+                                                <div class="state">
+                                                    <span class="holiday">휴일</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">25</span>
+                                            </div>
+                                            <div class="day-cont">
+                                                <ul class="reserve-list">
+                                                    <li>
+                                                        <button type="button" title="팝업열기"><span class="c-bs-link">VIP종합(2F)</span></button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">26</span>
+                                            </div>
+                                            <div class="day-cont">
+                                                <ul class="reserve-list">
+                                                    <li>
+                                                        <button type="button" title="팝업열기"><span class="c-bs-link">VIP종합(2F)</span></button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">27</span>
+                                            </div>
+                                            <div class="day-cont">
+                                                <ul class="reserve-list">
+                                                    <li>
+                                                        <button type="button" title="팝업열기"><span class="c-bs-link">VIP종합(2F)</span></button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="is-reserve-closed">
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">28</span>
+                                                <div class="state">
+                                                    <span class="reserve-closed">예약마감</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="is-reserve-unable">
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">29</span>
+                                                <div class="state">
+                                                    <span class="reserve-unable">예약불가능</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="is-reserve-unable">
+                                        <div>
+                                            <div class="day-top">
+                                                <span class="day">30</span>
+                                                <div class="state">
+                                                    <span class="reserve-unable">예약불가능</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- // Contents -->
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="container">
+                    <p class="copyright">Copyright© KMI.All Rights Reserved.</p>
+                </div>
+            </footer>
+
+        </div>
+        <!-- // Content-Wrapper -->
+    </div>
+
+    <!-- [ mod(220818) ] -->
+    <script src="../../lib/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../../js/common.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,371 @@
+.modal-dialog-scrollable {
+  display: flex; // IE10/11
+
+  .modal-content {
+    overflow: hidden;
+  }
+  .modal-body {
+    @include scrollType01;
+  }
+}
+
+// Actual modal
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: $color-gray-1;
+  pointer-events: auto;
+  background-color: $color-white-1;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: $gap-12;
+  outline: 0;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $zindex-modal-backdrop;
+  width: 100vw;
+  height: 100vh;
+  background-color: $modal-backdrop-bg;
+  & + .modal-backdrop {
+    opacity: 0;
+  }
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: $modal-header-padding;
+  border-bottom: $modal-header-border-width solid $modal-header-border-color;
+}
+
+.modal-title {
+  margin-bottom: 0;
+  line-height: $modal-title-line-height;
+}
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: $modal-inner-padding;
+
+  &::after {
+    display: block;
+    min-height: inherit;
+    font-size: 0;
+    content: '';
+  }
+
+  .c-article {
+    & + .c-table-field {
+      margin-top: 24px;
+    }
+  }
+}
+
+.modal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: $gap-20 $gap-40;
+  border-top: 1px solid $color-gray-5;
+  > * {
+    margin: $modal-footer-margin-between * 0.5;
+  }
+}
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+.modal-dialog-centered {
+  justify-content: center;
+}
+/*
+= Common
+*/
+
+// = layer popup
+.c-layer-popup {
+  .buttons {
+    justify-content: center;
+    .c-btn {
+      min-width: 80px;
+    }
+  }
+  .c-tab-field {
+    .c-tab-list {
+      > li {
+        a {
+          background-color: $color-white-1;
+        }
+      }
+    }
+  }
+
+  .c-article {
+    background-color: $color-white-2;
+  }
+
+  .c-title-field {
+    @at-root .c-article {
+      // margin-top: 0;
+      &.c-textarea-article {
+        background-color: $color-white-1;
+        border: 0;
+        padding: 0;
+      }
+    }
+  }
+  .c-panel {
+    *:not(.c-title-field) {
+      + .c-article {
+        margin: {
+          top: 10px;
+          bottom: 10px;
+          // left: 0;
+          // right: 0;
+        }
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  // 반반 나누는 화면
+  .c-layout-type01 {
+    overflow: hidden;
+    .left-wrap,
+    .right-wrap {
+      height: auto;
+      overflow: hidden;
+      > .c-inner {
+        height: 100%;
+        overflow-y: auto;
+        padding-right: 10px;
+
+        @include scrollType01;
+      }
+    }
+  }
+}
+
+// + modal-row
+.modal-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: {
+    left: -$gap-12;
+    right: -$gap-12;
+  }
+}
+
+//  + modal-header
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  padding: 12px 40px;
+  border: 0;
+  border-radius: 0;
+}
+
+.c-modal-title-field {
+  margin-right: 44px;
+  .c-title {
+    @include ellipsisLine01;
+    color: $color-white-1;
+    font: {
+      size: $fs-large;
+      weight: $weight-500;
+    }
+    line-height: 1.45;
+  }
+}
+.popup-cls-btn {
+  position: absolute;
+  top: 12px;
+  right: 40px;
+  background: url($image-ico-path + '/ico_del_02.svg') center/32px no-repeat;
+  width: 32px;
+  height: 32px;
+}
+
+// + modal header
+.modal-header {
+  background-color: $color-black-2;
+}
+.c-modal-title-field {
+  height: 32px;
+  overflow: hidden;
+}
+
+// + modal Body
+.modal-body {
+  padding: $gap-20 $gap-40;
+  line-height: $g-lineheight-2;
+}
+
+// = modal-input-list
+.c-article {
+  &.modal-input-list {
+  }
+}
+
+// + c-modal-content
+.modal-content {
+  border-radius: $radius-12;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.c-modal-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+}
+
+// = type01
+.c-layer-popup {
+  &.type01 {
+    .modal-content {
+      width: 360px;
+    }
+    .modal-body {
+      padding-top: 32px;
+    }
+  }
+}
+
+// = type02
+.c-layer-popup {
+  &.type02 {
+    .modal-content {
+      width: 480px;
+    }
+    .modal-body {
+      padding-top: 32px;
+    }
+  }
+}
+
+// = type03
+.c-layer-popup {
+  &.type03 {
+    .modal-content {
+      width: 1200px;
+    }
+  }
+}
+// = type04
+.c-layer-popup {
+  &.type04 {
+    .modal-content {
+      width: 720px;
+    }
+  }
+}
+
+// = type05
+.c-layer-popup {
+  &.type05 {
+    overflow-x: auto;
+    padding-right: 5px !important;
+    .modal-content {
+      min-width: 1600px;
+      min-height: calc(100vh - 40px);
+      height: 100%;
+      overflow: hidden;
+    }
+
+    &.modal {
+      padding-right: 20px !important;
+      overflow-x: auto;
+    }
+
+    .modal-dialog {
+      min-height: 100%;
+      min-width: 100%;
+      max-height: initial;
+      padding: 10px;
+      margin: 0;
+    }
+
+    .modal-body {
+      flex: 1 0 auto;
+    }
+
+    &.fix-width {
+      min-width: 1920px;
+    }
+  }
+}
+
+// = modal footer
+
+.modal-footer {
+  padding: 20px 35px;
+  > * {
+    margin: 0;
+  }
+  &.c-btn-field {
+    justify-content: flex-end;
+  }
+
+  &.type01 {
+    padding: {
+      top: 0;
+      bottom: 32px;
+    }
+    border-top: 0;
+    justify-content: center;
+    .buttons {
+      width: 100%;
+      .col {
+        @include paddingH(5px);
+      }
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+  .c-btn {
+    &.bg-blue-1 {
+      background-color: $color-navy-1 !important;
+    }
+  }
+}
+
+.modal.modal-static .modal-dialog {
+  -webkit-transform: none !important;
+  transform: none !important;
+}
+
+.modal-backdrop.show {
+}
+
+.modal-dialog {
+  max-height: calc(100% - 200px);
+  padding: {
+    top: 100px;
+    bottom: 100px;
+  }
+}
