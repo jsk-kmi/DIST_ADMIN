@@ -2,6 +2,9 @@
 
 ## HealthCare Platform Service UI Develop ADMIN Repositiory (DEV_DIST)
 
+
+## ※ Source Code 외부 반출 불가 ※
+
 ## 개요
 
 - KMI HealthCare Platform Service ADMIN UI Develop Sources
