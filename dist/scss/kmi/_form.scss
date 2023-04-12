@@ -1277,9 +1277,9 @@ textarea,
     @include paddingH(6px);
   }
   > [class*='col-'] {
-    input[type='text'] {
-      margin-top: 12px;
-    }
+    // input[type='text'] {
+    //   margin-top: 12px;
+    // }
   }
 }
 

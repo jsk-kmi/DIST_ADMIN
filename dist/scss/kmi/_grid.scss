@@ -254,6 +254,12 @@
   align-items: center;
 }
 
+.c-title-field {
+  &.with-btn {
+    min-height: 38px;
+  }
+}
+
 .c-breadcrumb {
   & + .c-breadcrumb {
     margin-top: $gap-12;

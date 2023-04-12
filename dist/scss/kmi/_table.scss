@@ -766,11 +766,18 @@ table.fixed-table {
 // + row scrope table
 .c-table {
   &.r-scope {
+    thead {
+      th {
+        &:not(:first-child) {
+          border-left: 1px solid $color-white-1;
+        }
+      }
+    }
     tbody {
       tr {
         &:not(:last-child) {
           th {
-            border-bottom: 1px solid $color-white-1;
+            border-bottom: 1px solid $color-gray-4;
           }
           td {
             border-bottom: 1px solid $color-gray-4;
@@ -778,11 +785,10 @@ table.fixed-table {
         }
       }
       th {
-        background-color: $color-navy-1;
-        color: $color-white-1;
+        background-color: $color-gray-13;
       }
       td {
-        text-align: left;
+        border-left: 1px solid $color-gray-4;
       }
     }
   }

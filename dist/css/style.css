@@ -10115,6 +10115,10 @@ button.c-btn:disabled:hover {
 		        align-items: center;
 }
 
+.c-title-field.with-btn {
+		min-height: 38px;
+}
+
 .c-breadcrumb + .c-breadcrumb {
 		margin-top: 12px;
 }
@@ -12269,10 +12273,6 @@ textarea.ta-r-only,
 		padding-left: 6px;
 		padding-right: 6px;
 }
-.c-input-btn-group > [class*=col-] input[type=text] {
-		margin-top: 12px;
-}
-
 .c-input-download {
 		position: relative;
 		width: 100%;
@@ -13116,18 +13116,20 @@ table.fixed-table th {
 		content: "";
 }
 
+.c-table.r-scope thead th:not(:first-child) {
+		border-left: 1px solid #fff;
+}
 .c-table.r-scope tbody tr:not(:last-child) th {
-		border-bottom: 1px solid #fff;
+		border-bottom: 1px solid #d2d2d1;
 }
 .c-table.r-scope tbody tr:not(:last-child) td {
 		border-bottom: 1px solid #d2d2d1;
 }
 .c-table.r-scope tbody th {
-		background-color: #253981;
-		color: #fff;
+		background-color: #f1f1ef;
 }
 .c-table.r-scope tbody td {
-		text-align: left;
+		border-left: 1px solid #d2d2d1;
 }
 
 .time-1 {
