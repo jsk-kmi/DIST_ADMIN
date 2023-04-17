@@ -763,10 +763,11 @@ table.fixed-table {
   }
 }
 
-// + row scrope table
+// = Row scope
 .c-table {
-  &.r-scope {
+  &[class*='r-scope'] {
     thead {
+      border-color: $color-gray-4;
       th {
         &:not(:first-child) {
           border-left: 1px solid $color-white-1;
@@ -776,9 +777,7 @@ table.fixed-table {
     tbody {
       tr {
         &:not(:last-child) {
-          th {
-            border-bottom: 1px solid $color-gray-4;
-          }
+          th,
           td {
             border-bottom: 1px solid $color-gray-4;
           }
@@ -789,6 +788,86 @@ table.fixed-table {
       }
       td {
         border-left: 1px solid $color-gray-4;
+      }
+    }
+  }
+
+  // + r-scope
+  &.r-scope-02 {
+    background-color: $color-white-1;
+    tbody {
+      th {
+        &[scope='rowgroup'] {
+          border-right: 1px solid $color-gray-4;
+        }
+      }
+      th:not(:first-child) {
+        border-right: 1px solid $color-gray-4;
+      }
+    }
+  }
+}
+
+// + tbl-price-field
+.tbl-price-field {
+  .tbl-price-details {
+    & ~ .tbl-price-details {
+      margin-top: 15px;
+    }
+  }
+}
+.c-table {
+  &.tbl-price-details {
+    border-radius: 8px;
+    // .total {
+    //   padding-bottom: 10px;
+    //   th {
+    //     background-color: $color-white-1;
+    //     border-right: 1px solid $color-gray-4;
+    //     color: $color-white-1;
+    //   }
+    //   td {
+    //     font-size: 14px;
+    //     > em {
+    //       font-weight: 700;
+    //     }
+    //   }
+    // }
+    .total {
+      th {
+        background-color: $color-navy-2;
+        color: $color-white-1;
+      }
+      th,
+      td {
+        @include coTxtBtnSmall;
+      }
+      td {
+        > em {
+          font-size: 13px;
+          font-weight: 700;
+        }
+      }
+    }
+    background-color: $color-white-1;
+    th {
+      &.bg-navy-1,
+      &.bg-navy-2 {
+        color: $color-white-1;
+      }
+      background-color: $color-blue-3;
+    }
+    tr {
+      &:not(:last-child) {
+        th,
+        td {
+          border-bottom: 1px solid $color-gray-4;
+        }
+      }
+    }
+    tbody {
+      th {
+        border-right: 1px solid $color-gray-4;
       }
     }
   }

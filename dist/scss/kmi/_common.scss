@@ -33,6 +33,8 @@ a.c-bs-link,
   line-height: 1.7;
 }
 
+// + size
+
 // title
 $title-list: (
   'lg': 20px,
@@ -54,6 +56,10 @@ $title-list: (
     size: 20px;
     weight: $weight-500;
   }
+}
+
+.c-fs-sm {
+  @include coTxtCaption;
 }
 
 // = color
@@ -81,6 +87,9 @@ $title-list: (
 }
 .is-orange-1 {
   color: $color-orange-1 !important;
+}
+.is-blue-4 {
+  color: $color-blue-4 !important;
 }
 
 // + background color
@@ -110,6 +119,9 @@ $title-list: (
 }
 .bg-orange-1 {
   background-color: $color-orange-1 !important;
+}
+.bg-blue-4 {
+  background-color: $color-blue-4 !important;
 }
 
 $color-list: ($color-gray-1, $color-gray-2, $color-gray-3, $color-gray-4, $color-gray-5, $color-gray-6, $color-gray-7, $color-gray-8, $color-gray-9, $color-gray-10);
