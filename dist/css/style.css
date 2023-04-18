@@ -13116,20 +13116,66 @@ table.fixed-table th {
 		content: "";
 }
 
-.c-table.r-scope thead th:not(:first-child) {
+.c-table[class*=r-scope] thead {
+		border-color: #d2d2d1;
+}
+.c-table[class*=r-scope] thead th:not(:first-child) {
 		border-left: 1px solid #fff;
 }
-.c-table.r-scope tbody tr:not(:last-child) th {
+.c-table[class*=r-scope] tbody tr:not(:last-child) th,
+.c-table[class*=r-scope] tbody tr:not(:last-child) td {
 		border-bottom: 1px solid #d2d2d1;
 }
-.c-table.r-scope tbody tr:not(:last-child) td {
-		border-bottom: 1px solid #d2d2d1;
-}
-.c-table.r-scope tbody th {
+.c-table[class*=r-scope] tbody th {
 		background-color: #f1f1ef;
 }
-.c-table.r-scope tbody td {
+.c-table[class*=r-scope] tbody td {
 		border-left: 1px solid #d2d2d1;
+}
+.c-table.r-scope-02 {
+		background-color: #fff;
+}
+.c-table.r-scope-02 tbody th[scope=rowgroup] {
+		border-right: 1px solid #d2d2d1;
+}
+.c-table.r-scope-02 tbody th:not(:first-child) {
+		border-right: 1px solid #d2d2d1;
+}
+
+.tbl-price-field .tbl-price-details ~ .tbl-price-details {
+		margin-top: 15px;
+}
+
+.c-table.tbl-price-details {
+		border-radius: 8px;
+		background-color: #fff;
+}
+.c-table.tbl-price-details .total th {
+		background-color: #225490;
+		color: #fff;
+}
+.c-table.tbl-price-details .total th,
+.c-table.tbl-price-details .total td {
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 1.6666666667;
+}
+.c-table.tbl-price-details .total td > em {
+		font-size: 13px;
+		font-weight: 700;
+}
+.c-table.tbl-price-details th {
+		background-color: #f9f8ff;
+}
+.c-table.tbl-price-details th.bg-navy-1, .c-table.tbl-price-details th.bg-navy-2 {
+		color: #fff;
+}
+.c-table.tbl-price-details tr:not(:last-child) th,
+.c-table.tbl-price-details tr:not(:last-child) td {
+		border-bottom: 1px solid #d2d2d1;
+}
+.c-table.tbl-price-details tbody th {
+		border-right: 1px solid #d2d2d1;
 }
 
 .time-1 {
@@ -14033,6 +14079,12 @@ a.c-bs-link,
 		font-weight: 500;
 }
 
+.c-fs-sm {
+		font-size: 10px;
+		font-weight: 500;
+		line-height: 1.6;
+}
+
 .is-white-1 {
 		color: #fff !important;
 }
@@ -14063,6 +14115,10 @@ a.c-bs-link,
 
 .is-orange-1 {
 		color: #ff6859 !important;
+}
+
+.is-blue-4 {
+		color: #8D8DB9 !important;
 }
 
 .bg-white-1 {
@@ -14099,6 +14155,10 @@ a.c-bs-link,
 
 .bg-orange-1 {
 		background-color: #ff6859 !important;
+}
+
+.bg-blue-4 {
+		background-color: #8D8DB9 !important;
 }
 
 /* $color_list[$i]*/
