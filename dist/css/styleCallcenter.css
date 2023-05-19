@@ -14108,6 +14108,14 @@ type-horizontal 최상위 요소 부여
 #container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-07 .c-rdochk {
 		margin-right: 25px;
 }
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .col-12 {
+		-webkit-flex-basis: 100% !important;
+		    -ms-flex-preferred-size: 100% !important;
+		        flex-basis: 100% !important;
+}
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .type-rsv-request {
+		margin-left: -20px !important;
+}
 #container .content-wrapper.type-callcenter .c-layer-popup .c-input-phone-group :not(.input-phone-01) {
 		-webkit-box-flex: 1 !important;
 		-webkit-flex: 1 1 min-content !important;

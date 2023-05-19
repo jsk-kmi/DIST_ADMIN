@@ -376,6 +376,14 @@ type-horizontal 최상위 요소 부여
           margin-right: 25px;
         }
       }
+
+      .col-12 {
+        flex-basis: 100% !important;
+      }
+
+      .type-rsv-request {
+        margin-left: -20px !important;
+      }
     }
 
     .c-layer-popup {
