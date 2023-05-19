@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>KMI Admin</title>
 	<script type="text/javascript" src="./js/dtree.js"></script>
-	<link rel="stylesheet" type="text/css" href="./css/base.css">
+	<link rel="stylesheet" type="text/css" href="./css/base.css" />
 </head>
-
 <body>
 	<div class="coding_guide">
 		<h1 class="c_left">KMI Admin</h1>
 		<h2 class="h2_guide">File Tree</h2>
-
 		<div class="dtree">
 			<p>
-				<a href="javascript: p.openAll();"><img src="./img/btn_expand.gif" alt="Expand All"></a> <a
-					href="javascript: p.closeAll();"><img src="./img/btn_collapse.gif" alt="Collapse All"></a>
+				<a href="javascript: p.openAll();"><img src="./img/btn_expand.gif" alt="Expand All" /></a> <a
+					href="javascript: p.closeAll();"><img src="./img/btn_collapse.gif" alt="Collapse All" /></a>
 			</p>
 			<script type="text/javascript">
 				var dir = '../coding_list/guide/';
@@ -40,6 +37,7 @@
 							Tab: [dir + 'guide_tab.html', '', 'mainFrame'],
 							Table: [dir + 'guide_table.html', '', 'mainFrame'],
 							Form: [dir + 'guide_form.html', '', 'mainFrame'],
+							'UI변경(v0.1)': [dir + 'guide_ui_improve01.html', '', 'mainFrame'],
 							// Layout: [dir + 'guide_layout.html', '', 'mainFrame'],
 						},
 					},
@@ -47,11 +45,11 @@
 				var p = new dTree('p', tree1);
 				document.write(p);
 			</script>
-
 			<p>
-				<a href="javascript: d.openAll();"><img src="./img/btn_expand.gif" alt="Expand All"></a> <a
-					href="javascript: d.closeAll();"><img src="./img/btn_collapse.gif" alt="Collapse All"></a>
+				<a href="javascript: d.openAll();"><img src="./img/btn_expand.gif" alt="Expand All" /></a> <a
+					href="javascript: d.closeAll();"><img src="./img/btn_collapse.gif" alt="Collapse All" /></a>
 			</p>
+
 			<!-- = Dist 목록 -->
 			<script type="text/javascript">
 				var dir2 = '../html/';
@@ -60,7 +58,10 @@
 					Publishing: {
 						Layout: {
 							'sample_input/입력/수정': [dir2 + 'layout/sample_input.html', '', 'blank'],
+							// 'sample_input/입력/수정-02': [dir2 + 'layout/sample_input_02.html', '', 'blank'],
 							'sample_detail/상세보기': [dir2 + 'layout/sample_detail.html', '', 'blank'],
+							'sample_input/입력요소(page)': [dir2 + 'layout/sample_input_03.html', '', 'blank'],
+							// 'sample_detail/상세보기-02': [dir2 + 'layout/sample_detail_02.html', '', 'blank'],
 							'CT_01_001/조회 sample ': [dir2 + 'layout/CT_01_001.html', '', 'blank'],
 							'LO_01_001/로그인 ': [dir2 + 'layout/LO_01_001.html', '', 'blank'],
 							'HP_05_006/캘린더 layout ': [dir2 + 'layout/HP_05_006.html', '', 'blank'],
@@ -113,6 +114,8 @@
 						},
 						'콜센터 (CS)': {
 							'CS-01-001 / 예약진행현황(조회)': [dir2 + 'cs/CS_01_001.html', '', 'blank'],
+							'CS-01-001-02 / 예약진행현황(조회)-UI 개선': [dir2 + 'cs/CS_01_001_02.html', '', 'blank'],
+							'CS-01-001-02_01 / 예약진행현황(조회)-UI 개선(KICS용)': [dir2 + 'cs/CS_01_001_02_01.html', '', 'blank'],
 						},
 						'기타 (ETC)': {
 							error: [dir2 + 'etc/error.html', '', 'blank'],
@@ -127,5 +130,4 @@
 		</div>
 	</div>
 </body>
-
 </html>

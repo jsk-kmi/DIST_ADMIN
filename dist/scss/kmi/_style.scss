@@ -122,6 +122,7 @@
     > li {
       display: table-cell;
       text-align: center;
+
       ~ li {
         padding-left: 12px;
       }
@@ -145,6 +146,8 @@
       }
     }
   }
+
+  // + tab-scroll
   &.tab-scroll {
     font-size: 0;
     display: block;
@@ -155,9 +158,6 @@
     overflow-x: auto;
     overflow-y: hidden;
     padding-bottom: 5px;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    display: block;
   }
 }
 
@@ -406,7 +406,9 @@
   &.type01 {
     $card-type01-padding: 0.428rem; // 6px
     position: relative;
-
+    // # 230503
+    width: 100%;
+    // # END 230503
     .card-body {
       padding: 0.428rem; // 6px
     }
@@ -447,6 +449,9 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    // # 230503
+    width: 100%;
+    // # END 230503
     .txt {
       line-height: 1.7;
       font-weight: $weight-400;
@@ -457,7 +462,9 @@
     display: flex;
     flex-direction: column;
     padding: 12px 20px;
-
+    // # 230503
+    width: 100%;
+    // # END 230503
     .name {
       font-size: $fs-small;
     }
@@ -488,6 +495,9 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    // # 230503
+    width: 100%;
+    // # END 230503
     .txt {
       line-height: 1.7;
       font-weight: $weight-400;
@@ -1089,9 +1099,6 @@ table {
         overflow-x: auto;
         overflow-y: hidden;
         padding-bottom: 5px;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-        display: block;
         &:after {
           @include after;
         }
@@ -2123,6 +2130,7 @@ $mod-rsv-left-width: 160px;
 
       .tab-cont {
         height: 100%;
+
         .c-table {
           margin-bottom: 2px;
         }
@@ -2131,12 +2139,17 @@ $mod-rsv-left-width: 160px;
 
     .modrsv-scroll {
       height: 100%;
-      overflow-y: auto;
+      width: 100%;
+      overflow: auto;
+      max-width: 100%;
+
+      @include scrollType04;
       &.type01 {
         padding-right: 10px;
       }
       > .inner {
         height: 100%;
+        width: 100%;
       }
     }
     // .cont-scroll {
@@ -2690,7 +2703,7 @@ $mod-rsv-left-width: 160px;
 // + 공지사항 등록
 .sms-template-view {
   display: flex;
-  flex: 1 1 100%;
+  flex: 1 1 auto; // flex IE 대응
   align-items: center;
   > div {
     border: 1px solid $color-gray-5;
@@ -2734,8 +2747,6 @@ $mod-rsv-left-width: 160px;
   }
 }
 
-// = 콜센터
-// + 예약 진행 현황
 .reservation-dtl-status-layout {
   $gap: 10px;
   display: flex;
@@ -2751,63 +2762,57 @@ $mod-rsv-left-width: 160px;
       right: $gap;
     }
   }
+  .label-input {
+    label {
+      margin-bottom: 0;
+    }
+  }
   .left-wrap {
-    width: 45%;
-    flex: 0 0 45%;
-    max-width: 45%;
+    width: calc(100% - $callcenter-right-col-width);
+    flex: 0 0 calc(100% - $callcenter-right-col-width);
+    max-width: calc(100% - $callcenter-right-col-width);
+
+    .col-6 {
+      flex-basis: 50%;
+      .c-input-phone-group {
+        .col:nth-of-type(2) {
+          flex: 0 1 auto;
+        }
+      }
+    }
+
+    // .c-panel:first-of-type {
+    //   input[type='text'] {
+    //     width: 0;
+    //   }
+    // }
+
+    // # 230517
+    > .c-panel:first-of-type {
+      .c-input-search {
+        input[type='text'] {
+          width: 0;
+        }
+      }
+    }
   }
   .right-wrap {
-    width: 55%;
-    flex: 0 0 55%;
-    max-width: 55%;
-  }
-
-  .input-list {
-    .row {
-      margin: {
-        left: -10px;
-        right: -10px;
-      }
-      > [class*='col'] {
-        padding: {
-          left: 10px;
-          right: 10px;
-        }
-      }
+    width: $callcenter-right-col-width;
+    flex: 0 0 $callcenter-right-col-width;
+    max-width: $callcenter-right-col-width;
+    .buttons:first-of-type {
+      justify-content: flex-end;
+      margin-bottom: 22px;
     }
-  }
-  .c-input-unit {
-    input[type='text'] {
-      padding-right: 18px;
-    }
-  }
-}
-
-.c-tbl-vertical-field {
-  &.type02 {
-    table {
-      &.tbl-examtarget-list {
-        th,
-        td {
-          padding: {
-            left: 6px;
-            right: 6px;
+    .c-article.input-list {
+      &.type03 {
+        .c-input-email-group {
+          align-items: center;
+          .col-6 {
+            max-width: initial;
           }
         }
-        // table-layout: auto;
       }
     }
-  }
-}
-
-#tblExamtargetList02 {
-  th,
-  td {
-    min-width: 110px;
-    max-width: 110px;
-  }
-
-  td:nth-child(2) {
-    max-width: 150px;
   }
 }

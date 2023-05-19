@@ -2,26 +2,23 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sample</title>
-    <link rel="shortcut icon" type="image/x-icon" href="../../images/ico/favicon.ico" />
-    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/ico/favicon.ico">
+    <link rel="stylesheet" href="../../css/style.css">
     <script src="../../lib/jquery/jquery.min.js"></script>
 </head>
 
-<body>
-    <!-- [ mod(220602) ] -->
+<body> <!-- [ mod(220602) ] -->
     <div class="skip-navigation">
         <p><a href="#container" tabindex="1">본문 바로가기</a></p>
         <p><a href="#sideNav" tabindex="1">주메뉴 바로가기</a></p>
     </div>
     <!-- [ // mod(220602) ] -->
 
-    <div id="container">
-        <!-- Side Navigation -->
+    <div id="container"> <!-- Side Navigation -->
         <nav id="sideNav">
             <!-- Sidebar -->
             <div class="sidenav-wrapper">
@@ -31,7 +28,7 @@
 					- h1 태그 수정
 				-->
                         <h1 class="logo">
-                            <a href="javascript:;"><img src="../../images/logo/withkmi_w_logo.svg" alt="WITH KMI" /></a>
+                            <a href="javascript:;"><img src="../../images/logo/withkmi_w_logo.svg" alt="WITH KMI"></a>
                         </h1>
                         <!-- [ // mod(220602) ] -->
                     </div>
@@ -141,8 +138,7 @@
         </nav>
 
         <!-- Content-Wrapper -->
-        <div class="content-wrapper">
-            <!-- Header-->
+        <div class="content-wrapper"> <!-- Header-->
             <header class="header">
                 <div class="wrap">
                     <div class="top-left">
@@ -151,7 +147,7 @@
                         </button>
                         <div class="total-search">
                             <i class="ico-search"></i>
-                            <input type="text" placeholder="검색" class="search-input" />
+                            <input type="text" placeholder="검색" class="search-input">
                             <!-- - 검색어 입력에 따른 연관 검색어 노출 처리 -->
                             <div class="search-related-field" style="display: none">
                                 <ul class="search-list">
@@ -164,7 +160,7 @@
                         </div>
                     </div>
                     <div class="top-right">
-                        <!-- [ mod(221031) ] 
+                        <!-- [ mod(221031) ]
 				- 부서, 로그아웃 버튼 추가
 			-->
                         <div class="user-team">운영지원팀</div>
@@ -173,7 +169,7 @@
                                 <div class="user-name">
                                     <p>홍길동님</p>
                                 </div>
-                                <div class="user-img"><img src="../../images/ico/ico_user_profile.svg" alt="" /></div>
+                                <div class="user-img"><img src="../../images/ico/ico_user_profile.svg" alt=""></div>
                             </a>
                             <div class="user-control">
                                 <ul>
@@ -188,27 +184,33 @@
 
             <!-- Contents -->
             <section class="contents">
+
                 <!-- + data-target / id 동일 네이밍 선언 -->
-                <button type="button" class="c-btn bg-blue-1" data-toggle="modal" data-target="#popupUserInfoMod"><span>Popup Sample</span></button>
+                <button type="button" class="c-btn bg-blue-1" data-toggle="modal" data-target="#popupUserInfoMod"><span>Popup
+                        Sample</span></button>
 
                 <!-- [ layer popup] -->
+
                 <!-- + daria-labelledby / id 동일 네이밍 선언  -->
                 <div class="c-layer-popup type03 modal fade" id="popupUserInfoMod" role="dialog" aria-labelledby="UserInfoModLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                         <div class="modal-content">
+
                             <!-- modal Header -->
                             <div class="modal-header">
                                 <div class="c-modal-title-field">
                                     <h4 class="c-title" id="UserInfoModLabel">타이틀</h4>
                                 </div>
-                                <button type="button" class="popup-cls-btn" data-dismiss="modal"><span class="skip">팝업 닫기</span></button>
+                                <button type="button" class="popup-cls-btn" data-dismiss="modal"><span class="skip">팝업
+                                        닫기</span></button>
                             </div>
 
                             <!-- Modal body -->
-                            <!-- = 
+
+                            <!-- =
 									+ label + input 요소 label for/ input id  동일 네이밍 부여  (ID 속성값 중복 X)
 									+ label + input 1: N인 경우, label for/ input id  속성 제거 ,
-									+    [input title] 부분 해당 input 요소에 대한 설명 기재  
+									+    [input title] 부분 해당 input 요소에 대한 설명 기재
 									+  (샘플 소스 속성값 유지 필요 x, 각 속성이 유일한 값을 가질 수 있도록 적절한 네이밍 처리)
 								-->
                             <div class="modal-body">
@@ -233,7 +235,7 @@
                                     <div class="c-title-field">
                                         <h1 class="title-md">TYPE01</h1>
                                         <div class="c-chkbox">
-                                            <input type="checkbox" id="chk01" />
+                                            <input type="checkbox" id="chk01">
                                             <label for="chk01" class="chk-label"><i></i><span>이전 연도와 동일 구성</span></label>
                                         </div>
                                     </div>
@@ -241,19 +243,19 @@
                                         <div class="row">
                                             <div class="col-3 label-input">
                                                 <label for="inputText01">회원번호</label>
-                                                <input type="text" class="c-input" id="inputText01" value="11442222" disabled />
+                                                <input type="text" class="c-input" id="inputText01" value="11442222" disabled>
                                             </div>
                                             <div class="col-3 label-input">
                                                 <label for="inputName01_01">이름</label>
-                                                <input type="text" class="c-input" id="inputName01_01" value="홍길동" />
+                                                <input type="text" class="c-input" id="inputName01_01" value="홍길동">
                                             </div>
                                             <div class="col-3 label-input">
                                                 <label for="inputName01_02">이름</label>
-                                                <input type="text" class="c-input" id="inputName01_02" value="홍길동" />
+                                                <input type="text" class="c-input" id="inputName01_02" value="홍길동">
                                             </div>
                                             <div class="col-3 label-input">
                                                 <label for="inputName01_03">이름</label>
-                                                <input type="text" class="c-input" id="inputName01_03" value="홍길동" />
+                                                <input type="text" class="c-input" id="inputName01_03" value="홍길동">
                                             </div>
                                         </div>
                                         <div class="row">
@@ -270,20 +272,20 @@
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col"><input type="text" class="c-input" title="휴대폰 전화번호 중간 4자리 입력" /></div>
-                                                    <div class="col"><input type="text" class="c-input" title="휴대폰 전화번호 끝 3자리 입력" /></div>
+                                                    <div class="col"><input type="text" class="c-input" title="휴대폰 전화번호 중간 4자리 입력"></div>
+                                                    <div class="col"><input type="text" class="c-input" title="휴대폰 전화번호 끝 3자리 입력"></div>
                                                 </div>
                                             </div>
                                             <div class="col-6 label-input">
                                                 <label class="c-label-txt">이메일</label>
                                                 <div class="row inner c-input-email-group">
                                                     <div class="col-6 input-email-01">
-                                                        <input type="text" class="c-input" title="이메일 계정입력" value="test" />
+                                                        <input type="text" class="c-input" title="이메일 계정입력" value="test">
                                                     </div>
                                                     <div class="col-6 input-email-02">
                                                         <div class="row">
                                                             <div class="col-6">
-                                                                <input type="text" class="c-input" title="이메일 도메인 입력" value="hanmail.net" />
+                                                                <input type="text" class="c-input" title="이메일 도메인 입력" value="hanmail.net">
                                                             </div>
                                                             <div class="col-6">
                                                                 <div class="c-select">
@@ -303,15 +305,15 @@
                                         <div class="row">
                                             <div class="col-3 label-input">
                                                 <label for="inputGender01">성별</label>
-                                                <input type="text" class="c-input" id="inputGender01" />
+                                                <input type="text" class="c-input" id="inputGender01">
                                             </div>
                                             <div class="col-3 label-input">
                                                 <label for="inputId">ID</label>
-                                                <input type="text" class="c-input" id="inputId" value="jks10951" disabled />
+                                                <input type="text" class="c-input" id="inputId" value="jks10951" disabled>
                                             </div>
                                             <div class="col-3 label-input">
                                                 <label for="inputPw">비밀번호</label>
-                                                <input type="text" class="c-input" id="inputPw" value="dddd" disabled />
+                                                <input type="text" class="c-input" id="inputPw" value="dddd" disabled>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -319,9 +321,9 @@
                                                 <label class="c-label-txt">주소</label>
                                                 <div class="row inner c-input-address-group">
                                                     <div class="col input-addr-01">
-                                                        <input type="text" class="c-input" title="우편번호 입력" placeholder="우편번호" />
+                                                        <input type="text" class="c-input" title="우편번호 입력" placeholder="우편번호">
                                                     </div>
-                                                    <div class="col input-addr-02"><input type="text" class="c-input" title="주소 입력" /></div>
+                                                    <div class="col input-addr-02"><input type="text" class="c-input" title="주소 입력"></div>
                                                     <div class="col input-addr-03">
                                                         <button type="button" class="c-btn input-btn"><span>검색</span></button>
                                                     </div>
@@ -329,7 +331,7 @@
                                             </div>
                                             <div class="col-6 label-input">
                                                 <label for="detailAddress">상세주소</label>
-                                                <input type="text" class="c-input" id="detailAddress" title="상세주소 입력" value="광화문 빌딩 2층" />
+                                                <input type="text" class="c-input" id="detailAddress" title="상세주소 입력" value="광화문 빌딩 2층">
                                             </div>
                                         </div>
                                         <div class="row">
@@ -339,29 +341,31 @@
                                                     <div class="input-col">
                                                         <div class="inner">
                                                             <div class="c-rdochk">
-                                                                <input type="radio" id="rdo02_01" name="rdogrp02" />
+                                                                <input type="radio" id="rdo02_01" name="rdogrp02">
                                                                 <label for="rdo02_01" class="chk-label"><i></i><span>상시 진행</span></label>
                                                             </div>
                                                         </div>
                                                     </div>
+
                                                     <!-- w-100 input size  제어  -->
                                                     <div class="input-col w-100">
                                                         <div class="c-multi-input-group">
                                                             <div class="c-rdochk">
-                                                                <input type="radio" id="rdo02_02" name="rdogrp02" />
+                                                                <input type="radio" id="rdo02_02" name="rdogrp02">
                                                                 <label for="rdo02_02" class="chk-label"><i></i><span>기간설정</span></label>
                                                             </div>
                                                             <div class="row inner c-input-date-group">
+
                                                                 <!-- for/id 매칭 필수 -->
                                                                 <div class="col-6 label-input">
                                                                     <div class="c-input-date">
-                                                                        <input type="text" class="c-input" placeholder="YYYY-MM-DD" value="2022-06-11" title="시작일 선택" />
+                                                                        <input type="text" class="c-input" placeholder="YYYY-MM-DD" value="2022-06-11" title="시작일 선택">
                                                                         <span><i class="date-btn"></i></span>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-6 label-input">
                                                                     <div class="c-input-date">
-                                                                        <input type="text" class="c-input" placeholder="YYYY-MM-DD" value="2022-06-11" title="종료일 선택" />
+                                                                        <input type="text" class="c-input" placeholder="YYYY-MM-DD" value="2022-06-11" title="종료일 선택">
                                                                         <span><i class="date-btn"></i></span>
                                                                     </div>
                                                                 </div>
@@ -372,17 +376,18 @@
                                             </div>
                                         </div>
                                         <div class="row c-input-group range">
+
                                             <!-- for/id 매칭 필수 -->
                                             <div class="col-6 label-input">
                                                 <label for="range01">금액설정</label>
                                                 <div class="c-input-date">
-                                                    <input type="text" class="c-input" id="range01" />
+                                                    <input type="text" class="c-input" id="range01">
                                                 </div>
                                             </div>
                                             <div class="col-6 label-input">
                                                 <label for="range02">label</label>
                                                 <div class="c-input-date">
-                                                    <input type="text" class="c-input" id="range02" />
+                                                    <input type="text" class="c-input" id="range02">
                                                 </div>
                                             </div>
                                         </div>
@@ -390,11 +395,12 @@
                                             <div class="col label-input">
                                                 <label for="range01">금액설정</label>
                                                 <div class="row inner c-input-group range">
+
                                                     <!-- for/id 매칭 및 값 변경 필수 -->
                                                     <div class="col-6 label-input">
                                                         <div class="c-input-box">
                                                             <div class="c-input-unit">
-                                                                <input type="text" class="c-input" id="inputPriceClaimOwn_01" value="0" />
+                                                                <input type="text" class="c-input" id="inputPriceClaimOwn_01" value="0">
                                                                 <span class="unit">원</span>
                                                             </div>
                                                         </div>
@@ -402,7 +408,7 @@
                                                     <div class="col-6 label-input">
                                                         <div class="c-input-box">
                                                             <div class="c-input-unit">
-                                                                <input type="text" class="c-input" id="inputPriceClaimOwn_01" value="0" />
+                                                                <input type="text" class="c-input" id="inputPriceClaimOwn_01" value="0">
                                                                 <span class="unit">원</span>
                                                             </div>
                                                         </div>
@@ -414,15 +420,16 @@
                                             <div class="col label-input">
                                                 <label class="c-label-txt">범위 설정</label>
                                                 <div class="row inner c-input-group range">
+
                                                     <!-- for/id 매칭 및 값 변경 필수 -->
                                                     <div class="col-6 label-input">
                                                         <div class="c-input-box">
-                                                            <input type="text" class="c-input" title="범위 입력" id="" />
+                                                            <input type="text" class="c-input" title="범위 입력" id="">
                                                         </div>
                                                     </div>
                                                     <div class="col-6 label-input">
                                                         <div class="c-input-box">
-                                                            <input type="text" class="c-input" title="범위 입력" id="" />
+                                                            <input type="text" class="c-input" title="범위 입력" id="">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -434,13 +441,13 @@
                                                 <div class="row inner c-input-date-group">
                                                     <div class="col-6 label-input">
                                                         <div class="c-input-date">
-                                                            <input type="text" class="c-input" placeholder="YYYY-MM-DD" value="2022-06-11" title="시작일 선택" />
+                                                            <input type="text" class="c-input" placeholder="YYYY-MM-DD" value="2022-06-11" title="시작일 선택">
                                                             <span><i class="date-btn"></i></span>
                                                         </div>
                                                     </div>
                                                     <div class="col-6 label-input">
                                                         <div class="c-input-date">
-                                                            <input type="text" class="c-input" placeholder="YYYY-MM-DD" value="2022-06-11" title="종료일 선택" />
+                                                            <input type="text" class="c-input" placeholder="YYYY-MM-DD" value="2022-06-11" title="종료일 선택">
                                                             <span><i class="date-btn"></i></span>
                                                         </div>
                                                     </div>
@@ -455,17 +462,23 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-6 label-input">
+
+                                        <!-- [ mod(230509) ]
+										-	file 소스 변경 클래수 추가 : c-file-field
+										- 상단 정렬 필요한 경우에만 클래스 추가 : align-item-s
+										-->
+                                        <div class="row align-item-s">
+                                            <div class="col-6 label-input c-file-field">
                                                 <div class="c-label-txt">작업환경측정서</div>
-                                                <div class="c-input-file-group">
-                                                    <input type="file" class="c-input-file" id="inputFile01" />
+                                                <div class="c-input-file-group file-type02">
+                                                    <input type="file" class="c-input-file" id="inputFile01">
                                                     <label class="c-file-label" for="inputFile01" tabindex="0">파일 선택</label>
                                                 </div>
                                                 <ul class="c-input-file-list">
                                                     <li>
                                                         <div class="file-info">
-                                                            <p class="name">asdsadasdasdsadasddasdsadasdasdasdsadasdasdasdasdsadsadsadsadsdsadasdasdsaasdss</p>
+                                                            <p class="name">
+                                                                asdsadasdasdsadasddasdsadasdasdasdsadasdasdasdasdsadsadsadsadsdsadasdasdsaasdss</p>
                                                             <button type="button" class="btn-del"><span class="skip">삭제</span></button>
                                                         </div>
                                                     </li>
@@ -479,18 +492,19 @@
                                             </div>
                                             <div class="col-6">
                                                 <div class="row inner c-input-date-group">
+
                                                     <!-- for/id 매칭 필수 -->
                                                     <div class="col-6 label-input">
                                                         <label for="startDate01">시작일 (시작)</label>
                                                         <div class="c-input-date">
-                                                            <input type="text" class="c-input" id="startDate01" placeholder="YYYY-MM-DD" />
+                                                            <input type="text" class="c-input" id="startDate01" placeholder="YYYY-MM-DD">
                                                             <span><i class="date-btn"></i></span>
                                                         </div>
                                                     </div>
                                                     <div class="col-6 label-input">
                                                         <label for="endDate01">종료일 (종료)</label>
                                                         <div class="c-input-date">
-                                                            <input type="text" class="c-input" id="endDate01" placeholder="YYYY-MM-DD" />
+                                                            <input type="text" class="c-input" id="endDate01" placeholder="YYYY-MM-DD">
                                                             <span><i class="date-btn"></i></span>
                                                         </div>
                                                     </div>
@@ -499,6 +513,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <!-- ============================================== [type02]-->
                                 <div class="c-panel">
                                     <div class="c-title-field">
@@ -508,26 +523,25 @@
                                         <div class="row">
                                             <div class="col-3 label-input">
                                                 <label for="inputName02">고객사명<i class="is-nec">필수입력</i></label>
-                                                <input type="text" class="c-input" id="inputName02" value="11442222" disabled />
+                                                <input type="text" class="c-input" id="inputName02" value="11442222" disabled>
                                             </div>
                                             <div class="col-3 label-input">
                                                 <label for="inputSearch">검색</label>
                                                 <div class="c-input-search">
-                                                    <input type="text" id="inputSearch" />
+                                                    <input type="text" id="inputSearch">
                                                     <button type="button" class="btn-search"><span class="skip">검색</span></button>
                                                 </div>
                                             </div>
                                             <div class="col-3 label-input">
                                                 <label for="inputText02">이름</label>
-                                                <input type="text" class="c-input" id="inputText02" value="홍길동" />
+                                                <input type="text" class="c-input" id="inputText02" value="홍길동">
                                             </div>
                                             <div class="col-3 label-input">
                                                 <label for="inputText03">이름</label>
-                                                <input type="text" class="c-input" id="inputText03" value="홍길동" />
+                                                <input type="text" class="c-input" id="inputText03" value="홍길동">
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="c-article input-list c-textarea-article">
                                         <div class="row">
                                             <div class="col label-input">
@@ -539,6 +553,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <!-- ============================================== [type03 - label 없는 경우]-->
                                 <div class="c-panel">
                                     <div class="c-title-field">
@@ -547,15 +562,14 @@
                                     <div class="c-article input-list">
                                         <div class="row align-item-e">
                                             <div class="col-3 label-input">
-                                                <input type="text" class="c-input" value="11442222" disabled />
+                                                <input type="text" class="c-input" value="11442222" disabled>
                                             </div>
                                             <div class="col-3 label-input">
                                                 <label for="inputText03">이름</label>
-                                                <input type="text" class="c-input" id="inputText03" value="홍길동" />
+                                                <input type="text" class="c-input" id="inputText03" value="홍길동">
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="c-article input-list c-textarea-article">
                                         <div class="row">
                                             <div class="col label-input">
@@ -573,6 +587,7 @@
                                     <div class="c-title-field">
                                         <h1 class="title-md">TYPE03</h1>
                                     </div>
+
                                     <!-- c-m-input-list -->
                                     <div class="c-article input-list">
                                         <div class="row">
@@ -582,7 +597,7 @@
                                                     <div class="input-col">
                                                         <div class="inner">
                                                             <div class="c-rdochk">
-                                                                <input type="radio" id="rdo01_01" name="rdogrp01" />
+                                                                <input type="radio" id="rdo01_01" name="rdogrp01">
                                                                 <label for="rdo01_01" class="chk-label"><i></i><span>없음</span></label>
                                                             </div>
                                                         </div>
@@ -590,10 +605,10 @@
                                                     <div class="input-col w-100">
                                                         <div class="c-multi-input-group">
                                                             <div class="c-rdochk">
-                                                                <input type="radio" id="rdo01_02" name="rdogrp01" />
+                                                                <input type="radio" id="rdo01_02" name="rdogrp01">
                                                                 <label for="rdo01_02" class="chk-label"><i></i><span>회사지원</span></label>
                                                             </div>
-                                                            <input type="text" class="c-input" />
+                                                            <input type="text" class="c-input">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -604,7 +619,7 @@
                                                     <div class="input-col">
                                                         <div class="inner">
                                                             <div class="c-chkbox">
-                                                                <input type="checkbox" id="chk01_01" />
+                                                                <input type="checkbox" id="chk01_01">
                                                                 <label for="chk01_01" class="chk-label"><i></i><span>없음</span></label>
                                                             </div>
                                                         </div>
@@ -612,10 +627,10 @@
                                                     <div class="input-col w-100">
                                                         <div class="c-multi-input-group">
                                                             <div class="c-chkbox">
-                                                                <input type="checkbox" id="chk01_02" />
+                                                                <input type="checkbox" id="chk01_02">
                                                                 <label for="chk01_02" class="chk-label"><i></i><span>회사지원</span></label>
                                                             </div>
-                                                            <input type="text" class="c-input" />
+                                                            <input type="text" class="c-input">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -628,7 +643,7 @@
                                                     <div class="input-col">
                                                         <div class="inner">
                                                             <div class="c-chkbox">
-                                                                <input type="checkbox" id="chk02_01" />
+                                                                <input type="checkbox" id="chk02_01">
                                                                 <label for="chk02_01" class="chk-label"><i></i><span>종합검진</span></label>
                                                             </div>
                                                         </div>
@@ -636,7 +651,7 @@
                                                     <div class="input-col">
                                                         <div class="inner">
                                                             <div class="c-chkbox">
-                                                                <input type="checkbox" id="chk02_02" />
+                                                                <input type="checkbox" id="chk02_02">
                                                                 <label for="chk02_02" class="chk-label"><i></i><span>건강검진</span></label>
                                                             </div>
                                                         </div>
@@ -644,10 +659,10 @@
                                                     <div class="input-col w-100">
                                                         <div class="c-multi-input-group">
                                                             <div class="c-chkbox">
-                                                                <input type="checkbox" id="chk02_03" />
+                                                                <input type="checkbox" id="chk02_03">
                                                                 <label for="chk02_03" class="chk-label"><i></i><span>회사지원</span></label>
                                                             </div>
-                                                            <input type="text" class="c-input" />
+                                                            <input type="text" class="c-input">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -658,7 +673,7 @@
                                                     <div class="input-col">
                                                         <div class="inner">
                                                             <div class="c-chkbox">
-                                                                <input type="checkbox" id="chk03_01" />
+                                                                <input type="checkbox" id="chk03_01">
                                                                 <label for="chk03_01" class="chk-label"><i></i><span>종합검진</span></label>
                                                             </div>
                                                         </div>
@@ -666,7 +681,7 @@
                                                     <div class="input-col">
                                                         <div class="inner">
                                                             <div class="c-chkbox">
-                                                                <input type="checkbox" id="chk03_02" />
+                                                                <input type="checkbox" id="chk03_02">
                                                                 <label for="chk03_02" class="chk-label"><i></i><span>건강검진</span></label>
                                                             </div>
                                                         </div>
@@ -674,10 +689,10 @@
                                                     <div class="input-col w-100">
                                                         <div class="c-multi-input-group">
                                                             <div class="c-chkbox">
-                                                                <input type="checkbox" id="chk03_03" />
+                                                                <input type="checkbox" id="chk03_03">
                                                                 <label for="chk03_03" class="chk-label"><i></i><span>회사지원</span></label>
                                                             </div>
-                                                            <input type="text" class="c-input" />
+                                                            <input type="text" class="c-input">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -706,14 +721,27 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptates omnis re
                                             </div>
                                             <div class="c-article input-list">
                                                 <div class="row">
+
                                                     <!-- for/id 매칭 필수 -->
                                                     <div class="col-6 label-input">
                                                         <label for="inputCustom02_01">고객사 코드</label>
-                                                        <input type="text" class="c-input" id="inputCustom02_01" />
+                                                        <input type="text" class="c-input" id="inputCustom02_01">
                                                     </div>
                                                     <div class="col-6 label-input">
                                                         <label for="inputCustom02_02">고객사 명</label>
-                                                        <input type="text" class="c-input" id="inputCustom02_02" />
+                                                        <input type="text" class="c-input" id="inputCustom02_02">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+
+                                                    <!-- for/id 매칭 필수 -->
+                                                    <div class="col-6 label-input">
+                                                        <label for="inputCustom02_01">고객사 코드</label>
+                                                        <input type="text" class="c-input" id="inputCustom02_01">
+                                                    </div>
+                                                    <div class="col-6 label-input">
+                                                        <label for="inputCustom02_02">고객사 명</label>
+                                                        <input type="text" class="c-input" id="inputCustom02_02">
                                                     </div>
                                                 </div>
                                             </div>
@@ -724,14 +752,15 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptates omnis re
                                             </div>
                                             <div class="c-article input-list">
                                                 <div class="row">
+
                                                     <!--  for/id값  매칭 필수 -->
                                                     <div class="col-6 label-input">
                                                         <label for="inputCustom02_03">대표 고객사명</label>
-                                                        <input type="text" class="c-input" id="inputCustom02_03" />
+                                                        <input type="text" class="c-input" id="inputCustom02_03">
                                                     </div>
                                                     <div class="col-6 label-input">
                                                         <label for="inputCustom02_04">대표자명</label>
-                                                        <input type="text" class="c-input" id="inputCustom02_04" />
+                                                        <input type="text" class="c-input" id="inputCustom02_04">
                                                     </div>
                                                 </div>
                                             </div>
@@ -746,10 +775,11 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptates omnis re
                                             </div>
                                             <div class="c-article input-list">
                                                 <div class="row">
+
                                                     <!-- for/id 매칭 필수 -->
                                                     <div class="col-6 label-input">
                                                         <label for="inputCustom01">고객사 코드</label>
-                                                        <input type="text" class="c-input" id="inputCustom01" />
+                                                        <input type="text" class="c-input" id="inputCustom01">
                                                     </div>
                                                 </div>
                                             </div>
@@ -766,20 +796,21 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptates omnis re
                                             </div>
                                             <div class="c-article input-list">
                                                 <div class="row">
+
                                                     <!--  for/id값  매칭 필수 -->
                                                     <div class="col-6 label-input">
                                                         <label for="inputCustom02">대표 고객사명</label>
-                                                        <input type="text" class="c-input" id="inputCustom02" />
+                                                        <input type="text" class="c-input" id="inputCustom02">
                                                     </div>
                                                     <div class="col-6 label-input">
                                                         <label for="inputCustom03">대표자명</label>
-                                                        <input type="text" class="c-input" id="inputCustom03" />
+                                                        <input type="text" class="c-input" id="inputCustom03">
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-6 label-input">
                                                         <label for="inputCustom04">사업자등록번호</label>
-                                                        <input type="text" class="c-input" id="inputCustom04" />
+                                                        <input type="text" class="c-input" id="inputCustom04">
                                                     </div>
                                                 </div>
                                             </div>
@@ -789,6 +820,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptates omnis re
 
                                 <!-- ============================================== [card panel  type01]-->
                                 <div class="c-panel card-panel">
+
                                     <!-- type01 -->
                                     <div class="row c-card-article type01">
                                         <div class="col-6">
@@ -827,8 +859,8 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptates omnis re
                                         </div>
                                     </div>
                                 </div>
-                                <!-- ============================================== [card panel type02]-->
 
+                                <!-- ============================================== [card panel type02]-->
                                 <div class="c-panel card-panel">
                                     <div class="row c-card-article type02">
                                         <div class="col-3">
@@ -859,13 +891,12 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptates omnis re
                                 </div>
 
                                 <!-- ============================================== [card panel type03]-->
-
                                 <div class="c-panel card-panel">
                                     <div class="row c-card-article type03">
                                         <div class="col-3">
                                             <div class="c-card type02">
                                                 <div class="c-chkbox">
-                                                    <input type="checkbox" id="chk04_01" />
+                                                    <input type="checkbox" id="chk04_01">
                                                     <label for="chk04_01" class="chk-label"><i></i><span>VIP종합(2F)</span></label>
                                                 </div>
                                             </div>
@@ -873,7 +904,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptates omnis re
                                         <div class="col-3">
                                             <div class="c-card type02">
                                                 <div class="c-chkbox">
-                                                    <input type="checkbox" id="chk04_02" />
+                                                    <input type="checkbox" id="chk04_02">
                                                     <label for="chk04_02" class="chk-label"><i></i><span>VIP종합(2F)</span></label>
                                                 </div>
                                             </div>
@@ -881,7 +912,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptates omnis re
                                         <div class="col-3">
                                             <div class="c-card type02">
                                                 <div class="c-chkbox">
-                                                    <input type="checkbox" id="chk04_03" />
+                                                    <input type="checkbox" id="chk04_03">
                                                     <label for="chk04_03" class="chk-label"><i></i><span>VIP종합(2F)</span></label>
                                                 </div>
                                             </div>
@@ -889,15 +920,15 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptates omnis re
                                         <div class="col-3">
                                             <div class="c-card type02">
                                                 <div class="c-chkbox">
-                                                    <input type="checkbox" id="chk04_04" />
+                                                    <input type="checkbox" id="chk04_04">
                                                     <label for="chk04_04" class="chk-label"><i></i><span>종합검진(3F)</span></label>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- ============================================== [card panel type04]-->
 
+                                <!-- ============================================== [card panel type04]-->
                                 <div class="c-panel card-panel">
                                     <div class="row c-card-article type03">
                                         <div class="col-3">
@@ -906,51 +937,48 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptates omnis re
                                                 <div class="c-multi-input-group-02">
                                                     <div class="input-col">
                                                         <div class="c-chkbox">
-                                                            <input type="checkbox" id="chk05_01" />
+                                                            <input type="checkbox" id="chk05_01">
                                                             <label for="chk05_01" class="chk-label"><i></i><span>오전</span></label>
                                                         </div>
                                                     </div>
                                                     <div class="input-col time">
-                                                        <input type="text" value="5" />
+                                                        <input type="text" value="5">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-
                                         <div class="col-3">
                                             <div class="c-card type03">
                                                 <p class="name">유방초음파</p>
                                                 <div class="c-multi-input-group-02">
                                                     <div class="input-col">
                                                         <div class="c-chkbox">
-                                                            <input type="checkbox" id="chk05_02" />
+                                                            <input type="checkbox" id="chk05_02">
                                                             <label for="chk05_02" class="chk-label"><i></i><span>오전</span></label>
                                                         </div>
                                                     </div>
                                                     <div class="input-col time">
-                                                        <input type="text" value="5" />
+                                                        <input type="text" value="5">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-
                                         <div class="col-3">
                                             <div class="c-card type03">
                                                 <p class="name">수면위내시경</p>
                                                 <div class="c-multi-input-group-02">
                                                     <div class="input-col">
                                                         <div class="c-chkbox">
-                                                            <input type="checkbox" id="chk05_03" />
+                                                            <input type="checkbox" id="chk05_03">
                                                             <label for="chk05_03" class="chk-label"><i></i><span>오전</span></label>
                                                         </div>
                                                     </div>
                                                     <div class="input-col time">
-                                                        <input type="text" value="5" />
+                                                        <input type="text" value="5">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-
                                         <div class="col-3">
                                             <div class="c-card type03">
                                                 <p class="name">MRI</p>
@@ -958,12 +986,12 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptates omnis re
                                                     <div class="c-multi-input-group-02">
                                                         <div class="input-col">
                                                             <div class="c-chkbox">
-                                                                <input type="checkbox" id="chk05_04" />
+                                                                <input type="checkbox" id="chk05_04">
                                                                 <label for="chk05_04" class="chk-label"><i></i><span>오전</span></label>
                                                             </div>
                                                         </div>
                                                         <div class="input-col time">
-                                                            <input type="text" value="5" />
+                                                            <input type="text" value="5">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1034,6 +1062,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptates omnis re
                                     </div>
                                 </div>
                             </div>
+
                             <!-- // modal body -->
 
                             <!-- modal-footer -->
@@ -1049,33 +1078,24 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptates omnis re
                             </div>
                         </div>
                     </div>
+
                     <!-- = type03  -->
+
                     <!-- [ // layer popup] -->
                 </div>
             </section>
-            <!-- // Contents -->
-
-            <!-- Footer -->
-            <footer class="footer">
-                <div class="container">
-                    <p class="copyright">Copyright© KMI.All Rights Reserved.</p>
-                </div>
-            </footer>
-
-        </div>
-        <!-- // Content-Wrapper -->
-    </div>
-    <!-- [ mod(220818) ] -->
-    <script src="../../lib/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="../../js/common.js"></script>
 
 
-    <script>
-        $(function() {
-            // Guide전용 스크립트
-            $('[data-target]').trigger('click');
-        });
-    </script>
+        </div> <!-- [ mod(220818) ] -->
+        <script src="../../lib/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="../../js/common.js"></script>
+
+        <script>
+            $(function() {
+                // Guide전용 스크립트
+                $('[data-target]').trigger('click');
+            });
+        </script>
 </body>
 
 </html>

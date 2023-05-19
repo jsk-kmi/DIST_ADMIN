@@ -37,8 +37,16 @@ a.c-btn,
 
   // + outline btn
   $btn-outline: (
-    blue-1: $color-navy-1,
+    blue-1: $color-blue-1,
     navy-1: $color-navy-1,
+    gray-1: $color-gray-1,
+    gray-2: $color-gray-2,
+    gray-10: $color-gray-10,
+    gray-3: $color-gray-3,
+    green-1: $color-green-1,
+    blue-2: $color-blue-2,
+    blue-3: $color-blue-3,
+    blue-4: $color-blue-4,
   );
   @each $class, $line in $btn-outline {
     &.is-outline-#{$class} {
@@ -92,4 +100,9 @@ button {
     height: 16px;
     display: inline-block;
   }
+}
+
+// + 조회 버튼
+.c-btn-inquiry {
+  background-color: $color-navy-1;
 }

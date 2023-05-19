@@ -30,7 +30,11 @@ a.c-bs-link,
   display: inline-block;
   text-decoration: underline;
   color: $color-blue-1;
+  overflow: hidden;
   line-height: 1.7;
+  > span {
+    position: relative;
+  }
 }
 
 // + size
@@ -317,4 +321,16 @@ $spacing: (0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16, 18, 20, 24, 25, 30, 35, 40, 42,
       color: $color-gray-2;
     }
   }
+}
+
+.flx-full,
+.ta-full {
+  display: flex;
+  > .col {
+    flex: 1 1 100% !important;
+  }
+}
+
+.col-w-full {
+  flex: 1 1 100% !important;
 }

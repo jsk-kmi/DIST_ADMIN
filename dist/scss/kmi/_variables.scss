@@ -18,7 +18,7 @@ $color-black-op8: rgba(28, 28, 27, 0.8) !default;
 $color-blue-1: #2f7ad3 !default;
 $color-blue-2: #66acff !default;
 $color-blue-3: #f9f8ff !default;
-$color-blue-4: #8D8DB9 !default;
+$color-blue-4: #8d8db9 !default;
 
 $color-navy-1: #253981 !default;
 $color-navy-2: #225490 !default;
@@ -118,6 +118,7 @@ $input-focus-border-color: $color-blue-1;
 $input-disabled-border-color: $color-gray-4;
 $input-disabled-bg-color: $color-gray-5;
 $input-disabled-font-color: $color-gray-2;
+$input-min-width: 120px;
 
 // $input-basic-lineheight: 22px;
 $input-basic-lineheight: 20px;
@@ -130,7 +131,9 @@ $input-check-size: 18px;
 
 // + input-list
 $input-col-gap-h: $gap-20;
-$input-col-gap-v: $gap-16;
+$input-col-gap-v: $gap-10;
+$input-auto-w-col-gap-h: $gap-10;
+$input-auto-w-col-gap-v: $gap-10;
 
 // = Space
 
@@ -153,3 +156,26 @@ $scrollbar-color: $color-gray-5;
 $scrollbar-size: 10px;
 $scrollbar-bg-color: transparent;
 $scrollbar-border-color: transparent;
+
+// ui-mod(v0.1)
+// = Input
+$input-label-min-width01: 95px;
+
+// = Per Page
+// + callcenter
+$callcenter-right-col-width: 40%;
+$callcenter-right-col-width02: 45%;
+
+// = table
+$tbl-col-w-no: 60px;
+$tbl-col-w-date: 110px;
+$tbl-col-w-birthday: 110px;
+$tbl-col-w-name: 110px;
+$tbl-col-w-phone: 140px;
+$tbl-col-w-gender: 70px;
+$tbl-col-w-price: 120px;
+$tbl-col-w-link: 60px;
+
+// = checkbox
+$tbl-col-w-checkbox: 40px;
+$tbl-col-w-checkbox02: 30px;

@@ -187,8 +187,12 @@
   scrollbar-3dlight-color: $color-gray-5;
   scrollbar-highlight-color: $color-gray-5;
   scrollbar-shadow-color: $color-gray-5;
-}
 
+  scrollbar-arrow-color: $color-gray-5;
+  // scrollbar-face-color: #ffffff;
+  // scrollbar-shadow-color: #ddd;
+  // scrollbar-track-color: #faf5f5;
+}
 @mixin sideNavScroll {
   ::-webkit-scrollbar {
     width: 8px;
@@ -203,14 +207,14 @@
   ::-webkit-scrollbar-corner {
     background: $color-gray-11;
   }
-
-  // ie
   scrollbar-arrow-color: $color-black-2;
   scrollbar-track-color: $color-black-2;
   scrollbar-face-color: $color-gray-11;
   scrollbar-3dlight-color: $color-black-2;
   scrollbar-highlight-color: $color-gray-11;
   scrollbar-shadow-color: $color-gray-11;
+
+  // ie
 }
 
 @mixin scrollType01 {
@@ -396,4 +400,29 @@
 }
 @mixin coTxtTypography {
   @include fontStyle(12px, 20px, 400, -0.3px);
+}
+
+// = Responsive
+@mixin responsive($device) {
+  @if ($device == 'laptopHD') {
+    @media screen and (max-width: 1280px) {
+      @content;
+    }
+  } @else if ($device == 'laptopMedium') {
+    @media screen and (max-width: 1366px) {
+      @content;
+    }
+  } @else if($device == 'laptopHigh') {
+    @media screen and (max-width: 1440px) {
+      @content;
+    }
+  } @else if($device == 'laptopFhd') {
+    @media screen and (max-width: 1536px) {
+      @content;
+    }
+  } @else if($device == 'desktopFhd') {
+    @media screen and (max-width: 1660px) {
+      @content;
+    }
+  }
 }

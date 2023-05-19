@@ -2,13 +2,12 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>고객사 조회 및 등록</title>
-    <link rel="shortcut icon" type="image/x-icon" href="../../images/ico/favicon.ico" />
-    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/ico/favicon.ico">
+    <link rel="stylesheet" href="../../css/style.css">
     <script src="../../lib/jquery/jquery.min.js"></script>
 </head>
 
@@ -19,9 +18,7 @@
         <p><a href="#sideNav" tabindex="1">주메뉴 바로가기</a></p>
     </div>
     <!-- [ // mod(220602) ] -->
-
-    <div id="container">
-        <!-- Side Navigation -->
+    <div id="container"> <!-- Side Navigation -->
         <nav id="sideNav">
             <!-- Sidebar -->
             <div class="sidenav-wrapper">
@@ -31,7 +28,7 @@
 					- h1 태그 수정
 				-->
                         <h1 class="logo">
-                            <a href="javascript:;"><img src="../../images/logo/withkmi_w_logo.svg" alt="WITH KMI" /></a>
+                            <a href="javascript:;"><img src="../../images/logo/withkmi_w_logo.svg" alt="WITH KMI"></a>
                         </h1>
                         <!-- [ // mod(220602) ] -->
                     </div>
@@ -141,8 +138,7 @@
         </nav>
 
         <!-- Content-Wrapper -->
-        <div class="content-wrapper">
-            <!-- Header-->
+        <div class="content-wrapper"> <!-- Header-->
             <header class="header">
                 <div class="wrap">
                     <div class="top-left">
@@ -151,7 +147,7 @@
                         </button>
                         <div class="total-search">
                             <i class="ico-search"></i>
-                            <input type="text" placeholder="검색" class="search-input" />
+                            <input type="text" placeholder="검색" class="search-input">
                             <!-- - 검색어 입력에 따른 연관 검색어 노출 처리 -->
                             <div class="search-related-field" style="display: none">
                                 <ul class="search-list">
@@ -164,7 +160,7 @@
                         </div>
                     </div>
                     <div class="top-right">
-                        <!-- [ mod(221031) ] 
+                        <!-- [ mod(221031) ]
 				- 부서, 로그아웃 버튼 추가
 			-->
                         <div class="user-team">운영지원팀</div>
@@ -173,7 +169,7 @@
                                 <div class="user-name">
                                     <p>홍길동님</p>
                                 </div>
-                                <div class="user-img"><img src="../../images/ico/ico_user_profile.svg" alt="" /></div>
+                                <div class="user-img"><img src="../../images/ico/ico_user_profile.svg" alt=""></div>
                             </a>
                             <div class="user-control">
                                 <ul>
@@ -188,6 +184,7 @@
 
             <!-- Contents -->
             <section class="contents">
+
                 <!-- [ mod(220607) ] -
 					- bread crumb 추가 반영 (design) 및 .c-title-field 위치 변경
 				-->
@@ -209,27 +206,29 @@
                 <div class="c-panel">
                     <div class="c-article input-list">
                         <div class="row">
+
                             <!-- for/id 매칭 입력 필수 -->
                             <div class="col-3 label-input">
                                 <label for="">고객사 코드</label>
-                                <input type="text" class="c-input" id="" />
+                                <input type="text" class="c-input" id="">
                             </div>
                             <div class="col-3 label-input">
                                 <label for="">고객사 명</label>
-                                <input type="text" class="c-input" id="" />
+                                <input type="text" class="c-input" id="">
                             </div>
                             <div class="col-3 label-input">
                                 <label for="">고객사 사업자번호</label>
-                                <input type="text" class="c-input" id="" />
+                                <input type="text" class="c-input" id="">
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- [ // mod(220607) ] -->
 
+                <!-- [ // mod(220607) ] -->
                 <div class="c-panel">
                     <div class="c-field">
                         <div class="c-select">
+
                             <!-- [ mod(220602) ]
 								- title 속성 추가
 								-->
@@ -247,35 +246,36 @@
                         </div>
                     </div>
                     <div class="c-table-field">
+
                         <!-- c-table -->
                         <div class="c-table striped sorting">
                             <table class="table">
-                                <!-- [ mod(220607) ] 
+
+                                <!-- [ mod(220607) ]
 										- caption 추가
 									-->
-                                <caption>
-                                    고객사 상세정보 : 항목 선텍, No, 고객사 코드, 대표 고객사명, 관계고객사명, 사업자등록번호, 담당자명, 영업담당자, 비고에 대한 정보
-                                </caption>
+                                <caption> 고객사 상세정보 : 항목 선텍, No, 고객사 코드, 대표 고객사명, 관계고객사명, 사업자등록번호, 담당자명, 영업담당자, 비고에 대한 정보 </caption>
                                 <colgroup>
-                                    <col class="checkbox" />
-                                    <col class="no" />
-                                    <col />
-                                    <col />
-                                    <col />
-                                    <col />
-                                    <col />
-                                    <col />
-                                    <col style="width: 25%" />
+                                    <col class="checkbox">
+                                    <col class="no">
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col style="width: 25%">
                                 </colgroup>
                                 <thead>
                                     <tr>
+
                                         <!--  [comment]
-												- for/id 값 매칭 
+												- for/id 값 매칭
 												- sorting 기능 적용 시 '오름차순/내림차순' text 변경 필요
 											-->
                                         <th>
                                             <div class="c-chkbox">
-                                                <input type="checkbox" id="allchk" />
+                                                <input type="checkbox" id="allchk">
                                                 <label for="allchk" class="chk-label"><i></i><span class="skip">전체선택</span></label>
                                             </div>
                                         </th>
@@ -319,12 +319,11 @@
                                         <th>비고</th>
                                     </tr>
                                 </thead>
-
                                 <tbody>
                                     <tr>
                                         <td>
                                             <div class="c-chkbox">
-                                                <input type="checkbox" id="" />
+                                                <input type="checkbox" id="">
                                                 <label for="" class="chk-label"><i></i><span class="skip">전체 선택</span></label>
                                             </div>
                                         </td>
@@ -342,7 +341,7 @@
                                     <tr>
                                         <td>
                                             <div class="c-chkbox">
-                                                <input type="checkbox" id="" />
+                                                <input type="checkbox" id="">
                                                 <label for="" class="chk-label"><i></i></label>
                                             </div>
                                         </td>
@@ -360,7 +359,7 @@
                                     <tr>
                                         <td>
                                             <div class="c-chkbox">
-                                                <input type="checkbox" id="" />
+                                                <input type="checkbox" id="">
                                                 <label for="" class="chk-label"><i></i></label>
                                             </div>
                                         </td>
@@ -378,7 +377,7 @@
                                     <tr>
                                         <td>
                                             <div class="c-chkbox">
-                                                <input type="checkbox" id="" />
+                                                <input type="checkbox" id="">
                                                 <label for="" class="chk-label"><i></i><span class="skip">전체 선택</span></label>
                                             </div>
                                         </td>
@@ -396,7 +395,7 @@
                                     <tr>
                                         <td>
                                             <div class="c-chkbox">
-                                                <input type="checkbox" id="" />
+                                                <input type="checkbox" id="">
                                                 <label for="" class="chk-label"><i></i><span class="skip">전체 선택</span></label>
                                             </div>
                                         </td>
@@ -414,6 +413,7 @@
                                 </tbody>
                             </table>
                         </div>
+
                         <!-- c-tbl-paging -->
                         <div class="c-tbl-paging">
                             <p class="page-info">Total Page <em>01</em> page</p>
@@ -450,22 +450,11 @@
                     </div>
                 </div>
             </section>
-            <!-- // Contents -->
 
-            <!-- Footer -->
-            <footer class="footer">
-                <div class="container">
-                    <p class="copyright">Copyright© KMI.All Rights Reserved.</p>
-                </div>
-            </footer>
 
-        </div>
-        <!-- // Content-Wrapper -->
-    </div>
-    <!-- [ mod(220818) ] -->
-    <script src="../../lib/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="../../js/common.js"></script>
-
+        </div> <!-- [ mod(220818) ] -->
+        <script src="../../lib/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="../../js/common.js"></script>
 </body>
 
 </html>

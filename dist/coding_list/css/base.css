@@ -103,7 +103,7 @@ em {
 }
 
 /* Responsive */
-/* 
+/*
 @media (max-width: 767px) {
   .fl-table {
     display: block;
@@ -307,8 +307,6 @@ h2.c_left {
   line-height: normal;
   padding: 5px;
   background-color: rgba(255, 100, 0, 0.1);
-
-  text-transform: capitalize;
 }
 .coding_guide dl.notice {
   padding-left: 20px;

@@ -93,10 +93,10 @@
   // = Input List
   &.input-list {
     > .row {
-      > [class*='col'] {
-        padding-top: 10px;
-        padding-bottom: 10px;
-      }
+      // > [class*='col'] {
+      //   padding-top: $input-col-gap-v;
+      //   padding-bottom: $input-col-gap-v;
+      // }
     }
   }
 
@@ -358,8 +358,8 @@
 
 .col {
   padding: {
-    left: $gap-20;
-    right: $gap-20;
+    left: 10px;
+    right: 10px;
   }
   max-width: 100%;
   flex-basis: 0;
@@ -374,58 +374,17 @@
   max-width: percentage(divide($size, $columns));
 }
 
-@for $i from 1 to 12 {
+$colWidths: (8.333%, 16.666%, 25%, 33.333%, 41.667%, 50%, 58.333%, 66.667%, 75%, 83.333%, 91.7%, 100%);
+@each $col in $colWidths {
+  $i: index($colWidths, $col);
   .col-#{$i} {
+    flex: 0 0 $col;
+    max-width: $col;
     padding: {
       left: $gap-20;
       right: $gap-20;
     }
   }
-}
-
-.col-1 {
-  flex: 0 0 8.333%;
-  max-width: 8.333%;
-}
-.col-2 {
-  flex: 0 0 16.666%;
-  max-width: 16.666%;
-}
-.col-3 {
-  flex: 0 0 25%;
-  max-width: 25%;
-}
-.col-4 {
-  flex: 0 0 33.333%;
-  max-width: 33.333%;
-}
-.col-5 {
-  flex: 0 0 41.66666667%;
-  max-width: 41.66666667%;
-}
-.col-6 {
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-.col-7 {
-  flex: 0 0 58.3333333333%;
-  max-width: 58.3333333333%;
-}
-.col-8 {
-  flex: 0 0 66.66666667%;
-  max-width: 66.66666667%;
-}
-.col-9 {
-  flex: 0 0 75%;
-  max-width: 75%;
-}
-.col-10 {
-  flex: 0 0 83.333%;
-  max-width: 83.333%;
-}
-.col-11 {
-  flex: 0 0 91.7%;
-  max-width: 91.7%;
 }
 .col,
 .col-12 {

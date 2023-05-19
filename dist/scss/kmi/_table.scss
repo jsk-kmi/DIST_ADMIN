@@ -97,35 +97,80 @@ table {
     th,
     td {
       &.checkbox {
-        width: 40px;
+        width: $tbl-col-w-checkbox;
       }
       &.checkbox02 {
-        width: 30px;
+        width: $tbl-col-w-checkbox02;
         padding: {
           left: 0;
           right: 7px;
         }
       }
       &.no {
-        width: 60px;
+        width: $tbl-col-w-no;
       }
       &.date {
-        width: 110px;
+        width: $tbl-col-w-date;
+      }
+      &.birthday {
+        width: $tbl-col-w-birthday;
       }
       &.name {
-        width: 110px;
+        width: $tbl-col-w-name;
       }
       &.phone {
-        width: 140px;
+        width: $tbl-col-w-phone;
       }
       &.gender {
-        width: 70px;
+        width: $tbl-col-w-gender;
       }
       &.price {
-        width: 120px;
+        width: $tbl-col-w-price;
       }
       &.link {
-        width: 60px;
+        width: $tbl-col-w-link;
+      }
+
+      // + max-width add
+      &.max-no {
+        width: $tbl-col-w-no;
+        max-width: $tbl-col-w-no;
+      }
+      &.max-checkbox {
+        width: $tbl-col-w-checkbox;
+        max-width: $tbl-col-w-checkbox;
+      }
+      &.max-checkbox02 {
+        width: $tbl-col-w-checkbox;
+        max-width: $tbl-col-w-checkbox02;
+      }
+      &.max-date {
+        width: $tbl-col-w-date;
+        max-width: $tbl-col-w-date;
+      }
+      &.max-birthday {
+        width: $tbl-col-w-birthday;
+        max-width: $tbl-col-w-birthday;
+      }
+      &.max-name {
+        width: $tbl-col-w-name;
+        max-width: $tbl-col-w-name;
+      }
+      &.max-phone {
+        width: $tbl-col-w-phone;
+        max-width: $tbl-col-w-phone;
+      }
+      &.max-gender {
+        width: $tbl-col-w-gender;
+        max-width: $tbl-col-w-gender;
+      }
+      &.max-price {
+        width: $tbl-col-w-price;
+        max-width: $tbl-col-w-price;
+      }
+      &.max-link {
+        width: $tbl-col-w-link;
+        max-width: $tbl-col-w-link;
       }
     }
   }
@@ -326,7 +371,6 @@ table {
 }
 
 // + c-vertical-scroll
-
 .c-tbl-vertical-field {
   position: relative;
   .c-vertical-scroll {
@@ -408,11 +452,12 @@ table {
   overflow-x: auto;
 }
 
+// = c-tbl-vh-field (+datatable)
 .c-tbl-vh-field {
   background-color: $color-white-2;
   .c-table {
     overflow: {
-      x: auto;
+      x: hidden;
       y: hidden;
     }
   }
@@ -423,10 +468,16 @@ table {
     tbody {
       display: block;
     }
+    thead {
+      th {
+        text-align: center;
+      }
+    }
   }
   tbody {
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow: hidden;
+    // overflow-y: scroll;
+    // overflow-x: hidden;
     height: 240px;
     @include scrollType04;
   }
@@ -442,6 +493,7 @@ table {
     .c-table {
       overflow: auto;
       max-height: 310px;
+      max-width: 100%;
       thead {
         display: table-header-group;
       }
@@ -482,6 +534,81 @@ table {
   // position: absolute;
   // }
 }
+
+// .c-tbl-vh-field {
+//   background-color: $color-white-2;
+//   .c-table {
+//     overflow: {
+//       x: auto;
+//       y: hidden;
+//     }
+//   }
+//   table {
+//     width: 100%;
+//     table-layout: fixed;
+//   }
+//   th,
+//   td {
+//     height: 25px;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+//   }
+
+//   //+ type01
+//   &.type01 {
+//     .c-table {
+//       overflow: {
+//         x: auto;
+//         y: hidden;
+//       }
+//     }
+//     table {
+//       width: 100%;
+//       table-layout: fixed;
+
+//       thead,
+//       tbody {
+//         display: block;
+//       }
+//     }
+//     // tbody {
+//     //   overflow-y: scroll;
+//     //   overflow-x: hidden;
+//     //   // height: 240px;
+//     //   @include scrollType04;
+//     // }
+
+//     @supports (position: sticky) or (position: -webkit-sticky) {
+//       .c-table {
+//         overflow: auto;
+//         // max-height: 310px;
+//         thead {
+//           display: table-header-group;
+//         }
+//         tbody {
+//           display: table-row-group;
+//         }
+//         thead {
+//           position: sticky;
+//           top: 0;
+//           z-index: 100;
+//         }
+
+//         tbody {
+//           overflow-y: scroll;
+//           overflow-x: hidden;
+//           height: 260px;
+//           @include scrollType04;
+//         }
+//       }
+//     }
+//   }
+
+//   // + type02
+//   &.type02 {
+//   }
+// }
+
 // .c-tbl-vertical-field02 {
 //   &.type01 {
 //     position: relative;
@@ -871,4 +998,50 @@ table.fixed-table {
       }
     }
   }
+}
+
+// = dataTables
+.dataTables_wrapper {
+  .dataTables_scroll {
+    .dataTables_scrollBody {
+      @include scrollType04;
+      border-bottom: none;
+    }
+  }
+  .no-footer {
+    border-bottom: none;
+  }
+  .dataTables_scrollHeadInner {
+  }
+}
+
+table.dataTable {
+  thead th {
+    text-align: center;
+  }
+  tbody {
+    th,
+    td {
+      vertical-align: top;
+    }
+  }
+  td {
+    // max-width: 0;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // white-space: nowrap;
+  }
+  &.no-footer {
+    border-bottom: 0;
+  }
+}
+
+.c-tbl-vh-field01 {
+  table {
+    width: 100%;
+    table-layout: fixed;
+  }
+}
+.dataTables_scrollHeadInner {
+  width: 100%;
 }

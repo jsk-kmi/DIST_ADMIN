@@ -1,0 +1,57 @@
+//= 수평 배치시 모든 스타일
+.contents {
+  &.type-horizontal {
+    & > .c-panel {
+      .input-list {
+        .row {
+          margin: {
+            left: -$input-col-gap-h;
+            right: -$input-col-gap-h;
+          }
+          // + c-input-email-group
+          &.c-input-email-group {
+            margin: {
+              left: -$input-col-gap-v;
+              right: -$input-col-gap-v;
+            }
+          }
+          > [class*='col-'] {
+            padding: {
+              left: $input-auto-w-col-gap-h;
+              right: $input-auto-w-col-gap-h;
+            }
+            display: flex;
+            // justify-content: space-between;
+          }
+
+          // + c-input-email-group
+          .c-input-email-group {
+            .input-email-01 {
+              padding-right: 18px;
+            }
+            .input-email-02 {
+              padding-left: 18px;
+            }
+          }
+        }
+      }
+      .c-article {
+        &.input-list {
+          display: flex;
+          flex-wrap: wrap;
+
+        }
+        // # 230516
+        // + textarea
+        &.c-textarea-article {
+          .col {
+            &.label-input {
+              flex: 0 0 100%;
+            }
+          }
+        }
+        // # // 230516
+      }
+    }
+  }
+}

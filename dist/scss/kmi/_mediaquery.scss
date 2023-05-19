@@ -1,0 +1,24 @@
+@include responsive(desktopFhd) {
+  // = 콜센터 페이지 화면  ui 개선 작업
+
+  body {
+  }
+  .content-wrapper {
+    &.type-callcenter {
+      // + callcenter
+
+      .reservation-dtl-status-layout {
+        .left-wrap {
+          width: calc(100% - $callcenter-right-col-width);
+          flex: 0 0 calc(100% - $callcenter-right-col-width);
+          max-width: calc(100% - $callcenter-right-col-width);
+        }
+        .right-wrap {
+          width: $callcenter-right-col-width;
+          flex: 0 0 $callcenter-right-col-width;
+          max-width: $callcenter-right-col-width;
+        }
+      }
+    }
+  }
+}

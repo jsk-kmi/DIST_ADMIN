@@ -762,11 +762,11 @@ $multi-input-ml: 1.714rem;
         left: $gap;
         right: $gap;
       }
-      > {
-        & {
-          @include paddingH(15px);
-        }
-      }
+      // > * {
+      //   & {
+      //     @include paddingH(15px);
+      //   }
+      // }
     }
     .input-email-01 {
       position: relative;
@@ -862,11 +862,11 @@ $multi-input-ml: 1.714rem;
         left: $gap;
         right: $gap;
       }
-      > {
-        & {
-          @include paddingH(15px);
-        }
-      }
+      // > {
+      //   & {
+      //     @include paddingH(15px);
+      //   }
+      // }
     }
     .c-select {
       select {
@@ -1277,9 +1277,9 @@ textarea,
     @include paddingH(6px);
   }
   > [class*='col-'] {
-    // input[type='text'] {
-    //   margin-top: 12px;
-    // }
+    input[type='text'] {
+      margin-top: 12px;
+    }
   }
 }
 
@@ -1401,7 +1401,7 @@ textarea,
           content: '~';
           position: absolute;
           top: 50%;
-          right: -22px;
+          right: -18px;
           transform: translateY(-50%);
           color: $color-gray-2;
         }
