@@ -247,10 +247,24 @@ type-horizontal 최상위 요소 부여
           &.type03 {
             .c-input-email-group {
               align-items: center;
+              // # 230522
               .col-6 {
                 max-width: initial;
+                padding-left: 10px;
+                padding-right: 10px;
               }
             }
+          }
+        }
+        // # 230522
+        .tab-cont {
+          .buttons {
+            margin-top: 20px;
+          }
+        }
+        .row {
+          &.c-input-address-group {
+            flex: 1 1 auto;
           }
         }
       }
@@ -338,6 +352,8 @@ type-horizontal 최상위 요소 부여
           }
           [class^='col'] {
             flex: 0 1 auto;
+            padding-left: 10px;
+            padding-right: 10px;
           }
           .c-input-address-group {
             .row:nth-of-type(2) {

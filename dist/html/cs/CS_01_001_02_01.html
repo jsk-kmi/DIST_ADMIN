@@ -2661,13 +2661,14 @@
     <script>
         toggleAccordion();
 
-        // 검진대상자 리스트 Table
+        // 검진대상자 리스트 Table Table 변경에 따른 script 재 실행 요청
         DefaultDateOption['scrollY'] = 200;
         var addDTableOption = DefaultDateOption;
         var table = $('#dTblChkupList01').DataTable(addDTableOption);
         document.addEventListener('DOMContentLoaded', function() {
             table;
         });
+
 
         window.addEventListener('resize', function() {
             table.columns.adjust().draw();
