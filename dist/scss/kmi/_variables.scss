@@ -1,14 +1,14 @@
-//= generic
+//+ generic
 
 $g-lineheight: 1.4;
 $g-lineheight-2: 1.7;
 $g-lineheight-3: 1.666666;
 
-// =font
+// + font
 $font-name: 'NotoSansKR';
 $font-path: '../fonts/';
 
-// = color
+// + color
 $color-black-1: #1c1c1b !default;
 $color-black-2: #222225 !default;
 $color-black-op4: rgba(28, 28, 27, 0.4) !default;
@@ -46,12 +46,12 @@ $color-gray-12: #d3d3d3 !default;
 $color-gray-13: #f1f1ef !default;
 
 // + font weight
-$weight-100: 100; // Thin
-$weight-300: 300; // Light
-$weight-400: 400; // Regular
-$weight-500: 500; // Medium
-$weight-700: 700; // Bold
-$weight-900: 900; // Black
+$weight-100: 100 !default; // Thin
+$weight-300: 300 !default; // Light
+$weight-400: 400 !default; // Regular
+$weight-500: 500 !default; // Medium
+$weight-700: 700 !default; // Bold
+$weight-900: 900 !default; // Black
 
 // + font size
 $fs-small: 10px !default;
@@ -68,24 +68,22 @@ $radius-8: 8px;
 $radius-12: 12px;
 $radius-20: 20px;
 
-$side-nav: 220px;
-
 // + image
 $image-path: '../images/';
 $image-ico-path: $image-path + 'ico/';
 $image-ico-sprite01: $image-ico-path + 'ico_sprites_01.svg';
 $image-logo-path: $image-path + 'logo/';
 
-// = [Icon]
+// + icon
 $ico-sprite01-t-y: -10px;
 $ico-sprite01-b-y: -48px;
 $ico-text: '' !default;
 
-$result: 10;
-
 $ico-type01-t-i-bg-arrow: -10px $ico-sprite01-t-y;
 $ico-type01-t-i-map: -48px $ico-sprite01-t-y;
 $ico-type01-t-i-home: -86px $ico-sprite01-t-y;
+
+$result: 10;
 
 // + gap
 $gap-2: 2px !default;
@@ -104,69 +102,29 @@ $gap-28: 28px !default;
 $gap-40: 40px !default;
 $gap-60: 60px !default;
 
-/*
-	button
-*/
-$btn-size-normal: 8px 24px;
-
-// = input
-// + basic
-$input-border-color: $color-gray-4;
-$input-border-radius: $radius-8;
-
-$input-focus-border-color: $color-blue-1;
-$input-disabled-border-color: $color-gray-4;
-$input-disabled-bg-color: $color-gray-5;
-$input-disabled-font-color: $color-gray-2;
-$input-min-width: 120px;
-
-// $input-basic-lineheight: 22px;
-$input-basic-lineheight: 20px;
-
-// + detail
-$input-detail-border-color: $color-gray-5;
-
-// + check, radio
-$input-check-size: 18px;
-
-// + input-list
-$input-col-gap-h: $gap-20;
-$input-col-gap-v: $gap-10;
-$input-auto-w-col-gap-h: $gap-10;
-$input-auto-w-col-gap-v: $gap-10;
-
-// = Space
-
-// + article
-$per-title-article-gap: 12px;
-
-$tabFocus: 1px dashed $input-focus-color;
-
-// = Column
-$row-basic-gap-h: $gap-20;
-$col-basic-gap-h: $gap-10;
-$col-basic-gap-v: $gap-10;
-
-// = Per Page
-// + Main
-$main-gap: 14px;
-
-// = Scrollbar
+// + Scrollbar
 $scrollbar-color: $color-gray-5;
 $scrollbar-size: 10px;
 $scrollbar-bg-color: transparent;
 $scrollbar-border-color: transparent;
 
-// ui-mod(v0.1)
-// = Input
-$input-label-min-width01: 95px;
+// + button
+$btn-size-normal: 8px 24px;
 
-// = Per Page
-// + callcenter
-$callcenter-right-col-width: 40%;
-$callcenter-right-col-width02: 45%;
+//  + spacing
+$spacing-normal: 20px;
+$spacing-small: 10px;
+$spacing-xsmall: 5px;
+$spacing-inputgrp: 12px;
+$spacing-cardgrp: 12px;
 
-// = table
+// + layout
+
+$side-nav: 220px;
+$per-title-article-gap: 12px;
+$tabFocus: 1px dashed $input-focus-color;
+
+// + table
 $tbl-col-w-no: 60px;
 $tbl-col-w-date: 110px;
 $tbl-col-w-birthday: 110px;
@@ -176,6 +134,41 @@ $tbl-col-w-gender: 70px;
 $tbl-col-w-price: 120px;
 $tbl-col-w-link: 60px;
 
-// = checkbox
 $tbl-col-w-checkbox: 40px;
 $tbl-col-w-checkbox02: 30px;
+
+// 1= input
+// 2= basic
+$input-border-color: $color-gray-4;
+$input-border-radius: $radius-8;
+$input-focus-border-color: $color-blue-1;
+$input-disabled-border-color: $color-gray-4;
+$input-disabled-bg-color: $color-gray-5;
+$input-disabled-font-color: $color-gray-2;
+
+$input-min-width: 120px;
+
+// $input-basic-lineheight: 22px;
+$input-basic-lineheight: 20px;
+
+// 2= detail
+$input-detail-border-color: $color-gray-5;
+$input-detail-spacing-btm: 4px;
+
+// 2= input-list
+$input-col-gap-h: $spacing-normal;
+$input-col-gap-v: $spacing-small;
+
+// 2= check, radio
+$input-check-size: 18px;
+
+// 1= Per Page
+// 2= Main
+$main-gap: 14px;
+
+// 2= callcenter
+$callcenter-right-col-width: 40%;
+$callcenter-right-col-width02: 45%;
+
+// ui-mod(v0.1)
+$input-label-min-width01: 95px;

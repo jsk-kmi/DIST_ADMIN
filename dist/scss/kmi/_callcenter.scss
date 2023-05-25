@@ -82,6 +82,7 @@ type-horizontal 최상위 요소 부여
               }
               &.c-input-address-group,
               &.c-input-email-group {
+								flex:1 1 100%;
                 > [class^='col'] {
                   > .row {
                     margin-left: -10px;
@@ -411,6 +412,15 @@ type-horizontal 최상위 요소 부여
             min-width: 70px;
           }
         }
+      }
+    }
+  }
+
+  .label-input {
+    > label {
+      & ~ .c-input-badge-group {
+        margin-top: -8px;
+        min-height: 33px;
       }
     }
   }

@@ -42,6 +42,11 @@
   justify-content: space-between;
   padding: $modal-header-padding;
   border-bottom: $modal-header-border-width solid $modal-header-border-color;
+  position: relative;
+  padding: 12px 40px;
+  border: 0;
+  border-radius: 0;
+  background-color: $color-black-2;
 }
 
 .modal-title {
@@ -170,17 +175,6 @@
   }
 }
 
-//  + modal-header
-.modal-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  position: relative;
-  padding: 12px 40px;
-  border: 0;
-  border-radius: 0;
-}
-
 .c-modal-title-field {
   margin-right: 44px;
   .c-title {
@@ -203,9 +197,6 @@
 }
 
 // + modal header
-.modal-header {
-  background-color: $color-black-2;
-}
 .c-modal-title-field {
   height: 32px;
   overflow: hidden;
@@ -367,5 +358,12 @@
   padding: {
     top: 100px;
     bottom: 100px;
+  }
+}
+
+// temp style
+.c-textarea-article {
+  > .row {
+    @include rowGridSpacingNormal;
   }
 }

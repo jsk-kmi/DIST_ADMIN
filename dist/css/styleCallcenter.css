@@ -8686,9 +8686,6 @@ a.text-dark:hover, a.text-dark:focus {
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-/*
-	button
-*/
 html,
 body,
 div,
@@ -9009,231 +9006,508 @@ em {
 		font-style: normal;
 }
 
-/*
-	button
+/**
+type-horizontal 최상위 요소 부여
+
 */
-.buttons {
+#container > #sideNav ~ .content-wrapper {
+		padding-left: 220px;
+}
+#container .content-wrapper.type-callcenter {
+		padding-left: 0px;
+}
+#container .content-wrapper .contents {
+		padding: 2.142rem 2.142rem 2.857rem;
+}
+#container .content-wrapper .header ~ #container > .contents {
+		padding: 7.785rem 2.142rem 2.857rem;
+}
+
+#container .content-wrapper.type-callcenter .contents .c-panel ~ .c-panel {
+		margin-top: 20px;
+}
+#container .content-wrapper.type-callcenter .contents .c-article.input-list .row.inner {
+		margin-left: -10px;
+		margin-right: -10px;
+}
+#container .content-wrapper.type-callcenter .contents .c-article.input-list .row.inner.c-input-phone-group :not(.input-phone-01) {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 fit-content;
+		    -ms-flex: 0 0 fit-content;
+		        flex: 0 0 fit-content;
+}
+#container .content-wrapper.type-callcenter .contents .c-article.input-list .row.inner.c-input-phone-group :not(.input-phone-01) input {
+		-webkit-flex-basis: fit-content;
+		    -ms-flex-preferred-size: fit-content;
+		        flex-basis: fit-content;
+		min-width: 70px;
+}
+#container .content-wrapper.type-callcenter .contents .c-article.input-list .row.inner select {
+		width: 100px;
+}
+#container .content-wrapper.type-callcenter .contents .c-article.input-list .row.inner.c-input-address-group > [class^=col] > .row, #container .content-wrapper.type-callcenter .contents .c-article.input-list .row.inner.c-input-email-group > [class^=col] > .row {
+		margin-left: -10px;
+		margin-right: -10px;
+}
+#container .content-wrapper.type-callcenter .contents .c-article.input-list .row.inner.c-input-address-group .input-email-02 > .row, #container .content-wrapper.type-callcenter .contents .c-article.input-list .row.inner.c-input-email-group .input-email-02 > .row {
+		-webkit-flex-wrap: nowrap;
+		    -ms-flex-wrap: nowrap;
+		        flex-wrap: nowrap;
+}
+#container .content-wrapper.type-callcenter .contents .c-article.type02 .label-input label {
+		min-width: 80px;
+}
+#container .content-wrapper.type-callcenter .contents .c-article.type03 .col-3 {
+		max-width: 50%;
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 50%;
+		    -ms-flex: 0 0 50%;
+		        flex: 0 0 50%;
+}
+#container .content-wrapper.type-callcenter .contents .c-article.type03 .col-3 .c-input-mark {
+		width: 100%;
+}
+#container .content-wrapper.type-callcenter .contents .c-article.type03 .col-3 .c-input-mark input {
+		padding-right: 22px;
+}
+#container .content-wrapper.type-callcenter .contents .c-article.type03 .col-6 {
+		max-width: 100%;
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 100%;
+		    -ms-flex: 0 0 100%;
+		        flex: 0 0 100%;
+}
+#container .content-wrapper.type-callcenter .contents .c-article.type03 .col-6.input-email-01,
+#container .content-wrapper.type-callcenter .contents .c-article.type03 .col-6 .input-email-02 {
+		max-width: 50%;
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 50%;
+		    -ms-flex: 0 0 50%;
+		        flex: 0 0 50%;
+}
+#container .content-wrapper.type-callcenter .contents .c-article.type03 .col-6.input-email-02 .col {
+		-webkit-flex-basis: 100%;
+		    -ms-flex-preferred-size: 100%;
+		        flex-basis: 100%;
+}
+#container .content-wrapper.type-callcenter .contents .c-article.type03 .input-email-01:after {
+		bottom: initial;
+		right: 1px;
+}
+#container .content-wrapper.type-callcenter .contents .cost-dtl-list {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+}
+#container .content-wrapper.type-callcenter .contents .cost-dtl-list.type02 .col-8 {
+		max-width: 100%;
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 100%;
+		    -ms-flex: 0 0 100%;
+		        flex: 0 0 100%;
+}
+#container .content-wrapper.type-callcenter .contents .cost-dtl-list.type02 .col-8 .c-input-badge-group {
+		width: 100%;
+}
+#container .content-wrapper.type-callcenter .contents .cost-dtl-list.type02 .col-8 .c-input-badge-group .c-badge-detail {
+		padding-top: 10px;
+}
+#container .content-wrapper.type-callcenter .contents .cost-dtl-list.type02 .col-2 {
+		max-width: 50%;
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 50%;
+		    -ms-flex: 0 0 50%;
+		        flex: 0 0 50%;
+}
+#container .content-wrapper.type-callcenter .contents .cost-dtl-list.type02 .c-input-unit {
+		width: 100%;
+}
+#container .content-wrapper.type-callcenter > .header .contents {
+		padding: 7.785rem 2.142rem 2.857rem;
+}
+#container .content-wrapper.type-callcenter .content-wrapper > .header ~ #container .contents {
+		padding: 7.785rem 2.142rem 2.857rem;
+}
+#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .label-input label {
+		margin-bottom: 0;
+}
+#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .left-wrap {
+		width: 60%;
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 60%;
+		    -ms-flex: 0 0 60%;
+		        flex: 0 0 60%;
+		max-width: 60%;
+}
+#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .left-wrap .col-6 .c-input-phone-group .col:nth-of-type(2) {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 1 auto;
+		    -ms-flex: 0 1 auto;
+		        flex: 0 1 auto;
+}
+#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .left-wrap > .c-inner > .c-panel:first-of-type .row {
+		max-width: 100%;
+}
+#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .left-wrap > .c-inner > .c-panel:first-of-type [class^=col] {
+		padding-left: 10px;
+		padding-right: 10px;
+}
+#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .left-wrap > .c-inner > .c-panel:first-of-type .c-input-search input[type=text] {
+		width: 0;
+}
+#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap {
+		width: 40%;
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 40%;
+		    -ms-flex: 0 0 40%;
+		        flex: 0 0 40%;
+		max-width: 40%;
+}
+#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .buttons:first-of-type {
+		-webkit-box-pack: end;
+		-webkit-justify-content: flex-end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
+		margin-bottom: 22px;
+}
+#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .c-article.input-list.type03 .c-input-email-group {
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+}
+#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .c-article.input-list.type03 .c-input-email-group .col-6 {
+		max-width: initial;
+		padding-left: 10px;
+		padding-right: 10px;
+}
+#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .tab-cont .buttons {
+		margin-top: 20px;
+}
+#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .row.c-input-address-group {
+		-webkit-box-flex: 1;
+		-webkit-flex: 1 1 auto;
+		    -ms-flex: 1 1 auto;
+		        flex: 1 1 auto;
+}
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .c-input {
+		width: auto;
+}
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-03 .c-table.tbl-modrsv-selectchk tbody td {
+		white-space: nowrap;
+}
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .c-input-address-group [class^=col] {
+		-webkit-flex-basis: min-content;
+		    -ms-flex-preferred-size: min-content;
+		        flex-basis: min-content;
+		display: -webkit-inline-box;
+		display: -webkit-inline-flex;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 1 100px;
+		    -ms-flex: 0 1 100px;
+		        flex: 0 1 100px;
+		max-width: 200px;
+}
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .input-list .row {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 1 auto;
+		    -ms-flex: 0 1 auto;
+		        flex: 0 1 auto;
+		margin-left: -10px;
+		margin-right: -10px;
+}
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .c-rdochk label {
+		min-width: 60px;
+}
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .col-6 {
+		-webkit-flex-basis: auto;
+		    -ms-flex-preferred-size: auto;
+		        flex-basis: auto;
+}
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .label-txt,
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .label-input > label {
+		min-width: 120px;
+}
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list {
+		display: inline-block;
+		width: 100%;
+}
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list > .row .c-select {
+		width: auto;
+		min-width: none;
+}
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list > .row > .col-12 {
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+}
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list .label-input .c-label-txt,
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list .label-input label {
+		min-width: 120px;
+}
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list .c-input-phone-group .col .c-input {
+		width: 0;
+}
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list [class^=col] {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 1 auto;
+		    -ms-flex: 0 1 auto;
+		        flex: 0 1 auto;
+		padding-left: 10px;
+		padding-right: 10px;
+}
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list .c-input-address-group .row:nth-of-type(2) .c-input {
+		width: 300px;
+}
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .row.c-input-phone-group {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+}
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .row .input-addr-02 {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+}
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .row.c-input-email-group {
+		-webkit-box-pack: start;
+		-webkit-justify-content: flex-start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+}
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .row.c-input-email-group [class*=col] {
+		padding-left: 10px;
+		padding-right: 10px;
+}
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-07 .c-rdochk {
+		margin-right: 25px;
+}
+#container .content-wrapper.type-callcenter .c-layer-popup .c-input-phone-group :not(.input-phone-01) {
+		-webkit-box-flex: 1 !important;
+		-webkit-flex: 1 1 min-content !important;
+		    -ms-flex: 1 1 min-content !important;
+		        flex: 1 1 min-content !important;
+}
+#container .content-wrapper.type-callcenter .c-layer-popup .c-input-phone-group :not(.input-phone-01) input {
+		min-width: 70px;
+}
+#container .content-wrapper.type-callcenter .set-modrsv-tab .c-inner-field > .input-list,
+#container .content-wrapper.type-callcenter .set-modrsv-tab .c-title-field + .input-list {
+		padding-left: 10px;
+		padding-right: 10px;
+}
+#container .content-wrapper.type-callcenter .set-modrsv-tab .c-article.input-list > .row {
+		margin-left: -10px;
+		margin-right: -10px;
+}
+#container .content-wrapper.type-callcenter .set-modrsv-tab .c-article.input-list > .row > [class^=col] {
+		padding-left: 10px;
+		padding-right: 10px;
+}
+#container .content-wrapper .label-input > label ~ .c-input-badge-group {
+		margin-top: -8px;
+		min-height: 33px;
+}
+
+.content-wrapper.type-callcenter .contents > .c-panel .c-article.input-list > .row {
+		-webkit-flex-wrap: wrap;
+		    -ms-flex-wrap: wrap;
+		        flex-wrap: wrap;
+}
+.content-wrapper.type-callcenter .contents > .c-panel .c-article.input-list > .row .c-input {
+		width: auto;
+}
+.content-wrapper.type-callcenter .contents > .c-panel .c-article.input-list > .row > [class^=col] {
+		-webkit-box-flex: 0;
+		-webkit-flex: none;
+		    -ms-flex: none;
+		        flex: none;
+		max-width: 100%;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: row;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+}
+.content-wrapper.type-callcenter .contents > .c-panel .c-article.input-list > .row > [class^=col] > .row {
+		-webkit-box-flex: 1;
+		-webkit-flex: 1 0 auto;
+		    -ms-flex: 1 0 auto;
+		        flex: 1 0 auto;
+}
+.content-wrapper.type-callcenter .contents > .c-panel .c-article.input-list > .row > [class^=col] .c-input-address-group {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 1 fit-content;
+		    -ms-flex: 0 1 fit-content;
+		        flex: 0 1 fit-content;
+}
+.content-wrapper.type-callcenter .contents > .c-panel .c-article.input-list > .row > [class^=col] .c-input-address-group > .col {
+		-webkit-box-flex: 1;
+		-webkit-flex: 1 1 min-content;
+		    -ms-flex: 1 1 min-content;
+		        flex: 1 1 min-content;
+}
+.content-wrapper.type-callcenter .contents > .c-panel .c-article.input-list > .row > [class^=col] .c-input-address-group .c-btn {
+		padding: 10px;
+}
+.content-wrapper.type-callcenter .contents > .c-panel .c-article.input-list.type03 .c-input-unit {
+		width: 100%;
+}
+.content-wrapper.type-callcenter .contents > .c-panel .c-article.input-list.type03 > .row {
+		-webkit-box-flex: 1;
+		-webkit-flex: 1 1 100%;
+		    -ms-flex: 1 1 100%;
+		        flex: 1 1 100%;
+}
+.content-wrapper.type-callcenter .contents > .c-panel .c-article.input-list.type03 > .row .c-input {
+		width: 100%;
+}
+.content-wrapper.type-callcenter .contents > .c-panel .c-article.input-list:not(.type03) .c-input-email-group {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 1 auto;
+		    -ms-flex: 0 1 auto;
+		        flex: 0 1 auto;
+}
+.content-wrapper.type-callcenter .contents > .c-panel .row.inner.c-input-phone-group .c-btn, .content-wrapper.type-callcenter .contents > .c-panel .row.inner.c-input-email-group .c-btn, .content-wrapper.type-callcenter .contents > .c-panel .row.inner.c-input-address-group .c-btn {
+		min-width: 80px;
+}
+.content-wrapper.type-callcenter .contents > .c-panel .row.inner.c-input-phone-group select, .content-wrapper.type-callcenter .contents > .c-panel .row.inner.c-input-email-group select, .content-wrapper.type-callcenter .contents > .c-panel .row.inner.c-input-address-group select {
+		min-width: 0;
+}
+.content-wrapper.type-callcenter .contents > .c-panel .row .c-input-address-group .input-addr-01 input[type=text] {
+		min-width: 95px;
+}
+.content-wrapper.type-callcenter .contents > .c-panel .row.c-input-email-group select {
+		margin-left: 10px;
+		min-width: 120px;
+}
+.content-wrapper.type-callcenter .contents > .c-panel .row .c-input-group.range input[type=text] {
+		min-width: 0;
+}
+.content-wrapper.type-callcenter .contents > .c-panel .row input[type=text] {
+		min-width: 120px;
+}
+.content-wrapper.type-callcenter .contents > .c-panel .type03 .label-input label,
+.content-wrapper.type-callcenter .contents > .c-panel .type03 .label-input .c-label-txt {
+		min-width: 100px;
+}
+.content-wrapper.type-callcenter .contents > .c-panel .label-input label {
+		min-width: -webkit-fit-content;
+		min-width: -moz-fit-content;
+		min-width: fit-content;
+}
+.content-wrapper.type-callcenter .contents .input-list > .row {
+		-webkit-box-flex: 1;
+		-webkit-flex: 1 1 auto;
+		    -ms-flex: 1 1 auto;
+		        flex: 1 1 auto;
+}
+.content-wrapper.type-callcenter .contents .reservation-dtl-status-layout {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-flex: 1;
+		-webkit-flex: 1 1 100%;
+		    -ms-flex: 1 1 100%;
+		        flex: 1 1 100%;
+		margin-left: -10px;
+		margin-right: -10px;
+}
+.content-wrapper.type-callcenter .contents .reservation-dtl-status-layout .left-wrap,
+.content-wrapper.type-callcenter .contents .reservation-dtl-status-layout .right-wrap {
+		padding-left: 10px;
+		padding-right: 10px;
+}
+.content-wrapper.type-callcenter .contents .reservation-dtl-status-layout .c-input-unit input[type=text] {
+		padding-right: 18px;
+}
+.content-wrapper.type-callcenter .contents .reservation-dtl-status-layout .left-wrap .c-panel:first-of-type input[type=text] {
+		width: auto;
+		width: 0;
+}
+.content-wrapper.type-callcenter .contents .reservation-dtl-status-layout .left-wrap .c-panel:first-of-type .row label {
+		min-width: 60px;
+		margin-right: 10px;
+}
+.content-wrapper.type-callcenter .contents .cost-dtl-list.type02 .row [class*=col] {
+		width: 100%;
+		-webkit-box-flex: 1;
+		-webkit-flex: 1 1 100%;
+		    -ms-flex: 1 1 100%;
+		        flex: 1 1 100%;
+}
+.content-wrapper.type-callcenter .contents .cost-dtl-list.type02 .row [class*=col] .c-input {
+		width: 100%;
+}
+.content-wrapper.type-callcenter .c-layer-popup .c-article.input-list .row.inner {
+		margin-left: -10px;
+		margin-right: -10px;
+}
+.content-wrapper.type-callcenter .c-layer-popup .c-article.input-list .row.inner > [class^=col] {
+		padding-left: 10px;
+		padding-right: 10px;
+}
+
+.c-tbl-vertical-field.type02 table.tbl-examtarget-list th,
+.c-tbl-vertical-field.type02 table.tbl-examtarget-list td {
+		padding-left: 6px;
+		padding-right: 6px;
+}
+
+#tblExamtargetList02 th,
+#tblExamtargetList02 td {
+		min-width: 110px;
+		max-width: 110px;
+}
+#tblExamtargetList02 td:nth-child(2) {
+		max-width: 150px;
+}
+
+.modrsv-scroll .input-list .row > [class^=col] {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: row;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
 		display: -webkit-box;
 		display: -webkit-flex;
 		display: -ms-flexbox;
 		display: flex;
 }
 
-button.c-btn,
-a.c-btn,
-.c-btn {
-		padding: 9px 20px;
-		border-radius: 8px;
-		text-align: center;
-		color: #fff;
-		-webkit-transition: opacity 0.3s;
-		transition: opacity 0.3s;
-		border-radius: 8px;
-		background-color: #253981;
-		display: inline-block;
-		line-height: 20px;
-		vertical-align: top;
+@media screen and (max-width: 1660px) {
+		.content-wrapper.type-callcenter .reservation-dtl-status-layout .left-wrap {
+				width: 60%;
+				-webkit-box-flex: 0;
+				-webkit-flex: 0 0 60%;
+				    -ms-flex: 0 0 60%;
+				        flex: 0 0 60%;
+				max-width: 60%;
+		}
+		.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap {
+				width: 40%;
+				-webkit-box-flex: 0;
+				-webkit-flex: 0 0 40%;
+				    -ms-flex: 0 0 40%;
+				        flex: 0 0 40%;
+				max-width: 40%;
+		}
 }
-button.c-btn > span,
-a.c-btn > span,
-.c-btn > span {
-		position: relative;
-		text-align: center;
-}
-button.c-btn + .c-btn,
-a.c-btn + .c-btn,
-.c-btn + .c-btn {
-		margin-left: 12px;
-}
-button.c-btn:not(:disabled):hover,
-a.c-btn:not(:disabled):hover,
-.c-btn:not(:disabled):hover {
-		opacity: 0.8;
-}
-button.c-btn.is-outline-blue-1,
-a.c-btn.is-outline-blue-1,
-.c-btn.is-outline-blue-1 {
-		border-width: 1px;
-		border-style: solid;
-		background-color: transparent;
-		border-color: #2f7ad3;
-		color: #2f7ad3;
-}
-button.c-btn.is-outline-blue-1:not(:disabled):hover,
-a.c-btn.is-outline-blue-1:not(:disabled):hover,
-.c-btn.is-outline-blue-1:not(:disabled):hover {
-		opacity: 0.4;
-}
-button.c-btn.is-outline-navy-1,
-a.c-btn.is-outline-navy-1,
-.c-btn.is-outline-navy-1 {
-		border-width: 1px;
-		border-style: solid;
-		background-color: transparent;
-		border-color: #253981;
-		color: #253981;
-}
-button.c-btn.is-outline-navy-1:not(:disabled):hover,
-a.c-btn.is-outline-navy-1:not(:disabled):hover,
-.c-btn.is-outline-navy-1:not(:disabled):hover {
-		opacity: 0.4;
-}
-button.c-btn.is-outline-gray-1,
-a.c-btn.is-outline-gray-1,
-.c-btn.is-outline-gray-1 {
-		border-width: 1px;
-		border-style: solid;
-		background-color: transparent;
-		border-color: #494949;
-		color: #494949;
-}
-button.c-btn.is-outline-gray-1:not(:disabled):hover,
-a.c-btn.is-outline-gray-1:not(:disabled):hover,
-.c-btn.is-outline-gray-1:not(:disabled):hover {
-		opacity: 0.4;
-}
-button.c-btn.is-outline-gray-2,
-a.c-btn.is-outline-gray-2,
-.c-btn.is-outline-gray-2 {
-		border-width: 1px;
-		border-style: solid;
-		background-color: transparent;
-		border-color: #777776;
-		color: #777776;
-}
-button.c-btn.is-outline-gray-2:not(:disabled):hover,
-a.c-btn.is-outline-gray-2:not(:disabled):hover,
-.c-btn.is-outline-gray-2:not(:disabled):hover {
-		opacity: 0.4;
-}
-button.c-btn.is-outline-gray-10,
-a.c-btn.is-outline-gray-10,
-.c-btn.is-outline-gray-10 {
-		border-width: 1px;
-		border-style: solid;
-		background-color: transparent;
-		border-color: #c0c4d1;
-		color: #c0c4d1;
-}
-button.c-btn.is-outline-gray-10:not(:disabled):hover,
-a.c-btn.is-outline-gray-10:not(:disabled):hover,
-.c-btn.is-outline-gray-10:not(:disabled):hover {
-		opacity: 0.4;
-}
-button.c-btn.is-outline-gray-3,
-a.c-btn.is-outline-gray-3,
-.c-btn.is-outline-gray-3 {
-		border-width: 1px;
-		border-style: solid;
-		background-color: transparent;
-		border-color: #a4a4a4;
-		color: #a4a4a4;
-}
-button.c-btn.is-outline-gray-3:not(:disabled):hover,
-a.c-btn.is-outline-gray-3:not(:disabled):hover,
-.c-btn.is-outline-gray-3:not(:disabled):hover {
-		opacity: 0.4;
-}
-button.c-btn.is-outline-green-1,
-a.c-btn.is-outline-green-1,
-.c-btn.is-outline-green-1 {
-		border-width: 1px;
-		border-style: solid;
-		background-color: transparent;
-		border-color: #206f44;
-		color: #206f44;
-}
-button.c-btn.is-outline-green-1:not(:disabled):hover,
-a.c-btn.is-outline-green-1:not(:disabled):hover,
-.c-btn.is-outline-green-1:not(:disabled):hover {
-		opacity: 0.4;
-}
-button.c-btn.is-outline-blue-2,
-a.c-btn.is-outline-blue-2,
-.c-btn.is-outline-blue-2 {
-		border-width: 1px;
-		border-style: solid;
-		background-color: transparent;
-		border-color: #66acff;
-		color: #66acff;
-}
-button.c-btn.is-outline-blue-2:not(:disabled):hover,
-a.c-btn.is-outline-blue-2:not(:disabled):hover,
-.c-btn.is-outline-blue-2:not(:disabled):hover {
-		opacity: 0.4;
-}
-button.c-btn.is-outline-blue-3,
-a.c-btn.is-outline-blue-3,
-.c-btn.is-outline-blue-3 {
-		border-width: 1px;
-		border-style: solid;
-		background-color: transparent;
-		border-color: #f9f8ff;
-		color: #f9f8ff;
-}
-button.c-btn.is-outline-blue-3:not(:disabled):hover,
-a.c-btn.is-outline-blue-3:not(:disabled):hover,
-.c-btn.is-outline-blue-3:not(:disabled):hover {
-		opacity: 0.4;
-}
-button.c-btn.is-outline-blue-4,
-a.c-btn.is-outline-blue-4,
-.c-btn.is-outline-blue-4 {
-		border-width: 1px;
-		border-style: solid;
-		background-color: transparent;
-		border-color: #8d8db9;
-		color: #8d8db9;
-}
-button.c-btn.is-outline-blue-4:not(:disabled):hover,
-a.c-btn.is-outline-blue-4:not(:disabled):hover,
-.c-btn.is-outline-blue-4:not(:disabled):hover {
-		opacity: 0.4;
-}
-button.c-btn.is-outline-blue-1,
-a.c-btn.is-outline-blue-1,
-.c-btn.is-outline-blue-1 {
-		font-weight: 500;
-}
-button.c-btn.is-outline-blue-1.type02,
-a.c-btn.is-outline-blue-1.type02,
-.c-btn.is-outline-blue-1.type02 {
-		background-color: #f5f5f9;
-}
-
-a.c-btn:disabled,
-button.c-btn:disabled {
-		background-color: #fff;
-		border-color: #d2d2d1;
-		color: #d2d2d1;
-}
-a.c-btn:disabled:hover,
-button.c-btn:disabled:hover {
-		cursor: no-drop;
-}
-
-.c-btn-refresh {
-		font-size: 0;
-		width: 38px;
-		height: 38px;
-		background-color: #fff;
-		border-radius: 8px;
-		border: 1px solid #d2d2d1;
-}
-.c-btn-refresh > span {
-		overflow: hidden;
-		text-indent: 100%;
-		white-space: nowrap;
-		background: url("../images/ico/ico_refresh.svg");
-		width: 16px;
-		height: 16px;
-		display: inline-block;
-}
-
-.c-btn-inquiry {
-		background-color: #253981;
-}
-
 .ui-widget {
 		font-size: 14px;
 		font-weight: 300;
@@ -11400,6 +11674,11 @@ table.dataTable.no-footer {
 		        justify-content: space-between;
 		padding: 1rem 1rem;
 		border-bottom: 1px solid #dee2e6;
+		position: relative;
+		padding: 12px 40px;
+		border: 0;
+		border-radius: 0;
+		background-color: #222225;
 }
 
 .modal-title {
@@ -11556,25 +11835,6 @@ table.dataTable.no-footer {
 		margin-right: -12px;
 }
 
-.modal-header {
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-align: start;
-		-webkit-align-items: flex-start;
-		    -ms-flex-align: start;
-		        align-items: flex-start;
-		-webkit-box-pack: justify;
-		-webkit-justify-content: space-between;
-		    -ms-flex-pack: justify;
-		        justify-content: space-between;
-		position: relative;
-		padding: 12px 40px;
-		border: 0;
-		border-radius: 0;
-}
-
 .c-modal-title-field {
 		margin-right: 44px;
 }
@@ -11596,10 +11856,6 @@ table.dataTable.no-footer {
 		background: url("../images/ico//ico_del_02.svg") center/32px no-repeat;
 		width: 32px;
 		height: 32px;
-}
-
-.modal-header {
-		background-color: #222225;
 }
 
 .c-modal-title-field {
@@ -11728,6 +11984,15 @@ table.dataTable.no-footer {
 		max-height: calc(100% - 200px);
 		padding-top: 100px;
 		padding-bottom: 100px;
+}
+
+.c-textarea-article > .row {
+		margin-left: -20px;
+		margin-right: -20px;
+}
+.c-textarea-article > .row > [class^=col] {
+		padding-left: 20px;
+		padding-right: 20px;
 }
 
 /*
@@ -12423,7 +12688,6 @@ textarea::placeholder {
 
 input[type=text][readonly=readonly],
 input[type=password][readonly=readonly] {
-		line-height: 20px;
 		color: #494949;
 		border: 0;
 		border-bottom: 1px solid #e9e9e9;
@@ -12476,8 +12740,8 @@ textarea::-webkit-scrollbar-button:start:decrement, textarea::-webkit-scrollbar-
 
 textarea[readonly=readonly] {
 		line-height: 20px;
-		color: #1c1c1b;
-		border: 0;
+		background-color: #fcfcfc;
+		border-color: #e9e9e9;
 		min-height: initial;
 		height: 100%;
 		overflow: auto;
@@ -12486,6 +12750,7 @@ textarea[readonly=readonly]:focus {
 		-webkit-transition: all 0.5s;
 		transition: all 0.5s;
 		-ms-transition: all 0.5s;
+		outline: 0;
 		border-color: #2f7ad3;
 		border: 1px solid #e9e9e9;
 		box-shadow: none;
@@ -12550,6 +12815,7 @@ input[type=text]:focus, input[type=password]:focus {
 		-webkit-transition: all 0.5s;
 		transition: all 0.5s;
 		-ms-transition: all 0.5s;
+		outline: 0;
 		border-color: #2f7ad3;
 		transition: all 0.5s;
 }
@@ -12705,6 +12971,7 @@ label.title-md {
 		-webkit-transition: all 0.5s;
 		transition: all 0.5s;
 		-ms-transition: all 0.5s;
+		outline: 0;
 		border-color: #2f7ad3;
 }
 .c-select select::ms-expand {
@@ -12795,10 +13062,10 @@ input[type=text].search-input:focus {
 		-webkit-transition: all 0.5s;
 		transition: all 0.5s;
 		-ms-transition: all 0.5s;
+		outline: 0;
 		border-color: #2f7ad3;
 }
 .c-input-search input[type=text][readonly=readonly] {
-		line-height: 20px;
 		color: #494949;
 		border: 0;
 		border-bottom: 1px solid #e9e9e9;
@@ -13243,10 +13510,10 @@ input[type=text].search-input:focus {
 		-webkit-transition: all 0.5s;
 		transition: all 0.5s;
 		-ms-transition: all 0.5s;
+		outline: 0;
 		border-color: #2f7ad3;
 }
 .c-input-date[readonly=readonly] {
-		line-height: 20px;
 		color: #494949;
 		border: 0;
 		border-bottom: 1px solid #e9e9e9;
@@ -13316,6 +13583,14 @@ input[type=text] + span {
 .c-txtarea-field {
 		width: 100%;
 }
+.c-txtarea-field > .row {
+		margin-left: -20px;
+		margin-right: -20px;
+}
+.c-txtarea-field > .row > [class^=col] {
+		padding-left: 20px;
+		padding-right: 20px;
+}
 
 textarea,
 .c-txt-area {
@@ -13372,6 +13647,7 @@ textarea:focus,
 		-webkit-transition: all 0.5s;
 		transition: all 0.5s;
 		-ms-transition: all 0.5s;
+		outline: 0;
 		border-color: #2f7ad3;
 }
 textarea.type02[readonly=readonly],
@@ -13421,6 +13697,7 @@ textarea.ta-r-only,
 		-webkit-transition: all 0.5s;
 		transition: all 0.5s;
 		-ms-transition: all 0.5s;
+		outline: 0;
 		border-color: #2f7ad3;
 }
 .c-input-file-group .c-file-label {
@@ -13703,7 +13980,6 @@ textarea.ta-r-only,
 }
 
 .c-input-search.detail-input input[type=text] {
-		line-height: 20px;
 		color: #494949;
 		border: 0;
 		border-bottom: 1px solid #e9e9e9;
@@ -13793,11 +14069,6 @@ textarea.ta-r-only,
 		color: #777776;
 }
 
-.label-input > label ~ .c-input-badge-group {
-		margin-top: -8px;
-		min-height: 33px;
-}
-
 .contents.type-horizontal > .c-panel .input-list .row {
 		margin-left: -20px;
 		margin-right: -20px;
@@ -13874,6 +14145,12 @@ type-horizontal 최상위 요소 부여
 }
 #container .content-wrapper.type-callcenter .contents .c-article.input-list .row.inner select {
 		width: 100px;
+}
+#container .content-wrapper.type-callcenter .contents .c-article.input-list .row.inner.c-input-address-group, #container .content-wrapper.type-callcenter .contents .c-article.input-list .row.inner.c-input-email-group {
+		-webkit-box-flex: 1;
+		-webkit-flex: 1 1 100%;
+		    -ms-flex: 1 1 100%;
+		        flex: 1 1 100%;
 }
 #container .content-wrapper.type-callcenter .contents .c-article.input-list .row.inner.c-input-address-group > [class^=col] > .row, #container .content-wrapper.type-callcenter .contents .c-article.input-list .row.inner.c-input-email-group > [class^=col] > .row {
 		margin-left: -10px;
@@ -14137,6 +14414,10 @@ type-horizontal 최상위 요소 부여
 }
 #container .content-wrapper.type-callcenter .c-layer-popup .c-input-phone-group :not(.input-phone-01) input {
 		min-width: 70px;
+}
+#container .content-wrapper .label-input > label ~ .c-input-badge-group {
+		margin-top: -8px;
+		min-height: 33px;
 }
 
 .content-wrapper.type-callcenter .contents > .c-panel .c-article.input-list > .row {

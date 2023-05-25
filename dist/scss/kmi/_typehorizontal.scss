@@ -1,5 +1,6 @@
 //= 수평 배치시 모든 스타일
 .contents {
+  // + 추가작업
   &.type-horizontal {
     & > .c-panel {
       .input-list {
@@ -17,8 +18,8 @@
           }
           > [class*='col-'] {
             padding: {
-              left: $input-auto-w-col-gap-h;
-              right: $input-auto-w-col-gap-h;
+              left: $spacing-small;
+              right: $spacing-small;
             }
             display: flex;
             // justify-content: space-between;
@@ -39,7 +40,6 @@
         &.input-list {
           display: flex;
           flex-wrap: wrap;
-
         }
         // # 230516
         // + textarea
@@ -53,5 +53,12 @@
         // # // 230516
       }
     }
+
+    // = [add] 0522
+    // = [add] // 0522
   }
+
+  // + //  추가작업
 }
+
+//

@@ -978,6 +978,9 @@ input[type='text'] {
 .c-txtarea-field {
   // height: 100%;
   width: 100%;
+  > .row {
+    @include rowGridSpacingNormal;
+  }
 }
 textarea,
 .c-txt-area {
@@ -1047,7 +1050,7 @@ textarea,
     @include formFocus;
   }
   .c-file-label {
-    @include input;
+    @include inputBasic;
     margin-bottom: 0;
     position: absolute;
     top: 0;
@@ -1406,15 +1409,6 @@ textarea,
           color: $color-gray-2;
         }
       }
-    }
-  }
-}
-
-.label-input {
-  > label {
-    & ~ .c-input-badge-group {
-      margin-top: -8px;
-      min-height: 33px;
     }
   }
 }

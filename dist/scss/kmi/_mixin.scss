@@ -37,7 +37,7 @@
   clear: both;
 }
 
-@mixin position($x, $y) {
+@mixin position($x: null, $y: null) {
   position: absolute;
   left: $x;
   top: $y;
@@ -107,7 +107,7 @@
 }
 
 // = Form
-@mixin input {
+@mixin inputBasic {
   line-height: $input-basic-lineheight;
   color: $color-gray-3;
   border: 1px solid $input-border-color;
@@ -117,6 +117,8 @@
 @mixin formFocus {
   transition: all 0.5s;
   -ms-transition: all 0.5s;
+
+  outline: 0;
   border-color: $input-focus-border-color;
   // box-shadow: 0 2px 2px 0 rgba(47, 122, 211, 0.25);
 }
@@ -124,7 +126,6 @@
   border-color: $input-focus-border-color;
 }
 @mixin inputDetail {
-  line-height: $input-basic-lineheight;
   color: $color-gray-1;
   border: 0;
   border-bottom: 1px solid $input-detail-border-color;
@@ -135,9 +136,8 @@
 
 @mixin txtareaDetail {
   line-height: $input-basic-lineheight;
-  color: $color-black-1;
-  // background-color: $color-white-1;
-  border: 0;
+  background-color: $color-white-2;
+  border-color: $color-gray-5;
 }
 
 @mixin inputDetailFocus {
@@ -368,6 +368,78 @@
   }
   line-height: #{$calc-line-height};
   letter-spacing: $letter-spacing;
+}
+
+// = Spacing
+
+@mixin rowGridSpacing($gap) {
+  margin: {
+    left: -$gap;
+    right: -$gap;
+  }
+  > [class^='col'] {
+    padding: {
+      left: $gap;
+      right: $gap;
+    }
+  }
+}
+
+@mixin rowGridSpacingNormal {
+  @include rowGridSpacing($spacing-normal); //20
+}
+@mixin rowGridSpacingSmall {
+  @include rowGridSpacing($spacing-small); // 10
+}
+// related input  group
+@mixin spacingInputGrp {
+  @include rowGridSpacing($spacing-inputgrp); // 12
+}
+
+// c-card-article
+@mixin rowGridSpacingCardArticle {
+  @include rowGridSpacing($spacing-cardgrp); // 12
+}
+
+// +++++++
+@mixin colOuterHSpacingNormal {
+  margin: {
+    left: -20px;
+    right: -20px;
+  }
+}
+@mixin colInnerHSpacingNormal {
+  padding: {
+    left: 20px;
+    right: 20px;
+  }
+}
+@mixin colInnerVSpacingNormal {
+  padding: {
+    top: 20px;
+    bottom: 20px;
+  }
+}
+
+@mixin colOuterHSpacingSmall {
+  margin: {
+    left: -10px;
+    right: -10px;
+  }
+}
+
+@mixin colInnerHSpacingSmall {
+  padding: {
+    left: 10px;
+    right: 10px;
+  }
+}
+
+@mixin colInnerVSpacingSmall {
+  padding: {
+    top: 10px;
+    bottom: 10px;
+  }
 }
 
 // = Font
