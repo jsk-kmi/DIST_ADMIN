@@ -1,933 +1,109 @@
-/**
-type-horizontal 최상위 요소 부여
-
+/*
+	button
 */
+.buttons {
+  display: flex;
+}
 
-// = [add] Improve UI (v0.1)
+button.c-btn,
+a.c-btn,
+.c-btn {
+  padding: 9px 20px;
+  border-radius: $radius-8;
+  text-align: center;
+  color: $color-white-1;
+  transition: opacity 0.3s;
+  border-radius: $radius-8;
+  background-color: $color-navy-1;
+  display: inline-block;
+  line-height: 20px;
+  vertical-align: top;
+  cursor: pointer;
 
-// + 메인
-// .main-row {
-//   .col {
-//     display: block;
-//   }
-//   &.col-full-height {
-//     .col {
-//       align-items: initial;
-//     }
-//     .col-6 {
-//       align-items: initial;
-//     }
-//   }
-// }
-// ================================ 콜센터 페이지 화면  ui 개선 작업 (Only Call Center)
-
-// = Type Horizontal
-
-// = callCenter Only Control
-
-// = Layout
-#container {
-  // + sideNav
-  > #sideNav {
-    ~ .content-wrapper {
-      padding-left: 220px;
+  > span {
+    position: relative;
+    text-align: center;
+  }
+  + .c-btn {
+    margin: {
+      left: $gap-12;
     }
   }
 
-  // + contents
-  .content-wrapper {
-    &.type-callcenter {
-      // # 230517
-      padding-left: 0px;
+  &:not(:disabled) {
+    &:hover {
+      opacity: 0.8;
     }
+  }
 
-    .contents {
-      padding: 2.142rem 2.142rem 2.857rem;
-    }
+  // + outline btn
+  $btn-outline: (
+    blue-1: $color-blue-1,
+    navy-1: $color-navy-1,
+    gray-1: $color-gray-1,
+    gray-2: $color-gray-2,
+    gray-10: $color-gray-10,
+    gray-3: $color-gray-3,
+    green-1: $color-green-1,
+    blue-2: $color-blue-2,
+    blue-3: $color-blue-3,
+    blue-4: $color-blue-4,
+  );
+  @each $class, $line in $btn-outline {
+    &.is-outline-#{$class} {
+      border-width: 1px;
+      border-style: solid;
+      background-color: transparent;
+      border-color: $line;
+      color: $line;
 
-    // + 개발화면 소스 대응
-    .header ~ #container > .contents {
-      padding: 7.785rem 2.142rem 2.857rem;
+      &:not(:disabled) {
+        &:hover {
+          opacity: 0.4;
+        }
+      }
     }
-    // + // 개발화면 소스 대응
+  }
+
+  &.is-outline-blue-1 {
+    font-weight: 500;
+    &.type02 {
+      background-color: $color-gray-9;
+    }
   }
 }
 
-#container .content-wrapper {
-  &.type-callcenter {
-    // # 230517
-    .contents {
-      .c-panel ~ .c-panel {
-        margin-top: 20px;
-      }
-
-      .c-article {
-        &.input-list {
-          .row {
-            &.inner {
-              margin-left: -10px;
-              margin-right: -10px;
-              &.c-input-phone-group {
-                :not(.input-phone-01) {
-                  //flex-basis: max-content;
-                  flex: 0 0 fit-content;
-                  input {
-                    flex-basis: fit-content;
-                    min-width: 70px;
-                  }
-                }
-              }
-
-              select {
-                width: 100px;
-              }
-              &.c-input-address-group,
-              &.c-input-email-group {
-                > [class^='col'] {
-                  > .row {
-                    margin-left: -10px;
-                    margin-right: -10px;
-                  }
-                }
-                .input-email-02 {
-                  > .row {
-                    flex-wrap: nowrap;
-                  }
-                }
-              }
-            }
-          }
-        }
-
-        &.type02 {
-          .label-input {
-            label {
-              min-width: 80px;
-            }
-          }
-        }
-
-        .left-wrap {
-        }
-
-        // + type03 대상자 정보
-        &.type03 {
-          .col-3 {
-            max-width: 50%;
-            flex: 0 0 50%;
-            .c-input-mark {
-              width: 100%;
-              input {
-                padding-right: 22px;
-              }
-            }
-          }
-          .col-6 {
-            max-width: 100%;
-            flex: 0 0 100%;
-            &.input-email-01,
-            .input-email-02 {
-              max-width: 50%;
-              flex: 0 0 50%;
-            }
-            // # 230517
-            &.input-email-02 {
-              .col {
-                flex-basis: 100%;
-              }
-            }
-          }
-
-          .input-email-01 {
-            &:after {
-              bottom: initial;
-              right: 01px;
-            }
-          }
-        }
-      }
-
-      .cost-dtl-list {
-        display: flex;
-        flex-direction: column;
-
-        // + type02 비용 내역
-        &.type02 {
-          .col-8 {
-            max-width: 100%;
-            flex: 0 0 100%;
-            .c-input-badge-group {
-              width: 100%;
-              .c-badge-detail {
-                padding-top: 10px;
-              }
-            }
-          }
-          .col-2 {
-            max-width: 50%;
-            flex: 0 0 50%;
-          }
-          .c-input-unit {
-            width: 100%;
-          }
-        }
-      }
-    }
-
-    // # 230517
-    > .header {
-      .contents {
-        padding: 7.785rem 2.142rem 2.857rem;
-      }
-    }
-
-    // 개발반영 스타일
-    .content-wrapper > .header ~ #container .contents {
-      padding: 7.785rem 2.142rem 2.857rem;
-    }
-
-    .reservation-dtl-status-layout {
-      .label-input {
-        label {
-          margin-bottom: 0;
-        }
-      }
-      .left-wrap {
-        width: calc(100% - $callcenter-right-col-width);
-        flex: 0 0 calc(100% - $callcenter-right-col-width);
-        max-width: calc(100% - $callcenter-right-col-width);
-
-        .col-6 {
-          // flex-basis: 50%;
-          .c-input-phone-group {
-            .col:nth-of-type(2) {
-              flex: 0 1 auto;
-            }
-          }
-        }
-
-        // .c-panel:first-of-type {
-        //   input[type='text'] {
-        //     width: 0;
-        //   }
-        // }
-
-        // # 230517
-        > .c-inner {
-          > .c-panel:first-of-type {
-            .row {
-              max-width: 100%;
-            }
-            [class^='col'] {
-              padding: {
-                left: 10px;
-                right: 10px;
-              }
-              //   margin: {
-              //     left: -10px;
-              //     right: -10px;
-              //   }
-            }
-            .c-input-search {
-              input[type='text'] {
-                width: 0;
-              }
-            }
-          }
-        }
-      }
-      .right-wrap {
-        width: $callcenter-right-col-width;
-        flex: 0 0 $callcenter-right-col-width;
-        max-width: $callcenter-right-col-width;
-        .buttons:first-of-type {
-          justify-content: flex-end;
-          margin-bottom: 22px;
-        }
-        .c-article.input-list {
-          &.type03 {
-            .c-input-email-group {
-              align-items: center;
-              // # 230522
-              .col-6 {
-                max-width: initial;
-                padding-left: 10px;
-                padding-right: 10px;
-              }
-            }
-          }
-        }
-        // # 230522
-        .tab-cont {
-          .buttons {
-            margin-top: 20px;
-          }
-        }
-        .row {
-          &.c-input-address-group {
-            flex: 1 1 auto;
-          }
-        }
-      }
-    }
-
-    // + 예약 변경 설정
-    .mod-rsv-setting-field {
-      .c-input {
-        width: auto;
-        // width: 0;
-      }
-
-      .set-modrsv-tab.tab-03 {
-        .c-table.tbl-modrsv-selectchk {
-          tbody {
-            td {
-              white-space: nowrap;
-            }
-          }
-        }
-      }
-      .c-input-address-group {
-        [class^='col'] {
-          flex-basis: min-content;
-          display: inline-flex;
-          flex: 0 1 100px;
-          max-width: 200px;
-        }
-      }
-
-      .set-modrsv-tab.tab-05 {
-        .input-list .row {
-          flex: 0 1 auto;
-          margin: {
-            left: -10px;
-            right: -10px;
-          }
-        }
-        .c-rdochk {
-          label {
-            min-width: 60px;
-          }
-        }
-        .col-6 {
-          flex-basis: auto;
-        }
-
-        .label-txt,
-        .label-input > label {
-          min-width: 120px;
-        }
-      }
-
-      // + tab-06
-      .set-modrsv-tab.tab-06 {
-        .c-article.input-list {
-          display: inline-block;
-          width: 100%;
-          > .row {
-            // display: block;
-            .c-select {
-              width: auto;
-              min-width: none;
-            }
-            > .col-12 {
-              width: 100%;
-              padding: {
-                left: 10px;
-                right: 10px;
-              }
-            }
-          }
-
-          .label-input {
-            .c-label-txt,
-            label {
-              min-width: 120px;
-            }
-          }
-          .c-input-phone-group {
-            .col {
-              .c-input {
-                width: 0;
-              }
-            }
-          }
-          [class^='col'] {
-            flex: 0 1 auto;
-            padding-left: 10px;
-            padding-right: 10px;
-          }
-          .c-input-address-group {
-            .row:nth-of-type(2) {
-              .c-input {
-                width: 300px;
-              }
-            }
-          }
-        }
-        .row {
-          &.c-input-phone-group {
-            flex: 0 0 auto;
-          }
-          .input-addr-02 {
-            flex: 0 0 auto;
-          }
-
-          &.c-input-email-group {
-            // flex: 0 1 auto;
-            justify-content: flex-start;
-            [class*='col'] {
-              padding: {
-                left: 10px;
-                right: 10px;
-              }
-            }
-            // .input-email-02 {
-            //   flex-basis: 65%;
-            // }
-          }
-        }
-      }
-
-      .set-modrsv-tab.tab-07 {
-        .c-rdochk {
-          margin-right: 25px;
-        }
-      }
-    }
-
-    .c-layer-popup {
-      .c-input-phone-group {
-        :not(.input-phone-01) {
-          //flex-basis: max-content;
-          flex: 1 1 min-content !important;
-          input {
-            min-width: 70px;
-          }
-        }
-      }
-    }
-
-    .set-modrsv-tab {
-      .c-inner-field > .input-list,
-      .c-title-field + .input-list {
-        @include colInnerHSpacingSmall;
-      }
-      .c-article {
-        &.input-list {
-          & > .row {
-            @include rowGridSpacingSmall;
-          }
-        }
-      }
-    }
-  }
-
-  .label-input {
-    > label {
-      & ~ .c-input-badge-group {
-        margin-top: -8px;
-        min-height: 33px;
+a,
+button {
+  &.c-btn {
+    &:disabled {
+      background-color: $color-white-1;
+      border-color: $color-gray-4;
+      color: $color-gray-4;
+      &:hover {
+        cursor: no-drop;
       }
     }
   }
 }
 
-// ==== [add] Improve UI (v0.1)
-
-// = 콜센터
-.content-wrapper {
-  &.type-callcenter {
-    .contents {
-      // ! 콜센터 페이지 전용 (팝업제외 위해 c_panel 클래스 상속통해  제어 필요) = 콜센터 전용(exclude popup) 스타일 부여
-      // + inner c-panel
-      & > .c-panel {
-        .c-article.input-list {
-          > .row {
-            // display: inline-flex;
-            flex-wrap: wrap;
-            // flex: none;
-            .c-input {
-              width: auto;
-            }
-
-            & > [class^='col'] {
-              flex: none;
-              max-width: 100%;
-              flex-direction: row;
-              align-items: center;
-
-              > .row {
-                flex: 1 0 auto;
-              }
-
-              .c-input-address-group {
-                flex: 0 1 fit-content;
-
-                > .col {
-                  flex: 1 1 min-content;
-                }
-                .c-btn {
-                  padding: 10px;
-                }
-              }
-            }
-          }
-          &.type03 {
-            .c-input-unit {
-              width: 100%;
-            }
-            > .row {
-              flex: 1 1 100%;
-              .c-input {
-                width: 100%;
-              }
-            }
-          }
-          &:not(.type03) {
-            .c-input-email-group {
-              flex: 0 1 auto;
-              .c-select {
-                //margin-left: 40px;
-              }
-            }
-          }
-        }
-        // = callcenter min-width List
-
-        .row {
-          &.inner {
-            &.c-input-phone-group,
-            &.c-input-email-group,
-            &.c-input-address-group {
-              .c-btn {
-                min-width: 80px;
-              }
-              select {
-                min-width: 0;
-              }
-            }
-          }
-          .c-input-address-group {
-            .input-addr-01 {
-              input[type='text'] {
-                min-width: 95px;
-              }
-            }
-          }
-          //+ email
-          &.c-input-email-group {
-            select {
-              margin-left: 10px;
-              min-width: $input-min-width;
-            }
-          }
-          // + range
-          .c-input-group.range {
-            input[type='text'] {
-              min-width: 0;
-            }
-          }
-          //+ input
-          input[type='text'] {
-            min-width: 120px;
-            //width: 0;
-          }
-        }
-
-        .type03 {
-          .label-input {
-            label,
-            .c-label-txt {
-              min-width: 100px;
-            }
-          }
-        }
-
-        // + label
-        .label-input {
-          label {
-            min-width: fit-content;
-          }
-        }
-
-        // = callcenter min-width List
-      }
-      // + // inner c-panel
-      // ! 콜센터 페이지 전용 (팝업제외 위해 c_panel 클래스 상속통해  제어 필요) = 콜센터 전용(exclude popup) 스타일 부여
-
-      .input-list {
-        // margin: {
-        //   left: -$input-col-gap-h;
-        //   right: -$input-col-gap-h;
-        // }
-        & > .row {
-          flex: 1 1 auto;
-        }
-        padding: {
-        }
-        // [class*='col'] {
-        //   padding: {
-        //     top: $input-col-gap-v;
-        //     bottom: $input-col-gap-v;
-        //   }
-        // }
-      }
-
-      // + 예약 진행 현황
-      .reservation-dtl-status-layout {
-        $gap: 10px;
-        display: flex;
-        flex: 1 1 100%;
-        margin: {
-          left: -$gap;
-          right: -$gap;
-        }
-        .left-wrap,
-        .right-wrap {
-          padding: {
-            left: $gap;
-            right: $gap;
-          }
-        }
-
-        // .input-list {
-        //   .row {
-        //     margin: {
-        //       left: -8px;
-        //       right: -8px;
-        //     }
-        //     > [class*='col'] {
-        //       padding: {
-        //         left: 8px;
-        //         right: 8px;
-        //       }
-        //     }
-        //   }
-        // }
-        .c-input-unit {
-          input[type='text'] {
-            padding-right: 18px;
-          }
-        }
-        .left-wrap {
-          .col-6 {
-            // flex: 1 0 auto;
-            // flex-basis: 50%;
-          }
-          .c-panel:first-of-type {
-            input[type='text'] {
-              width: auto;
-              width: 0;
-            }
-            .row {
-              label {
-                min-width: 60px;
-                margin-right: 10px;
-              }
-            }
-          }
-        }
-        // .right-wrap {
-        //   .c-input-email-group {
-        //     .col-6 {
-        //       max-width: inherit;
-        //       .col {
-        //         max-width: inherit;
-        //       }
-        //     }
-        //   }
-        // }
-      }
-
-      .cost-dtl-list.type02 {
-        .row {
-          [class*='col'] {
-            width: 100%;
-            flex: 1 1 100%;
-            .c-input {
-              width: 100%;
-            }
-          }
-        }
-      }
-
-      // & > .c-article.input-list {
-      // 	.row {
-      // 		flex-wrap: nowrap;
-      // 		&.inner {
-      // 			&.c-input-phone-group,
-      // 			&.c-input-email-group,
-      // 			&.c-input-address-group {
-      // 				flex: 1 1 100%;
-
-      // 				[class^='col'] {
-      // 					flex-basis: max-content;
-      // 				}
-      // 				.c-input,
-      // 				.c-btn {
-      // 					width: 100%;
-      // 				}
-
-      // 				.c-btn {
-      // 					min-width: 80px;
-      // 				}
-      // 				input[type='text'] {
-      // 					flex-basis: inherit;
-      // 				}
-      // 				select {
-      // 					min-width: 0;
-      // 				}
-      // 			}
-      // 		}
-      // 		// # 230516
-      // 		&.c-input-phone-group,
-      // 		.c-input-email-group {
-      // 			flex: 1 1 100% !important;
-      // 		}
-
-      // 		&.c-input-phone-group {
-      // 			.col {
-      // 				input.c-input {
-      // 					width: 120px;
-      // 				}
-      // 			}
-      // 		}
-      // 		.c-input-address-group {
-      // 			.input-addr-01 {
-      // 				input[type='text'] {
-      // 					min-width: 95px;
-      // 					width: 100%;
-      // 				}
-      // 			}
-      // 		}
-      // 		// # // 230516
-
-      // 		.c-input {
-      // 			width: auto;
-      // 		}
-      // 		[class^='col'] {
-      // 			flex: 0 1 min-content;
-      // 		}
-
-      // 		//+ input
-      // 		// input[type='text'] {
-      // 		//   min-width: 120px;
-      // 		// }
-
-      // 		//+ email
-      // 		&.c-input-email-group {
-      // 			> [class^='col'] {
-      // 				flex: 1 1 min-content;
-      // 			}
-
-      // 			select {
-      // 				min-width: $input-min-width;
-      // 			}
-      // 		}
-
-      // 		// + range
-      // 		.c-input-group.range {
-      // 			input[type='text'] {
-      // 				min-width: 0;
-      // 			}
-      // 		}
-
-      // 		// + button
-      // 		.input-btn {
-      // 			padding: {
-      // 				left: 10px;
-      // 				right: 10px;
-      // 			}
-      // 		}
-
-      // 		// + select
-      // 		.c-select {
-      // 			&.w-auto {
-      // 				display: inline-flex;
-      // 			}
-      // 		}
-
-      // 		// + c-card-article
-      // 		&.c-card-article {
-      // 			margin: {
-      // 				left: -10px;
-      // 				right: -10px;
-      // 			}
-      // 			> [class^='col'] {
-      // 				flex: 1 1 max-content;
-      // 			}
-      // 			width: 100%;
-      // 		}
-
-      // 		// + c-arrow-move-field
-
-      // 		&.c-arrow-move-field {
-      // 			.column {
-      // 				// # 230509 c-arrow-move-field
-      // 				flex: 1 1 auto;
-      // 				// # // 230509
-      // 			}
-      // 		}
-
-      // 		.col-6 {
-      // 			flex-basis: 50%;
-      // 			max-width: 50%;
-      // 		}
-      // 		// # 230510 col-full-height
-      // 		&.col-full-height {
-      // 			.col-6 {
-      // 				align-items: initial;
-      // 				.c-article {
-      // 					flex: 1 1 auto;
-      // 				}
-      // 			}
-      // 		}
-
-      // 		// # // 230510
-      // 	}
-
-      // 	// + ui (v0.1)
-      // 	[class*='col'] {
-      // 		&.c-file-field {
-      // 			display: flex;
-      // 			flex-direction: column;
-      // 			flex-wrap: wrap;
-      // 			.c-input-file-group,
-      // 			.c-input-file-list {
-      // 				flex: {
-      // 					grow: 1;
-      // 					shrink: 1;
-      // 				}
-      // 			}
-
-      // 			.c-input-file-group {
-      // 				flex-basis: 0;
-      // 			}
-      // 			.c-input-file-list {
-      // 				max-width: 100%;
-      // 				flex-basis: 100%;
-      // 			}
-      // 		}
-      // 	}
-
-      // 	// + label
-      // 	.label-input {
-      // 		label {
-      // 			// min-width: $input-label-min-width01;
-      // 			min-width: fit-content;
-      // 			//flex-shrink: 1;
-      // 		}
-      // 	}
-      // 	display: flex;
-      // 	flex-wrap: wrap;
-      // 	> .row {
-      // 		display: inline-flex;
-      // 		flex: none;
-      // 		> [class^='col'] {
-      // 			flex: none;
-      // 			max-width: initial;
-      // 			> .row {
-      // 				flex: 1 0 auto;
-      // 			}
-
-      // 			.c-input-email-group {
-      // 				justify-content: flex-start;
-      // 			}
-      // 			.c-input-address-group {
-      // 				flex: 1 1 100%;
-
-      // 				> .col {
-      // 					flex: 1 1 min-content;
-      // 				}
-      // 			}
-      // 		}
-      // 		input[type='text'] {
-      // 			min-width: 0;
-      // 		}
-      // 	}
-      // }
-    }
-    .c-layer-popup {
-      .c-article.input-list {
-        .row.inner {
-          margin: {
-            left: -10px;
-            right: -10px;
-          }
-          > [class^='col'] {
-            padding: {
-              left: 10px;
-              right: 10px;
-            }
-          }
-        }
-      }
-    }
+.c-btn-refresh {
+  font-size: 0;
+  width: 38px;
+  height: 38px;
+  background-color: $color-white-1;
+  border-radius: $radius-8;
+  border: 1px solid $color-gray-4;
+  > span {
+    @include hide;
+    background: url($image-ico-path + 'ico_refresh.svg');
+    width: 16px;
+    height: 16px;
+    display: inline-block;
   }
 }
 
-.c-tbl-vertical-field {
-  &.type02 {
-    table {
-      &.tbl-examtarget-list {
-        th,
-        td {
-          padding: {
-            left: 6px;
-            right: 6px;
-          }
-        }
-        // table-layout: auto;
-      }
-    }
-  }
-}
-
-#tblExamtargetList02 {
-  th,
-  td {
-    min-width: 110px;
-    max-width: 110px;
-  }
-
-  td:nth-child(2) {
-    max-width: 150px;
-  }
-}
-
-// = // 콜센터
-
-@at-root .modrsv-scroll .input-list .row {
-  & > [class^='col'] {
-    flex-direction: row;
-    display: flex;
-  }
-}
-
-// + mediaquery
-
-@include responsive(desktopFhd) {
-  // = 콜센터 페이지 화면  ui 개선 작업
-
-  body {
-  }
-  .content-wrapper {
-    &.type-callcenter {
-      // + callcenter
-
-      .reservation-dtl-status-layout {
-        .left-wrap {
-          width: calc(100% - $callcenter-right-col-width);
-          flex: 0 0 calc(100% - $callcenter-right-col-width);
-          max-width: calc(100% - $callcenter-right-col-width);
-        }
-        .right-wrap {
-          width: $callcenter-right-col-width;
-          flex: 0 0 $callcenter-right-col-width;
-          max-width: $callcenter-right-col-width;
-        }
-      }
-    }
-  }
+// + 조회 버튼
+.c-btn-inquiry {
+  background-color: $color-navy-1;
 }
