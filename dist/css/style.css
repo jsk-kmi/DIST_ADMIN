@@ -12216,7 +12216,7 @@ input[type=text], input[type=password], input[type=number] {
 		    -ms-flex: 1 1 auto;
 		        flex: 1 1 auto;
 		line-height: 20px;
-		color: #a4a4a4;
+		color: #494949;
 		border: 1px solid #d2d2d1;
 		border-radius: 8px;
 		overflow: hidden;
@@ -13025,7 +13025,7 @@ textarea[readonly=readonly]:focus, textarea.ta-r-only:focus {
 }
 .c-input-file-group .c-file-label {
 		line-height: 20px;
-		color: #a4a4a4;
+		color: #494949;
 		border: 1px solid #d2d2d1;
 		border-radius: 8px;
 		margin-bottom: 0;
