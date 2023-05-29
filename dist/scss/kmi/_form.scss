@@ -34,8 +34,7 @@ input {
     &[type='text'],
     &[type='password'],
     &[type='number'] {
-    @at-root textarea,
-      &::placeholder {
+    &::placeholder {
       font: 400 12px/20px 'NotoSansKR';
       color: $color-gray-3;
     }
