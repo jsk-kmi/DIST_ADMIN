@@ -320,6 +320,11 @@
   }
 }
 
+.row {
+  &.c-card-article {
+    @include rowGridSpacingCardArticle;
+  }
+}
 .c-card-article {
   .c-card {
     display: flex;
@@ -343,13 +348,6 @@
 }
 
 .c-card-article {
-  > [class*='col'],
-  > [class*='col-'] {
-    padding: {
-      left: $gap-10;
-      right: $gap-10;
-    }
-  }
   &.type01 {
     [class='col-3'] {
       padding: {
@@ -1942,13 +1940,14 @@ $preferenceChartWidth: 300px;
         display: flex;
         flex: 1 1 auto;
       }
-      .reservation-dtl-layout {
+      // .reservation-dtl-layout {
+      .reservation-dtl-status-layout {
         display: flex;
         width: 100%;
         flex: 1 1 auto;
 
         .in-layout {
-          padding: 20px 25px;
+          //padding: 20px 25px;
         }
 
         .row.c-input-email-group .input-email-01:after {
@@ -1956,19 +1955,19 @@ $preferenceChartWidth: 300px;
           bottom: 7px;
         }
       }
-      .left-wrap,
-      .right-wrap {
-        padding {
-          left: 20px;
-          right: 20px;
-        }
-      }
-      .left-wrap {
-        width: 36%;
-        flex: 0 0 36%;
-        min-width: 680px;
-        background-color: $color-gray-9;
-      }
+      // .left-wrap,
+      // .right-wrap {
+      //   padding {
+      //     left: 20px;
+      //     right: 20px;
+      //   }
+      // }
+      // .left-wrap {
+      //   width: 36%;
+      //   flex: 0 0 36%;
+      //   min-width: 680px;
+      //   background-color: $color-gray-9;
+      // }
     }
     .c-layout-type01 > .row > .col {
       padding: {
@@ -2810,6 +2809,56 @@ $mod-rsv-left-width: 160px;
           align-items: center;
           .col-6 {
             max-width: initial;
+          }
+        }
+      }
+    }
+  }
+}
+
+// + 콜센터 팝업
+// # 230523
+.c-layer-popup {
+  &.type-callcenter {
+    .modal-body {
+      .reservation-dtl-status-layout {
+        padding: 20px 40px;
+
+        .type03 {
+          label {
+            min-width: 100px;
+          }
+        }
+
+        .c-panel {
+          .row {
+            input[type='text'] {
+              min-width: 120px;
+            }
+            &.type-rsv-request {
+              > .col-5 {
+                flex: none;
+                padding-left: 20px;
+                padding-right: 20px;
+              }
+            }
+          }
+        }
+        .left-wrap {
+          .c-panel:first-of-type {
+            .row {
+              [class^='col'] {
+                flex: none;
+              }
+            }
+          }
+        }
+
+        .c-btn {
+          min-width: initial;
+
+          &.input-btn {
+            padding: 10px;
           }
         }
       }

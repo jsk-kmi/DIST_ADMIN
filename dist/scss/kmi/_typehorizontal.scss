@@ -1,64 +1,132 @@
 //= 수평 배치시 모든 스타일
-.contents {
+.content-wrapper,
+.c-layer-popup {
   // + 추가작업
   &.type-horizontal {
-    & > .c-panel {
-      .input-list {
-        .row {
-          margin: {
-            left: -$input-col-gap-h;
-            right: -$input-col-gap-h;
-          }
-          // + c-input-email-group
-          &.c-input-email-group {
-            margin: {
-              left: -$input-col-gap-v;
-              right: -$input-col-gap-v;
+    > .contents {
+      & > .c-panel {
+        // 콜센터 내 레이어팝업 제어위한 상속
+        .input-list {
+          .row {
+            @include colOuterHSpacingNormal;
+            // margin: {
+            //   left: -$input-col-gap-h;
+            //   right: -$input-col-gap-h;
+            // }
+            // + c-input-email-group
+            &.c-input-email-group {
+              @include colOuterHSpacingSmall;
+              // margin: {
+              //   left: -$input-col-gap-v;
+              //   right: -$input-col-gap-v;
+              // }
             }
-          }
-          > [class*='col-'] {
-            padding: {
-              left: $spacing-small;
-              right: $spacing-small;
+            > [class*='col-'] {
+              // padding: {
+              //   left: $spacing-small;
+              //   right: $spacing-small;
+              // }
+              @include colInnerHSpacingSmall;
+              display: flex;
+              // justify-content: space-between;
             }
-            display: flex;
-            // justify-content: space-between;
-          }
 
-          // + c-input-email-group
-          .c-input-email-group {
-            .input-email-01 {
-              padding-right: 18px;
-            }
-            .input-email-02 {
-              padding-left: 18px;
-            }
+            // + c-input-email-group
+            // .c-input-email-group {
+            //   .input-email-01 {
+            //     padding-right: 18px;
+            //   }
+            //   .input-email-02 {
+            //     padding-left: 18px;
+            //   }
+            // }
           }
         }
+        .c-article {
+          &.input-list {
+            display: flex;
+            flex-wrap: wrap;
+          }
+          // # 230516
+          // + textarea
+          &.c-textarea-article {
+            .col {
+              &.label-input {
+                flex: 0 0 100%;
+              }
+            }
+          }
+          // # // 230516
+        }
       }
+
+      // ========================== [add] 0522
+
+      // == Form
+
+      // + Input Basic
+      // +  c-input-group (range)      // + .c-input-phone-group
+      .c-input-phone-group {
+        .input-phone-01 {
+          flex-basis: 100px;
+        }
+      }
+
+      // = Grid
       .c-article {
         &.input-list {
-          display: flex;
-          flex-wrap: wrap;
-        }
-        // # 230516
-        // + textarea
-        &.c-textarea-article {
-          .col {
-            &.label-input {
-              flex: 0 0 100%;
+          > .row {
+            // display: inline-flex;
+            //flex-wrap: wrap;
+            // flex: none;
+            .c-input {
+              //width: auto;
+            }
+
+            & > [class^='col'] {
+              flex: none;
+              max-width: 100%;
+              flex-direction: row;
+              align-items: center;
+
+              > .row {
+                flex: 1 0 auto;
+              }
+
+              .c-input-address-group {
+                flex: 0 1 fit-content;
+
+                > .col {
+                  flex: 1 1 min-content;
+                }
+                .c-btn {
+                  padding: 10px;
+                }
+              }
+            }
+          }
+          &.type03 {
+            .c-input-unit {
+              width: 100%;
+            }
+            > .row {
+              flex: 1 1 100%;
+              .c-input {
+                //width: 100%;
+              }
+            }
+          }
+          &:not(.type03) {
+            .c-input-email-group {
+              flex: 0 1 auto;
+              .c-select {
+                //margin-left: 40px;
+              }
             }
           }
         }
-        // # // 230516
       }
+      // + //  추가작업
     }
-
-    // = [add] 0522
-    // = [add] // 0522
   }
-
-  // + //  추가작업
 }
-
-//

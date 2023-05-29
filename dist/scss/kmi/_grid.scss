@@ -30,15 +30,24 @@
   }
 }
 
+.c-field,
+.c-title-field,
+.c-btn-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .c-title-field {
-  .inner-title {
-    display: flex;
-    align-items: center;
-  }
+  .inner-title,
   .date-box {
     display: flex;
     align-items: center;
   }
+  // .date-box {
+  //   display: flex;
+  //   align-items: center;
+  // }
   // + type-tab
   &.type-tab {
     .c-tab-list {
@@ -68,6 +77,18 @@
       }
     }
   }
+
+  & + .tab-panel {
+    margin-top: $gap-12;
+  }
+  .label-input {
+    .c-input-search {
+      width: 200px;
+    }
+  }
+  &.with-btn {
+    min-height: 38px;
+  }
 }
 
 /*
@@ -77,12 +98,16 @@
   border: 1px solid $color-gray-5;
   background-color: $color-white-1;
   border-radius: $radius-8;
-  padding: {
-    top: $gap-10;
-    bottom: $gap-10;
-    right: $gap-20;
-    left: $gap-20;
-  }
+  // padding: {
+  //   top: $gap-10;
+  //   bottom: $gap-10;
+  //   right: $gap-20;
+  //   left: $gap-20;
+  // }
+
+  @include colInnerVSpacingSmall;
+  @include colInnerHSpacingNormal;
+
   margin: {
     top: $gap-12;
     bottom: $gap-12;
@@ -91,14 +116,6 @@
   // - 타입 별  padding 상하 값 조정
 
   // = Input List
-  &.input-list {
-    > .row {
-      // > [class*='col'] {
-      //   padding-top: $input-col-gap-v;
-      //   padding-bottom: $input-col-gap-v;
-      // }
-    }
-  }
 
   // + input-list02
   &.input-list02 {
@@ -106,18 +123,20 @@
       left: 0;
       right: 0;
     }
-    $gap: 20px;
+    //$gap: 20px;
+    $gap: $spacing-normal;
     > .row {
-      margin: {
-        left: -$gap;
-        right: -$gap;
-      }
-      > [class*='col'] {
-        padding: {
-          left: $gap;
-          right: $gap;
-        }
-      }
+      // margin: {
+      //   left: -$gap;
+      //   right: -$gap;
+      // }
+      // > [class*='col'] {
+      //   padding: {
+      //     left: $gap;
+      //     right: $gap;
+      //   }
+      // }
+      @include rowGridSpacingNormal;
     }
 
     @at-root {
@@ -132,24 +151,13 @@
     }
   }
 
-  // + input-list02
+  // + input-list03
   &.input-list03 {
     background-color: $color-white-1;
     margin: 0;
     padding: 0;
-    $gap: 10px;
     > .row {
-      margin: {
-        left: -$gap;
-        right: -$gap;
-      }
       > [class*='col'] {
-        padding: {
-          left: $gap;
-          right: $gap;
-          top: $gap;
-          bottom: $gap;
-        }
         display: flex;
         flex-direction: column;
       }
@@ -165,311 +173,46 @@
         }
       }
     }
-
-    .inner {
-      &.c-input-btn-group {
-        width: 100%;
-        margin: {
-          left: 0;
-          right: 0;
-        }
-        padding {
-          left: 6px;
-          right: 6px;
-        }
-      }
-    }
   }
-}
 
-// + list
-.input-list {
-  // margin: {
-  //   left: -$input-col-gap-h;
-  //   right: -$input-col-gap-h;
+  // = List
+  // .list-row {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   width: 100%;
+
+  //   margin: {
+  //     left: -$gap-6;
+  //     right: -$gap-6;
+  //   }
+  //   .col {
+  //     padding: {
+  //       left: $gap-6;
+  //       right: $gap-6;
+  //     }
+  //     &.title {
+  //       width: 180px;
+  //       flex: 0 0 180px;
+  //       font: {
+  //         size: $fs-small;
+  //       }
+  //       color: $color-gray-2;
+  //     }
+
+  //     &.cont {
+  //       width: auto;
+  //       line-height: $g-lineheight-2;
+  //     }
+  //   }
+
+  //   .inner-row {
+  //     > .col {
+  //       flex: 0 0 180px;
+  //     }
+  //   }
   // }
-  padding: {
-  }
-  [class*='col'] {
-    padding: {
-      top: $input-col-gap-v;
-      bottom: $input-col-gap-v;
-    }
-  }
-  .row {
-    margin: {
-      left: -$input-col-gap-h;
-      right: -$input-col-gap-h;
-    }
-    > [class*='col-'] {
-      padding: {
-        left: $input-col-gap-h;
-        right: $input-col-gap-h;
-      }
-      display: flex;
-      flex-direction: column;
-      // justify-content: space-between;
-    }
-  }
-}
 
-.c-title-field {
-  & + .tab-panel {
-    margin-top: $gap-12;
-  }
-  .label-input {
-    .c-input-search {
-      width: 200px;
-    }
-  }
-}
-
-/*
-	= Field
-*/
-.c-field {
-  ~ .c-field {
-    margin-top: $gap-20;
-  }
-  .label-input {
-    + .label-input {
-      // margin-left: $gap-20;
-      margin-left: $gap-12;
-    }
-  }
-  .c-input-search {
-    display: inline-block;
-    width: auto;
-    input[type='text'] {
-      width: 240px;
-      flex: 0 0 auto;
-    }
-  }
-}
-.c-field,
-.c-title-field,
-.c-btn-field {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.c-title-field {
-  &.with-btn {
-    min-height: 38px;
-  }
-}
-
-.c-breadcrumb {
-  & + .c-breadcrumb {
-    margin-top: $gap-12;
-  }
-}
-
-// + c-field
-.c-field {
-  .c-select {
-    select {
-      min-width: 120px;
-    }
-    + .c-select {
-      margin-left: $gap-8;
-    }
-  }
-}
-
-// .c-field {
-//   & + .c-table-field {
-//     margin-top: $gap-12;
-//   }
-// }
-
-.c-field {
-  & + .c-calendar-container {
-    margin-top: $gap-12;
-  }
-}
-
-/*
-  = Row Common
-*/
-
-.row {
-  // inner
-  &.inner {
-    [class*='col'] {
-      padding: {
-        top: 0;
-        bottom: 0;
-      }
-    }
-  }
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: {
-    left: -$gap-10;
-    right: -$gap-10;
-  }
-  &.col-full-height {
-    [class*='col-'] {
-      display: flex;
-      flex-direction: column;
-    }
-
-    &.align-item-c {
-      align-items: center;
-    }
-  }
-
-  .col-full-height {
-    .c-article {
-      flex: 1 1 auto;
-    }
-  }
-
-  // + row-per-5 (수납내역)
-  &.row-cols-5 {
-    padding: {
-      top: 0;
-      bottom: 0;
-    }
-    > .col {
-      flex: 0 0 20%;
-      max-width: 20%;
-    }
-  }
-}
-
-/*
-  = Column Common
-*/
-
-@for $i from 1 to 12 {
-  [class='col-#{$i}'] {
-    padding: {
-      left: $gap-12;
-      right: $gap-12;
-    }
-  }
-}
-
-.col {
-  padding: {
-    left: 10px;
-    right: 10px;
-  }
-  max-width: 100%;
-  flex-basis: 0;
-  flex: 1; // IE 10
-}
-
-@mixin make-col($size, $columns: $grid-columns) {
-  flex: 0 0 percentage(divide($size, $columns));
-  // Add a `max-width` to ensure content within each column does not blow out
-  // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
-  // do not appear to require this.
-  max-width: percentage(divide($size, $columns));
-}
-
-$colWidths: (8.333%, 16.666%, 25%, 33.333%, 41.667%, 50%, 58.333%, 66.667%, 75%, 83.333%, 91.7%, 100%);
-@each $col in $colWidths {
-  $i: index($colWidths, $col);
-  .col-#{$i} {
-    flex: 0 0 $col;
-    max-width: $col;
-    padding: {
-      left: $gap-20;
-      right: $gap-20;
-    }
-  }
-}
-.col,
-.col-12 {
-  max-width: 100%;
-  flex-basis: 0;
-  flex: 1; // IE 10
-}
-
-.flex-d-column {
-  flex-direction: column;
-
-  .input-list {
-    align-items: stretch;
-  }
-}
-
-.align-stretch {
-  align-items: stretch;
-}
-
-.inner-row {
-  width: 100%;
-  flex: 1 1 auto;
-}
-
-// = align
-.justify-c-sb {
-  justify-content: space-between;
-}
-
-// = List
-// +
-.c-article {
-  .list-row {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-
-    margin: {
-      left: -$gap-6;
-      right: -$gap-6;
-    }
-    .col {
-      padding: {
-        left: $gap-6;
-        right: $gap-6;
-      }
-      &.title {
-        width: 180px;
-        flex: 0 0 180px;
-        font: {
-          size: $fs-small;
-        }
-        color: $color-gray-2;
-      }
-
-      &.cont {
-        width: auto;
-        line-height: $g-lineheight-2;
-      }
-    }
-
-    .inner-row {
-      > .col {
-        flex: 0 0 180px;
-      }
-    }
-  }
-}
-
-.row {
-  &.number {
-    .col-4 {
-      padding: {
-        left: $gap-10;
-        right: $gap-10;
-      }
-    }
-  }
-}
-
-/*
-	[Artcle - Content]
-*/
-.c-article {
+  // = Content
   &.c-contents {
     .c-content-field {
       padding {
@@ -499,7 +242,8 @@ $colWidths: (8.333%, 16.666%, 25%, 33.333%, 41.667%, 50%, 58.333%, 66.667%, 75%,
           }
         }
       }
-      &.disc {
+      &.disc,
+      &.number {
         > li {
           list-style-type: disc;
           left: 20px;
@@ -512,11 +256,11 @@ $colWidths: (8.333%, 16.666%, 25%, 33.333%, 41.667%, 50%, 58.333%, 66.667%, 75%,
       &.number {
         > li {
           list-style-type: decimal;
-          left: 20px;
-          padding: {
-            left: 0;
-            right: 20px;
-          }
+          // left: 20px;
+          // padding: {
+          //   left: 0;
+          //   right: 20px;
+          // }
         }
       }
     }
@@ -538,25 +282,230 @@ $colWidths: (8.333%, 16.666%, 25%, 33.333%, 41.667%, 50%, 58.333%, 66.667%, 75%,
   }
 }
 
-// = Content
+// + list
+.input-list,
+.input-list03 {
+  // margin: {
+  //   left: -$input-col-gap-h;
+  //   right: -$input-col-gap-h;
+  // }
+
+  [class*='col'] {
+    // padding: {
+    //   top: $input-col-gap-v;
+    //   bottom: $input-col-gap-v;
+    // }
+    @include colInnerVSpacingSmall;
+  }
+  .row {
+    > [class*='col-'] {
+      display: flex;
+      flex-direction: column;
+      // justify-content: space-between;
+    }
+  }
+}
+
+/*
+	= Field
+*/
+// + c-field
+.c-field {
+  ~ .c-field {
+    margin-top: $gap-20;
+  }
+  .label-input {
+    + .label-input {
+      // margin-left: $gap-20;
+      margin-left: $gap-12;
+    }
+  }
+  .c-input-search {
+    display: inline-block;
+    width: auto;
+    input[type='text'] {
+      width: 240px;
+      flex: 0 0 auto;
+    }
+  }
+  .c-select {
+    select {
+      min-width: 120px;
+    }
+    + .c-select {
+      margin-left: $gap-8;
+    }
+  }
+  & + .c-calendar-container {
+    margin-top: $gap-12;
+  }
+}
+
+.c-breadcrumb {
+  & + .c-breadcrumb {
+    margin-top: $gap-12;
+  }
+}
+
+// .c-field {
+//   & + .c-table-field {
+//     margin-top: $gap-12;
+//   }
+// }
+
+/*
+  = Row Common
+*/
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  // inner
+  &:not(.inner) {
+    @include rowGridSpacingNormal;
+  }
+  &.inner {
+    [class*='col'] {
+      padding: {
+        top: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+  &.col-full-height {
+    [class*='col-'] {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &.align-item-c {
+      align-items: center;
+    }
+
+    .c-article {
+      flex: 1 1 0;
+    }
+  }
+
+  // .col-full-height {
+  //   .c-article {
+  //     flex: 1 1 auto;
+  //   }
+  // }
+
+  // + row-per-5 (수납내역)
+  &.row-cols-5 {
+    padding: {
+      top: 0;
+      bottom: 0;
+    }
+    > .col {
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+  }
+
+  &.number {
+    .col-4 {
+      // padding: {
+      //   left: $gap-10;
+      //   right: $gap-10;
+      // }
+      @include colInnerHSpacingSmall;
+    }
+  }
+}
+
+/*
+  = Column Common
+*/
+
+@for $i from 1 to 12 {
+  [class='col-#{$i}'] {
+    padding: {
+      left: $gap-12;
+      right: $gap-12;
+    }
+  }
+}
+
+.col {
+  // padding: {
+  //   left: $gap-20;
+  //   right: $gap-20;
+  // }
+  @include colInnerHSpacingNormal;
+  max-width: 100%;
+  flex-basis: 0;
+  flex: 1; // IE 10
+}
+
+@mixin make-col($size, $columns: $grid-columns) {
+  flex: 0 0 percentage(divide($size, $columns));
+  // Add a `max-width` to ensure content within each column does not blow out
+  // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
+  // do not appear to require this.
+  max-width: percentage(divide($size, $columns));
+}
+
+$colWidths: (8.333%, 16.666%, 25%, 33.333%, 41.667%, 50%, 58.333%, 66.667%, 75%, 83.333%, 91.7%, 100%);
+@each $col in $colWidths {
+  $i: index($colWidths, $col);
+  .col-#{$i} {
+    flex: 0 0 $col;
+    max-width: $col;
+  }
+}
+// .col,
+// .col-12 {
+//   max-width: 100%;
+//   flex-basis: 0;
+//   flex: 1; // IE 10
+// }
+
+// .flex-d-column {
+//   flex-direction: column;
+
+//   .input-list {
+//     align-items: stretch;
+//   }
+// }
+
+// .align-stretch {
+//   align-items: stretch;
+// }
+
+// .inner-row {
+//   width: 100%;
+//   flex: 1 1 auto;
+// }
+
+// = align
+// .justify-c-sb {
+//   justify-content: space-between;
+// }
 
 // = layout type
 .c-layout-type01 {
   // margin-top: 0 !important;
   // padding-top: 40px;
   & > .row {
-    $gap: 10px;
-    margin: {
-      left: -$gap;
-      right: -$gap;
-    }
+    // $gap: 10px;
+    // margin: {
+    //   left: -$gap;
+    //   right: -$gap;
+    // }
 
-    & > .col {
-      padding: {
-        left: $gap;
-        right: $gap;
-      }
-    }
+    // & > .col {
+    //   padding: {
+    //     left: $gap;
+    //     right: $gap;
+    //   }
+    // }
+    $gap: $spacing-small;
+    @include rowGridSpacingSmall;
   }
   .right-wrap {
     position: relative;
@@ -569,26 +518,29 @@ $colWidths: (8.333%, 16.666%, 25%, 33.333%, 41.667%, 50%, 58.333%, 66.667%, 75%,
   }
 }
 
-// + 예약 변경 설정
-.mod-rsv-setting-field {
-}
+// .c-half-field {
+//   $half-gap: 20px;
+//   margin: {
+//     left: -$half-gap;
+//     right: -$half-gap;
+//   }
+//   .column {
+//     display: flex;
+//     flex: 1 0 auto;
+//     width: calc(50% - $half-gap);
+//     padding: {
+//       left: $half-gap;
+//       right: $half-gap;
+//     }
+//     > .c-article {
+//       width: 100%;
+//     }
+//   }
+// }
 
-.c-half-field {
-  $half-gap: 20px;
-  margin: {
-    left: -$half-gap;
-    right: -$half-gap;
-  }
-  .column {
-    display: flex;
-    flex: 1 0 auto;
-    width: calc(50% - $half-gap);
-    padding: {
-      left: $half-gap;
-      right: $half-gap;
-    }
-    > .c-article {
-      width: 100%;
-    }
+
+.c-textarea-article {
+  > .row {
+    @include rowGridSpacingNormal;
   }
 }

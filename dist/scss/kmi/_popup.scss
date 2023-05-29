@@ -360,10 +360,3 @@
     bottom: 100px;
   }
 }
-
-// temp style
-.c-textarea-article {
-  > .row {
-    @include rowGridSpacingNormal;
-  }
-}
