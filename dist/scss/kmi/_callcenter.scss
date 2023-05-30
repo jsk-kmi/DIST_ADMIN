@@ -157,7 +157,7 @@ type-horizontal 최상위 요소 부여
             label,
             .c-label-txt {
               min-width: 60px;
-              margin-right: 10px;
+              margin-right: 12px;
             }
           }
         }
@@ -312,7 +312,7 @@ type-horizontal 최상위 요소 부여
         }
         .c-rdochk {
           label {
-            min-width: 60px;
+            min-width: auto;
           }
         }
         .col-6 {
@@ -325,17 +325,22 @@ type-horizontal 최상위 요소 부여
               margin-left: 15px;
             }
           }
-          .label-input label {
-            display: inline-flex;
-            flex: none;
-            width: auto;
-            min-width: auto;
+        }
+
+        .c-m-input-list {
+          > .input-col {
+            & ~ .input-col {
+              margin-left: 0;
+            }
           }
         }
 
         .label-txt,
         .label-input > label {
-          min-width: 120px;
+          display: inline-flex;
+          flex: none;
+          width: auto;
+          min-width: auto;
         }
       }
 
@@ -431,6 +436,10 @@ type-horizontal 최상위 요소 부여
       .c-article {
         &.input-list {
           & > .row {
+            margin: {
+              left: 0;
+              right: 0;
+            }
             @include rowGridSpacingSmall;
           }
         }
