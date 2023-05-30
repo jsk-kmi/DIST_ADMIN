@@ -319,6 +319,20 @@ type-horizontal 최상위 요소 부여
           flex-basis: auto;
         }
 
+        .type-rsv-request {
+          .col-5 {
+            & ~ .col-5 {
+              margin-left: 15px;
+            }
+          }
+          .label-input label {
+            display: inline-flex;
+            flex: none;
+            width: auto;
+            min-width: auto;
+          }
+        }
+
         .label-txt,
         .label-input > label {
           min-width: 120px;

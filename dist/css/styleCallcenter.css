@@ -13780,6 +13780,21 @@ type-horizontal 최상위 요소 부여
 		    -ms-flex-preferred-size: auto;
 		        flex-basis: auto;
 }
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .type-rsv-request .col-5 ~ .col-5 {
+		margin-left: 15px;
+}
+#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .type-rsv-request .label-input label {
+		display: -webkit-inline-box;
+		display: -webkit-inline-flex;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+		-webkit-box-flex: 0;
+		-webkit-flex: none;
+		    -ms-flex: none;
+		        flex: none;
+		width: auto;
+		min-width: auto;
+}
 #container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .label-txt,
 #container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .label-input > label {
 		min-width: 120px;
