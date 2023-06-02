@@ -139,7 +139,7 @@
         font-size: $fs-normal;
         color: $color-gray-1;
         background-color: $color-gray-9;
-        padding: 4px 15px;
+        padding: 4px 8px;
         border: 0.5px solid $color-gray-4;
         border-radius: $radius-8;
         line-height: $input-basic-lineheight;
@@ -1993,7 +1993,6 @@ $preferenceChartWidth: 300px;
         > .col-5 {
           flex: 0 0 calc(100% / 2 - 29px);
           max-width: calc(100% / 2 - 29px);
-
         }
         .col-2 {
           flex: 0 0 58px;
