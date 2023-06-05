@@ -442,6 +442,16 @@ table {
   &.type02 {
     table {
       table-layout: fixed;
+      &.tbl-examtarget-list {
+        th,
+        td {
+          padding: {
+            left: 6px;
+            right: 6px;
+          }
+        }
+        // table-layout: auto;
+      }
     }
   }
 }

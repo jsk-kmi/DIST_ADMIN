@@ -146,7 +146,14 @@ $input-disabled-border-color: $color-gray-4;
 $input-disabled-bg-color: $color-gray-5;
 $input-disabled-font-color: $color-gray-2;
 
-$input-min-width: 120px;
+$input-w-default: 120px;
+$input-w-postcode: 95px;
+$input-w-phone: 70px;
+$input-w-date: $input-w-default;
+$input-w-address: $input-w-default;
+$input-w-email: 100px;
+
+$select-w-default: $input-w-default;
 
 // $input-basic-lineheight: 22px;
 $input-basic-lineheight: 20px;
@@ -171,4 +178,7 @@ $callcenter-right-col-width: 40%;
 $callcenter-right-col-width02: 45%;
 
 // ui-mod(v0.1)
-$input-label-min-width01: 95px;
+$input-label-w-default: 85px;
+$input-label-min-width01: 60px;
+$input-label-min-width02: 100px;
+$input-label-min-width03: 120px;

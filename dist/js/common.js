@@ -301,7 +301,7 @@ var formElemAlign = function formElemAlign() {
 // });
 
 // + DataTable Library Control
-var DefaultDateOption = {
+var DefaultDateOptionBasic = {
   scrollX: true,
   paging: false,
   searching: false,

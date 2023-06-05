@@ -159,7 +159,7 @@ input[type='text'] {
 .c-input-btn-group {
   display: flex;
   @include spacingInputGrp;
-  flex: 1 1 100%;
+  //flex: 1 1 100%;
   > [class*='col'] {
     // flex: 1 1 fit-content;
     flex: 1 1 max-content;
@@ -647,7 +647,7 @@ textarea {
   }
 
   select {
-    min-width: 120px;
+    min-width: $select-w-default;
     border: 1px solid $input-border-color;
     border-radius: $input-border-radius;
     background-color: $color-white-1;
@@ -814,19 +814,6 @@ textarea {
     }
   }
   .input-email-02 {
-    // $gap: 10px;
-    // > .row {
-    //   margin: {
-    //     left: -$gap;
-    //     right: -$gap;
-    //   }
-    //   > .col-6 {
-    //     padding: {
-    //       left: $gap;
-    //       right: $gap;
-    //     }
-    //   }
-    // }
     > .row {
       @include rowGridSpacingSmall;
     }
@@ -838,7 +825,7 @@ textarea {
 }
 .row {
   &.c-input-email-group {
-    @include spacingInputGrp;
+    //@include spacingInputGrp;
   }
 }
 

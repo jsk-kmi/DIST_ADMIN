@@ -7,20 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>검진상품 조회</title>
     <link rel="shortcut icon" type="image/x-icon" href="../../images/ico/favicon.ico">
+    <link rel="stylesheet" href="../../lib/dataTables/datatables.min.css">
     <link rel="stylesheet" href="../../css/style.css">
     <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/dataTables/datatables.min.js"></script>
+    <script src="../../lib/smooth-scrollbar/dist/smooth-scrollbar.js"></script>
 </head>
 
-<body>
-    <!-- [ mod(220602) ] -->
+<body> <!-- [ mod(220602) ] -->
     <div class="skip-navigation">
         <p><a href="#container" tabindex="1">본문 바로가기</a></p>
         <p><a href="#sideNav" tabindex="1">주메뉴 바로가기</a></p>
     </div>
     <!-- [ // mod(220602) ] -->
 
-    <div id="container">
-        <!-- Side Navigation -->
+    <div id="container"> <!-- Side Navigation -->
         <nav id="sideNav">
             <!-- Sidebar -->
             <div class="sidenav-wrapper">
@@ -140,8 +141,7 @@
         </nav>
 
         <!-- Content-Wrapper -->
-        <div class="content-wrapper">
-            <!-- Header-->
+        <div class="content-wrapper"> <!-- Header-->
             <header class="header">
                 <div class="wrap">
                     <div class="top-left">
@@ -184,6 +184,7 @@
                 </div>
             </header>
             <!-- // Header-->
+
             <!-- Contents -->
             <section class="contents">
                 <div class="c-panel top_head">
@@ -216,6 +217,7 @@
                             <div class="col-6 label-input">
                                 <label class="c-label-txt">검진가격</label>
                                 <div class="row inner c-input-group range">
+
                                     <!-- for/id 매칭 및 값 변경 필수 -->
                                     <div class="col-6 label-input">
                                         <div class="c-input-box">
@@ -246,12 +248,11 @@
                         </div>
                     </div>
                     <div class="c-table-field">
+
                         <!-- c-table -->
                         <div class="c-table striped sorting">
                             <table class="table">
-                                <caption>
-                                    제안서 정보 : No, 검진연도, 검진구분, 제안서명, 등록일, 대상인원, 검진가격, 공단비용차감, 제안서구분, 상태구분, 등록자에 대한 정보
-                                </caption>
+                                <caption> 제안서 정보 : No, 검진연도, 검진구분, 제안서명, 등록일, 대상인원, 검진가격, 공단비용차감, 제안서구분, 상태구분, 등록자에 대한 정보 </caption>
                                 <colgroup>
                                     <col class="no">
                                     <col class="date">
@@ -269,6 +270,7 @@
                                 </colgroup>
                                 <thead>
                                     <tr>
+
                                         <!--  [comment]
 												- for/id 값 매칭
 											-->
@@ -406,6 +408,7 @@
                                 </tbody>
                             </table>
                         </div>
+
                         <!-- c-tbl-paging -->
                         <div class="c-tbl-paging">
                             <p class="page-info">Total Page <em>01</em> page</p>
@@ -442,22 +445,11 @@
                     </div>
                 </div>
             </section>
-            <!-- // Contents -->
 
-            <!-- Footer -->
-            <footer class="footer">
-                <div class="container">
-                    <p class="copyright">Copyright© KMI.All Rights Reserved.</p>
-                </div>
-            </footer>
 
-        </div>
-        <!-- // Content-Wrapper -->
-    </div>
-    <!-- [ mod(220818) ] -->
-    <script src="../../lib/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="../../js/common.js"></script>
-
+        </div> <!-- [ mod(220818) ] -->
+        <script src="../../lib/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="../../js/common.js"></script>
 </body>
 
 </html>

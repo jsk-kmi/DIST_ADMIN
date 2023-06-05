@@ -578,18 +578,18 @@
 // = c-arrow-move-field
 .c-arrow-move-field {
   position: relative;
-  margin: {
-    left: -$gap-20;
-    right: -$gap-20;
-  }
+
+  @include colOuterHSpacingNormal;
+
   [class*='column'] {
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-    padding: {
-      left: $gap-20;
-      right: $gap-20;
-    }
+    // padding: {
+    //   left: $gap-20;
+    //   right: $gap-20;
+    // }
+    @include colInnerHSpacingNormal;
   }
   > [class*='column'] > .c-article {
     flex: 1 1 auto;
@@ -902,18 +902,20 @@
 
 .c-arrow-fixed-field {
   position: relative;
-  margin: {
-    left: -$gap-20;
-    right: -$gap-20;
-  }
+  // margin: {
+  //   left: -$gap-20;
+  //   right: -$gap-20;
+  // }
+  @include colOuterHSpacingNormal;
   [class*='column'] {
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-    padding: {
-      left: $gap-20;
-      right: $gap-20;
-    }
+    // padding: {
+    //   left: $gap-20;
+    //   right: $gap-20;
+    // }
+    @include colInnerHSpacingNormal;
   }
   > [class*='column'] > .c-article {
     flex: 1 1 auto;
@@ -1914,10 +1916,11 @@ $preferenceChartWidth: 300px;
     }
   }
   .row.chart-list [class*='col-'] {
-    padding: {
-      left: 20px;
-      right: 20px;
-    }
+    // padding: {
+    //   left: 20px;
+    //   right: 20px;
+    // }
+    @include colInnerHSpacingNormal;
   }
 }
 
@@ -1935,16 +1938,16 @@ $preferenceChartWidth: 300px;
         background-color: $color-white-1;
       }
       .modal-body {
-        padding: 0;
+        //padding: 0;
         height: inherit;
         display: flex;
-        flex: 1 1 auto;
+        //flex: 1 1 auto;
       }
       // .reservation-dtl-layout {
       .reservation-dtl-status-layout {
-        display: flex;
-        width: 100%;
-        flex: 1 1 auto;
+        //display: flex;
+        //width: 100%;
+        //flex: 1 1 auto;
 
         .in-layout {
           //padding: 20px 25px;
@@ -1970,11 +1973,11 @@ $preferenceChartWidth: 300px;
       // }
     }
     .c-layout-type01 > .row > .col {
-      padding: {
-        left: 20px;
-        right: 20px;
-      }
-
+      // padding: {
+      //   left: 20px;
+      //   right: 20px;
+      // }
+      @include colInnerHSpacingNormal;
       .request-box {
         white-space: wrap;
       }
@@ -1983,7 +1986,7 @@ $preferenceChartWidth: 300px;
     .c-input-phone-group {
       .c-select {
         select {
-          min-width: auto;
+          //min-width: auto;
         }
       }
     }
@@ -1991,8 +1994,8 @@ $preferenceChartWidth: 300px;
     .c-article.input-list > .row {
       &.type-rsv-request {
         > .col-5 {
-          flex: 0 0 calc(100% / 2 - 29px);
-          max-width: calc(100% / 2 - 29px);
+          // flex: 0 0 calc(100% / 2 - 29px);
+          // max-width: calc(100% / 2 - 29px);
         }
         .col-2 {
           flex: 0 0 58px;
@@ -2006,15 +2009,16 @@ $preferenceChartWidth: 300px;
     .input-list {
       .row {
         margin: {
-          left: -10px;
-          right: -10px;
+          // left: -10px;
+          // right: -10px;
         }
         &.inner {
           [class*='col'] {
-            padding: {
-              left: 10px;
-              right: 10px;
-            }
+            // padding: {
+            //   left: 10px;
+            //   right: 10px;
+            // }
+            @include colInnerHSpacingSmall;
           }
         }
       }
@@ -2036,7 +2040,7 @@ $preferenceChartWidth: 300px;
       }
     }
     .c-panel + .c-panel {
-      margin-top: 20px;
+      //margin-top: 20px;
     }
     // + rsvdtl-popup-type02
     &.type02 {
@@ -2048,10 +2052,11 @@ $preferenceChartWidth: 300px;
         padding: 8px 10px;
       }
       .input-list .row {
-        margin: {
-          left: -10px;
-          right: -10px;
-        }
+        // margin: {
+        //   left: -10px;
+        //   right: -10px;
+        // }
+        @include colOuterHSpacingSmall;
       }
       .modal-content {
         min-width: 1880px;
@@ -2099,8 +2104,6 @@ $preferenceChartWidth: 300px;
   }
 }
 
-$mod-rsv-left-width: 160px;
-
 // + mod-reservatio
 .mod-reservation {
   padding: $gap-12;
@@ -2110,7 +2113,7 @@ $mod-rsv-left-width: 160px;
   .c-inner-left,
   .c-inner-right {
     height: 100%;
-    overflow-x: hidden;
+    // overflow-x: hidden;
   }
   .c-inner-left {
     width: 156px;
@@ -2122,7 +2125,7 @@ $mod-rsv-left-width: 160px;
     // overflow-y: auto;
     overflow: hidden;
     flex-grow: 1;
-    height: 100%;
+    //height: 100%;
 
     .c-tab-contents {
       height: 100%;
@@ -2272,18 +2275,20 @@ $mod-rsv-left-width: 160px;
 // = c-horizontal-field
 .c-rsvdtl-horizontal-field {
   position: relative;
-  margin: {
-    left: -$gap-20;
-    right: -$gap-20;
-  }
+  // margin: {
+  //   left: -$gap-20;
+  //   right: -$gap-20;
+  // }
+  @include colOuterHSpacingNormal;
   [class*='column'] {
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-    padding: {
-      left: $gap-20;
-      right: $gap-20;
-    }
+    // padding: {
+    //   left: $gap-20;
+    //   right: $gap-20;
+    // }
+    @include colInnerHSpacingNormal;
   }
   > [class*='column'] > .c-article {
     flex: 1 1 auto;
@@ -2364,6 +2369,9 @@ $mod-rsv-left-width: 160px;
 
   // + tab-06
   &.tab-06 {
+    .c-label-txt {
+      min-width: 100px;
+    }
     .c-input-email-group {
       .input-email-01 {
         flex: 0 0 35%;
@@ -2534,7 +2542,7 @@ $mod-rsv-left-width: 160px;
 .region-article {
   padding : {
     top: 20px;
-    botton: 20px;
+    bottom: 20px;
   }
   .c-card-article > [class*='col'],
   .c-card-article > [class*='col-'] {
@@ -2549,18 +2557,20 @@ $mod-rsv-left-width: 160px;
 
 .c-reg-sms-field {
   position: relative;
-  margin: {
-    left: -$gap-20;
-    right: -$gap-20;
-  }
+  // margin: {
+  //   left: -$gap-20;
+  //   right: -$gap-20;
+  // }
+  @include colOuterHSpacingNormal;
   [class*='column'] {
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-    padding: {
-      left: $gap-20;
-      right: $gap-20;
-    }
+    // padding: {
+    //   left: $gap-20;
+    //   right: $gap-20;
+    // }
+    @include colInnerHSpacingNormal;
   }
   > [class*='column'] > .c-article {
     flex: 1 1 auto;
@@ -2747,23 +2757,25 @@ $mod-rsv-left-width: 160px;
 }
 
 .reservation-dtl-status-layout {
-  $gap: 10px;
+  //$gap: 10px;
   display: flex;
   flex: 1 1 100%;
-  margin: {
-    left: -$gap;
-    right: -$gap;
-  }
+  // margin: {
+  //   left: -$gap;
+  //   right: -$gap;
+  // }
+  @include colOuterHSpacingSmall;
   .left-wrap,
   .right-wrap {
-    padding: {
-      left: $gap;
-      right: $gap;
-    }
+    // padding: {
+    //   left: $gap;
+    //   right: $gap;
+    // }
+    @include colInnerHSpacingSmall;
   }
   .label-input {
     label {
-      margin-bottom: 0;
+      //margin-bottom: 0;
     }
   }
   .left-wrap {
@@ -2800,15 +2812,15 @@ $mod-rsv-left-width: 160px;
     flex: 0 0 $callcenter-right-col-width;
     max-width: $callcenter-right-col-width;
     .buttons:first-of-type {
-      justify-content: flex-end;
-      margin-bottom: 22px;
+      //justify-content: flex-end;
+      //margin-bottom: 22px;
     }
     .c-article.input-list {
       &.type03 {
         .c-input-email-group {
           align-items: center;
           .col-6 {
-            max-width: initial;
+            //max-width: initial;
           }
         }
       }
@@ -2816,52 +2828,91 @@ $mod-rsv-left-width: 160px;
   }
 }
 
-// + 콜센터 팝업
-// # 230523
-.c-layer-popup {
-  &.type-callcenter {
-    .modal-body {
-      .reservation-dtl-status-layout {
-        padding: 20px 40px;
+// ! 삭제 예정 (검진예약 상세보기 - popup type)
+/**
+@ 검진예약현황 - 상세보기 팝업 (UI 변경 스타일 반영 이후 Delete)
+*/
 
-        .type03 {
-          label {
-            min-width: 100px;
-          }
+// [OS[
+// = 검진예약현황
+
+.c-layer-popup:not(.type-callcenter) {
+  &.reservation-detail-popup {
+    // + rsvdtl-popup-type01
+
+    .label-input {
+      label,
+      .c-label-txt {
+        flex: 0 0 auto;
+        margin: {
+          right: 15px;
+        }
+      }
+    }
+    .c-m-input-list {
+      .input-col {
+        margin-bottom: 8px;
+      }
+    }
+    &.rsvdtl-popup-type01 {
+      &.show {
+        padding-left: 0 !important;
+      }
+      .c-article {
+        background-color: $color-white-1;
+      }
+      .modal-body {
+        padding: 0;
+        height: inherit;
+        display: flex;
+        flex: 1 1 auto;
+      }
+      .reservation-dtl-layout {
+        display: flex;
+        width: 100%;
+        flex: 1 1 auto;
+
+        .in-layout {
+          padding: 20px 25px;
         }
 
-        .c-panel {
-          .row {
-            input[type='text'] {
-              min-width: 120px;
-            }
-            &.type-rsv-request {
-              > .col-5 {
-                flex: none;
-                padding-left: 20px;
-                padding-right: 20px;
-              }
-            }
-          }
+        .row.c-input-email-group .input-email-01:after {
+          right: -6px;
+          bottom: 7px;
         }
-        .left-wrap {
-          .c-panel:first-of-type {
-            .row {
-              [class^='col'] {
-                flex: none;
-              }
-            }
-          }
+      }
+      .left-wrap,
+      .right-wrap {
+        padding {
+          left: 20px;
+          right: 20px;
         }
-
-        .c-btn {
-          min-width: initial;
-
-          &.input-btn {
-            padding: 10px;
-          }
-        }
+      }
+      .left-wrap {
+        width: 36%;
+        flex: 0 0 36%;
+        min-width: 680px;
+        background-color: $color-gray-9;
+      }
+    }
+    .c-input-badge-group {
+      min-height: 33px;
+    }
+    .c-input-phone-group,
+    .c-input-address-group,
+    .c-input-email-group {
+      flex-grow: 1;
+    }
+    .tab-06 {
+      .c-label-txt,
+      .label-input label {
+        min-width: 100px;
+      }
+      .col-12 {
+        flex-direction: row;
       }
     }
   }
 }
+
+// ! 삭제 예정 (검진예약 상세보기 - popup type)

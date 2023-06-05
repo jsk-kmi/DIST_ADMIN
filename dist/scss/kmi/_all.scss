@@ -10,30 +10,12 @@
 @import 'table';
 @import 'icon';
 @import 'popup';
-// =====  UI 폼요소 변경 전 원본 스타일 Improt List
-// 수직 정렬
 @import 'grid';
 @import 'form';
-// =====  UI 폼요소 변경 및 콜센터 전용 스타일 Import List
 
-// 수평정렬
-// @import 'grid02';
-// @import 'form04_02';
-
-// @import 'callcenter'; // callcenter
-
-// bakup
-
-// @import 'form02'; // r-auto (row width auto)
-// @import 'form03'; // non class input width (row inner col)
-// @import 'form04_02'; // type-horizontal 최상위 요소 부여 (230516 - 현재 작업 )
-// @import 'form04'; // c-article input-list 요소 내부 전체스타일 반영 적용
-//@import 'callcenter'; // callcenter
-
-// = End
+@import 'typehorizontal';
+@import 'callcenter'; // CallCenter 전용 스타일
 
 @import 'common';
 
 @import 'style';
-
-// @import 'mediaquery'; // form요소 변경 스타일 & callcenter 전용

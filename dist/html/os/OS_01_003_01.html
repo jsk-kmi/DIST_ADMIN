@@ -7,20 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>공지하기 등록</title>
     <link rel="shortcut icon" type="image/x-icon" href="../../images/ico/favicon.ico">
+    <link rel="stylesheet" href="../../lib/dataTables/datatables.min.css">
     <link rel="stylesheet" href="../../css/style.css">
     <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/dataTables/datatables.min.js"></script>
+    <script src="../../lib/smooth-scrollbar/dist/smooth-scrollbar.js"></script>
 </head>
 
-<body>
-    <!-- [ mod(220602) ] -->
+<body> <!-- [ mod(220602) ] -->
     <div class="skip-navigation">
         <p><a href="#container" tabindex="1">본문 바로가기</a></p>
         <p><a href="#sideNav" tabindex="1">주메뉴 바로가기</a></p>
     </div>
     <!-- [ // mod(220602) ] -->
 
-    <div id="container">
-        <!-- Side Navigation -->
+    <div id="container"> <!-- Side Navigation -->
         <nav id="sideNav">
             <!-- Sidebar -->
             <div class="sidenav-wrapper">
@@ -140,8 +141,7 @@
         </nav>
 
         <!-- Content-Wrapper -->
-        <div class="content-wrapper">
-            <!-- Header-->
+        <div class="content-wrapper"> <!-- Header-->
             <header class="header">
                 <div class="wrap">
                     <div class="top-left">
@@ -184,6 +184,7 @@
                 </div>
             </header>
             <!-- // Header-->
+
             <!-- Contents -->
             <section class="contents">
                 <div class="c-panel top_head">
@@ -197,14 +198,17 @@
                         <h1 class="title-lg">검진 예약 관리</h1>
                     </div>
                 </div>
+
                 <!-- * [ mod(230404) ] -->
                 <div class="c-panel reservation-dtl-status-layout">
                     <div class="col in-layout left-wrap">
                     </div>
                     <div class="col in-layout right-wrap">
+
                         <!-- [ mod(230417) ]
 							+ 수납내역 UI
 						-->
+
                         <!-- c-panel -->
                         <div class="c-panel">
                             <div class="c-title-field">
@@ -213,9 +217,7 @@
                             <div class="c-table-field tbl-price-field">
                                 <div class="c-table tbl-price-details">
                                     <table class="table">
-                                        <caption>
-                                            총 검진 금액 : 총 회사 청구 금액, 총 개인 청구 금액 합계
-                                        </caption>
+                                        <caption> 총 검진 금액 : 총 회사 청구 금액, 총 개인 청구 금액 합계 </caption>
                                         <colgroup>
                                             <col width="20%">
                                             <col width="40%">
@@ -234,9 +236,7 @@
                                 </div>
                                 <div class="c-table tbl-price-details">
                                     <table class="table">
-                                        <caption>
-                                            총 회사 청구 금액 : 검진상품금액, 추가검사금액, 건강관리 서비스 이용료에 대한 정보
-                                        </caption>
+                                        <caption> 총 회사 청구 금액 : 검진상품금액, 추가검사금액, 건강관리 서비스 이용료에 대한 정보 </caption>
                                         <colgroup>
                                             <col width="20%">
                                             <col width="40%">
@@ -266,9 +266,7 @@
                                 </div>
                                 <div class="c-table tbl-price-details">
                                     <table class="table">
-                                        <caption>
-                                            총 개인 청구 금액 : 검진상품금액, 추가검사금액, 건강관리 서비스 이용료에 대한 정보
-                                        </caption>
+                                        <caption> 총 개인 청구 금액 : 검진상품금액, 추가검사금액, 건강관리 서비스 이용료에 대한 정보 </caption>
                                         <colgroup>
                                             <col width="20%">
                                             <col width="40%">
@@ -298,34 +296,19 @@
                                             </tr>
                                         </tbody>
                                     </table>
-
                                 </div>
                             </div>
-
                         </div>
-                        <!-- [ // mod(230417) ] -->
 
+                        <!-- [ // mod(230417) ] -->
                     </div>
                 </div>
-
             </section>
-            <!-- // Contents -->
 
-            <!-- Footer -->
-            <footer class="footer">
-                <div class="container">
-                    <p class="copyright">Copyright© KMI.All Rights Reserved.</p>
-                </div>
-            </footer>
 
-        </div>
-    </div>
-    <!-- // Content-Wrapper -->
-    </div>
-    <!-- [ mod(220818) ] -->
-    <script src="../../lib/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="../../js/common.js"></script>
-
+        </div> <!-- [ mod(220818) ] -->
+        <script src="../../lib/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="../../js/common.js"></script>
 </body>
 
 </html>

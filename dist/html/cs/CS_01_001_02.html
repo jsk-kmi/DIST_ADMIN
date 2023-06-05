@@ -7,11 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>예약 내역 &gt; 예약 진행 현황</title>
     <link rel="shortcut icon" type="image/x-icon" href="../../images/ico/favicon.ico">
-    <link rel="stylesheet" href="../../lib/jquery-ui/css/jquery-ui.min.css">
     <link rel="stylesheet" href="../../lib/dataTables/datatables.min.css">
-    <link rel="stylesheet" href="../../css/styleCallcenter.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <script src="../../lib/jquery/jquery.min.js"></script>
-    <script src="../../lib/jquery-ui/js/jquery-ui-1.9.2.custom.js"></script>
     <script src="../../lib/dataTables/datatables.min.js"></script>
     <script src="../../lib/smooth-scrollbar/dist/smooth-scrollbar.js"></script>
 </head>
@@ -147,7 +145,7 @@
         <!-- [ mod(230207) ]
 		- 클래스 추가 type-callcenter
 		-->
-        <div class="content-wrapper type-callcenter type-horizontal">
+        <div class="content-wrapper type-horizontal type-callcenter">
             <!-- Header-->
             <header class="header">
                 <div class="wrap">
@@ -307,7 +305,7 @@
 					- table 소스 전체 변경
 					-->
                                     <div class="c-table striped c-vertical-scroll  d-tbl-chklist-wrap">
-                                        <table class="table tbl-examtarget-list c-datatable d-tbl-chklist" id="dTblChkupList01" style="width:100%;">
+                                        <table class="table tbl-examtarget-list c-datatable d-tbl-chklist dataTable no-footer" id="dTblChkupList01" style="width:100%;">
                                             <caption> 검진 대상자 목록 : 예약 확정일자, 고객사, 검진자, 관계, 생년월일, 휴대폰번호, 예약상태, 비고, 대상자추가에 대한 정보 </caption>
 
                                             <!-- [ mod(230519) ]
@@ -1399,8 +1397,7 @@
                                                                                 <div class="inner">
                                                                                     <div class="c-rdochk">
                                                                                         <input type="radio" id="rdoChkupDate02_02" name="rdoChkupDate02">
-                                                                                        <label for="rdoChkupDate02_02" class="chk-label"><i></i><span>분리검진
-                                                                                                진행</span></label>
+                                                                                        <label for="rdoChkupDate02_02" class="chk-label"><i></i><span>분리검진 진행</span></label>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1487,8 +1484,7 @@
                                                                                 <div class="inner">
                                                                                     <div class="c-rdochk">
                                                                                         <input type="radio" id="rdoChkupDate04_02" name="rdoChkupDate04">
-                                                                                        <label for="rdoChkupDate04_02" class="chk-label"><i></i><span>분리검진
-                                                                                                진행</span></label>
+                                                                                        <label for="rdoChkupDate04_02" class="chk-label"><i></i><span>분리검진 진행</span></label>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1590,7 +1586,8 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="row inner">
-                                                                                <div class="col "><input type="text" class="c-input" title="상세주소 입력" placeholder="상세주소"></div>
+                                                                                <div class="col "><input type="text" class="c-input" title="상세주소 입력" placeholder="상세주소">
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -1903,13 +1900,15 @@
                                     <div class="c-tab-field tab-scroll">
                                         <ul class="c-tab-list" role="tablist">
                                             <li class="on" role="presentation">
-                                                <a id="tabList_01" href="javascript:;" role="tab" aria-controls="tabContent_01" aria-selected="true">대상자 정보</a>
+                                                <a id="tabList_01" href="javascript:;" role="tab" aria-controls="tabContent_01" aria-selected="true">대상자
+                                                    정보</a>
                                             </li>
                                             <li role="presentation">
                                                 <a id="tabList_02" href="javascript:;" role="tab" aria-controls="tabContent_02" aria-selected="false">검진예약 정보</a>
                                             </li>
                                             <li role="presentation">
-                                                <a id="tabList_03" href="javascript:;" role="tab" aria-controls="tabContent_03" aria-selected="false">비용 내역</a>
+                                                <a id="tabList_03" href="javascript:;" role="tab" aria-controls="tabContent_03" aria-selected="false">비용
+                                                    내역</a>
                                             </li>
                                             <li role="presentation">
                                                 <a id="tabList_04" href="javascript:;" role="tab" aria-controls="tabContent_04" aria-selected="false">수납내역</a>
@@ -2169,12 +2168,12 @@
 										-->
                                                     <div class="col label-input col-w-full">
                                                         <label for="inputRsvContInfo02_11">요청사항</label>
-                                                        <div class="cont-box request-box "> 온라인 문진표 제공 가능한지 확인 바랍니다.<br> 월별 SK자체양식의 사후관리소견서 취합이 가능한지
-                                                            확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의
-                                                            사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다.
+                                                        <div class="cont-box request-box "> 온라인 문진표 제공 가능한지 확인 바랍니다.<br> 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다.
                                                             월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이
                                                             가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의
-                                                            사후관리소견서 취합이 가능한지 확인바랍니다. </div>
+                                                            사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다.
+                                                            월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이
+                                                            가능한지 확인바랍니다. </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2818,23 +2817,31 @@
     </div> <!-- [ mod(220818) ] -->
     <script src="../../lib/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../../js/common.js"></script>
+
     <script>
         toggleAccordion();
+        var DefaultDateOption = {
+            scrollX: true,
+            scrollY: 200,
+            paging: false,
+            searching: false,
+            ordering: false,
+            reponsive: true,
+            info: false,
+            autoWidth: false,
+            destroy: true,
+        }
 
-        // 검진대상자 리스트 Table Table 변경에 따른 script 재 실행 요청
-        DefaultDateOption['scrollY'] = 200;
-        var addDTableOption = DefaultDateOption;
-        var table = $('#dTblChkupList01').DataTable(addDTableOption);
-        document.addEventListener('DOMContentLoaded', function() {
-            table;
+        document.querySelector('.c-btn-inquiry').addEventListener('click', function() {
+            $('#dTblChkupList01').DataTable(DefaultDateOption);
+
         });
-
-
         window.addEventListener('resize', function() {
-            table.columns.adjust().draw();
+            $('#dTblChkupList01').DataTable(DefaultDateOption).columns.adjust().draw();
         });
+
         document.querySelector('.sidebar-toggle').addEventListener('click', function() {
-            table.columns.adjust().draw();
+            $('#dTblChkupList01').DataTable(DefaultDateOption).columns.adjust().draw();
         });
     </script>
 </body>

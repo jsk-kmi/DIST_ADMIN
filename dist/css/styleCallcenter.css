@@ -10765,6 +10765,11 @@ table {
 .c-tbl-vertical-field.type02 table {
 		table-layout: fixed;
 }
+.c-tbl-vertical-field.type02 table.tbl-examtarget-list th,
+.c-tbl-vertical-field.type02 table.tbl-examtarget-list td {
+		padding-left: 6px;
+		padding-right: 6px;
+}
 
 .c-horizontal-scroll {
 		overflow-y: hidden;
@@ -12391,10 +12396,6 @@ input[type=text].search-input:focus {
 		display: flex;
 		margin-left: -12px;
 		margin-right: -12px;
-		-webkit-box-flex: 1;
-		-webkit-flex: 1 1 100%;
-		    -ms-flex: 1 1 100%;
-		        flex: 1 1 100%;
 }
 .c-input-btn-group > [class^=col] {
 		padding-left: 12px;
@@ -13145,15 +13146,6 @@ textarea[readonly=readonly]:focus, textarea.ta-r-only:focus {
 		min-width: auto;
 }
 
-.row.c-input-email-group {
-		margin-left: -12px;
-		margin-right: -12px;
-}
-.row.c-input-email-group > [class^=col] {
-		padding-left: 12px;
-		padding-right: 12px;
-}
-
 .c-input-phone-group {
 		margin-left: -12px;
 		margin-right: -12px;
@@ -13466,27 +13458,18 @@ textarea[readonly=readonly]:focus, textarea.ta-r-only:focus {
 		box-shadow: none;
 }
 
-.content-wrapper.type-horizontal > .contents > .c-panel .input-list .row,
-.c-layer-popup.type-horizontal > .contents > .c-panel .input-list .row {
-		margin-left: -20px;
-		margin-right: -20px;
+.content-wrapper.type-horizontal input[type=text], .content-wrapper.type-horizontal input[type=password],
+.c-layer-popup.type-horizontal input[type=text],
+.c-layer-popup.type-horizontal input[type=password] {
+		min-width: 120px;
+		width: 0;
 }
-.content-wrapper.type-horizontal > .contents > .c-panel .input-list .row.c-input-email-group,
-.c-layer-popup.type-horizontal > .contents > .c-panel .input-list .row.c-input-email-group {
-		margin-left: -10px;
-		margin-right: -10px;
+.content-wrapper.type-horizontal .label-input label,
+.c-layer-popup.type-horizontal .label-input label {
+		margin-bottom: 0;
 }
-.content-wrapper.type-horizontal > .contents > .c-panel .input-list .row > [class*=col-],
-.c-layer-popup.type-horizontal > .contents > .c-panel .input-list .row > [class*=col-] {
-		padding-left: 10px;
-		padding-right: 10px;
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-}
-.content-wrapper.type-horizontal > .contents > .c-panel .c-article.input-list,
-.c-layer-popup.type-horizontal > .contents > .c-panel .c-article.input-list {
+.content-wrapper.type-horizontal .c-article.input-list,
+.c-layer-popup.type-horizontal .c-article.input-list {
 		display: -webkit-box;
 		display: -webkit-flex;
 		display: -ms-flexbox;
@@ -13495,26 +13478,74 @@ textarea[readonly=readonly]:focus, textarea.ta-r-only:focus {
 		    -ms-flex-wrap: wrap;
 		        flex-wrap: wrap;
 }
-.content-wrapper.type-horizontal > .contents > .c-panel .c-article.c-textarea-article .col.label-input,
-.c-layer-popup.type-horizontal > .contents > .c-panel .c-article.c-textarea-article .col.label-input {
+.content-wrapper.type-horizontal .c-article.input-list.c-textarea-article,
+.c-layer-popup.type-horizontal .c-article.input-list.c-textarea-article {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+}
+.content-wrapper.type-horizontal .c-article.input-list.c-textarea-article .col,
+.c-layer-popup.type-horizontal .c-article.input-list.c-textarea-article .col {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: row;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+}
+.content-wrapper.type-horizontal .c-article.input-list.c-textarea-article .col.label-input,
+.c-layer-popup.type-horizontal .c-article.input-list.c-textarea-article .col.label-input {
 		-webkit-box-flex: 0;
 		-webkit-flex: 0 0 100%;
 		    -ms-flex: 0 0 100%;
 		        flex: 0 0 100%;
 }
-.content-wrapper.type-horizontal > .contents .c-input-phone-group .input-phone-01,
-.c-layer-popup.type-horizontal > .contents .c-input-phone-group .input-phone-01 {
-		-webkit-flex-basis: 100px;
-		    -ms-flex-preferred-size: 100px;
-		        flex-basis: 100px;
-}
-.content-wrapper.type-horizontal > .contents .c-article.input-list > .row > [class^=col],
-.c-layer-popup.type-horizontal > .contents .c-article.input-list > .row > [class^=col] {
+.content-wrapper.type-horizontal .c-article.input-list > .row > [class^=col],
+.c-layer-popup.type-horizontal .c-article.input-list > .row > [class^=col] {
 		-webkit-box-flex: 0;
 		-webkit-flex: none;
 		    -ms-flex: none;
 		        flex: none;
 		max-width: 100%;
+}
+.content-wrapper.type-horizontal .c-article.input-list > .row > [class^=col] > .row,
+.c-layer-popup.type-horizontal .c-article.input-list > .row > [class^=col] > .row {
+		-webkit-box-flex: 1;
+		-webkit-flex: 1 0 auto;
+		    -ms-flex: 1 0 auto;
+		        flex: 1 0 auto;
+}
+.content-wrapper.type-horizontal .c-article.input-list > .row > [class^=col] .c-input-address-group .c-btn,
+.c-layer-popup.type-horizontal .c-article.input-list > .row > [class^=col] .c-input-address-group .c-btn {
+		padding: 10px;
+}
+.content-wrapper.type-horizontal .c-article.input-list .c-input-unit > input[type=text],
+.content-wrapper.type-horizontal .c-article.input-list .c-input-unit > input[type=password],
+.content-wrapper.type-horizontal .c-article.input-list .c-input-unit > input[type=number],
+.content-wrapper.type-horizontal .c-article.input-list .c-input > input[type=text],
+.content-wrapper.type-horizontal .c-article.input-list .c-input > input[type=password],
+.content-wrapper.type-horizontal .c-article.input-list .c-input > input[type=number],
+.c-layer-popup.type-horizontal .c-article.input-list .c-input-unit > input[type=text],
+.c-layer-popup.type-horizontal .c-article.input-list .c-input-unit > input[type=password],
+.c-layer-popup.type-horizontal .c-article.input-list .c-input-unit > input[type=number],
+.c-layer-popup.type-horizontal .c-article.input-list .c-input > input[type=text],
+.c-layer-popup.type-horizontal .c-article.input-list .c-input > input[type=password],
+.c-layer-popup.type-horizontal .c-article.input-list .c-input > input[type=number] {
+		width: 100%;
+}
+.content-wrapper.type-horizontal .c-article.input-list .row > [class^=col],
+.c-layer-popup.type-horizontal .c-article.input-list .row > [class^=col] {
+		padding-left: 10px;
+		padding-right: 10px;
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 1 auto;
+		    -ms-flex: 0 1 auto;
+		        flex: 0 1 auto;
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		-webkit-flex-direction: row;
@@ -13525,49 +13556,79 @@ textarea[readonly=readonly]:focus, textarea.ta-r-only:focus {
 		    -ms-flex-align: center;
 		        align-items: center;
 }
-.content-wrapper.type-horizontal > .contents .c-article.input-list > .row > [class^=col] > .row,
-.c-layer-popup.type-horizontal > .contents .c-article.input-list > .row > [class^=col] > .row {
-		-webkit-box-flex: 1;
-		-webkit-flex: 1 0 auto;
-		    -ms-flex: 1 0 auto;
-		        flex: 1 0 auto;
+.content-wrapper.type-horizontal .c-article.input-list .row .c-input-address-group .input-addr-01 input[type=text],
+.c-layer-popup.type-horizontal .c-article.input-list .row .c-input-address-group .input-addr-01 input[type=text] {
+		width: 95px;
+		min-width: 95px;
 }
-.content-wrapper.type-horizontal > .contents .c-article.input-list > .row > [class^=col] .c-input-address-group,
-.c-layer-popup.type-horizontal > .contents .c-article.input-list > .row > [class^=col] .c-input-address-group {
-		-webkit-box-flex: 0;
-		-webkit-flex: 0 1 fit-content;
-		    -ms-flex: 0 1 fit-content;
-		        flex: 0 1 fit-content;
+.content-wrapper.type-horizontal .c-article.input-list .row.c-input-group.range input[type=text],
+.c-layer-popup.type-horizontal .c-article.input-list .row.c-input-group.range input[type=text] {
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
+		width: fit-content;
+		min-width: 0;
 }
-.content-wrapper.type-horizontal > .contents .c-article.input-list > .row > [class^=col] .c-input-address-group > .col,
-.c-layer-popup.type-horizontal > .contents .c-article.input-list > .row > [class^=col] .c-input-address-group > .col {
-		-webkit-box-flex: 1;
-		-webkit-flex: 1 1 min-content;
-		    -ms-flex: 1 1 min-content;
-		        flex: 1 1 min-content;
-}
-.content-wrapper.type-horizontal > .contents .c-article.input-list > .row > [class^=col] .c-input-address-group .c-btn,
-.c-layer-popup.type-horizontal > .contents .c-article.input-list > .row > [class^=col] .c-input-address-group .c-btn {
-		padding: 10px;
-}
-.content-wrapper.type-horizontal > .contents .c-article.input-list.type03 .c-input-unit,
-.c-layer-popup.type-horizontal > .contents .c-article.input-list.type03 .c-input-unit {
-		width: 100%;
-}
-.content-wrapper.type-horizontal > .contents .c-article.input-list.type03 > .row,
-.c-layer-popup.type-horizontal > .contents .c-article.input-list.type03 > .row {
+.content-wrapper.type-horizontal .c-article.input-list .row.c-input-email-group .input-email-02,
+.c-layer-popup.type-horizontal .c-article.input-list .row.c-input-email-group .input-email-02 {
 		-webkit-box-flex: 1;
 		-webkit-flex: 1 1 100%;
 		    -ms-flex: 1 1 100%;
 		        flex: 1 1 100%;
 }
-.content-wrapper.type-horizontal > .contents .c-article.input-list:not(.type03) .c-input-email-group,
-.c-layer-popup.type-horizontal > .contents .c-article.input-list:not(.type03) .c-input-email-group {
-		-webkit-box-flex: 0;
-		-webkit-flex: 0 1 auto;
-		    -ms-flex: 0 1 auto;
-		        flex: 0 1 auto;
+.content-wrapper.type-horizontal .c-article.input-list .row.c-input-email-group .input-email-02 > .row,
+.c-layer-popup.type-horizontal .c-article.input-list .row.c-input-email-group .input-email-02 > .row {
+		-webkit-box-flex: 1;
+		-webkit-flex-grow: 1;
+		    -ms-flex-positive: 1;
+		        flex-grow: 1;
 }
+.content-wrapper.type-horizontal .c-article.input-list .row.c-input-email-group .input-email-02 input,
+.c-layer-popup.type-horizontal .c-article.input-list .row.c-input-email-group .input-email-02 input {
+		min-width: 100px;
+}
+.content-wrapper.type-horizontal .c-article.input-list .row.c-input-email-group select,
+.c-layer-popup.type-horizontal .c-article.input-list .row.c-input-email-group select {
+		width: 100px;
+}
+.content-wrapper.type-horizontal .c-article.input-list .row.inner,
+.c-layer-popup.type-horizontal .c-article.input-list .row.inner {
+		margin-left: -10px;
+		margin-right: -10px;
+}
+.content-wrapper.type-horizontal .c-article.input-list .row.inner.c-input-address-group > [class^=col] > .row, .content-wrapper.type-horizontal .c-article.input-list .row.inner.c-input-email-group > [class^=col] > .row,
+.c-layer-popup.type-horizontal .c-article.input-list .row.inner.c-input-address-group > [class^=col] > .row,
+.c-layer-popup.type-horizontal .c-article.input-list .row.inner.c-input-email-group > [class^=col] > .row {
+		-webkit-box-flex: 1;
+		-webkit-flex: 1 1 100%;
+		    -ms-flex: 1 1 100%;
+		        flex: 1 1 100%;
+		margin-left: -10px;
+		margin-right: -10px;
+}
+.content-wrapper.type-horizontal .c-article.input-list .row.inner.c-input-address-group .input-email-02 > .row, .content-wrapper.type-horizontal .c-article.input-list .row.inner.c-input-email-group .input-email-02 > .row,
+.c-layer-popup.type-horizontal .c-article.input-list .row.inner.c-input-address-group .input-email-02 > .row,
+.c-layer-popup.type-horizontal .c-article.input-list .row.inner.c-input-email-group .input-email-02 > .row {
+		-webkit-flex-wrap: nowrap;
+		    -ms-flex-wrap: nowrap;
+		        flex-wrap: nowrap;
+}
+.content-wrapper.type-horizontal .c-article.input-list .row.inner.c-input-phone-group :not(.input-phone-01) input,
+.c-layer-popup.type-horizontal .c-article.input-list .row.inner.c-input-phone-group :not(.input-phone-01) input {
+		width: 70px;
+		min-width: 70px;
+}
+.content-wrapper.type-horizontal .c-article.input-list.type03 .c-input-unit,
+.c-layer-popup.type-horizontal .c-article.input-list.type03 .c-input-unit {
+		width: 100%;
+}
+.content-wrapper.type-horizontal .c-article.input-list.type03 > .row,
+.c-layer-popup.type-horizontal .c-article.input-list.type03 > .row {
+		-webkit-box-flex: 1;
+		-webkit-flex: 1 1 100%;
+		    -ms-flex: 1 1 100%;
+		        flex: 1 1 100%;
+}
+
 /**
 type-horizontal 최상위 요소 부여
 
@@ -13588,206 +13649,173 @@ type-horizontal 최상위 요소 부여
 		padding-top: 7.785rem;
 }
 
-#container .content-wrapper.type-callcenter .contents .c-panel ~ .c-panel {
+.content-wrapper.type-callcenter .c-panel ~ .c-panel,
+.c-layer-popup.type-callcenter .c-panel ~ .c-panel {
 		margin-top: 20px;
 }
-#container .content-wrapper.type-callcenter .contents .c-article.input-list .row.inner {
-		margin-left: -10px;
-		margin-right: -10px;
-		-webkit-box-flex: 1;
-		-webkit-flex: 1 0 auto;
-		    -ms-flex: 1 0 auto;
-		        flex: 1 0 auto;
-}
-#container .content-wrapper.type-callcenter .contents .c-article.input-list .row.inner.c-input-address-group > [class^=col] > .row, #container .content-wrapper.type-callcenter .contents .c-article.input-list .row.inner.c-input-email-group > [class^=col] > .row {
-		margin-left: -10px;
-		margin-right: -10px;
-}
-#container .content-wrapper.type-callcenter .contents .c-article.input-list .row.inner.c-input-address-group .input-email-02 > .row, #container .content-wrapper.type-callcenter .contents .c-article.input-list .row.inner.c-input-email-group .input-email-02 > .row {
-		-webkit-flex-wrap: nowrap;
-		    -ms-flex-wrap: nowrap;
-		        flex-wrap: nowrap;
-}
-#container .content-wrapper.type-callcenter .contents .c-article.input-list .row.inner.c-input-phone-group :not(.input-phone-01) {
-		-webkit-box-flex: 0;
-		-webkit-flex: 0 0 fit-content;
-		    -ms-flex: 0 0 fit-content;
-		        flex: 0 0 fit-content;
-}
-#container .content-wrapper.type-callcenter .contents .c-article.input-list .row.inner.c-input-phone-group :not(.input-phone-01) input {
-		-webkit-flex-basis: fit-content;
-		    -ms-flex-preferred-size: fit-content;
-		        flex-basis: fit-content;
-		min-width: 70px;
-}
-#container .content-wrapper.type-callcenter .contents .c-article:not(.type03) .c-input-email-group {
-		-webkit-box-flex: 0;
-		-webkit-flex: 0 1 auto;
-		    -ms-flex: 0 1 auto;
-		        flex: 0 1 auto;
-}
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout {
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-flex: 1;
-		-webkit-flex: 1 1 100%;
-		    -ms-flex: 1 1 100%;
-		        flex: 1 1 100%;
-		margin-left: -10px;
-		margin-right: -10px;
-}
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout > .c-inner > .c-panel:first-of-type .row {
-		max-width: 100%;
-}
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout > .c-inner > .c-panel:first-of-type [class^=col] {
-		padding-left: 10px;
-		padding-right: 10px;
-}
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .c-input-unit input[type=text] {
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .c-input-unit input[type=text],
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .c-input-unit input[type=text] {
 		padding-right: 18px;
 }
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .left-wrap .c-panel input[type=text] {
-		width: 0;
-}
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .left-wrap .c-panel .row label,
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .left-wrap .c-panel .row .c-label-txt {
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .left-wrap .c-panel .row label,
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .left-wrap .c-panel .row .c-label-txt,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .left-wrap .c-panel .row label,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .left-wrap .c-panel .row .c-label-txt {
 		min-width: 60px;
-		margin-right: 12px;
+		margin-right: 10px;
 }
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .left-wrap .col-6 .c-input-phone-group .col:nth-of-type(2) {
-		-webkit-box-flex: 0;
-		-webkit-flex: 0 1 auto;
-		    -ms-flex: 0 1 auto;
-		        flex: 0 1 auto;
-}
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 {
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 {
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
 		-webkit-flex-direction: column;
 		    -ms-flex-direction: column;
 		        flex-direction: column;
 }
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .label-input label {
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .label-input label,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .label-input label {
 		min-width: 80px;
 }
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-8 {
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-8,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-8 {
 		max-width: 100%;
 		-webkit-box-flex: 0;
 		-webkit-flex: 0 0 100%;
 		    -ms-flex: 0 0 100%;
 		        flex: 0 0 100%;
 }
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-8 .c-input-badge-group {
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-8 .c-input-badge-group,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-8 .c-input-badge-group {
 		width: 100%;
 		margin-top: -8px;
 		min-height: 33px;
 }
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-8 .c-input-badge-group .c-badge-detail {
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-8 .c-input-badge-group .c-badge-detail,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-8 .c-input-badge-group .c-badge-detail {
 		padding-top: 10px;
 }
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-2 {
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-8 .c-input-unit,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-8 .c-input-unit {
+		width: 100%;
+}
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-2,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-2 {
 		max-width: 50%;
 		-webkit-box-flex: 0;
 		-webkit-flex: 0 0 50%;
 		    -ms-flex: 0 0 50%;
 		        flex: 0 0 50%;
 }
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .c-input-unit {
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-2 .c-input-unit,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-2 .c-input-unit {
 		width: 100%;
 }
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .label-input label,
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .label-input .c-label-txt {
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .label-input label,
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .label-input .c-label-txt,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .label-input label,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .label-input .c-label-txt {
 		min-width: 100px;
 }
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .col-3 {
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .col-3,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .col-3 {
 		max-width: 50%;
 		-webkit-box-flex: 0;
 		-webkit-flex: 0 0 50%;
 		    -ms-flex: 0 0 50%;
 		        flex: 0 0 50%;
 }
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .col-3 .c-input-mark {
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .col-3 .c-input-mark,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .col-3 .c-input-mark {
 		width: 100%;
 }
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .col-3 .c-input-mark input {
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .col-3 .c-input-mark input,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .col-3 .c-input-mark input {
 		padding-right: 22px;
 }
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .col-6 {
-		max-width: 100%;
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .col-6,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .col-6 {
 		-webkit-box-flex: 0;
 		-webkit-flex: 0 0 100%;
 		    -ms-flex: 0 0 100%;
 		        flex: 0 0 100%;
 }
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .col-6.input-email-01,
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .col-6 .input-email-02 {
-		max-width: 50%;
-		-webkit-box-flex: 0;
-		-webkit-flex: 0 0 50%;
-		    -ms-flex: 0 0 50%;
-		        flex: 0 0 50%;
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .col-6.input-email-01:after,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .col-6.input-email-01:after {
+		bottom: initial;
+		right: -5px;
 }
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .col-6.input-email-02 .col {
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .col-6.input-email-01 input,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .col-6.input-email-01 input {
+		min-width: initial;
+		width: auto;
+}
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .col-6.input-email-02 .col,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .col-6.input-email-02 .col {
 		-webkit-flex-basis: 100%;
 		    -ms-flex-preferred-size: 100%;
 		        flex-basis: 100%;
 }
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .c-input-email-group {
-		-webkit-box-align: center;
-		-webkit-align-items: center;
-		    -ms-flex-align: center;
-		        align-items: center;
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .col-6.input-email-02 .col input,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .col-6.input-email-02 .col input {
+		width: 100%;
 }
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .c-input-email-group .col-6 {
-		max-width: initial;
-		padding-left: 10px;
-		padding-right: 10px;
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .c-input-address-group,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .c-input-address-group {
+		-webkit-flex-wrap: nowrap;
+		    -ms-flex-wrap: nowrap;
+		        flex-wrap: nowrap;
 }
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .input-email-01:after {
-		bottom: initial;
-		right: -5px;
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .c-input-address-group .input-addr-02,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .c-input-address-group .input-addr-02 {
+		-webkit-flex-basis: 100%;
+		    -ms-flex-preferred-size: 100%;
+		        flex-basis: 100%;
 }
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .buttons:first-of-type {
-		-webkit-box-pack: end;
-		-webkit-justify-content: flex-end;
-		    -ms-flex-pack: end;
-		        justify-content: flex-end;
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .c-input-address-group .input-addr-02 input,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .c-input-address-group .input-addr-02 input {
+		width: 100%;
+}
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .buttons:first-of-type,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .buttons:first-of-type {
 		margin-bottom: 22px;
 }
-#container .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .tab-cont .buttons {
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .tab-cont .buttons,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .tab-cont .buttons {
 		margin-top: 20px;
 }
-#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-03 .c-table.tbl-modrsv-selectchk tbody td {
+.content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-03 .c-table.tbl-modrsv-selectchk tbody td,
+.c-layer-popup.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-03 .c-table.tbl-modrsv-selectchk tbody td {
 		white-space: nowrap;
 }
-#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .input-list .row {
+.content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .input-list .row,
+.c-layer-popup.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .input-list .row {
 		-webkit-box-flex: 0;
 		-webkit-flex: 0 1 auto;
 		    -ms-flex: 0 1 auto;
 		        flex: 0 1 auto;
 }
-#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .c-rdochk label {
+.content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .c-rdochk label,
+.c-layer-popup.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .c-rdochk label {
 		min-width: auto;
 }
-#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .col-6 {
+.content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .col-6,
+.c-layer-popup.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .col-6 {
 		-webkit-flex-basis: auto;
 		    -ms-flex-preferred-size: auto;
 		        flex-basis: auto;
 }
-#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .type-rsv-request .col-5 ~ .col-5 {
+.content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .type-rsv-request .col-5 ~ .col-5,
+.c-layer-popup.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .type-rsv-request .col-5 ~ .col-5 {
 		margin-left: 15px;
 }
-#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .c-m-input-list > .input-col ~ .input-col {
+.content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .c-m-input-list > .input-col ~ .input-col,
+.c-layer-popup.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .c-m-input-list > .input-col ~ .input-col {
 		margin-left: 0;
 }
-#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .label-txt,
-#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .label-input > label {
+.content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .label-txt,
+.content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .label-input > label,
+.c-layer-popup.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .label-txt,
+.c-layer-popup.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-05 .label-input > label {
 		display: -webkit-inline-box;
 		display: -webkit-inline-flex;
 		display: -ms-inline-flexbox;
@@ -13799,107 +13827,53 @@ type-horizontal 최상위 요소 부여
 		width: auto;
 		min-width: auto;
 }
-#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list {
+.content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list,
+.c-layer-popup.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list {
 		display: inline-block;
 		width: 100%;
 }
-#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list > .row .c-select {
+.content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list > .row .c-select,
+.c-layer-popup.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list > .row .c-select {
 		width: auto;
 }
-#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list > .row > .col-12 {
+.content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list > .row > .col-12,
+.c-layer-popup.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list > .row > .col-12 {
 		width: 100%;
-		padding-left: 10px;
-		padding-right: 10px;
 }
-#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list .input-email-02 input[type=text] {
-		width: inherit;
-		min-width: inherit;
-}
-#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list [class^=col] {
-		-webkit-box-flex: 0;
-		-webkit-flex: 0 1 auto;
-		    -ms-flex: 0 1 auto;
-		        flex: 0 1 auto;
-}
-#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list .label-input .c-label-txt,
-#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list .label-input label {
+.content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list .label-input .c-label-txt,
+.content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list .label-input label,
+.c-layer-popup.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list .label-input .c-label-txt,
+.c-layer-popup.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list .label-input label {
 		min-width: 120px;
 }
-#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list .c-input-phone-group .col .c-input {
-		width: 0;
-}
-#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list .c-input-address-group .row:nth-of-type(2) .c-input {
+.content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list .c-input-address-group .row:nth-of-type(2) .c-input,
+.c-layer-popup.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list .c-input-address-group .row:nth-of-type(2) .c-input {
 		width: 300px;
 }
-#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list .c-input-address-group > .row + .row > .col {
+.content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list .c-input-address-group > .row + .row > .col,
+.c-layer-popup.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list .c-input-address-group > .row + .row > .col {
 		width: 100%;
 }
-#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .row.c-input-phone-group,
-#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-06 .row .input-addr-02 {
-		-webkit-box-flex: 0;
-		-webkit-flex: 0 0 auto;
-		    -ms-flex: 0 0 auto;
-		        flex: 0 0 auto;
-}
-#container .content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-07 .c-rdochk {
+.content-wrapper.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-07 .c-rdochk,
+.c-layer-popup.type-callcenter .mod-rsv-setting-field .set-modrsv-tab.tab-07 .c-rdochk {
 		margin-right: 25px;
 }
-#container .content-wrapper.type-callcenter .c-layer-popup .c-input-phone-group :not(.input-phone-01) {
-		-webkit-box-flex: 1 !important;
-		-webkit-flex: 1 1 min-content !important;
-		    -ms-flex: 1 1 min-content !important;
-		        flex: 1 1 min-content !important;
-}
-#container .content-wrapper.type-callcenter .c-layer-popup .c-input-phone-group :not(.input-phone-01) input {
-		min-width: 70px;
-}
-#container .content-wrapper.type-callcenter .set-modrsv-tab .c-inner-field > .input-list,
-#container .content-wrapper.type-callcenter .set-modrsv-tab .c-title-field + .input-list {
+.content-wrapper.type-callcenter .set-modrsv-tab .c-inner-field > .input-list,
+.content-wrapper.type-callcenter .set-modrsv-tab .c-title-field + .input-list,
+.c-layer-popup.type-callcenter .set-modrsv-tab .c-inner-field > .input-list,
+.c-layer-popup.type-callcenter .set-modrsv-tab .c-title-field + .input-list {
 		padding-left: 10px;
 		padding-right: 10px;
 }
-#container .content-wrapper.type-callcenter .set-modrsv-tab .c-article.input-list > .row {
-		margin-left: 0;
-		margin-right: 0;
+.content-wrapper.type-callcenter .set-modrsv-tab .c-article.input-list > .row,
+.c-layer-popup.type-callcenter .set-modrsv-tab .c-article.input-list > .row {
 		margin-left: -10px;
 		margin-right: -10px;
 }
-#container .content-wrapper.type-callcenter .set-modrsv-tab .c-article.input-list > .row > [class^=col] {
+.content-wrapper.type-callcenter .set-modrsv-tab .c-article.input-list > .row > [class^=col],
+.c-layer-popup.type-callcenter .set-modrsv-tab .c-article.input-list > .row > [class^=col] {
 		padding-left: 10px;
 		padding-right: 10px;
-}
-
-.content-wrapper.type-callcenter .contents > .c-panel .row .c-input-address-group .input-addr-01 input[type=text] {
-		min-width: 95px;
-}
-.content-wrapper.type-callcenter .contents > .c-panel .row .c-input-group.range input[type=text] {
-		min-width: 0;
-}
-.content-wrapper.type-callcenter .contents > .c-panel .row input[type=text] {
-		min-width: 120px;
-}
-.content-wrapper.type-callcenter .c-layer-popup .c-article.input-list .row.inner {
-		margin-left: -10px;
-		margin-right: -10px;
-}
-.content-wrapper.type-callcenter .c-layer-popup .c-article.input-list .row.inner > [class^=col] {
-		padding-left: 10px;
-		padding-right: 10px;
-}
-
-.c-tbl-vertical-field.type02 table.tbl-examtarget-list th,
-.c-tbl-vertical-field.type02 table.tbl-examtarget-list td {
-		padding-left: 6px;
-		padding-right: 6px;
-}
-
-#tblExamtargetList02 th,
-#tblExamtargetList02 td {
-		min-width: 110px;
-		max-width: 110px;
-}
-#tblExamtargetList02 td:nth-child(2) {
-		max-width: 150px;
 }
 
 .modrsv-scroll .input-list .row > [class^=col] {
@@ -13907,6 +13881,22 @@ type-horizontal 최상위 요소 부여
 		display: -webkit-flex;
 		display: -ms-flexbox;
 		display: flex;
+}
+
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .c-btn {
+		min-width: initial;
+}
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .c-btn.input-btn {
+		padding: 10px;
+}
+.c-layer-popup.type-callcenter .tab-05 .c-article.input-list {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		    -ms-flex-wrap: wrap;
+		        flex-wrap: wrap;
 }
 
 /*
@@ -17367,27 +17357,11 @@ table.tbl-chkup-category .btn-open-chkup-infotxt {
 		background-color: #fff;
 }
 .c-layer-popup.reservation-detail-popup.rsvdtl-popup-type01 .modal-body {
-		padding: 0;
 		height: inherit;
 		display: -webkit-box;
 		display: -webkit-flex;
 		display: -ms-flexbox;
 		display: flex;
-		-webkit-box-flex: 1;
-		-webkit-flex: 1 1 auto;
-		    -ms-flex: 1 1 auto;
-		        flex: 1 1 auto;
-}
-.c-layer-popup.reservation-detail-popup.rsvdtl-popup-type01 .reservation-dtl-status-layout {
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-		width: 100%;
-		-webkit-box-flex: 1;
-		-webkit-flex: 1 1 auto;
-		    -ms-flex: 1 1 auto;
-		        flex: 1 1 auto;
 }
 .c-layer-popup.reservation-detail-popup.rsvdtl-popup-type01 .reservation-dtl-status-layout .row.c-input-email-group .input-email-01:after {
 		right: -6px;
@@ -17400,16 +17374,6 @@ table.tbl-chkup-category .btn-open-chkup-infotxt {
 .c-layer-popup.reservation-detail-popup .c-layout-type01 > .row > .col .request-box {
 		white-space: wrap;
 }
-.c-layer-popup.reservation-detail-popup .c-input-phone-group .c-select select {
-		min-width: auto;
-}
-.c-layer-popup.reservation-detail-popup .c-article.input-list > .row.type-rsv-request > .col-5 {
-		-webkit-box-flex: 0;
-		-webkit-flex: 0 0 calc(50% - 29px);
-		    -ms-flex: 0 0 calc(50% - 29px);
-		        flex: 0 0 calc(50% - 29px);
-		max-width: calc(50% - 29px);
-}
 .c-layer-popup.reservation-detail-popup .c-article.input-list > .row.type-rsv-request .col-2 {
 		-webkit-box-flex: 0;
 		-webkit-flex: 0 0 58px;
@@ -17419,10 +17383,6 @@ table.tbl-chkup-category .btn-open-chkup-infotxt {
 }
 .c-layer-popup.reservation-detail-popup .c-article.input-list > .row > [class*=col] {
 		padding: 8px 10px;
-}
-.c-layer-popup.reservation-detail-popup .input-list .row {
-		margin-left: -10px;
-		margin-right: -10px;
 }
 .c-layer-popup.reservation-detail-popup .input-list .row.inner [class*=col] {
 		padding-left: 10px;
@@ -17441,9 +17401,6 @@ table.tbl-chkup-category .btn-open-chkup-infotxt {
 }
 .c-layer-popup.reservation-detail-popup .modal-content .c-input-unit input[type=text] {
 		padding-right: 15px;
-}
-.c-layer-popup.reservation-detail-popup .c-panel + .c-panel {
-		margin-top: 20px;
 }
 .c-layer-popup.reservation-detail-popup.rsvdtl-popup-type03 .c-article.input-list > .row > [class*=col] {
 		padding: 8px 10px;
@@ -17499,7 +17456,6 @@ table.tbl-chkup-category .btn-open-chkup-infotxt {
 .mod-reservation .c-inner-left,
 .mod-reservation .c-inner-right {
 		height: 100%;
-		overflow-x: hidden;
 }
 .mod-reservation .c-inner-left {
 		width: 156px;
@@ -17515,7 +17471,6 @@ table.tbl-chkup-category .btn-open-chkup-infotxt {
 		-webkit-flex-grow: 1;
 		    -ms-flex-positive: 1;
 		        flex-grow: 1;
-		height: 100%;
 }
 .mod-reservation .c-inner-right .c-tab-contents {
 		height: 100%;
@@ -17819,6 +17774,9 @@ table.tbl-chkup-category .btn-open-chkup-infotxt {
 .set-modrsv-tab.tab-01 .c-table {
 		max-height: 100%;
 }
+.set-modrsv-tab.tab-06 .c-label-txt {
+		min-width: 100px;
+}
 .set-modrsv-tab.tab-06 .c-input-email-group .input-email-01 {
 		-webkit-box-flex: 0;
 		-webkit-flex: 0 0 35%;
@@ -17935,7 +17893,7 @@ table.tbl-chkup-category .btn-open-chkup-infotxt {
 
 .region-article {
 		padding-top: 20px;
-		padding-botton: 20px;
+		padding-bottom: 20px;
 }
 .region-article .c-card-article > [class*=col] padding,
 .region-article .c-card-article > [class*=col-] padding {
@@ -18233,9 +18191,6 @@ table.tbl-chkup-category .btn-open-chkup-infotxt {
 		padding-left: 10px;
 		padding-right: 10px;
 }
-.reservation-dtl-status-layout .label-input label {
-		margin-bottom: 0;
-}
 .reservation-dtl-status-layout .left-wrap {
 		width: 60%;
 		-webkit-box-flex: 0;
@@ -18266,50 +18221,96 @@ table.tbl-chkup-category .btn-open-chkup-infotxt {
 		        flex: 0 0 40%;
 		max-width: 40%;
 }
-.reservation-dtl-status-layout .right-wrap .buttons:first-of-type {
-		-webkit-box-pack: end;
-		-webkit-justify-content: flex-end;
-		    -ms-flex-pack: end;
-		        justify-content: flex-end;
-		margin-bottom: 22px;
-}
 .reservation-dtl-status-layout .right-wrap .c-article.input-list.type03 .c-input-email-group {
 		-webkit-box-align: center;
 		-webkit-align-items: center;
 		    -ms-flex-align: center;
 		        align-items: center;
 }
-.reservation-dtl-status-layout .right-wrap .c-article.input-list.type03 .c-input-email-group .col-6 {
-		max-width: initial;
+/**
+@ 검진예약현황 - 상세보기 팝업 (UI 변경 스타일 반영 이후 Delete)
+*/
+.c-layer-popup:not(.type-callcenter).reservation-detail-popup .label-input label,
+.c-layer-popup:not(.type-callcenter).reservation-detail-popup .label-input .c-label-txt {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		margin-right: 15px;
 }
-
-.c-layer-popup.type-callcenter .modal-body .reservation-dtl-status-layout {
-		padding: 20px 40px;
+.c-layer-popup:not(.type-callcenter).reservation-detail-popup .c-m-input-list .input-col {
+		margin-bottom: 8px;
 }
-.c-layer-popup.type-callcenter .modal-body .reservation-dtl-status-layout .type03 label {
+.c-layer-popup:not(.type-callcenter).reservation-detail-popup.rsvdtl-popup-type01.show {
+		padding-left: 0 !important;
+}
+.c-layer-popup:not(.type-callcenter).reservation-detail-popup.rsvdtl-popup-type01 .c-article {
+		background-color: #fff;
+}
+.c-layer-popup:not(.type-callcenter).reservation-detail-popup.rsvdtl-popup-type01 .modal-body {
+		padding: 0;
+		height: inherit;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-flex: 1;
+		-webkit-flex: 1 1 auto;
+		    -ms-flex: 1 1 auto;
+		        flex: 1 1 auto;
+}
+.c-layer-popup:not(.type-callcenter).reservation-detail-popup.rsvdtl-popup-type01 .reservation-dtl-layout {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		width: 100%;
+		-webkit-box-flex: 1;
+		-webkit-flex: 1 1 auto;
+		    -ms-flex: 1 1 auto;
+		        flex: 1 1 auto;
+}
+.c-layer-popup:not(.type-callcenter).reservation-detail-popup.rsvdtl-popup-type01 .reservation-dtl-layout .in-layout {
+		padding: 20px 25px;
+}
+.c-layer-popup:not(.type-callcenter).reservation-detail-popup.rsvdtl-popup-type01 .reservation-dtl-layout .row.c-input-email-group .input-email-01:after {
+		right: -6px;
+		bottom: 7px;
+}
+.c-layer-popup:not(.type-callcenter).reservation-detail-popup.rsvdtl-popup-type01 .left-wrap padding,
+.c-layer-popup:not(.type-callcenter).reservation-detail-popup.rsvdtl-popup-type01 .right-wrap padding {
+		left: 20px;
+		right: 20px;
+}
+.c-layer-popup:not(.type-callcenter).reservation-detail-popup.rsvdtl-popup-type01 .left-wrap {
+		width: 36%;
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 36%;
+		    -ms-flex: 0 0 36%;
+		        flex: 0 0 36%;
+		min-width: 680px;
+		background-color: #f5f5f9;
+}
+.c-layer-popup:not(.type-callcenter).reservation-detail-popup .c-input-badge-group {
+		min-height: 33px;
+}
+.c-layer-popup:not(.type-callcenter).reservation-detail-popup .c-input-phone-group,
+.c-layer-popup:not(.type-callcenter).reservation-detail-popup .c-input-address-group,
+.c-layer-popup:not(.type-callcenter).reservation-detail-popup .c-input-email-group {
+		-webkit-box-flex: 1;
+		-webkit-flex-grow: 1;
+		    -ms-flex-positive: 1;
+		        flex-grow: 1;
+}
+.c-layer-popup:not(.type-callcenter).reservation-detail-popup .tab-06 .c-label-txt,
+.c-layer-popup:not(.type-callcenter).reservation-detail-popup .tab-06 .label-input label {
 		min-width: 100px;
 }
-.c-layer-popup.type-callcenter .modal-body .reservation-dtl-status-layout .c-panel .row input[type=text] {
-		min-width: 120px;
-}
-.c-layer-popup.type-callcenter .modal-body .reservation-dtl-status-layout .c-panel .row.type-rsv-request > .col-5 {
-		-webkit-box-flex: 0;
-		-webkit-flex: none;
-		    -ms-flex: none;
-		        flex: none;
-		padding-left: 20px;
-		padding-right: 20px;
-}
-.c-layer-popup.type-callcenter .modal-body .reservation-dtl-status-layout .left-wrap .c-panel:first-of-type .row [class^=col] {
-		-webkit-box-flex: 0;
-		-webkit-flex: none;
-		    -ms-flex: none;
-		        flex: none;
-}
-.c-layer-popup.type-callcenter .modal-body .reservation-dtl-status-layout .c-btn {
-		min-width: initial;
-}
-.c-layer-popup.type-callcenter .modal-body .reservation-dtl-status-layout .c-btn.input-btn {
-		padding: 10px;
+.c-layer-popup:not(.type-callcenter).reservation-detail-popup .tab-06 .col-12 {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: row;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
 }
 /*# sourceMappingURL=maps/styleCallcenter.css.map */
