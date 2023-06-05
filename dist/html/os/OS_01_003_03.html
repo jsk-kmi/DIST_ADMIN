@@ -2681,33 +2681,28 @@
 
         <script>
             toggleAccordion();
-
-            // 검진대상자 리스트 Table Table 변경에 따른 script 재 실행 요청
-            const DefaultDateOption = {
+            var DefaultDateOption = {
                 scrollX: true,
+                scrollY: 200,
                 paging: false,
                 searching: false,
                 ordering: false,
                 reponsive: true,
                 info: false,
-                autoWitdh: false,
-            };
+                autoWidth: false,
+                destroy: true,
+            }
 
-            DefaultDateOption['scrollY'] = 200;
-            var addDTableOption = DefaultDateOption;
-            var table = $('#dTblChkupList01').DataTable(addDTableOption);
-            document.addEventListener('DOMContentLoaded', function() {
-                table;
+            document.querySelector('.c-btn-inquiry').addEventListener('click', function() {
+                $('#dTblChkupList01').DataTable(DefaultDateOption);
+
             });
-
             window.addEventListener('resize', function() {
-                table.columns.adjust().draw();
+                $('#dTblChkupList01').DataTable(DefaultDateOption).columns.adjust().draw();
             });
 
-            $(function() {
-                // Guide전용 스크립트 (개발 소스 적용 X)
-                $('[data-target]').trigger('click');
-                // 검사항목 Event1
+            document.querySelector('.sidebar-toggle').addEventListener('click', function() {
+                $('#dTblChkupList01').DataTable(DefaultDateOption).columns.adjust().draw();
             });
         </script>
 </body>
