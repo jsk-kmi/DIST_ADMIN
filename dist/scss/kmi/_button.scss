@@ -18,7 +18,7 @@ a.c-btn,
   display: inline-block;
   line-height: 20px;
   vertical-align: top;
-  cursor: pointer;
+  //cursor: pointer;
 
   > span {
     position: relative;
@@ -44,6 +44,7 @@ a.c-btn,
     gray-2: $color-gray-2,
     gray-10: $color-gray-10,
     gray-3: $color-gray-3,
+    gray-6: $color-gray-6,
     green-1: $color-green-1,
     blue-2: $color-blue-2,
     blue-3: $color-blue-3,

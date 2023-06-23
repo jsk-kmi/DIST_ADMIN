@@ -78,6 +78,15 @@ input {
   }
 }
 
+.c-input-mark,
+.c-input-date,
+.c-input-unit {
+  input[type='text'],
+  input[type='number'] {
+    padding-right: $input-ico-spacing-01;
+  }
+}
+
 // 1= label
 .label-input {
   label,
@@ -155,13 +164,48 @@ input[type='text'] {
   }
 }
 
+.c-inquiry-date-group {
+  display: flex;
+  margin: {
+    left: -6px;
+    right: -6px;
+  }
+  .c-input-date,
+  .buttons {
+    padding: {
+      left: 6px;
+      right: 6px;
+    }
+  }
+  > .col {
+    flex: {
+      grow: 1;
+      shrink: 1;
+      basis: 100%;
+    }
+  }
+  .buttons {
+    flex: {
+      shrink: 0;
+      basis: auto;
+    }
+    width: auto;
+    @supports (min-width: fit-content) {
+      min-width: fit-content;
+    }
+    .c-btn {
+      min-width: auto;
+      padding: 9px 10px;
+      @include coTxtCaption;
+    }
+  }
+}
+
 // 2= c-input-btn-group
 .c-input-btn-group {
   display: flex;
   @include spacingInputGrp;
-  //flex: 1 1 100%;
   > [class*='col'] {
-    // flex: 1 1 fit-content;
     flex: 1 1 max-content;
     max-width: initial;
   }
@@ -201,13 +245,11 @@ input[type='text'] {
   display: flex;
   align-items: center;
   width: 100%;
+
+  @include ellipsisLine01;
+
   input[type='text'] {
-    width: 100%;
-    &[readonly='readonly'] {
-      & + .btn-search {
-        @include inputDetailIconPos;
-      }
-    }
+    padding-right: 38px;
   }
 
   .btn-search {
@@ -271,7 +313,6 @@ input[type='text'] {
 .c-input-unit {
   position: relative;
   input[type='text'] {
-    padding-right: 36px;
     font-size: $fs-normal;
     + .unit {
       @include position(null, 50%);
@@ -279,17 +320,13 @@ input[type='text'] {
     }
     &[readonly='readonly'] {
       + .unit {
-        @include inputDetailIconPos;
         padding-right: 2px;
       }
     }
   }
   .unit {
-    position: absolute;
-    top: 12px;
     right: 12px;
     color: $color-gray-3;
-    width: 28px;
     text-align: right;
   }
 }
@@ -339,7 +376,9 @@ input[type='text'] {
   .filename {
     border-bottom: 1px solid $color-blue-1;
     color: $color-blue-1;
-    overflow: hidden;
+    max-width: 100%;
+    display: inline-block;
+    @include ellipsisLine01;
   }
 
   &.input-view {
@@ -605,6 +644,9 @@ textarea {
   }
 }
 
+.row {
+}
+
 .c-txtarea-field {
   width: 100%;
 }
@@ -802,8 +844,7 @@ textarea {
 
     &:after {
       content: '@';
-      position: absolute;
-      bottom: 8px;
+      @include position(null, 50%);
       right: -6px;
       color: $color-gray-3;
       font: {
@@ -823,32 +864,16 @@ textarea {
     min-width: auto;
   }
 }
-.row {
-  &.c-input-email-group {
-    //@include spacingInputGrp;
-  }
-}
 
 // 2= c-input-phone-group
 .c-input-phone-group {
-  // $gap: 10px;
-
-  // margin: {
-  //   left: -$gap;
-  //   right: -$gap;
-  // }
-  // > .col {
-  //   padding: {
-  //     left: $gap;
-  //     right: $gap;
-  //   }
-  // }
   @include spacingInputGrp;
   .input-phone-01 {
-    @include colFixedWidth(80px, 10px);
+    @include colFixedWidth(50px, 10px);
     .c-select {
       select {
-        min-width: 100px;
+        width: $input-w-phone;
+        min-width: $input-w-phone;
       }
     }
   }
@@ -933,22 +958,6 @@ textarea {
 
 .row {
   &.c-input-date-group {
-    //$gap: $gap-20;
-    // margin: {
-    //   left: -$gap;
-    //   right: -$gap;
-    // }
-    // > [class*='col-'] {
-    //   padding: {
-    //     left: $gap;
-    //     right: $gap;
-    //   }
-    //   // > * {
-    //   //   & {
-    //   //     @include paddingH(15px);
-    //   //   }
-    //   // }
-    // }
     @include spacingInputGrp;
     @include justify-row;
 
@@ -1003,8 +1012,10 @@ textarea {
   display: flex;
   align-items: center;
   position: relative;
-  input[type='text']::-ms-clear {
-    display: none;
+  input[type='text'] {
+    &::-ms-clear {
+      display: none;
+    }
   }
   // + span {
   //   display: inline-block;
@@ -1026,22 +1037,6 @@ textarea {
 // 2= c-input-select-group
 .row {
   &.c-input-select-group {
-    // $gap: $gap-20;
-    // margin: {
-    //   left: -$gap;
-    //   right: -$gap;
-    // }
-    // > [class*='col-'] {
-    //   padding: {
-    //     left: $gap;
-    //     right: $gap;
-    //   }
-    //   // > {
-    //   //   & {
-    //   //     @include paddingH(15px);
-    //   //   }
-    //   // }
-    // }
     $gap: $spacing-small;
     @include rowGridSpacingSmall;
     @include justify-row;
@@ -1055,7 +1050,6 @@ textarea {
 }
 
 // + detail input
-
 .c-input-search {
   &.detail-input {
     input[type='text'] {

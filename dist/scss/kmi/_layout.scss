@@ -3,19 +3,26 @@
 #container {
   min-height: 100vh;
   height: 100vh;
-}
-#container .content-wrapper {
-  width: 100%;
-  padding-left: 220px;
-  min-width: 1400px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  flex: 1 0 auto;
-}
-#container .content-wrapper .contents {
-  flex: 1 0 auto;
-  min-width: 1400px;
+
+  // + sideNav
+  > #sideNav {
+    ~ .content-wrapper {
+      padding-left: $side-nav;
+    }
+  }
+  .content-wrapper {
+    width: 100%;
+    padding-left: 0;
+    min-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1 0 auto;
+    .contents {
+      flex: 1 0 auto;
+      min-width: 1400px;
+    }
+  }
 }
 
 /*

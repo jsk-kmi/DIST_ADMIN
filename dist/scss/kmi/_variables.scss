@@ -22,6 +22,7 @@ $color-blue-4: #8d8db9 !default;
 
 $color-navy-1: #253981 !default;
 $color-navy-2: #225490 !default;
+$color-red-1: #ba1d3c !default;
 $color-orange-1: #ff6859 !default;
 $color-green-1: #206f44 !default;
 $color-white-1: #fff !default;
@@ -148,6 +149,7 @@ $input-disabled-font-color: $color-gray-2;
 
 $input-w-default: 120px;
 $input-w-postcode: 95px;
+
 $input-w-phone: 70px;
 $input-w-date: $input-w-default;
 $input-w-address: $input-w-default;
@@ -157,6 +159,8 @@ $select-w-default: $input-w-default;
 
 // $input-basic-lineheight: 22px;
 $input-basic-lineheight: 20px;
+
+$input-ico-spacing-01: 32px;
 
 // 2= detail
 $input-detail-border-color: $color-gray-5;
@@ -178,7 +182,69 @@ $callcenter-right-col-width: 40%;
 $callcenter-right-col-width02: 45%;
 
 // ui-mod(v0.1)
-$input-label-w-default: 85px;
+$input-label-w-default: fit-content; // 85px
 $input-label-min-width01: 60px;
 $input-label-min-width02: 100px;
 $input-label-min-width03: 120px;
+$input-label-min-width04: 75px;
+
+// type-horizontal
+$spacing-inputgrp-02: 4px;
+$input-w-default-readonly: 50px;
+$input-w-postcode-readonly: $input-w-default-readonly;
+$input-w-phone-readonly: $input-w-default-readonly;
+$input-w-address-readonly: 150px;
+
+// type-platformsystem
+$table-padding: 4px 8px;
+$input-padding: 4px 8px;
+$tab-list-padding: 2px 8px;
+$select-padding: 4px 30px 4px 12px;
+$c-article-padding: 4px;
+$c-article-padding-01: 6px;
+$c-article-padding-02: 10px;
+$col-padding: 2px;
+$col-padding-01: 6px;
+$col-padding-02: 8px;
+$col-padding-03: 10px;
+$col-padding-04: 12px;
+$col-padding-05: 14px;
+$c-btn-padding: 4px 12px;
+$c-panel-margin-top: 14px;
+$input-min-width: 80px;
+$input-min-width-02: 115px;
+$mod-reservation-padding: 6px 20px;
+$c-btn-refresh: 28px;
+$row-margin: -6px;
+$row-margin-01: 4px;
+$row-margin-02: 6px;
+$row-margin-03: 8px;
+$row-margin-04: 10px;
+$row-padding: 2px;
+$row-padding-01: 4px;
+$row-padding-02: 6px;
+$row-padding-03: 10px;
+
+$email-width: 280px;
+$phone-width: 60px;
+$accrodion-margin: 8px;
+$mod-reservation-height: 380px;
+$textarea-height: 100px;
+$wrap-min-width: 1280px;
+$input-ico-spacing-02: 20px;
+$c-badge: 2px 10px;
+$c-badge-font: 12px;
+$btn-search: 16px;
+$input-line-height: 18px;
+$input-border-radius-01: 6px;
+$input-border-radius-02: 8px;
+$input-border-radius-03: 10px;
+$refresh-size: 14px;
+$badge-margin: -4px;
+$chk-size: 16px;
+
+// login - join
+$join-w: 480px;
+$join-btn-email: 56px;
+$join-btn-login: 16px 46px;
+$join-btn-margin: 30px auto 20px;

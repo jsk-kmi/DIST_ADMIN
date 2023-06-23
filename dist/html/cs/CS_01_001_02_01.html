@@ -24,11 +24,7 @@
     <div id="container">
 
         <!-- Content-Wrapper -->
-
-        <!-- [ mod(230207) ]
-		- 클래스 추가 type-callcenter
-		-->
-        <div class="content-wrapper type-horizontal type-callcenter">
+        <div class="content-wrapper type-horizontal type-callcenter type-platformsystem">
             <!-- Contents -->
             <section class="contents">
 
@@ -1248,9 +1244,24 @@
                                                                 <div class="row type-rsv-request">
                                                                     <div class="col-5 label-input input-col">
                                                                         <label for="inputChkupDate01_01">예약신청일</label>
-                                                                        <div class="c-input-date">
-                                                                            <input type="text" class="c-input btn-date-picker" id="inputChkupDate01_01" placeholder="YYYY-MM-DD" autocomplete="off">
-                                                                            <span><i class="date-btn"></i></span>
+
+                                                                        <!-- <div class="c-input-date">
+															<input type="text" class="c-input btn-date-picker" id="inputChkupDate01_01"
+																placeholder="YYYY-MM-DD" autocomplete="off">
+															<span><i class="date-btn"></i></span>
+														</div> -->
+
+                                                                        <!-- [ mod(230623) ]
+															- 날짜 조회 버튼 추가
+														-->
+                                                                        <div class="c-inquiry-date-group">
+                                                                            <div class="c-input-date">
+                                                                                <input type="text" class="c-input btn-date-picker" id="rsvHopeDate02_01" placeholder="YYYY-MM-DD" autocomplete="off">
+                                                                                <span><i class="date-btn"></i></span>
+                                                                            </div>
+                                                                            <div class="buttons">
+                                                                                <button type="button" class="c-btn bg-navy-1"><span>조희</span></button>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-5 label-input input-col">
@@ -1335,9 +1346,18 @@
                                                                 <div class="row type-rsv-request">
                                                                     <div class="col-5 label-input input-col">
                                                                         <label for="inputChkupDate05_01">예약신청일</label>
-                                                                        <div class="c-input-date">
-                                                                            <input type="text" class="c-input btn-date-picker" id="inputChkupDate05_01" placeholder="YYYY-MM-DD" autocomplete="off">
-                                                                            <span><i class="date-btn"></i></span>
+
+                                                                        <!-- [ mod(230623) ]
+															- 날짜 조회 버튼 추가
+														-->
+                                                                        <div class="c-inquiry-date-group">
+                                                                            <div class="c-input-date">
+                                                                                <input type="text" class="c-input btn-date-picker" id="inputChkupDate05_01" placeholder="YYYY-MM-DD" autocomplete="off">
+                                                                                <span><i class="date-btn"></i></span>
+                                                                            </div>
+                                                                            <div class="buttons">
+                                                                                <button type="button" class="c-btn bg-navy-1"><span>조희</span></button>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-5 label-input input-col">
@@ -1373,9 +1393,18 @@
                                                                     </div>
                                                                     <div class="col-6 label-input">
                                                                         <label for="inputDelayRsvDate01_02">연기검사 신청일</label>
-                                                                        <div class="c-input-date">
-                                                                            <input type="text" class="c-input" id="inputDelayRsvDate01_02" placeholder="YYYY-MM-DD" value="2022-06-11" readonly="readonly">
-                                                                            <span><i class="date-btn"></i></span>
+
+                                                                        <!-- [ mod(230623) ]
+															- 날짜 조회 버튼 추가
+														-->
+                                                                        <div class="c-inquiry-date-group">
+                                                                            <div class="c-input-date">
+                                                                                <input type="text" class="c-input btn-date-picker" id="inputDelayRsvDate01_02" placeholder="YYYY-MM-DD" autocomplete="off">
+                                                                                <span><i class="date-btn"></i></span>
+                                                                            </div>
+                                                                            <div class="buttons">
+                                                                                <button type="button" class="c-btn bg-navy-1"><span>조희</span></button>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1477,8 +1506,8 @@
                                                                     <div class="col label-input col-w-full">
                                                                         <label for="inpuModRsvInfo01_02">검진요청사항</label>
                                                                         <div class="c-txtarea-field">
-                                                                            <textarea id="inpuModRsvInfo01_02" class="c-txt-area">
-의료진에 전달하고자 하는 내용(ex 알러지, 복용약 등)을 입력해 주세요.&#13;&#10;아스피린, 항 응고제, 혈압, 당뇨 기타 약이 있으시면 꼭 기재해 주세요.&#13;&#10;심장관련 질환이 있거나 수술 또는 병력, 치료중인 사항도 기입해주셔야 하며 검진 진행 시 제한이 있을 수 있습니다.(100자)</textarea>
+                                                                            <textarea id="inpuModRsvInfo01_02" class="c-txt-area" placeholder="의료진에 전달하고자 하는 내용(ex 알러지, 복용약 등)을 입력해 주세요.&#13;&#10;아스피린, 항 응고제, 혈압, 당뇨 기타 약이 있으시면 꼭 기재해 주세요.&#13;&#10;심장관련 질환이 있거나 수술 또는 병력, 치료중인 사항도 기입해주셔야 하며 검진 진행 시 제한이 있을 수 있습니다.(100자)">
+</textarea>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1763,7 +1792,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="c-tab-contents" style="min-height:1000px">
+                                <div class="c-tab-contents">
 
                                     <!-- + tabContent_01 (대상자 정보) -->
                                     <div class="tab-cont  on" id="tabContent_01" role="tabpanel" aria-labelledby="tabList_01">
@@ -1943,10 +1972,25 @@
                                                     </div>
                                                     <div class="col-3 label-input">
                                                         <label for="inputRsvContInfo02_04">검진 확정일</label>
-                                                        <div class="c-input-date">
-                                                            <input type="text" class="c-input" id="inputRsvContInfo02_04" placeholder="YYYY-MM-DD" value="2022-06-11">
-                                                            <span><i class="date-btn"></i></span>
+
+                                                        <!-- [ mod(230207) ]
+										- 조회 버튼 추가
+										-->
+                                                        <div class="c-inquiry-date-group">
+                                                            <div class="c-input-date">
+                                                                <input type="text" class="c-input btn-date-picker" id="inputRsvContInfo02_04" placeholder="YYYY-MM-DD" autocomplete="off">
+                                                                <span><i class="date-btn"></i></span>
+                                                            </div>
+                                                            <div class="buttons">
+                                                                <button type="button" class="c-btn bg-navy-1"><span>조희</span></button>
+                                                            </div>
                                                         </div>
+
+                                                        <!-- <div class="c-input-date">
+											<input type="text" class="c-input" id="inputRsvContInfo02_04" placeholder="YYYY-MM-DD"
+												value="2022-06-11" readonly="readonly">
+											<span><i class="date-btn"></i></span>
+										</div> -->
                                                     </div>
                                                 </div>
                                                 <div class="row align-item-e">
@@ -1959,10 +2003,25 @@
                                                     </div>
                                                     <div class="col-3 label-input">
                                                         <label for="inputRsvContInfo02_06">연기검사 확정일</label>
-                                                        <div class="c-input-date">
-                                                            <input type="text" class="c-input" id="inputRsvContInfo02_06" placeholder="YYYY-MM-DD" value="2022-06-11">
-                                                            <span><i class="date-btn"></i></span>
+
+                                                        <!-- [ mod(230623) ]
+										- 조회 버튼 추가
+										-->
+                                                        <div class="c-inquiry-date-group">
+                                                            <div class="c-input-date">
+                                                                <input type="text" class="c-input btn-date-picker" id="inputRsvContInfo02_06" placeholder="YYYY-MM-DD" autocomplete="off">
+                                                                <span><i class="date-btn"></i></span>
+                                                            </div>
+                                                            <div class="buttons">
+                                                                <button type="button" class="c-btn bg-navy-1"><span>조희</span></button>
+                                                            </div>
                                                         </div>
+
+                                                        <!-- <div class="c-input-date">
+											<input type="text" class="c-input" id="inputRsvContInfo02_06" placeholder="YYYY-MM-DD"
+												value="2022-06-11">
+											<span><i class="date-btn"></i></span>
+										</div> -->
                                                     </div>
                                                     <div class="col-3 label-input">
                                                         <label for="inputRsvContInfo02_11">검진결과 수령방법</label>
@@ -2486,11 +2545,11 @@
                                             </div>
                                         </div>
 
-                                        <!-- [ mod(230519) ]
-						- 메모관리 버튼 추가
+                                        <!-- [ mod(230623) ]
+						-  메모관리 버튼 클래스 제거
 					-->
                                         <div class="buttons justify-cont-e">
-                                            <button class="c-btn c-btn-inquiry"><span>메모관리</span></button>
+                                            <button class="c-btn"><span>메모관리</span></button>
                                         </div>
 
                                         <!-- [ // mod(230519) ] -->
@@ -2632,25 +2691,14 @@
                                             </div>
                                         </div>
                                     </div>
-
-                                    <!-- [ // mod(230519) ] -->
                                 </div>
-
-                                <!-- [ // mod(230519) ] -->
                             </div>
-
-                            <!-- [ // mod(230519) ] -->
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- // Contents --><!-- Footer -->
-            <footer class="footer">
-                <div class="container">
-                    <p class="copyright">Copyright© KMI.All Rights Reserved.</p>
-                </div>
-            </footer>
+            <!-- // Contents -->
         </div>
 
         <!-- // Content-Wrapper -->
@@ -2662,27 +2710,40 @@
         toggleAccordion();
 
         // 검진대상자 리스트 Table Table 변경에 따른 script 재 실행 요청
-
         var DefaultDateOption = {
             scrollX: true,
+            scrollY: 100, // 높이 변경
             paging: false,
             searching: false,
             ordering: false,
             reponsive: true,
             info: false,
-            autoWitdh: false,
-        };
+            autoWidth: false,
+            destroy: true,
+        }
 
-        DefaultDateOption['scrollY'] = 200;
-        var addDTableOption = DefaultDateOption;
-        var table = $('#dTblChkupList01').DataTable(addDTableOption);
-        document.addEventListener('DOMContentLoaded', function() {
-            table;
-        });
+
+        $('#dTblChkupList01').DataTable(DefaultDateOption);
+
+        function initTargetExamDataTable() {
+            $('#dTblChkupList01').DataTable(DefaultDateOption);
+        }
+
+        function resizeTargetExamDataTable() {
+            $('#dTblChkupList01').DataTable(DefaultDateOption).columns.adjust().draw();
+        }
+
 
         window.addEventListener('resize', function() {
-            table.columns.adjust().draw();
+            resizeTargetExamDataTable();
         });
+
+
+        // + UI 화면 확인 전용 스크립트 (상용 소스 내 미적용)
+        // 개발 페이지의 경우 조회 버튼 클릭 시 Load
+        setTimeout(function() {
+            resizeTargetExamDataTable();
+        }, 200);
     </script>
 </body>
 

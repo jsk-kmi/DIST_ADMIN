@@ -288,7 +288,6 @@
     }
     i {
       float: right;
-      //  margin-left: $gap-40;
     }
   }
 
@@ -364,7 +363,8 @@
   &[class*='type'] {
     height: 100%;
   }
-  .check {
+  .check,
+  .uncheck {
     &:after {
       content: '';
       display: block;
@@ -377,13 +377,7 @@
   }
   .uncheck {
     &:after {
-      content: '';
-      display: block;
-      width: 16px;
-      height: 12px;
       background: url($image-ico-path + 'ico_uncheck.svg') center center no-repeat;
-      margin: 10px auto 0;
-      text-align: center;
     }
   }
   .cnt {
@@ -404,9 +398,7 @@
   &.type01 {
     $card-type01-padding: 0.428rem; // 6px
     position: relative;
-    // # 230503
     width: 100%;
-    // # END 230503
     .card-body {
       padding: 0.428rem; // 6px
     }
@@ -447,9 +439,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    // # 230503
     width: 100%;
-    // # END 230503
     .txt {
       line-height: 1.7;
       font-weight: $weight-400;
@@ -460,9 +450,7 @@
     display: flex;
     flex-direction: column;
     padding: 12px 20px;
-    // # 230503
     width: 100%;
-    // # END 230503
     .name {
       font-size: $fs-small;
     }
@@ -482,6 +470,7 @@
             padding: 2px;
             width: 40px;
             height: 29px;
+            min-width: auto;
           }
         }
       }
@@ -493,9 +482,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    // # 230503
     width: 100%;
-    // # END 230503
     .txt {
       line-height: 1.7;
       font-weight: $weight-400;
@@ -585,10 +572,7 @@
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-    // padding: {
-    //   left: $gap-20;
-    //   right: $gap-20;
-    // }
+
     @include colInnerHSpacingNormal;
   }
   > [class*='column'] > .c-article {
@@ -902,19 +886,13 @@
 
 .c-arrow-fixed-field {
   position: relative;
-  // margin: {
-  //   left: -$gap-20;
-  //   right: -$gap-20;
-  // }
+
   @include colOuterHSpacingNormal;
   [class*='column'] {
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-    // padding: {
-    //   left: $gap-20;
-    //   right: $gap-20;
-    // }
+
     @include colInnerHSpacingNormal;
   }
   > [class*='column'] > .c-article {
@@ -962,8 +940,6 @@
     position: fixed;
     right: 50px;
     flex: inherit;
-  }
-  .c-btn-group {
   }
 }
 
@@ -1236,9 +1212,6 @@ table {
 
   .accrodion-panel {
     background-color: $color-white-1;
-    // overflow: hidden;
-    // max-height: 0;
-    // transition: max-height 0.4s;
     display: none;
     .panel-cont {
       padding: 20px;
@@ -1373,7 +1346,6 @@ table {
     .spinner {
       border: 6px solid #e7e9ea;
       border-radius: 50%;
-      //  border-right: 10px solid $color-blue-1;
       width: 58px;
       height: 58px;
       animation: spinner 1.5s linear infinite;
@@ -1617,7 +1589,6 @@ table {
   }
   .slide-card {
     position: relative;
-    //   padding-bottom: 23.33%;
     width: 100%;
     border-radius: $radius-12;
     overflow: hidden;
@@ -1916,10 +1887,6 @@ $preferenceChartWidth: 300px;
     }
   }
   .row.chart-list [class*='col-'] {
-    // padding: {
-    //   left: 20px;
-    //   right: 20px;
-    // }
     @include colInnerHSpacingNormal;
   }
 }
@@ -1938,65 +1905,25 @@ $preferenceChartWidth: 300px;
         background-color: $color-white-1;
       }
       .modal-body {
-        //padding: 0;
         height: inherit;
         display: flex;
-        //flex: 1 1 auto;
       }
-      // .reservation-dtl-layout {
       .reservation-dtl-status-layout {
-        //display: flex;
-        //width: 100%;
-        //flex: 1 1 auto;
-
-        .in-layout {
-          //padding: 20px 25px;
-        }
-
         .row.c-input-email-group .input-email-01:after {
           right: -6px;
           bottom: 7px;
         }
       }
-      // .left-wrap,
-      // .right-wrap {
-      //   padding {
-      //     left: 20px;
-      //     right: 20px;
-      //   }
-      // }
-      // .left-wrap {
-      //   width: 36%;
-      //   flex: 0 0 36%;
-      //   min-width: 680px;
-      //   background-color: $color-gray-9;
-      // }
     }
     .c-layout-type01 > .row > .col {
-      // padding: {
-      //   left: 20px;
-      //   right: 20px;
-      // }
       @include colInnerHSpacingNormal;
       .request-box {
         white-space: wrap;
       }
     }
 
-    .c-input-phone-group {
-      .c-select {
-        select {
-          //min-width: auto;
-        }
-      }
-    }
-
     .c-article.input-list > .row {
       &.type-rsv-request {
-        > .col-5 {
-          // flex: 0 0 calc(100% / 2 - 29px);
-          // max-width: calc(100% / 2 - 29px);
-        }
         .col-2 {
           flex: 0 0 58px;
           max-width: 58px;
@@ -2009,15 +1936,9 @@ $preferenceChartWidth: 300px;
     .input-list {
       .row {
         margin: {
-          // left: -10px;
-          // right: -10px;
         }
         &.inner {
           [class*='col'] {
-            // padding: {
-            //   left: 10px;
-            //   right: 10px;
-            // }
             @include colInnerHSpacingSmall;
           }
         }
@@ -2039,12 +1960,6 @@ $preferenceChartWidth: 300px;
         padding-right: 15px;
       }
     }
-    .c-panel + .c-panel {
-      //margin-top: 20px;
-    }
-    // + rsvdtl-popup-type02
-    &.type02 {
-    }
 
     // + rsvdtl-popup-type03
     &.rsvdtl-popup-type03 {
@@ -2052,10 +1967,6 @@ $preferenceChartWidth: 300px;
         padding: 8px 10px;
       }
       .input-list .row {
-        // margin: {
-        //   left: -10px;
-        //   right: -10px;
-        // }
         @include colOuterHSpacingSmall;
       }
       .modal-content {
@@ -2107,13 +2018,12 @@ $preferenceChartWidth: 300px;
 // + mod-reservatio
 .mod-reservation {
   padding: $gap-12;
-  height: 424px;
+  height: 350px;
   width: 100%;
   display: flex;
   .c-inner-left,
   .c-inner-right {
     height: 100%;
-    // overflow-x: hidden;
   }
   .c-inner-left {
     width: 156px;
@@ -2122,10 +2032,8 @@ $preferenceChartWidth: 300px;
   }
 
   .c-inner-right {
-    // overflow-y: auto;
     overflow: hidden;
     flex-grow: 1;
-    //height: 100%;
 
     .c-tab-contents {
       height: 100%;
@@ -2144,7 +2052,6 @@ $preferenceChartWidth: 300px;
       width: 100%;
       overflow: auto;
       max-width: 100%;
-
       @include scrollType04;
       &.type01 {
         padding-right: 10px;
@@ -2153,13 +2060,13 @@ $preferenceChartWidth: 300px;
         height: 100%;
         width: 100%;
       }
+      .co-accrodion-list {
+        height: 100%;
+        position: relative;
+        overflow-y: auto;
+        @include scrollType04;
+      }
     }
-    // .cont-scroll {
-    //   height: 100%;
-    //   overflow-x: hidden;
-    //   overflow-y: auto;
-    //   @include scrollType01;
-    // }
   }
 
   .rsv-mod-list01 {
@@ -2275,19 +2182,13 @@ $preferenceChartWidth: 300px;
 // = c-horizontal-field
 .c-rsvdtl-horizontal-field {
   position: relative;
-  // margin: {
-  //   left: -$gap-20;
-  //   right: -$gap-20;
-  // }
+
   @include colOuterHSpacingNormal;
   [class*='column'] {
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-    // padding: {
-    //   left: $gap-20;
-    //   right: $gap-20;
-    // }
+
     @include colInnerHSpacingNormal;
   }
   > [class*='column'] > .c-article {
@@ -2314,7 +2215,6 @@ $preferenceChartWidth: 300px;
   }
   & + .modrsv-scroll {
     margin-top: 12px;
-    // @include scrollType02;
   }
   .c-select {
     margin-left: 12px;
@@ -2431,8 +2331,7 @@ $preferenceChartWidth: 300px;
 
 // = Scroll Customizing
 
-//+ modrsv-scroll
-.modrsv-scroll {
+.content-wrapper {
   .scroll-content {
     padding-right: 10px;
   }
@@ -2452,10 +2351,14 @@ $preferenceChartWidth: 300px;
   }
 }
 
-.type-rsv-requst {
-  .input-col {
-  }
-  .refresh-col {
+//+ list-send-person-scroll
+.list-send-person {
+  .scrollbar-track-y {
+    top: 4px;
+    bottom: 4px;
+    right: 4px;
+    overflow: hidden;
+    height: auto;
   }
 }
 
@@ -2471,8 +2374,7 @@ $preferenceChartWidth: 300px;
         .c-chkbox {
           width: 18px;
         }
-        &.in-chkbox {
-        }
+
         &.in-chklabel {
           padding-left: 5px;
         }
@@ -2557,23 +2459,24 @@ $preferenceChartWidth: 300px;
 
 .c-reg-sms-field {
   position: relative;
-  // margin: {
-  //   left: -$gap-20;
-  //   right: -$gap-20;
-  // }
+
   @include colOuterHSpacingNormal;
   [class*='column'] {
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-    // padding: {
-    //   left: $gap-20;
-    //   right: $gap-20;
-    // }
+
     @include colInnerHSpacingNormal;
   }
   > [class*='column'] > .c-article {
     flex: 1 1 auto;
+  }
+  .c-input-unit {
+    input[type='text'] {
+      &[readonly='readonly'] {
+        padding-bottom: 0;
+      }
+    }
   }
 
   .sms-txtarea01 {
@@ -2601,7 +2504,7 @@ $preferenceChartWidth: 300px;
             left: 20px;
             right: 20px;
           }
-          line-height: 40px;
+          line-height: 38px;
           background-color: $color-gray-9;
           flex: 0 0 auto;
         }
@@ -2629,11 +2532,7 @@ $preferenceChartWidth: 300px;
       > .input-list {
         > .row {
           > .col-6 {
-            // flex: 0 0 58.3333333333%;
-            // max-width: 58.3333333333%;
             & ~ .col-6 {
-              // flex: 0 0 41.66666667%;
-              // max-width: 41.66666667%;
               .buttons {
                 .c-btn {
                   width: 100%;
@@ -2655,7 +2554,7 @@ $preferenceChartWidth: 300px;
       x: hidden;
       y: auto;
     }
-    overflow-y: auto;
+    //overflow-y: auto;
     @include scrollType04;
   }
   .sms-send-list {
@@ -2757,27 +2656,15 @@ $preferenceChartWidth: 300px;
 }
 
 .reservation-dtl-status-layout {
-  //$gap: 10px;
   display: flex;
   flex: 1 1 100%;
-  // margin: {
-  //   left: -$gap;
-  //   right: -$gap;
-  // }
+
   @include colOuterHSpacingSmall;
   .left-wrap,
   .right-wrap {
-    // padding: {
-    //   left: $gap;
-    //   right: $gap;
-    // }
     @include colInnerHSpacingSmall;
   }
-  .label-input {
-    label {
-      //margin-bottom: 0;
-    }
-  }
+
   .left-wrap {
     width: calc(100% - $callcenter-right-col-width);
     flex: 0 0 calc(100% - $callcenter-right-col-width);
@@ -2792,13 +2679,6 @@ $preferenceChartWidth: 300px;
       }
     }
 
-    // .c-panel:first-of-type {
-    //   input[type='text'] {
-    //     width: 0;
-    //   }
-    // }
-
-    // # 230517
     > .c-panel:first-of-type {
       .c-input-search {
         input[type='text'] {
@@ -2811,17 +2691,122 @@ $preferenceChartWidth: 300px;
     width: $callcenter-right-col-width;
     flex: 0 0 $callcenter-right-col-width;
     max-width: $callcenter-right-col-width;
-    .buttons:first-of-type {
-      //justify-content: flex-end;
-      //margin-bottom: 22px;
-    }
+
     .c-article.input-list {
       &.type03 {
         .c-input-email-group {
           align-items: center;
-          .col-6 {
-            //max-width: initial;
-          }
+        }
+      }
+    }
+  }
+}
+
+// + 고객사 회원가입
+
+.login-field {
+  &.membership-join {
+    width: $join-w;
+    .login-input {
+      margin-top: 30px;
+      > .row {
+        @include rowGridSpacing(0);
+        > [class^='col'] {
+          margin: 10px 0;
+        }
+      }
+      .row {
+        &.inner {
+          flex: 1 1 auto;
+        }
+      }
+      & + .c-chkbox {
+        margin-top: 10px;
+      }
+    }
+    h1 {
+      @include coTxtTitle;
+      font-weight: $weight-700;
+    }
+    [class^='col'] {
+      display: flex;
+      align-items: center;
+      &.label-input {
+        label {
+          min-width: $input-label-min-width04;
+          margin-bottom: 0;
+        }
+        input[type='text'],
+        input[type='password'] {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .rechk-label {
+      margin-top: -18px;
+    }
+    .pw-rechk {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      .pw-chk {
+        margin-top: 4px;
+        color: $color-blue-1;
+        line-height: 1;
+        &.is-error {
+          color: $color-red-1;
+        }
+      }
+    }
+
+    .c-input-email-group {
+      flex: 1 1 auto;
+
+      .row {
+        flex: 1 1 auto;
+      }
+
+      .c-btn {
+        padding: 9px 0;
+      }
+      .input-email-02 {
+        > .row {
+          @include rowGridSpacing(6px);
+        }
+      }
+    }
+
+    .c-input-phone-group {
+      .col {
+        margin: 0;
+      }
+    }
+
+    .alr-login {
+      text-align: center;
+      color: $color-gray-2;
+      a {
+        color: $color-gray-1;
+        font-weight: bold;
+      }
+    }
+    .c-btn {
+      &.btn-login {
+        padding: $join-btn-login;
+        display: flex;
+        margin: $join-btn-margin;
+        justify-content: center;
+      }
+    }
+    .c-input-phone-group {
+      padding: {
+        left: 6px;
+        right: 6px;
+      }
+      > [class*='col'] {
+        padding: {
+          left: 6px;
+          right: 6px;
         }
       }
     }

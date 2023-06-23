@@ -36,7 +36,7 @@ table {
       vertical-align: middle;
       text-align: center;
       font-weight: $weight-500;
-      padding: 10px 10px;
+      padding: 10px;
       line-height: 20px;
       @include ellipsisLine01;
       .title {
@@ -237,8 +237,8 @@ table {
     }
 
     .img {
-      width: 110px;
-      height: auto;
+      // width: 110px;
+      // height: auto;
       margin: 0 auto;
       display: inline-block;
       background: url($image-logo-path + 'kmi/kmi_02.png') center/100% no-repeat;
@@ -450,7 +450,6 @@ table {
             right: 6px;
           }
         }
-        // table-layout: auto;
       }
     }
   }
@@ -486,8 +485,7 @@ table {
   }
   tbody {
     overflow: hidden;
-    // overflow-y: scroll;
-    // overflow-x: hidden;
+
     height: 240px;
     @include scrollType04;
   }
@@ -541,128 +539,7 @@ table {
     overflow: auto;
     position: relative;
   }
-  // position: absolute;
-  // }
 }
-
-// .c-tbl-vh-field {
-//   background-color: $color-white-2;
-//   .c-table {
-//     overflow: {
-//       x: auto;
-//       y: hidden;
-//     }
-//   }
-//   table {
-//     width: 100%;
-//     table-layout: fixed;
-//   }
-//   th,
-//   td {
-//     height: 25px;
-//     overflow: hidden;
-//     text-overflow: ellipsis;
-//   }
-
-//   //+ type01
-//   &.type01 {
-//     .c-table {
-//       overflow: {
-//         x: auto;
-//         y: hidden;
-//       }
-//     }
-//     table {
-//       width: 100%;
-//       table-layout: fixed;
-
-//       thead,
-//       tbody {
-//         display: block;
-//       }
-//     }
-//     // tbody {
-//     //   overflow-y: scroll;
-//     //   overflow-x: hidden;
-//     //   // height: 240px;
-//     //   @include scrollType04;
-//     // }
-
-//     @supports (position: sticky) or (position: -webkit-sticky) {
-//       .c-table {
-//         overflow: auto;
-//         // max-height: 310px;
-//         thead {
-//           display: table-header-group;
-//         }
-//         tbody {
-//           display: table-row-group;
-//         }
-//         thead {
-//           position: sticky;
-//           top: 0;
-//           z-index: 100;
-//         }
-
-//         tbody {
-//           overflow-y: scroll;
-//           overflow-x: hidden;
-//           height: 260px;
-//           @include scrollType04;
-//         }
-//       }
-//     }
-//   }
-
-//   // + type02
-//   &.type02 {
-//   }
-// }
-
-// .c-tbl-vertical-field02 {
-//   &.type01 {
-//     position: relative;
-
-//     &:before {
-//       position: absolute;
-//       top: 0;
-//       right: 0;
-//       width: 40px;
-//       height: 40px;
-//       background-color: $color-navy-1;
-//       content: '';
-//     }
-//     overflow-x: hidden;
-//     overflow-y: auto;
-//     height: 262px;
-//   }
-
-//   .tbl-wrapper {
-//     overflow-x: hidden;
-//     overflow-y: auto;
-//     height: 100%;
-//     padding-top: 40px;
-//   }
-//   table.table {
-//     width: 100%;
-//     border-collapse: collapse;
-//     table-layout: fixed;
-//     th {
-//       padding: 0;
-//     }
-//     td {
-//     }
-//   }
-//   .tit-th {
-//     position: absolute;
-//     top: 0;
-//     width: inherit;
-//     line-height: 40px;
-//     height: 40px;
-//     z-index: 999;
-//     background: $color-navy-1;
-//   }
-// }
 
 // = .c-tbl-vertical-field-type
 
@@ -748,40 +625,7 @@ table {
   }
 
   // + state-dimed
-  &.c-tbl-plan {
-    // tbody {
-    //   tr {
-    //     &:nth-of-type(even):hover {
-    //       background-color: $color-white-2;
-    //     }
-    //     &:nth-of-type(odd):hover {
-    //       background-color: $color-white-1;
-    //     }
-    //     &:before {
-    //       position: absolute;
-    //       top: 0;
-    //       bottom: 0;
-    //       left: 0;
-    //       right: 0;
-    //       z-index: -1;
-    //       content: '';
-    //     }
 
-    //     &.state-dimed {
-    //       &:before {
-    //         position: absolute;
-    //         top: 0;
-    //         bottom: 0;
-    //         left: 0;
-    //         right: 0;
-    //         background: rgba(28, 28, 27, 0.6);
-    //         z-index: 10;
-    //         content: '';
-    //       }
-    //     }
-    //   }
-    // }
-  }
   tr.state-dimed {
     * ::selection {
       background: transparent;
@@ -956,20 +800,7 @@ table.fixed-table {
 .c-table {
   &.tbl-price-details {
     border-radius: 8px;
-    // .total {
-    //   padding-bottom: 10px;
-    //   th {
-    //     background-color: $color-white-1;
-    //     border-right: 1px solid $color-gray-4;
-    //     color: $color-white-1;
-    //   }
-    //   td {
-    //     font-size: 14px;
-    //     > em {
-    //       font-weight: 700;
-    //     }
-    //   }
-    // }
+
     .total {
       th {
         background-color: $color-navy-2;
@@ -981,8 +812,10 @@ table.fixed-table {
       }
       td {
         > em {
-          font-size: 13px;
-          font-weight: 700;
+          font : {
+            size: 12px;
+            weight: $weight-700;
+          }
         }
       }
     }
@@ -1021,8 +854,6 @@ table.fixed-table {
   .no-footer {
     border-bottom: none;
   }
-  .dataTables_scrollHeadInner {
-  }
 }
 
 table.dataTable {
@@ -1035,12 +866,7 @@ table.dataTable {
       vertical-align: top;
     }
   }
-  td {
-    // max-width: 0;
-    // overflow: hidden;
-    // text-overflow: ellipsis;
-    // white-space: nowrap;
-  }
+
   &.no-footer {
     border-bottom: 0;
   }

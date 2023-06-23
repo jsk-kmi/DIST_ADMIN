@@ -138,10 +138,7 @@
       left: 0;
       top: 0;
     }
-  }
 
-  .ui-datepicker-prev,
-  .ui-datepicker-next {
     > .ui-icon {
       width: 28px;
       height: 28px;
@@ -151,10 +148,7 @@
         repeat: no-repeat;
       }
     }
-  }
 
-  .ui-datepicker-prev,
-  .ui-datepicker-next {
     &:hover {
       background-color: transparent;
       border: 0;

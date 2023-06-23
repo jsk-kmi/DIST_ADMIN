@@ -7,25 +7,12 @@ type-horizontal 최상위 요소 부여
 
 // ================================ 콜센터 페이지 화면  ui 개선 작업 (Only Call Center)
 
-// = Type Horizontal
-
 // = callCenter Only Control
 
 // = Layout
 #container {
-  // + sideNav
-  > #sideNav {
-    ~ .content-wrapper {
-      padding-left: 220px;
-    }
-  }
-
   // + contents
   .content-wrapper {
-    &.type-callcenter {
-      padding-left: 0px;
-    }
-
     .contents {
       padding: 2.142rem 2.142rem 2.857rem;
     }
@@ -48,10 +35,6 @@ type-horizontal 최상위 요소 부여
   .c-panel ~ .c-panel {
     margin-top: 20px;
   }
-
-  // + inner c-panel
-  // + // inner c-panel
-
   // + 예약 진행 현황
   .reservation-dtl-status-layout {
     .c-input-unit {
@@ -60,16 +43,19 @@ type-horizontal 최상위 요소 부여
       }
     }
 
+    .c-m-input-list,
+    .c-input-date {
+      width: 100%;
+    }
+
     .left-wrap {
       .c-panel {
-        input[type='text'] {
-          // width: 0;
-        }
         .row {
           label,
           .c-label-txt {
             min-width: 60px;
             margin-right: 10px;
+            padding-right: 0;
           }
         }
       }
@@ -78,9 +64,11 @@ type-horizontal 최상위 요소 부여
     .right-wrap {
       // + type02 비용 내역
       .cost-dtl-list.type02 {
-        //display: flex;
         flex-direction: column;
 
+        .row {
+          padding-right: 0;
+        }
         .label-input {
           label {
             min-width: 80px;
@@ -119,6 +107,9 @@ type-horizontal 최상위 요소 부여
             min-width: 100px;
           }
         }
+        .row {
+          padding-right: 0;
+        }
 
         .col-3 {
           max-width: 50%;
@@ -147,10 +138,15 @@ type-horizontal 최상위 요소 부여
             .col {
               flex-basis: 100%;
               input {
-                // min-width: initial;
                 width: 100%;
               }
             }
+          }
+        }
+        .c-input-email-group {
+          .col-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
           }
         }
 
@@ -169,11 +165,16 @@ type-horizontal 최상위 요소 부여
         margin-bottom: 22px;
       }
 
-      // + 메모 리스트 메모관리 button
-      .tab-cont {
-        .buttons {
-          margin-top: 20px;
-        }
+			
+    }
+
+    .d-tbl-chklist-wrap {
+      max-height: 245px;
+    }
+
+    .c-table-field {
+      & + .buttons {
+        margin-top: 20px;
       }
     }
   }
@@ -205,14 +206,6 @@ type-horizontal 최상위 요소 부여
         flex-basis: auto;
       }
 
-      .type-rsv-request {
-        .col-5 {
-          & ~ .col-5 {
-            margin-left: 15px;
-          }
-        }
-      }
-
       .c-m-input-list {
         > .input-col {
           & ~ .input-col {
@@ -242,7 +235,6 @@ type-horizontal 최상위 요소 부여
           }
           > .col-12 {
             width: 100%;
-            //@include colInnerHSpacingSmall;
           }
         }
 
@@ -293,25 +285,13 @@ type-horizontal 최상위 요소 부여
     }
   }
 }
-@at-root .modrsv-scroll .input-list .row {
-  & > [class^='col'] {
-    display: flex;
-  }
-}
+
 // + popup
 .c-layer-popup {
   &.type-callcenter {
     .reservation-dtl-status-layout {
-      input[type='text'] {
-        //min-width: 120px;
-      }
-
       .c-btn {
         min-width: initial;
-
-        &.input-btn {
-          padding: 10px;
-        }
       }
     }
 
@@ -354,3 +334,433 @@ type-horizontal 최상위 요소 부여
 //     }
 //   }
 // }
+
+// = type platformsystem
+
+#container .content-wrapper {
+  &.type-horizontal {
+    &.type-callcenter {
+      &.type-platformsystem {
+        min-width: $wrap-min-width;
+        .contents {
+          min-width: $wrap-min-width;
+          padding: 0 6px;
+        }
+        input {
+          &[type='text'],
+          &[type='number'] {
+            padding: $input-padding;
+            line-height: $input-line-height;
+            border-radius: $input-border-radius-01;
+            &[readonly='readonly'] {
+              border-radius: 0;
+            }
+          }
+        }
+
+        .c-input-mark,
+        .c-input-date,
+        .c-input-search,
+        .c-input-unit {
+          @include ellipsisLine01;
+          input[type='text'],
+          input[type='number'] {
+            padding-right: $input-ico-spacing-02;
+          }
+        }
+        .c-input-date i {
+          right: 8px;
+        }
+        .c-input-phone-group {
+          [class^='col']:last-of-type {
+            margin-left: $row-margin-01;
+          }
+        }
+        .c-input-search {
+          .btn-search {
+            background-size: $btn-search;
+            width: $btn-search;
+            height: $btn-search;
+            right: 5px;
+          }
+        }
+        .c-select {
+          select {
+            padding: $select-padding;
+            line-height: $input-line-height;
+            border-radius: $input-border-radius-01;
+          }
+        }
+        .c-table,
+        .c-article,
+        textarea[readonly='readonly'],
+        textarea.ta-r-only,
+        .c-table-field {
+          border-radius: $input-border-radius-01;
+        }
+
+        button {
+          &.c-btn {
+            padding: $c-btn-padding;
+            border-radius: $input-border-radius-01;
+          }
+        }
+
+        textarea,
+        .c-txt-area {
+          height: $textarea-height;
+          padding: $col-padding-02;
+        }
+        [class*='-field'] + .c-tab-contents {
+          margin-top: $row-margin-02;
+        }
+        .c-tab-field {
+          .c-tab-list {
+            > li {
+              a {
+                padding: $tab-list-padding;
+                border-radius: $input-border-radius-01;
+              }
+            }
+          }
+        }
+        .c-panel ~ .c-panel {
+          margin-top: $c-panel-margin-top;
+        }
+        .c-panel {
+          &.top_head {
+            display: none;
+          }
+        }
+        .c-article {
+          margin: {
+            top: $row-margin-03;
+            bottom: $row-margin-03;
+          }
+          &.input-list {
+            .row {
+              &.inner {
+                margin: {
+                  left: $row-margin;
+                  right: $row-margin;
+                }
+              }
+
+              > [class^='col'] {
+                padding: {
+                  left: $row-padding-02;
+                  right: $row-padding-02;
+                }
+              }
+            }
+          }
+        }
+        .input-list {
+          [class*='col'] {
+            padding: {
+              top: $col-padding-01;
+              bottom: $col-padding-01;
+            }
+          }
+        }
+
+        .co-accrodion-list {
+          &.type01 {
+            > li ~ li {
+              margin-top: $accrodion-margin;
+            }
+            .btn-accrodion {
+              border-radius: $input-border-radius-02;
+            }
+          }
+          .c-table {
+            .c-chkbox {
+              &.in-type {
+                vertical-align: bottom;
+              }
+            }
+          }
+        }
+        .set-modrsv-tab {
+          .c-article {
+            &.input-list {
+              > .row {
+                margin: {
+                  left: $row-margin;
+                  right: $row-margin;
+                }
+              }
+            }
+          }
+        }
+        .reservation-dtl-status-layout {
+          @include rowGridSpacing(6px);
+          &.c-panel {
+            margin-top: 0;
+          }
+          .c-table {
+            table {
+              th,
+              td {
+                padding: $table-padding;
+              }
+            }
+          }
+          .c-tab-field {
+            .c-tab-list {
+              > li ~ li {
+                padding-left: $row-padding-03;
+              }
+            }
+          }
+          .c-btn-refresh {
+            width: $c-btn-refresh;
+            height: $c-btn-refresh;
+            border-radius: $input-border-radius-01;
+            > span {
+              width: $refresh-size;
+              height: $refresh-size;
+              background-size: 100% 100%;
+            }
+          }
+          .left-wrap {
+            .c-panel:first-of-type {
+              .c-article {
+                padding: {
+                  left: $c-article-padding;
+                  right: $c-article-padding;
+                  top: 0;
+                  bottom: 0;
+                }
+                .row {
+                  label {
+                    min-width: 0;
+                  }
+                  input[type='text'] {
+                    min-width: $input-min-width;
+                  }
+                  .c-input-phone-group:not(.input-phone-01) {
+                    input[type='text'] {
+                      min-width: $phone-width;
+                      width: $phone-width;
+                    }
+                  }
+                }
+              }
+              .buttons {
+                .c-btn {
+                  border: 1px solid transparent;
+                }
+              }
+            }
+            .c-panel {
+              .row {
+                label {
+                  margin-right: $row-margin-03;
+                }
+              }
+            }
+            table.dataTable {
+              tbody,
+              thead {
+                th,
+                td {
+                  padding: $table-padding;
+                }
+              }
+            }
+
+            .c-input-phone-group {
+              [class^='col']:not(.input-phone-01) {
+                padding: {
+                  left: $col-padding;
+                  right: $col-padding;
+                }
+              }
+            }
+            .c-input-address-group {
+              .c-btn {
+                padding: $input-padding;
+              }
+            }
+            .mod-reservation {
+              padding: {
+                top: $col-padding-03;
+                bottom: $col-padding-03;
+              }
+              .rsv-mod-list01 {
+                > li {
+                  > a {
+                    padding: $mod-reservation-padding;
+                  }
+                }
+              }
+
+              .co-accordion {
+                .btn-accrodion {
+                  padding: $mod-reservation-padding;
+                  border-radius: $input-border-radius-01;
+                }
+                .accrodion-panel {
+                  .panel-cont {
+                    padding: $col-padding-04;
+                  }
+                }
+              }
+              .co-accrodion-list.type01 {
+                .accrodion-panel {
+                  border-radius: $input-border-radius-02;
+                }
+              }
+
+              .tab-05 {
+                .c-article {
+                  padding: {
+                    top: 0;
+                    bottom: $col-padding;
+                    left: $c-article-padding-02;
+                    right: $c-article-padding-02;
+                  }
+                  &.input-list {
+                    input[type='text'] {
+                      min-width: $input-min-width-02;
+                    }
+                    [class*='col'] {
+                      padding-bottom: 2px;
+                    }
+                  }
+                }
+              }
+              .tab-06 {
+                .c-article {
+                  padding: {
+                    top: $col-padding-01;
+                    bottom: $col-padding-02;
+                  }
+                  margin: {
+                    top: 0;
+                    bottom: 0;
+                  }
+                }
+
+                .row {
+                  label,
+                  .c-label-txt {
+                    margin-right: 0;
+                  }
+                }
+
+                .input-list {
+                  [class*='col'] {
+                    padding: {
+                      top: $col-padding;
+                      bottom: $col-padding;
+                    }
+                  }
+
+                  .c-input-address-group {
+                    > .row ~ .row {
+                      margin-top: 0;
+                    }
+
+                    .row:nth-of-type(2) {
+                      .c-input {
+                        width: $email-width;
+                        margin-top: $row-margin-02;
+                      }
+                    }
+                  }
+                  .c-input-email-group {
+                    .col-6.input-email-02 {
+                      > .row {
+                        > .col-6:first-of-type {
+                          padding-left: $col-padding-05;
+                        }
+                      }
+                    }
+                    .input-email-01::after {
+                      right: -8px;
+                    }
+                  }
+                }
+                .c-txtarea-field {
+                  margin: 4px 0;
+                }
+              }
+              .tab-07 {
+                .c-inner-field {
+                  .c-article {
+                    margin-top: $c-article-padding-02;
+                    padding: {
+                      top: $col-padding-01;
+                      bottom: $col-padding-01;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .right-wrap {
+            .buttons:first-of-type {
+              margin-bottom: $row-margin-04;
+            }
+
+            .c-badge {
+              padding: $c-badge;
+              border-radius: $input-border-radius-01;
+              font-size: 0;
+              > span {
+                font-size: $c-badge-font;
+                line-height: 1;
+              }
+            }
+            .c-article {
+              padding: $row-padding-01;
+              padding-bottom: $c-article-padding-01;
+              &.input-list {
+                .row > [class^='col'] {
+                  padding-top: $row-padding;
+                  padding-bottom: $row-padding;
+                }
+              }
+            }
+
+            .c-input-email-group {
+              [class^='col'] {
+                padding: {
+                  left: $col-padding-02;
+                  right: $col-padding-02;
+                }
+              }
+            }
+
+            .cost-dtl-list.type02 {
+              .col-8 {
+                .c-input-badge-group {
+                  margin-top: $badge-margin;
+                  padding: $input-padding;
+                  .badge-card {
+                    padding: $row-padding;
+                  }
+                  .c-badge-detail {
+                    padding-top: $row-padding;
+                  }
+                }
+              }
+            }
+          }
+
+          .c-table-field {
+            & + .buttons {
+              margin-top: 10px;
+            }
+          }
+        }
+        .d-tbl-chklist-wrap {
+          max-height: 135px;
+        }
+      }
+    }
+  }
+}
