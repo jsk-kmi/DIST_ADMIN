@@ -164,6 +164,15 @@ input[type='text'] {
   }
 }
 
+// 2= c-input-pw-group
+// .c-input-pw-row {
+//   & + .c-input-pw-row {
+//     > [class*='col'] {
+//       margin-top: 6px;
+//     }
+//   }
+// }
+
 .c-inquiry-date-group {
   display: flex;
   margin: {
@@ -224,6 +233,11 @@ input[type='text'] {
         margin-left: calc($spacing-inputgrp * 2);
       }
     }
+  }
+
+  // 3= certify-grp
+  &.certify-grp {
+    @include rowGridSpacing(6px);
   }
 }
 

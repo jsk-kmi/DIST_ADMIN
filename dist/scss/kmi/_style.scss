@@ -11,7 +11,7 @@
 }
 
 .login-field {
-  width: 380px;
+  width: 460px;
   padding: 40px 32px;
   background-color: $color-white-1;
   text-align: left;
@@ -2702,15 +2702,49 @@ $preferenceChartWidth: 300px;
   }
 }
 
-// + 고객사 회원가입
+// # 회원가입 및 비밀번호 찾기 UI
+// + 로그인
+.login-field {
+  .membership-account {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    li {
+      display: inline;
+    }
+    li:nth-of-type(1) {
+      padding-right: 16px;
+      position: relative;
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 4px;
+        right: 8px;
+        width: 1px;
+        height: 15px;
+        background-color: $color-gray-4;
+      }
+    }
+    button {
+      color: $color-gray-3;
+      padding: 0;
+    }
+  }
+}
 
+// + 고객사 회원가입
 .login-field {
   &.membership-join {
-    width: $join-w;
     .login-input {
       margin-top: 30px;
       > .row {
         @include rowGridSpacing(0);
+        > .col {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
         > [class^='col'] {
           margin: 10px 0;
         }
@@ -2742,19 +2776,11 @@ $preferenceChartWidth: 300px;
         }
       }
     }
-    .rechk-label {
-      margin-top: -18px;
-    }
-    .pw-rechk {
-      display: flex;
-      flex-direction: column;
-      flex-basis: 100%;
-      .pw-chk {
-        margin-top: 4px;
-        color: $color-blue-1;
-        line-height: 1;
-        &.is-error {
-          color: $color-red-1;
+
+    .c-input-pw-row {
+      & + .c-input-pw-row {
+        > [class*='col'] {
+          margin-top: 0;
         }
       }
     }
@@ -2812,6 +2838,96 @@ $preferenceChartWidth: 300px;
     }
   }
 }
+
+// + 일치 불일치 공통
+.pw-rechk {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+.c-input-info-txt {
+  margin-top: 4px;
+  color: $color-blue-1;
+  line-height: 1;
+  &.is-error {
+    color: $color-red-1;
+  }
+}
+.rechk-label {
+  margin-top: -18px;
+}
+
+// + 비밀번호 찾기
+.pw-sch-cont {
+  .pw-sch-txt {
+    p {
+      @include coPwTitle;
+    }
+    span {
+      @include coPwSubTitle;
+      color: $color-gray-2;
+    }
+  }
+  .pw-sch-input {
+    margin: 40px 0;
+    .col {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+      padding: {
+        left: 0;
+        right: 0;
+      }
+      label {
+        margin-bottom: 0;
+        min-width: $pw-sch-input;
+      }
+    }
+    .pw-chk {
+      margin-top: 6px;
+    }
+  }
+  .pw-sch-field {
+    color: $color-gray-2;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid $color-gray-5;
+    background-color: $color-white-2;
+
+    ul {
+      li {
+        position: relative;
+        padding-left: 10px;
+        &:before {
+          position: absolute;
+          top: 8px;
+          left: 0;
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background-color: $color-gray-2;
+          display: inline-block;
+          content: '';
+        }
+        ~ li {
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}
+
+//+ 중복확인 alert
+.join-confirm {
+  p {
+    text-align: center;
+    .email-possible {
+      color: $color-blue-1;
+    }
+  }
+}
+
+//+ 계정관리
 
 // ! 삭제 예정 (검진예약 상세보기 - popup type)
 /**

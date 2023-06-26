@@ -141,7 +141,7 @@
         </nav>
 
         <!-- Content-Wrapper -->
-        <div class="content-wrapper"> <!-- Header-->
+        <div class="content-wrapper type-horizontal"> <!-- Header-->
             <header class="header">
                 <div class="wrap">
                     <div class="top-left">
@@ -216,7 +216,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
+
+                                <!-- # [ mod(230620) ]
+									-- c-ta-row 클래스 추가
+								-->
+                                <div class="row c-ta-row">
                                     <div class="col label-input">
                                         <label for="inputSmsReg01_02">내용 입력</label>
                                         <div class="c-txtarea-field">
@@ -224,18 +228,26 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- # [// mod(230620) ] -->
                             </div>
                         </div>
                         <div class="column send-list">
                             <div class="c-article input-list">
                                 <div class="row align-item-e">
-                                    <div class="col-6 label-input">
+
+                                    <!-- # [ mod(230620) ]
+									-- 고객사 label input display: none 처리
+								-->
+                                    <div class="col-6 label-input" style="display:none">
                                         <label for="inputSmsReg01_03">고객사</label>
                                         <div class="c-input-search">
                                             <input type="text" id="inputSmsReg01_03">
                                             <button type="button" class="btn-search"><span class="skip">검색</span></button>
                                         </div>
                                     </div>
+
+                                    <!-- # [// mod(230620) ] -->
                                     <div class="col-6 label-input">
                                         <div class="buttons justify-cont-e">
                                             <button class="c-btn is-outline-navy-1"><span>대상자 불러오기</span></button>
@@ -443,7 +455,7 @@
                                         <!-- # [// mod(230620) ] -->
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row ">
                                     <div class="col-6">
                                         <div class="buttons">
                                             <button class="c-btn is-outline-navy-1"><span>전체 삭제</span></button>
@@ -476,6 +488,12 @@
         </div> <!-- [ mod(220818) ] -->
         <script src="../../lib/bootstrap/bootstrap.bundle.min.js"></script>
         <script src="../../js/common.js"></script>
+
+        <script>
+            // 공지하기 등록 스크롤
+            <!-- # [ mod(230620) ] -->
+            noticeEnrollment();
+        </script>
 </body>
 
 </html>

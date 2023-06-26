@@ -474,6 +474,14 @@
   @include fontStyle(12px, 20px, 400, -0.3px);
 }
 
+// 비밀번호 찾기
+@mixin coPwTitle {
+  @include fontStyle(16px, 32px, 500, null);
+}
+@mixin coPwSubTitle {
+  @include fontStyle(14px, 28px, 300, null);
+}
+
 // = Responsive
 @mixin responsive($device) {
   @if ($device == 'laptopHD') {
