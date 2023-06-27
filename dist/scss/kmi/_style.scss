@@ -2727,6 +2727,12 @@ $preferenceChartWidth: 300px;
         background-color: $color-gray-4;
       }
     }
+
+    button {
+      > span {
+        position: relative;
+      }
+    }
     a,
     button {
       color: $color-gray-3;
@@ -2918,7 +2924,7 @@ $preferenceChartWidth: 300px;
   }
 }
 
-//+ 중복확인 alert
+//+ 중복확인 alert\\
 .join-confirm {
   p {
     text-align: center;
@@ -2929,6 +2935,24 @@ $preferenceChartWidth: 300px;
 }
 
 //+ 계정관리
+.contents {
+  &.service-ad {
+    .c-field {
+      justify-content: flex-end;
+    }
+  }
+}
+
+//+ 검진센터 조회 popup
+.center-sch {
+  .c-article {
+    [class^='col'] {
+      label {
+        min-width: $input-label-w-default;
+      }
+    }
+  }
+}
 
 // ! 삭제 예정 (검진예약 상세보기 - popup type)
 /**

@@ -244,6 +244,12 @@ var modRsvScrollbarStatus = function modRsvScrollbarStatus() {
   }
 };
 
+// + 공지하기 등록
+var noticeEnrollment = function noticeEnrollment() {
+  var Scrollbar = window.Scrollbar;
+  Scrollbar.init(document.querySelector('.list-send-person'));
+};
+
 // + Table Vh Scroll
 var tableVhScroll = function tableVhScroll() {
   var table = document.querySelector('.c-table-field');

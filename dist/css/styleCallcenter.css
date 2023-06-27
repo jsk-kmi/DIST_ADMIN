@@ -18732,6 +18732,9 @@ table.tbl-chkup-category .btn-open-chkup-infotxt {
 		height: 15px;
 		background-color: #d2d2d1;
 }
+.login-field .membership-account button > span {
+		position: relative;
+}
 .login-field .membership-account a,
 .login-field .membership-account button {
 		color: #a4a4a4;
@@ -18944,6 +18947,19 @@ table.tbl-chkup-category .btn-open-chkup-infotxt {
 }
 .join-confirm p .email-possible {
 		color: #2f7ad3;
+}
+
+.contents.service-ad .c-field {
+		-webkit-box-pack: end;
+		-webkit-justify-content: flex-end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
+}
+
+.center-sch .c-article [class^=col] label {
+		min-width: -webkit-fit-content;
+		min-width: -moz-fit-content;
+		min-width: fit-content;
 }
 
 /**
