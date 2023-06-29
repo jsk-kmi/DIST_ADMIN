@@ -269,8 +269,11 @@
       display: table;
     }
   }
-  .is-rate {
-    bottom: 0;
+  .c-input-mark {
+    .is-rate {
+      @include position(null, 50%);
+      bottom: 0;
+    }
   }
 
   .input-button {

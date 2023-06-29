@@ -164,14 +164,27 @@ input[type='text'] {
   }
 }
 
-// 2= c-input-pw-group
-// .c-input-pw-row {
-//   & + .c-input-pw-row {
-//     > [class*='col'] {
-//       margin-top: 6px;
-//     }
-//   }
-// }
+//2= c-input-pw-group
+.c-input-pw-row {
+  & + .c-input-pw-row {
+    > [class*='col'] {
+      margin-top: -10px;
+    }
+  }
+  .pw-rechk {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+  }
+  .c-input-info-txt {
+    margin-top: 4px;
+    color: $color-blue-1;
+    line-height: 1;
+    &.is-error {
+      color: $color-red-1;
+    }
+  }
+}
 
 .c-inquiry-date-group {
   display: flex;
@@ -350,15 +363,15 @@ input[type='text'] {
   display: flex;
   align-items: center;
   position: relative;
-}
-.is-rate {
-  position: absolute;
-  right: 0;
-  bottom: 6px;
-  font-size: $fs-small;
-  text-align: right;
-  > span {
-    font-size: $fs-small-m;
+  .is-rate {
+    position: absolute;
+    right: 0;
+    bottom: 6px;
+    font-size: $fs-small;
+    text-align: right;
+    > span {
+      font-size: $fs-small-m;
+    }
   }
 }
 
@@ -658,9 +671,6 @@ textarea {
   }
 }
 
-.row {
-}
-
 .c-txtarea-field {
   width: 100%;
 }
@@ -847,7 +857,8 @@ textarea {
 }
 
 // 2=  c-input-email-group
-.c-input-email-group {
+.c-input-email-group,
+.c-input-email-group02 {
   @include spacingInputGrp;
   &:not(.row) {
     display: flex;
@@ -876,6 +887,28 @@ textarea {
 
   select {
     min-width: auto;
+  }
+}
+
+// 2= c-input-email-group02
+.c-input-email-group02 {
+  .c-btn {
+    padding: 9px;
+  }
+
+  .input-email-02 {
+    > .row {
+      @include rowGridSpacing(6px);
+    }
+    .col {
+      padding: {
+        top: 0;
+        bottom: 0;
+      }
+      &:nth-of-type(2) {
+        flex: 0 0 fit-content;
+      }
+    }
   }
 }
 

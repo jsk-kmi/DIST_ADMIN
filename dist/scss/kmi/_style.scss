@@ -2691,6 +2691,7 @@ $preferenceChartWidth: 300px;
     width: $callcenter-right-col-width;
     flex: 0 0 $callcenter-right-col-width;
     max-width: $callcenter-right-col-width;
+    min-width: 620px;
 
     .c-article.input-list {
       &.type03 {
@@ -2793,16 +2794,25 @@ $preferenceChartWidth: 300px;
     }
 
     .c-input-email-group {
-      flex: 1 1 auto;
-
       .row {
         flex: 1 1 auto;
       }
-
-      .c-btn {
-        padding: 9px 0;
-      }
       .input-email-02 {
+        .row {
+          flex-wrap: nowrap;
+          flex-basis: 100%;
+        }
+        .col-7 {
+          flex: 1 1 100%;
+          max-width: 100%;
+        }
+        .col-5 {
+          flex: 0 0 fit-content;
+          max-width: fit-content;
+        }
+        .c-btn {
+          padding: 9px;
+        }
         > .row {
           @include rowGridSpacing(6px);
         }
@@ -2843,25 +2853,10 @@ $preferenceChartWidth: 300px;
         }
       }
     }
+    .rechk-label {
+      margin-top: -18px;
+    }
   }
-}
-
-// + 일치 불일치 공통
-.pw-rechk {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-}
-.c-input-info-txt {
-  margin-top: 4px;
-  color: $color-blue-1;
-  line-height: 1;
-  &.is-error {
-    color: $color-red-1;
-  }
-}
-.rechk-label {
-  margin-top: -18px;
 }
 
 // + 비밀번호 찾기

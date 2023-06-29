@@ -191,8 +191,8 @@ $input-label-min-width04: 75px;
 // type-horizontal
 $spacing-inputgrp-02: 4px;
 $input-w-default-readonly: 50px;
-$input-w-postcode-readonly: $input-w-default-readonly;
-$input-w-phone-readonly: $input-w-default-readonly;
+$input-w-postcode-readonly: 65px;
+$input-w-phone-readonly: 65px;
 $input-w-address-readonly: 150px;
 
 // type-platformsystem
@@ -231,7 +231,7 @@ $accrodion-margin: 8px;
 $mod-reservation-height: 380px;
 $textarea-height: 100px;
 $wrap-min-width: 1280px;
-$input-ico-spacing-02: 20px;
+$input-ico-spacing-02: 28px;
 $c-badge: 2px 10px;
 $c-badge-font: 12px;
 $btn-search: 16px;

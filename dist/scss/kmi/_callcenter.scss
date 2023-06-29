@@ -159,128 +159,180 @@ type-horizontal 최상위 요소 부여
             }
           }
         }
-      }
+        // + type03 input - not readonly
+        input[type='text'] {
+          padding: 4px 12px;
+        }
+        .c-input-mark {
+          .is-rate {
+            right: 8px;
+          }
+          input[type='text'] {
+            padding-right: 30px;
+          }
+        }
+        .c-input-address-group {
+          .input-addr-03 {
+            .c-btn {
+              padding: 4px 10px;
+            }
+          }
 
-      .buttons:first-of-type {
-        margin-bottom: 22px;
+          [class^='col'] {
+            &.input-addr-03 {
+              flex: 0 0 auto;
+            }
+          }
+          // 3= inner
+          &.inner {
+            flex: 1 1 100%;
+            max-width: 100%;
+            flex-wrap: wrap;
+            @include rowGridSpacing(6px);
+            > .col {
+              flex: 0 0 auto;
+              &.input-addr-02 {
+                flex: 1 1 0;
+              }
+            }
+            .input-addr-04 {
+              padding-top: 10px;
+              flex: 0 0 100%;
+            }
+          }
+        }
+        .c-inquiry-date-group {
+          .buttons {
+            .c-btn {
+              padding: 4px 10px;
+            }
+          }
+        }
+        .c-select {
+          select {
+            padding: 4px 30px 4px 12px;
+          }
+        }
       }
-
-			
     }
 
-    .d-tbl-chklist-wrap {
-      max-height: 245px;
+    .buttons:first-of-type {
+      margin-bottom: 14px;
     }
+  }
 
-    .c-table-field {
-      & + .buttons {
-        margin-top: 20px;
+  .d-tbl-chklist-wrap {
+    max-height: 245px;
+  }
+
+  .c-table-field {
+    & + .buttons {
+      margin-top: 20px;
+    }
+  }
+}
+
+// + 예약 변경 설정
+.mod-rsv-setting-field {
+  // + tab-03
+  .set-modrsv-tab.tab-03 {
+    .c-table.tbl-modrsv-selectchk {
+      tbody {
+        td {
+          white-space: nowrap;
+        }
       }
     }
   }
 
-  // + 예약 변경 설정
-  .mod-rsv-setting-field {
-    // + tab-03
-    .set-modrsv-tab.tab-03 {
-      .c-table.tbl-modrsv-selectchk {
-        tbody {
-          td {
-            white-space: nowrap;
-          }
-        }
-      }
+  // + tab-05
+  .set-modrsv-tab.tab-05 {
+    .input-list .row {
+      flex: 0 1 auto;
     }
-
-    // + tab-05
-    .set-modrsv-tab.tab-05 {
-      .input-list .row {
-        flex: 0 1 auto;
-      }
-      .c-rdochk {
-        label {
-          min-width: auto;
-        }
-      }
-      .col-6 {
-        flex-basis: auto;
-      }
-
-      .c-m-input-list {
-        > .input-col {
-          & ~ .input-col {
-            margin-left: 0;
-          }
-        }
-      }
-
-      .label-txt,
-      .label-input > label {
-        display: inline-flex;
-        flex: none;
-        width: auto;
+    .c-rdochk {
+      label {
         min-width: auto;
       }
     }
+    .col-6 {
+      flex-basis: auto;
+    }
 
-    // + tab-06
-    .set-modrsv-tab.tab-06 {
-      .c-article.input-list {
-        display: inline-block;
-        width: 100%;
-
-        > .row {
-          .c-select {
-            width: auto;
-          }
-          > .col-12 {
-            width: 100%;
-          }
-        }
-
-        .label-input {
-          .c-label-txt,
-          label {
-            min-width: 120px;
-          }
-        }
-
-        .c-input-address-group {
-          .row:nth-of-type(2) {
-            .c-input {
-              width: 300px;
-            }
-          }
-          > .row {
-            & + .row {
-              > .col {
-                width: 100%;
-              }
-            }
-          }
+    .c-m-input-list {
+      > .input-col {
+        & ~ .input-col {
+          margin-left: 0;
         }
       }
     }
 
-    // + tab-07
-    .set-modrsv-tab.tab-07 {
-      .c-rdochk {
-        margin-right: 25px;
+    .label-txt,
+    .label-input > label {
+      display: inline-flex;
+      flex: none;
+      width: auto;
+      min-width: auto;
+    }
+  }
+
+  // + tab-06
+  .set-modrsv-tab.tab-06 {
+    .c-article.input-list {
+      display: inline-block;
+      width: 100%;
+
+      > .row {
+        .c-select {
+          width: auto;
+        }
+        > .col-12 {
+          width: 100%;
+        }
+      }
+
+      .label-input {
+        .c-label-txt,
+        label {
+          min-width: 120px;
+        }
+      }
+
+      .c-input-address-group {
+        .row:nth-of-type(2) {
+          .c-input {
+            width: 300px;
+          }
+        }
+        > .row {
+          & + .row {
+            > .col {
+              width: 100%;
+            }
+          }
+        }
       }
     }
   }
 
-  // + 예약 변경 설정 Tab
-  .set-modrsv-tab {
-    .c-inner-field > .input-list,
-    .c-title-field + .input-list {
-      @include colInnerHSpacingSmall;
+  // + tab-07
+  .set-modrsv-tab.tab-07 {
+    .c-rdochk {
+      margin-right: 25px;
     }
-    .c-article {
-      &.input-list {
-        & > .row {
-          @include rowGridSpacingSmall;
-        }
+  }
+}
+
+// + 예약 변경 설정 Tab
+.set-modrsv-tab {
+  .c-inner-field > .input-list,
+  .c-title-field + .input-list {
+    @include colInnerHSpacingSmall;
+  }
+  .c-article {
+    &.input-list {
+      & > .row {
+        @include rowGridSpacingSmall;
       }
     }
   }
@@ -547,11 +599,6 @@ type-horizontal 최상위 요소 부여
                   }
                 }
               }
-              .buttons {
-                .c-btn {
-                  border: 1px solid transparent;
-                }
-              }
             }
             .c-panel {
               .row {
@@ -723,6 +770,16 @@ type-horizontal 최상위 요소 부여
                   padding-top: $row-padding;
                   padding-bottom: $row-padding;
                 }
+              }
+              & > .type03 {
+                // input[type='text'] {
+                //   padding: 4px 12px;
+                // }
+                // .c-input-mark {
+                //   .is-rate {
+                //     right: 8px;
+                //   }
+                // }
               }
             }
 

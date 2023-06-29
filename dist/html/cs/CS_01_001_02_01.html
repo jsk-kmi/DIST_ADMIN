@@ -27,7 +27,6 @@
         <div class="content-wrapper type-horizontal type-callcenter type-platformsystem">
             <!-- Contents -->
             <section class="contents">
-
                 <!-- [ mod(230519) ] -
 		- bread crumb 추가 반영 (design) 및 .c-title-field 위치 변경
 		- bread crumb 삭제
@@ -57,6 +56,14 @@
                                 <div class="c-title-field justify-c-sb">
                                     <h2 class="title-md">검진자 정보</h2>
                                     <div class="buttons justify-cont-sb">
+
+                                        <!-- [ mod(230628) ]
+							- 신규등록 버튼 추가
+							- 색상 클래스 변경
+						-->
+                                        <button class="c-btn is-outline-navy-1"><span>신규등록</span></button>
+
+                                        <!-- [ // mod(230628) ] -->
                                         <button class="c-btn c-btn-inquiry"><span>조회</span></button>
 
                                         <!-- <button class="c-btn is-outline-navy-1" type="button"><span>취소하기</span></button>
@@ -68,7 +75,7 @@
                                         <div class="col-4 label-input">
                                             <label for="inputRsvStatusInfo01_01">고객사명</label>
                                             <div class="c-input-search">
-                                                <input type="text" id="inputRsvStatusInfo01_01">
+                                                <input type="text" id="inputRsvStatusInfo01_01" />
                                                 <button type="button" class="btn-search"><span class="skip">검색</span></button>
                                             </div>
                                         </div>
@@ -78,11 +85,11 @@
 					-->
                                         <div class="col-3 label-input">
                                             <label for="inputRsvStatusInfo01_04">검진자 이름</label>
-                                            <input type="text" class="c-input" id="inputRsvStatusInfo01_04" value="" placeholder="임직원 이름">
+                                            <input type="text" class="c-input" id="inputRsvStatusInfo01_04" value="" placeholder="임직원 이름" />
                                         </div>
                                         <div class="col-3 label-input">
                                             <label for="inputRsvStatusInfo01_05">생년월일</label>
-                                            <input type="text" class="c-input" id="inputRsvStatusInfo01_05" value="" placeholder="생년월일">
+                                            <input type="text" class="c-input" id="inputRsvStatusInfo01_05" value="" placeholder="생년월일" />
                                         </div>
                                         <div class="col-6 label-input">
                                             <label class="c-label-txt" title="휴대폰 전화번호 앞 3자리 선택">휴대폰 번호</label>
@@ -98,8 +105,8 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="col"><input type="text" class="c-input" title="휴대폰 전화번호 중간 4자리 입력" aria-label="휴대폰 전화번호 중간 4자리 입력"></div>
-                                                <div class="col"><input type="text" class="c-input" title="휴대폰 전화번호 끝 3자리 입력" aria-label="휴대폰 전화번호 끝 3자리 입력"></div>
+                                                <div class="col"><input type="text" class="c-input" title="휴대폰 전화번호 중간 4자리 입력" aria-label="휴대폰 전화번호 중간 4자리 입력" /></div>
+                                                <div class="col"><input type="text" class="c-input" title="휴대폰 전화번호 끝 3자리 입력" aria-label="휴대폰 전화번호 끝 3자리 입력" /></div>
                                             </div>
                                         </div>
 
@@ -133,7 +140,7 @@
 							<button class="c-btn bg-navy-1"><span>button</span></button>
 						</div> -->
                                 </div>
-                                <div class="c-table-field  type02">
+                                <div class="c-table-field type02">
 
                                     <!-- 작업 -->
 
@@ -141,35 +148,35 @@
 					- 해당 영역 전체 소스 변경 반영 필요 (Source Diff 필)
 					- table 소스 전체 변경
 					-->
-                                    <div class="c-table striped c-vertical-scroll  d-tbl-chklist-wrap">
-                                        <table class="table tbl-examtarget-list c-datatable d-tbl-chklist dataTable no-footer" id="dTblChkupList01" style="width:100%;">
+                                    <div class="c-table striped c-vertical-scroll d-tbl-chklist-wrap">
+                                        <table class="table tbl-examtarget-list c-datatable d-tbl-chklist dataTable no-footer" id="dTblChkupList01" style="width: 100%">
                                             <caption> 검진 대상자 목록 : 예약 확정일자, 고객사, 검진자, 관계, 생년월일, 휴대폰번호, 예약상태, 비고, 대상자추가에 대한 정보 </caption>
 
                                             <!-- [ mod(230519) ]
 					-  table 너비 제어 일괄 변경
 					-->
                                             <colgroup>
-                                                <col class="max-date">
-                                                <col style="width:auto;">
-                                                <col style="width: 100px; max-width:100px;">
-                                                <col style="width: 100px; max-width:100px;">
-                                                <col class="max-birthday">
-                                                <col class="max-phone">
-                                                <col style="width: 90px; max-width:90px">
-                                                <col style="width: 55px; max-width:55px">
-                                                <col style="width: 80px; max-width:80px">
+                                                <col class="max-date" />
+                                                <col style="width: auto" />
+                                                <col style="width: 100px; max-width: 100px" />
+                                                <col style="width: 100px; max-width: 100px" />
+                                                <col class="max-birthday" />
+                                                <col class="max-phone" />
+                                                <col style="width: 90px; max-width: 90px" />
+                                                <col style="width: 55px; max-width: 55px" />
+                                                <col style="width: 80px; max-width: 80px" />
                                             </colgroup>
                                             <thead>
                                                 <tr>
                                                     <th scope="col" class="max-date">예약 확정일자</th>
-                                                    <th scope="col" style="width:auto;">고객사</th>
-                                                    <th scope="col" style="width: 100px; max-width:100px;">검진자</th>
-                                                    <th scope="col" style="width: 100px; max-width:100px;">관계</th>
+                                                    <th scope="col" style="width: auto">고객사</th>
+                                                    <th scope="col" style="width: 100px; max-width: 100px">검진자</th>
+                                                    <th scope="col" style="width: 100px; max-width: 100px">관계</th>
                                                     <th scope="col" class="max-birthday">생년월일</th>
                                                     <th scope="col" class="max-phone">휴대폰번호</th>
-                                                    <th scope="col" style="width: 90px; max-width:90px">예약상태</th>
-                                                    <th scope="col" style="width: 55px; max-width:55px">비고</th>
-                                                    <th scope="col" style="width: 80px; max-width:80px">대상자추가</th>
+                                                    <th scope="col" style="width: 90px; max-width: 90px">예약상태</th>
+                                                    <th scope="col" style="width: 55px; max-width: 55px">비고</th>
+                                                    <th scope="col" style="width: 80px; max-width: 80px">대상자추가</th>
                                                 </tr>
                                             </thead>
 
@@ -177,7 +184,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td>2022-11-11</td>
-                                                    <td>동우디지털트윈 </td>
+                                                    <td>동우디지털트윈</td>
                                                     <td>홍둘리</td>
                                                     <td>본인</td>
                                                     <td>1970-01-01</td>
@@ -321,7 +328,13 @@
                                     </div>
                                     <div class="in-right inner-title">
                                         <div class="buttons">
-                                            <button class="c-btn is-outline-blue-1"><span>적용하기</span></button>
+
+                                            <!-- [ mod(230628) ]
+							- 색상 클래스 변경
+						-->
+                                            <button class="c-btn is-outline-navy-1"><span>적용하기</span></button>
+
+                                            <!-- [ // mod(230628) ] -->
                                         </div>
                                     </div>
                                 </div>
@@ -401,9 +414,9 @@
 
                                                                             <!-- [ mod(230519) ] -->
                                                                             <colgroup>
-                                                                                <col class="max-checkbox02">
-                                                                                <col>
-                                                                                <col style="width: 200px; max-width:200px;">
+                                                                                <col class="max-checkbox02" />
+                                                                                <col />
+                                                                                <col style="width: 200px; max-width: 200px" />
 
                                                                                 <!-- <col class="link"> -->
                                                                             </colgroup>
@@ -411,7 +424,7 @@
                                                                                 <tr>
                                                                                     <th scope="col" class="max-checkbox02"></th>
                                                                                     <th scope="col">검진기관</th>
-                                                                                    <th scope="col" style="width: 200px; max-width:200px;">지역</th>
+                                                                                    <th scope="col" style="width: 200px; max-width: 200px">지역</th>
 
                                                                                     <!-- <th scope="col">세부</th> -->
                                                                                 </tr>
@@ -422,7 +435,7 @@
                                                                                 <tr>
                                                                                     <td class="in-chkbox">
                                                                                         <div class="c-chkbox">
-                                                                                            <input type="checkbox" id="chkChkupInstitution_01">
+                                                                                            <input type="checkbox" id="chkChkupInstitution_01" />
                                                                                             <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                         </div>
                                                                                     </td>
@@ -442,7 +455,7 @@
                                                                                 <tr>
                                                                                     <td class="in-chkbox">
                                                                                         <div class="c-chkbox">
-                                                                                            <input type="checkbox" id="chkChkupInstitution_02">
+                                                                                            <input type="checkbox" id="chkChkupInstitution_02" />
                                                                                             <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                         </div>
                                                                                     </td>
@@ -458,7 +471,7 @@
                                                                                 <tr>
                                                                                     <td>
                                                                                         <div class="c-chkbox">
-                                                                                            <input type="checkbox" id="chkChkupInstitution_03">
+                                                                                            <input type="checkbox" id="chkChkupInstitution_03" />
                                                                                             <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                         </div>
                                                                                     </td>
@@ -474,7 +487,7 @@
                                                                                 <tr>
                                                                                     <td class="in-chkbox">
                                                                                         <div class="c-chkbox">
-                                                                                            <input type="checkbox" id="chkChkupInstitution_04">
+                                                                                            <input type="checkbox" id="chkChkupInstitution_04" />
                                                                                             <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                         </div>
                                                                                     </td>
@@ -490,7 +503,7 @@
                                                                                 <tr>
                                                                                     <td class="in-chkbox">
                                                                                         <div class="c-chkbox">
-                                                                                            <input type="checkbox" id="chkChkupInstitution_05">
+                                                                                            <input type="checkbox" id="chkChkupInstitution_05" />
                                                                                             <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                         </div>
                                                                                     </td>
@@ -506,7 +519,7 @@
                                                                                 <tr>
                                                                                     <td class="in-chkbox">
                                                                                         <div class="c-chkbox">
-                                                                                            <input type="checkbox" id="chkChkupInstitution_06">
+                                                                                            <input type="checkbox" id="chkChkupInstitution_06" />
                                                                                             <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                         </div>
                                                                                     </td>
@@ -522,7 +535,7 @@
                                                                                 <tr>
                                                                                     <td class="in-chkbox">
                                                                                         <div class="c-chkbox">
-                                                                                            <input type="checkbox" id="chkChkupInstitution_07">
+                                                                                            <input type="checkbox" id="chkChkupInstitution_07" />
                                                                                             <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                         </div>
                                                                                     </td>
@@ -538,7 +551,7 @@
                                                                                 <tr>
                                                                                     <td class="in-chkbox">
                                                                                         <div class="c-chkbox">
-                                                                                            <input type="checkbox" id="chkChkupInstitution_08">
+                                                                                            <input type="checkbox" id="chkChkupInstitution_08" />
                                                                                             <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                         </div>
                                                                                     </td>
@@ -554,7 +567,7 @@
                                                                                 <tr>
                                                                                     <td class="in-chkbox">
                                                                                         <div class="c-chkbox">
-                                                                                            <input type="checkbox" id="chkChkupInstitution_09">
+                                                                                            <input type="checkbox" id="chkChkupInstitution_09" />
                                                                                             <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                         </div>
                                                                                     </td>
@@ -570,7 +583,7 @@
                                                                                 <tr>
                                                                                     <td class="in-chkbox">
                                                                                         <div class="c-chkbox">
-                                                                                            <input type="checkbox" id="chkChkupInstitution_10">
+                                                                                            <input type="checkbox" id="chkChkupInstitution_10" />
                                                                                             <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                         </div>
                                                                                     </td>
@@ -606,17 +619,17 @@
 
                                                                         <!-- [ mod(230519) ] -->
                                                                         <colgroup>
-                                                                            <col class="max-checkbox02">
-                                                                            <col>
-                                                                            <col class="max-price">
-                                                                            <col class="link" style="width: 150px; max-width:150px">
+                                                                            <col class="max-checkbox02" />
+                                                                            <col />
+                                                                            <col class="max-price" />
+                                                                            <col class="link" style="width: 150px; max-width: 150px" />
                                                                         </colgroup>
                                                                         <thead>
                                                                             <tr>
                                                                                 <th scope="col" class="max-checkbox02"></th>
                                                                                 <th scope="col">상품명</th>
                                                                                 <th scope="col" class="max-price">검진비용액</th>
-                                                                                <th scope="col" style="width: 150px; max-width:150px">세부</th>
+                                                                                <th scope="col" style="width: 150px; max-width: 150px">세부</th>
                                                                             </tr>
                                                                         </thead>
 
@@ -625,7 +638,7 @@
                                                                             <tr>
                                                                                 <td class="in-chkbox">
                                                                                     <div class="c-chkbox">
-                                                                                        <input type="checkbox" id="chkChkPrd01_01">
+                                                                                        <input type="checkbox" id="chkChkPrd01_01" />
                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                     </div>
                                                                                 </td>
@@ -645,7 +658,7 @@
                                                                             <tr>
                                                                                 <td class="in-chkbox">
                                                                                     <div class="c-chkbox">
-                                                                                        <input type="checkbox" id="chkChkPrd01_02">
+                                                                                        <input type="checkbox" id="chkChkPrd01_02" />
                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                     </div>
                                                                                 </td>
@@ -665,7 +678,7 @@
                                                                             <tr>
                                                                                 <td class="in-chkbox">
                                                                                     <div class="c-chkbox">
-                                                                                        <input type="checkbox" id="chkChkPrd01_03">
+                                                                                        <input type="checkbox" id="chkChkPrd01_03" />
                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                     </div>
                                                                                 </td>
@@ -685,7 +698,7 @@
                                                                             <tr>
                                                                                 <td class="in-chkbox">
                                                                                     <div class="c-chkbox">
-                                                                                        <input type="checkbox" id="chkChkPrd01_04">
+                                                                                        <input type="checkbox" id="chkChkPrd01_04" />
                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                     </div>
                                                                                 </td>
@@ -705,7 +718,7 @@
                                                                             <tr>
                                                                                 <td class="in-chkbox">
                                                                                     <div class="c-chkbox">
-                                                                                        <input type="checkbox" id="chkChkPrd01_05">
+                                                                                        <input type="checkbox" id="chkChkPrd01_05" />
                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                     </div>
                                                                                 </td>
@@ -725,7 +738,7 @@
                                                                             <tr>
                                                                                 <td class="in-chkbox">
                                                                                     <div class="c-chkbox">
-                                                                                        <input type="checkbox" id="chkChkPrd01_06">
+                                                                                        <input type="checkbox" id="chkChkPrd01_06" />
                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                     </div>
                                                                                 </td>
@@ -773,7 +786,7 @@
                                                                         <div class="panel-cont">
                                                                             <div class="c-filter-field chk-cnt justify-cont-e">
                                                                                 <label class="label-txt">선택 항목 갯수</label>
-                                                                                <input type="text" class="c-input" value="1" readonly="readonly">
+                                                                                <input type="text" class="c-input" value="1" readonly="readonly" />
                                                                             </div>
                                                                             <div class="c-table-field">
 
@@ -786,13 +799,13 @@
 
                                                                                         <!-- [ mod(230519) ] -->
                                                                                         <colgroup>
-                                                                                            <col class="max-checkbox02">
-                                                                                            <col>
-                                                                                            <col class="max-checkbox02">
-                                                                                            <col>
-                                                                                            <col class="max-price">
-                                                                                            <col class="max-date">
-                                                                                            <col class="chkdelay">
+                                                                                            <col class="max-checkbox02" />
+                                                                                            <col />
+                                                                                            <col class="max-checkbox02" />
+                                                                                            <col />
+                                                                                            <col class="max-price" />
+                                                                                            <col class="max-date" />
+                                                                                            <col class="chkdelay" />
                                                                                         </colgroup>
                                                                                         <thead>
                                                                                             <tr>
@@ -808,7 +821,7 @@
                                                                                             <tr>
                                                                                                 <td class="in-chkbox">
                                                                                                     <div class="c-chkbox">
-                                                                                                        <input type="checkbox" id="chkChoiceChkPrd01_01_01">
+                                                                                                        <input type="checkbox" id="chkChoiceChkPrd01_01_01" />
                                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                                     </div>
                                                                                                 </td>
@@ -823,7 +836,7 @@
                                                                                                 <td>2022-05-12</td>
                                                                                                 <td class="ta-c in-chkbox">
                                                                                                     <div class="c-chkbox in-type">
-                                                                                                        <input type="checkbox">
+                                                                                                        <input type="checkbox" />
                                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                                     </div>
                                                                                                 </td>
@@ -854,7 +867,7 @@
                                                                         <div class="panel-cont">
                                                                             <div class="c-filter-field chk-cnt justify-cont-e">
                                                                                 <label class="label-txt">선택 항목 갯수</label>
-                                                                                <input type="text" class="c-input" value="2" readonly="readonly">
+                                                                                <input type="text" class="c-input" value="2" readonly="readonly" />
                                                                             </div>
                                                                             <div class="c-table-field">
 
@@ -867,13 +880,13 @@
 
                                                                                         <!-- [ mod(230519) ] -->
                                                                                         <colgroup>
-                                                                                            <col class="max-checkbox02">
-                                                                                            <col>
-                                                                                            <col class="max-checkbox02">
-                                                                                            <col>
-                                                                                            <col class="max-price">
-                                                                                            <col class="max-date">
-                                                                                            <col class="chkdelay">
+                                                                                            <col class="max-checkbox02" />
+                                                                                            <col />
+                                                                                            <col class="max-checkbox02" />
+                                                                                            <col />
+                                                                                            <col class="max-price" />
+                                                                                            <col class="max-date" />
+                                                                                            <col class="chkdelay" />
                                                                                         </colgroup>
                                                                                         <thead>
                                                                                             <tr>
@@ -889,7 +902,7 @@
                                                                                             <tr>
                                                                                                 <td class="in-chkbox">
                                                                                                     <div class="c-chkbox">
-                                                                                                        <input type="checkbox" id="chkAddChkPrd02_01_01">
+                                                                                                        <input type="checkbox" id="chkAddChkPrd02_01_01" />
                                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                                     </div>
                                                                                                 </td>
@@ -903,7 +916,7 @@
                                                                                                 <td>검진기간 내 불가</td>
                                                                                                 <td class="ta-c">
                                                                                                     <div class="c-chkbox in-type">
-                                                                                                        <input type="checkbox">
+                                                                                                        <input type="checkbox" />
                                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                                     </div>
                                                                                                 </td>
@@ -911,7 +924,7 @@
                                                                                             <tr>
                                                                                                 <td class="in-chkbox">
                                                                                                     <div class="c-chkbox">
-                                                                                                        <input type="checkbox" id="chkAddChkPrd02_01_02">
+                                                                                                        <input type="checkbox" id="chkAddChkPrd02_01_02" />
                                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                                     </div>
                                                                                                 </td>
@@ -931,14 +944,14 @@
                                                                                             <tr>
                                                                                                 <td rowspan="4" class="in-chkbox">
                                                                                                     <div class="c-chkbox">
-                                                                                                        <input type="checkbox" id="chkAddChkPrd02_01_03">
+                                                                                                        <input type="checkbox" id="chkAddChkPrd02_01_03" />
                                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                                     </div>
                                                                                                 </td>
                                                                                                 <td class="ta-l in-chklabel" rowspan="4"><label for="chkAddChkPrd02_01_03" class="tbl-label">CT촬영 (선택갯수 1) CT촬영 (선택갯수 1)</label></td>
                                                                                                 <td>
                                                                                                     <div class="c-chkbox">
-                                                                                                        <input type="checkbox" id="chkAddChkPrd02_01_04">
+                                                                                                        <input type="checkbox" id="chkAddChkPrd02_01_04" />
                                                                                                         <label class="chk-label"><i></i><span class="skip"></span></label>
                                                                                                     </div>
                                                                                                 </td>
@@ -952,7 +965,7 @@
                                                                                                 <td>2022-05-12</td>
                                                                                                 <td class="ta-c">
                                                                                                     <div class="c-chkbox in-type">
-                                                                                                        <input type="checkbox">
+                                                                                                        <input type="checkbox" />
                                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                                     </div>
                                                                                                 </td>
@@ -960,7 +973,7 @@
                                                                                             <tr>
                                                                                                 <td class="in-chkbox">
                                                                                                     <div class="c-chkbox">
-                                                                                                        <input type="checkbox" id="chkAddChkPrd02_01_05">
+                                                                                                        <input type="checkbox" id="chkAddChkPrd02_01_05" />
                                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                                     </div>
                                                                                                 </td>
@@ -977,7 +990,7 @@
                                                                                             <tr>
                                                                                                 <td class="in-chkbox">
                                                                                                     <div class="c-chkbox">
-                                                                                                        <input type="checkbox" id="chkAddChkPrd02_01_06">
+                                                                                                        <input type="checkbox" id="chkAddChkPrd02_01_06" />
                                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                                     </div>
                                                                                                 </td>
@@ -994,7 +1007,7 @@
                                                                                             <tr>
                                                                                                 <td class="in-chkbox">
                                                                                                     <div class="c-chkbox">
-                                                                                                        <input type="checkbox" id="chkAddChkPrd02_01_07">
+                                                                                                        <input type="checkbox" id="chkAddChkPrd02_01_07" />
                                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                                     </div>
                                                                                                 </td>
@@ -1030,7 +1043,7 @@
                                                                         <div class="panel-cont">
                                                                             <div class="c-filter-field chk-cnt justify-cont-e">
                                                                                 <label class="label-txt">선택 항목 갯수</label>
-                                                                                <input type="text" class="c-input" value="1" readonly="readonly">
+                                                                                <input type="text" class="c-input" value="1" readonly="readonly" />
                                                                             </div>
                                                                             <div class="c-table-field">
 
@@ -1043,13 +1056,13 @@
 
                                                                                         <!-- [ mod(230519) ] -->
                                                                                         <colgroup>
-                                                                                            <col class="max-checkbox02">
-                                                                                            <col>
-                                                                                            <col class="max-checkbox02">
-                                                                                            <col>
-                                                                                            <col class="max-price">
-                                                                                            <col class="max-date">
-                                                                                            <col class="chkdelay">
+                                                                                            <col class="max-checkbox02" />
+                                                                                            <col />
+                                                                                            <col class="max-checkbox02" />
+                                                                                            <col />
+                                                                                            <col class="max-price" />
+                                                                                            <col class="max-date" />
+                                                                                            <col class="chkdelay" />
                                                                                         </colgroup>
                                                                                         <thead>
                                                                                             <tr>
@@ -1065,7 +1078,7 @@
                                                                                             <tr>
                                                                                                 <td class="in-chkbox">
                                                                                                     <div class="c-chkbox">
-                                                                                                        <input type="checkbox" id="chkChoiceChkPrd03_01_01">
+                                                                                                        <input type="checkbox" id="chkChoiceChkPrd03_01_01" />
                                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                                     </div>
                                                                                                 </td>
@@ -1080,7 +1093,7 @@
                                                                                                 <td>2022-05-12</td>
                                                                                                 <td class="ta-c in-chkbox">
                                                                                                     <div class="c-chkbox in-type">
-                                                                                                        <input type="checkbox">
+                                                                                                        <input type="checkbox" />
                                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                                     </div>
                                                                                                 </td>
@@ -1110,9 +1123,9 @@
 
                                                                         <!-- [ mod(230519) ] -->
                                                                         <colgroup>
-                                                                            <col class="max-checkbox02">
-                                                                            <col>
-                                                                            <col class="price" style="width: 200px; max-width:200px;">
+                                                                            <col class="max-checkbox02" />
+                                                                            <col />
+                                                                            <col class="price" style="width: 200px; max-width: 200px" />
 
                                                                             <!-- <col class="date"> -->
                                                                         </colgroup>
@@ -1120,7 +1133,7 @@
                                                                             <tr>
                                                                                 <th scope="col" class="max-checkbox02"></th>
                                                                                 <th scope="col">선택항목</th>
-                                                                                <th scope="col" style="width: 200px; max-width:200px;">개인추가금</th>
+                                                                                <th scope="col" style="width: 200px; max-width: 200px">개인추가금</th>
 
                                                                                 <!-- <th scope="col">예약가능일</th> -->
                                                                             </tr>
@@ -1131,7 +1144,7 @@
                                                                             <tr>
                                                                                 <td class="in-chkbox">
                                                                                     <div class="c-chkbox">
-                                                                                        <input type="checkbox" id="chkAddChkPrd01_01">
+                                                                                        <input type="checkbox" id="chkAddChkPrd01_01" />
                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                     </div>
                                                                                 </td>
@@ -1148,7 +1161,7 @@
                                                                             <tr>
                                                                                 <td class="in-chkbox">
                                                                                     <div class="c-chkbox">
-                                                                                        <input type="checkbox" id="chkAddChkPrd01_02">
+                                                                                        <input type="checkbox" id="chkAddChkPrd01_02" />
                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                     </div>
                                                                                 </td>
@@ -1201,7 +1214,7 @@
                                                                             <div class="input-col">
                                                                                 <div class="inner">
                                                                                     <div class="c-rdochk">
-                                                                                        <input type="radio" id="rdoChkupDate01_02" name="rdoChkupDate01">
+                                                                                        <input type="radio" id="rdoChkupDate01_02" name="rdoChkupDate01" />
                                                                                         <label for="rdoChkupDate01_02" class="chk-label"><i></i><span>오전</span></label>
                                                                                     </div>
                                                                                 </div>
@@ -1209,7 +1222,7 @@
                                                                             <div class="input-col">
                                                                                 <div class="inner">
                                                                                     <div class="c-rdochk">
-                                                                                        <input type="radio" id="rdoChkupDate01_03" name="rdoChkupDate01">
+                                                                                        <input type="radio" id="rdoChkupDate01_03" name="rdoChkupDate01" />
                                                                                         <label for="rdoChkupDate01_03" class="chk-label"><i></i><span>오후</span></label>
                                                                                     </div>
                                                                                 </div>
@@ -1224,7 +1237,7 @@
                                                                             <div class="input-col">
                                                                                 <div class="inner">
                                                                                     <div class="c-rdochk">
-                                                                                        <input type="radio" id="rdoChkupDate02_01" name="rdoChkupDate02">
+                                                                                        <input type="radio" id="rdoChkupDate02_01" name="rdoChkupDate02" />
                                                                                         <label for="rdoChkupDate02_01" class="chk-label"><i></i><span>수면 내시경 포함 예약
                                                                                                 진행</span></label>
                                                                                     </div>
@@ -1233,7 +1246,7 @@
                                                                             <div class="input-col">
                                                                                 <div class="inner">
                                                                                     <div class="c-rdochk">
-                                                                                        <input type="radio" id="rdoChkupDate02_02" name="rdoChkupDate02">
+                                                                                        <input type="radio" id="rdoChkupDate02_02" name="rdoChkupDate02" />
                                                                                         <label for="rdoChkupDate02_02" class="chk-label"><i></i><span>분리검진 진행</span></label>
                                                                                     </div>
                                                                                 </div>
@@ -1256,7 +1269,7 @@
 														-->
                                                                         <div class="c-inquiry-date-group">
                                                                             <div class="c-input-date">
-                                                                                <input type="text" class="c-input btn-date-picker" id="rsvHopeDate02_01" placeholder="YYYY-MM-DD" autocomplete="off">
+                                                                                <input type="text" class="c-input btn-date-picker" id="rsvHopeDate02_01" placeholder="YYYY-MM-DD" autocomplete="off" />
                                                                                 <span><i class="date-btn"></i></span>
                                                                             </div>
                                                                             <div class="buttons">
@@ -1303,7 +1316,7 @@
                                                                             <div class="input-col">
                                                                                 <div class="inner">
                                                                                     <div class="c-rdochk">
-                                                                                        <input type="radio" id="rdoChkupDate03_02" name="rdoChkupDate03">
+                                                                                        <input type="radio" id="rdoChkupDate03_02" name="rdoChkupDate03" />
                                                                                         <label for="rdoChkupDate03_02" class="chk-label"><i></i><span>오전</span></label>
                                                                                     </div>
                                                                                 </div>
@@ -1311,7 +1324,7 @@
                                                                             <div class="input-col">
                                                                                 <div class="inner">
                                                                                     <div class="c-rdochk">
-                                                                                        <input type="radio" id="rdoChkupDate03_03" name="rdoChkupDate03">
+                                                                                        <input type="radio" id="rdoChkupDate03_03" name="rdoChkupDate03" />
                                                                                         <label for="rdoChkupDate03_03" class="chk-label"><i></i><span>오후</span></label>
                                                                                     </div>
                                                                                 </div>
@@ -1326,7 +1339,7 @@
                                                                             <div class="input-col">
                                                                                 <div class="inner">
                                                                                     <div class="c-rdochk">
-                                                                                        <input type="radio" id="rdoChkupDate04_01" name="rdoChkupDate04">
+                                                                                        <input type="radio" id="rdoChkupDate04_01" name="rdoChkupDate04" />
                                                                                         <label for="rdoChkupDate04_01" class="chk-label"><i></i><span>수면 내시경 포함 예약
                                                                                                 진행</span></label>
                                                                                     </div>
@@ -1335,7 +1348,7 @@
                                                                             <div class="input-col">
                                                                                 <div class="inner">
                                                                                     <div class="c-rdochk">
-                                                                                        <input type="radio" id="rdoChkupDate04_02" name="rdoChkupDate04">
+                                                                                        <input type="radio" id="rdoChkupDate04_02" name="rdoChkupDate04" />
                                                                                         <label for="rdoChkupDate04_02" class="chk-label"><i></i><span>분리검진 진행</span></label>
                                                                                     </div>
                                                                                 </div>
@@ -1352,7 +1365,7 @@
 														-->
                                                                         <div class="c-inquiry-date-group">
                                                                             <div class="c-input-date">
-                                                                                <input type="text" class="c-input btn-date-picker" id="inputChkupDate05_01" placeholder="YYYY-MM-DD" autocomplete="off">
+                                                                                <input type="text" class="c-input btn-date-picker" id="inputChkupDate05_01" placeholder="YYYY-MM-DD" autocomplete="off" />
                                                                                 <span><i class="date-btn"></i></span>
                                                                             </div>
                                                                             <div class="buttons">
@@ -1387,9 +1400,9 @@
 														-->
                                                             <div class="c-article input-list">
                                                                 <div class="row">
-                                                                    <div class="col-6 label-input ">
+                                                                    <div class="col-6 label-input">
                                                                         <label for="inputDelayRsvDate01_01">연기검사항목</label>
-                                                                        <input type="text" class="c-input" id="inputDelayRsvDate01_01" value="대장내시경" readonly="readonly">
+                                                                        <input type="text" class="c-input" id="inputDelayRsvDate01_01" value="대장내시경" readonly="readonly" />
                                                                     </div>
                                                                     <div class="col-6 label-input">
                                                                         <label for="inputDelayRsvDate01_02">연기검사 신청일</label>
@@ -1399,7 +1412,7 @@
 														-->
                                                                         <div class="c-inquiry-date-group">
                                                                             <div class="c-input-date">
-                                                                                <input type="text" class="c-input btn-date-picker" id="inputDelayRsvDate01_02" placeholder="YYYY-MM-DD" autocomplete="off">
+                                                                                <input type="text" class="c-input btn-date-picker" id="inputDelayRsvDate01_02" placeholder="YYYY-MM-DD" autocomplete="off" />
                                                                                 <span><i class="date-btn"></i></span>
                                                                             </div>
                                                                             <div class="buttons">
@@ -1434,10 +1447,8 @@
                                                                                     </select>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="col"><input type="text" class="c-input" title="휴대폰 전화번호 중간 4자리 입력">
-                                                                            </div>
-                                                                            <div class="col"><input type="text" class="c-input" title="휴대폰 전화번호 끝 3자리 입력">
-                                                                            </div>
+                                                                            <div class="col"><input type="text" class="c-input" title="휴대폰 전화번호 중간 4자리 입력" /></div>
+                                                                            <div class="col"><input type="text" class="c-input" title="휴대폰 전화번호 끝 3자리 입력" /></div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1447,17 +1458,15 @@
                                                                         <div class="c-input-address-group">
                                                                             <div class="row inner">
                                                                                 <div class="col input-addr-01">
-                                                                                    <input type="text" class="c-input" title="우편번호 입력" placeholder="우편번호">
+                                                                                    <input type="text" class="c-input" title="우편번호 입력" placeholder="우편번호" />
                                                                                 </div>
-                                                                                <div class="col input-addr-02"><input type="text" class="c-input" title="주소 입력">
-                                                                                </div>
+                                                                                <div class="col input-addr-02"><input type="text" class="c-input" title="주소 입력" /></div>
                                                                                 <div class="col input-addr-03">
                                                                                     <button type="button" class="c-btn input-btn"><span>검색</span></button>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="row inner">
-                                                                                <div class="col "><input type="text" class="c-input" title="상세주소 입력" placeholder="상세주소">
-                                                                                </div>
+                                                                                <div class="col"><input type="text" class="c-input" title="상세주소 입력" placeholder="상세주소" /></div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -1467,12 +1476,12 @@
                                                                         <label class="c-label-txt">이메일<i class="is-nec">필수입력</i></label>
                                                                         <div class="row inner c-input-email-group">
                                                                             <div class="col-6 input-email-01">
-                                                                                <input type="text" class="c-input" title="이메일 계정입력" value="test">
+                                                                                <input type="text" class="c-input" title="이메일 계정입력" value="test" />
                                                                             </div>
                                                                             <div class="col-6 input-email-02">
                                                                                 <div class="row">
                                                                                     <div class="col-6">
-                                                                                        <input type="text" class="c-input" title="이메일 도메인 입력" value="hanmail.net">
+                                                                                        <input type="text" class="c-input" title="이메일 도메인 입력" value="hanmail.net" />
                                                                                     </div>
                                                                                     <div class="col-6">
                                                                                         <div class="c-select">
@@ -1506,8 +1515,7 @@
                                                                     <div class="col label-input col-w-full">
                                                                         <label for="inpuModRsvInfo01_02">검진요청사항</label>
                                                                         <div class="c-txtarea-field">
-                                                                            <textarea id="inpuModRsvInfo01_02" class="c-txt-area" placeholder="의료진에 전달하고자 하는 내용(ex 알러지, 복용약 등)을 입력해 주세요.&#13;&#10;아스피린, 항 응고제, 혈압, 당뇨 기타 약이 있으시면 꼭 기재해 주세요.&#13;&#10;심장관련 질환이 있거나 수술 또는 병력, 치료중인 사항도 기입해주셔야 하며 검진 진행 시 제한이 있을 수 있습니다.(100자)">
-</textarea>
+                                                                            <textarea id="inpuModRsvInfo01_02" class="c-txt-area" placeholder="의료진에 전달하고자 하는 내용(ex 알러지, 복용약 등)을 입력해 주세요.&#13;&#10;아스피린, 항 응고제, 혈압, 당뇨 기타 약이 있으시면 꼭 기재해 주세요.&#13;&#10;심장관련 질환이 있거나 수술 또는 병력, 치료중인 사항도 기입해주셔야 하며 검진 진행 시 제한이 있을 수 있습니다.(100자)"></textarea>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1537,9 +1545,9 @@
 
                                                                         <!-- [ mod(230519) ] -->
                                                                         <colgroup>
-                                                                            <col style="width: 80px; max-width:80px;">
-                                                                            <col>
-                                                                            <col style="width: 160px; max-width:160px;">
+                                                                            <col style="width: 80px; max-width: 80px" />
+                                                                            <col />
+                                                                            <col style="width: 160px; max-width: 160px" />
                                                                         </colgroup>
                                                                         <thead>
                                                                             <tr>
@@ -1710,7 +1718,7 @@
                                                                             <div class="input-col">
                                                                                 <div class="inner">
                                                                                     <div class="c-rdochk">
-                                                                                        <input type="radio" id="chkPayWay01_01" name="chkPayWay01">
+                                                                                        <input type="radio" id="chkPayWay01_01" name="chkPayWay01" />
                                                                                         <label for="chkPayWay01_01" class="chk-label"><i></i><span>온라인 결제</span></label>
                                                                                     </div>
                                                                                 </div>
@@ -1718,7 +1726,7 @@
                                                                             <div class="input-col">
                                                                                 <div class="inner">
                                                                                     <div class="c-rdochk">
-                                                                                        <input type="radio" id="chkPayWay01_02" name="chkPayWay01">
+                                                                                        <input type="radio" id="chkPayWay01_02" name="chkPayWay01" />
                                                                                         <label for="chkPayWay01_02" class="chk-label"><i></i><span>현장결제</span></label>
                                                                                     </div>
                                                                                 </div>
@@ -1795,146 +1803,151 @@
                                 <div class="c-tab-contents">
 
                                     <!-- + tabContent_01 (대상자 정보) -->
-                                    <div class="tab-cont  on" id="tabContent_01" role="tabpanel" aria-labelledby="tabList_01">
+                                    <div class="tab-cont on" id="tabContent_01" role="tabpanel" aria-labelledby="tabList_01">
                                         <div class="c-panel">
-
-                                            <!-- <div class="c-title-field">
-									<h2 class="title-md">대상자 정보</h2>
-									<div class="buttons">
-										<button class="c-btn is-outline-navy-1"><span>button</span></button>
-										<button class="c-btn bg-navy-1"><span>button</span></button>
-									</div>
-								</div> -->
-
-                                            <!-- [ mod(230512) ]
-										- 클래스추가 : type03, 고객사명/임직원 이름/임직원 생년월일/임직원 부서 row 추가
-										-->
-                                            <div class="c-article input-list type03">
-                                                <div class="row">
-                                                    <div class="col-3 label-input">
-                                                        <label for="rosterInfo_supGenderCd">고객사명</label>
-                                                        <input type="text" class="c-input" id="rosterInfo_supGenderCd" value="로스트아크로스트아크로스트아크" readonly="readonly">
-                                                    </div>
-                                                    <div class="col-3 label-input">
-                                                        <label for="rosterInfo_supName">임직원 이름</label>
-                                                        <div class="c-input-mark">
-                                                            <input type="text" class="c-input" id="rosterInfo_supName" value="홍길동홍길동홍길동홍길동홍길동" readonly="readonly">
+                                            <div class="c-panel">
+                                                <div class="c-article input-list type03">
+                                                    <div class="row">
+                                                        <div class="col-3 label-input">
+                                                            <label for="rosterInfo_supGenderCd">고객사명</label>
+                                                            <input type="text" class="c-input" id="rosterInfo_supGenderCd" value="로스트아크로스트아크로스트아크" />
                                                         </div>
-                                                    </div>
-                                                    <div class="col-3 label-input">
-                                                        <label for="rosterInfo_supBirthday">임직원 생년월일</label>
-                                                        <div class="c-input">
-                                                            <input type="text" class="c-input" id="rosterInfo_supBirthday" value="850102" readonly="readonly">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-3 label-input">
-                                                        <label for="rosterInfo_supDomestic">임직원 부서</label>
-                                                        <input type="text" class="c-input" id="rosterInfo_supDomestic" value="kmi" readonly="readonly">
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-3 label-input">
-                                                        <label for="inputRsvUserInfo02_01">이름</label>
-                                                        <div class="c-input-mark">
-                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_01" value="홍길동홍길동홍길동홍길동홍길동" readonly="readonly">
-                                                            <div class="is-rate"><span class="is-orange-1">VIP</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-3 label-input">
-                                                        <label for="inputRsvUserInfo02_02">생년월일</label>
-                                                        <div class="c-input">
-                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_02" value="850102" readonly="readonly">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-3 label-input">
-                                                        <label for="inputRsvUserInfo02_03">성별</label>
-                                                        <input type="text" class="c-input" id="inputRsvUserInfo02_03" value="남" readonly="readonly">
-                                                    </div>
-                                                    <div class="col-3 label-input">
-                                                        <label for="inputRsvUserInfo02_04">국적</label>
-                                                        <input type="text" class="c-input" id="inputRsvUserInfo02_04" value="내국인" readonly="readonly">
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-3 label-input">
-                                                        <label for="inputRsvUserInfo02_05">검진구분</label>
-                                                        <input type="text" class="c-input" id="inputRsvUserInfo02_05" value="종합검진 / 특수검진" readonly="readonly">
-                                                    </div>
-                                                    <div class="col-3 label-input">
-                                                        <label for="inputRsvUserInfo02_06">임직원과의 관계</label>
-                                                        <input type="text" class="c-input" id="inputRsvUserInfo02_06" value="본인" readonly="readonly">
-                                                    </div>
-                                                    <div class="col-3 label-input">
-                                                        <label class="c-label-txt" for="inputRsvUserInfo02_07">휴대폰 전화번호</label>
-                                                        <input type="text" class="c-input" id="inputRsvUserInfo02_07" value="01012341234" readonly="readonly">
-                                                    </div>
-                                                    <div class="col-3 label-input">
-                                                        <label class="c-label-txt" for="inputRsvUserInfo02_08">전화번호</label>
-                                                        <input type="text" class="c-input" id="inputRsvUserInfo02_08" title="휴대폰 전화번호 앞 3자리 입력" value="01012341234" readonly="readonly">
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-3 label-input">
-                                                        <label class="c-label-txt" for="inputRsvUserInfo02_09">회사지원금</label>
-                                                        <div class="c-input-unit">
-                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_09" value="300,000" readonly="readonly">
-                                                            <span class="unit">원</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-3 label-input">
-                                                        <label class="c-label-txt" for="inputRsvUserInfo02_10">공단대상자</label>
-                                                        <input type="text" class="c-input" id="inputRsvUserInfo02_10" value="대상자" readonly="readonly">
-                                                    </div>
-                                                    <div class="col-3 label-input">
-                                                        <label class="c-label-txt" for="inputRsvUserInfo02_11">특수검진</label>
-                                                        <input type="text" class="c-input" id="inputRsvUserInfo02_11" value="대상자" readonly="readonly">
-                                                    </div>
-                                                    <div class="col-3 label-input">
-                                                        <label class="c-label-txt" for="inputRsvUserInfo02_12">출장검진</label>
-                                                        <div class="c-input">
-                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_12" value="대상자 아님" readonly="readonly">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-6 label-input">
-                                                        <label class="c-label-txt">이메일</label>
-                                                        <div class="row inner c-input-email-group">
-                                                            <div class="col-6 input-email-01">
-                                                                <input type="text" class="c-input" title="이메일 계정입력" value="test" readonly="readonly" aria-label="이메일 계정입력">
+                                                        <div class="col-3 label-input">
+                                                            <label for="rosterInfo_supName">임직원 이름</label>
+                                                            <div class="c-input-mark">
+                                                                <input type="text" class="c-input" id="rosterInfo_supName" value="홍길동홍길동홍길동홍길동홍길동" />
                                                             </div>
-                                                            <div class="col-6 input-email-02">
-                                                                <div class="row">
-                                                                    <div class="col">
-                                                                        <input type="text" class="c-input" title="이메일 도메인 입력" value="hanmail.net" readonly="readonly" aria-label="이메일 도메인 입력">
+                                                        </div>
+                                                        <div class="col-3 label-input">
+                                                            <label for="rosterInfo_supBirthday">임직원 생년월일</label>
+                                                            <div class="c-input">
+                                                                <input type="text" class="c-input" id="rosterInfo_supBirthday" value="850102" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-3 label-input">
+                                                            <label for="rosterInfo_supDomestic">임직원 부서</label>
+                                                            <input type="text" class="c-input" id="rosterInfo_supDomestic" value="kmi" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-3 label-input">
+                                                            <label for="inputRsvUserInfo02_01">이름</label>
+                                                            <div class="c-input-mark">
+                                                                <input type="text" class="c-input" id="inputRsvUserInfo02_01" value="홍길동홍길동홍길동홍길동홍길동" />
+                                                                <div class="is-rate"><span class="is-orange-1">VIP</span></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-3 label-input">
+                                                            <label for="inputRsvUserInfo02_02">생년월일</label>
+                                                            <div class="c-input">
+                                                                <input type="text" class="c-input" id="inputRsvUserInfo02_02" value="850102" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-3 label-input">
+                                                            <label for="inputRsvUserInfo02_03">성별</label>
+                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_03" value="남" />
+                                                        </div>
+                                                        <div class="col-3 label-input">
+                                                            <label for="inputRsvUserInfo02_04">국적</label>
+                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_04" value="내국인" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-3 label-input">
+                                                            <label for="inputRsvUserInfo02_05">검진구분</label>
+                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_05" value="종합검진 / 특수검진" />
+                                                        </div>
+                                                        <div class="col-3 label-input">
+                                                            <label for="inputRsvUserInfo02_06">임직원과의 관계</label>
+                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_06" value="본인" />
+                                                        </div>
+                                                        <div class="col-3 label-input">
+                                                            <label class="c-label-txt" for="inputRsvUserInfo02_07">휴대폰 전화번호</label>
+                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_07" value="01012341234" />
+                                                        </div>
+                                                        <div class="col-3 label-input">
+                                                            <label class="c-label-txt" for="inputRsvUserInfo02_08">전화번호</label>
+                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_08" title="휴대폰 전화번호 앞 3자리 입력" value="01012341234" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-3 label-input">
+                                                            <label class="c-label-txt" for="inputRsvUserInfo02_09">회사지원금</label>
+                                                            <div class="c-input-unit">
+                                                                <input type="text" class="c-input" id="inputRsvUserInfo02_09" value="300,000" />
+                                                                <span class="unit">원</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-3 label-input">
+                                                            <label class="c-label-txt" for="inputRsvUserInfo02_10">공단대상자</label>
+                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_10" value="대상자" />
+                                                        </div>
+                                                        <div class="col-3 label-input">
+                                                            <label class="c-label-txt" for="inputRsvUserInfo02_11">특수검진</label>
+                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_11" value="대상자" />
+                                                        </div>
+                                                        <div class="col-3 label-input">
+                                                            <label class="c-label-txt" for="inputRsvUserInfo02_12">출장검진</label>
+                                                            <div class="c-input">
+                                                                <input type="text" class="c-input" id="inputRsvUserInfo02_12" value="대상자 아님" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6 label-input">
+                                                            <label class="c-label-txt">이메일</label>
+                                                            <div class="row inner c-input-email-group">
+                                                                <div class="col-6 input-email-01">
+                                                                    <input type="text" class="c-input" title="이메일 계정입력" value="test" aria-label="이메일 계정입력" />
+                                                                </div>
+                                                                <div class="col-6 input-email-02">
+                                                                    <div class="row">
+                                                                        <div class="col">
+                                                                            <input type="text" class="c-input" title="이메일 도메인 입력" value="hanmail.net" aria-label="이메일 도메인 입력" />
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-6 label-input">
-                                                        <label class="c-label-txt">주소</label>
-                                                        <div class="row inner c-input-address-group">
-                                                            <div class="col input-addr-01">
-                                                                <input type="text" class="c-input" title="우편번호 입력" placeholder="우편번호" value="03173" readonly="readonly" aria-label="우편번호 입력">
-                                                            </div>
-                                                            <div class="col input-addr-02">
-                                                                <input type="text" class="c-input" title="주소 입력" value="서울시 종로구 세종대로 23길 54" readonly="readonly" aria-label="주소 입력">
+                                                        <div class="col-6 label-input">
+                                                            <label class="c-label-txt">주소</label>
+                                                            <div class="row inner c-input-address-group">
+                                                                <div class="col input-addr-01">
+                                                                    <input type="text" class="c-input" title="우편번호 입력" value="1234" placeholder="우편번호" />
+                                                                </div>
+                                                                <div class="col input-addr-02"><input type="text" class="c-input" title="주소 입력" /></div>
+                                                                <div class="col input-addr-03">
+                                                                    <button type="button" class="c-btn input-btn"><span>검색</span></button>
+                                                                </div>
+                                                                <div class="col input-addr-04">
+                                                                    <input type="text" class="c-input" id="detailAddress" title="상세주소 입력" value="광화문 빌딩 2층" />
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
 
-                                                    <!-- [ mod(230519) ]
-										+ 클래스 추가 col-w-full
-										-->
-                                                    <div class="col label-input col-w-full">
-                                                        <label for="rosterInfo_note">특이사항</label>
-                                                        <div class="c-txtarea-field">
-                                                            <textarea id="rosterInfo_note" class="c-txt-area ta-r-only type03" readonly="readonly">                                                </textarea>
+                                                        <!-- [ mod(230519) ]
+							+ 클래스 추가 col-w-full
+							-->
+                                                        <div class="col label-input col-w-full">
+                                                            <label for="rosterInfo_note">특이사항</label>
+                                                            <div class="c-txtarea-field">
+                                                                <textarea id="rosterInfo_note" class="c-txt-area ta-r-only type03"> </textarea>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
+
                                             </div>
+
+                                            <!-- [ mod(230628) ]
+							- 수정, 저장 버튼 추가
+						-->
+                                            <div class="buttons justify-cont-e">
+                                                <button class="c-btn is-outline-navy-1"><span>수정</span></button>
+                                                <button class="c-btn bg-blue-3"><span>저장</span></button>
+                                            </div>
+
+                                            <!-- [ // mod(230628) ] -->
                                         </div>
                                     </div>
 
@@ -1954,19 +1967,19 @@
                                                     <div class="col-3 label-input">
                                                         <label for="inputRsvContInfo02_01">검진기관</label>
                                                         <div class="c-input">
-                                                            <input type="text" class="c-input" id="inputRsvContInfo02_01" value="텍스트" readonly="readonly">
+                                                            <input type="text" class="c-input" id="inputRsvContInfo02_01" value="텍스트" readonly="readonly" />
                                                         </div>
                                                     </div>
                                                     <div class="col-3 label-input">
                                                         <label for="inputRsvContInfo02_02">검진항목 상품</label>
                                                         <div class="c-input">
-                                                            <input type="text" class="c-input" id="inputRsvContInfo02_02" value="텍스트" readonly="readonly">
+                                                            <input type="text" class="c-input" id="inputRsvContInfo02_02" value="텍스트" readonly="readonly" />
                                                         </div>
                                                     </div>
                                                     <div class="col-3 label-input">
                                                         <label for="inputRsvContInfo02_03">검진 신청일</label>
                                                         <div class="c-input-date">
-                                                            <input type="text" class="c-input" id="inputRsvContInfo02_03" placeholder="YYYY-MM-DD" value="2022-06-11" readonly="readonly">
+                                                            <input type="text" class="c-input" id="inputRsvContInfo02_03" placeholder="YYYY-MM-DD" value="2022-06-11" readonly="readonly" />
                                                             <span><i class="date-btn"></i></span>
                                                         </div>
                                                     </div>
@@ -1978,7 +1991,7 @@
 										-->
                                                         <div class="c-inquiry-date-group">
                                                             <div class="c-input-date">
-                                                                <input type="text" class="c-input btn-date-picker" id="inputRsvContInfo02_04" placeholder="YYYY-MM-DD" autocomplete="off">
+                                                                <input type="text" class="c-input btn-date-picker" id="inputRsvContInfo02_04" placeholder="YYYY-MM-DD" autocomplete="off" />
                                                                 <span><i class="date-btn"></i></span>
                                                             </div>
                                                             <div class="buttons">
@@ -1997,7 +2010,7 @@
                                                     <div class="col-3 label-input">
                                                         <label for="inputRsvContInfo02_05">연기검사 신청일</label>
                                                         <div class="c-input-date">
-                                                            <input type="text" class="c-input" id="inputRsvContInfo02_05" placeholder="YYYY-MM-DD" value="2022-06-11" readonly="readonly">
+                                                            <input type="text" class="c-input" id="inputRsvContInfo02_05" placeholder="YYYY-MM-DD" value="2022-06-11" readonly="readonly" />
                                                             <span><i class="date-btn"></i></span>
                                                         </div>
                                                     </div>
@@ -2009,7 +2022,7 @@
 										-->
                                                         <div class="c-inquiry-date-group">
                                                             <div class="c-input-date">
-                                                                <input type="text" class="c-input btn-date-picker" id="inputRsvContInfo02_06" placeholder="YYYY-MM-DD" autocomplete="off">
+                                                                <input type="text" class="c-input btn-date-picker" id="inputRsvContInfo02_06" placeholder="YYYY-MM-DD" autocomplete="off" />
                                                                 <span><i class="date-btn"></i></span>
                                                             </div>
                                                             <div class="buttons">
@@ -2025,7 +2038,7 @@
                                                     </div>
                                                     <div class="col-3 label-input">
                                                         <label for="inputRsvContInfo02_11">검진결과 수령방법</label>
-                                                        <input type="text" class="c-input" id="inputRsvContInfo02_11" value="선택 없음" readonly="readonly">
+                                                        <input type="text" class="c-input" id="inputRsvContInfo02_11" value="선택 없음" readonly="readonly" />
                                                     </div>
                                                     <div class="col-3 label-input">
                                                         <label for="inputRsvContInfo02_12">진행상태</label>
@@ -2045,19 +2058,19 @@
                                                 <div class="row">
                                                     <div class="col-3 label-input">
                                                         <label for="inputRsvContInfo02_07">개인정보이용동의</label>
-                                                        <input type="text" class="c-input" id="inputRsvContInfo02_07" value="Y" readonly="readonly">
+                                                        <input type="text" class="c-input" id="inputRsvContInfo02_07" value="Y" readonly="readonly" />
                                                     </div>
                                                     <div class="col-3 label-input">
                                                         <label for="inputRsvContInfo02_08">서비스이용동의</label>
-                                                        <input type="text" class="c-input" id="inputRsvContInfo02_08" value="Y" readonly="readonly">
+                                                        <input type="text" class="c-input" id="inputRsvContInfo02_08" value="Y" readonly="readonly" />
                                                     </div>
                                                     <div class="col-3 label-input">
                                                         <label for="inputRsvContInfo02_09">제3자 제공동의</label>
-                                                        <input type="text" class="c-input" id="inputRsvContInfo02_09" value="Y" readonly="readonly">
+                                                        <input type="text" class="c-input" id="inputRsvContInfo02_09" value="Y" readonly="readonly" />
                                                     </div>
                                                     <div class="col-3 label-input">
                                                         <label for="inputRsvContInfo02_10">민감정보 수집동의</label>
-                                                        <input type="text" class="c-input" id="inputRsvContInfo02_10" value="Y" readonly="readonly">
+                                                        <input type="text" class="c-input" id="inputRsvContInfo02_10" value="Y" readonly="readonly" />
                                                     </div>
                                                 </div>
                                                 <div class="row"></div>
@@ -2068,12 +2081,12 @@
 										-->
                                                     <div class="col label-input col-w-full">
                                                         <label for="inputRsvContInfo02_11">요청사항</label>
-                                                        <div class="cont-box request-box "> 온라인 문진표 제공 가능한지 확인 바랍니다.<br> 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다.
-                                                            월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이
-                                                            가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의
-                                                            사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다.
-                                                            월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이
-                                                            가능한지 확인바랍니다. </div>
+                                                        <div class="cont-box request-box"> 온라인 문진표 제공 가능한지 확인 바랍니다.<br /> 월별 SK자체양식의 사후관리소견서 취합이 가능한지
+                                                            확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서
+                                                            취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별
+                                                            SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지
+                                                            확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서
+                                                            취합이 가능한지 확인바랍니다. </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2110,14 +2123,14 @@
                                                     <div class="col-2 label-input justify-cont-sb">
                                                         <label for="inputRsvUserInfoPrice01_01">회사부담</label>
                                                         <div class="c-input-unit">
-                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_01" value="300,000,000,000" readonly="readonly">
+                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_01" value="300,000,000,000" readonly="readonly" />
                                                             <span class="unit">원</span>
                                                         </div>
                                                     </div>
                                                     <div class="col-2 label-input justify-cont-sb">
                                                         <label for="inputRsvUserInfoPrice01_02">개인부담</label>
                                                         <div class="c-input-unit">
-                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_02" value="0" readonly="readonly">
+                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_02" value="0" readonly="readonly" />
                                                             <span class="unit">원</span>
                                                         </div>
                                                     </div>
@@ -2139,14 +2152,14 @@
                                                     <div class="col-2 label-input justify-cont-sb">
                                                         <label for="inputRsvUserInfoPrice01_03">회사부담</label>
                                                         <div class="c-input-unit">
-                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_03" value="300,000" readonly="readonly">
+                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_03" value="300,000" readonly="readonly" />
                                                             <span class="unit">원</span>
                                                         </div>
                                                     </div>
                                                     <div class="col-2 label-input justify-cont-sb">
                                                         <label for="inputRsvUserInfoPrice01_04">개인부담</label>
                                                         <div class="c-input-unit">
-                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_04" value="0" readonly="readonly">
+                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_04" value="0" readonly="readonly" />
                                                             <span class="unit">원</span>
                                                         </div>
                                                     </div>
@@ -2168,14 +2181,14 @@
                                                     <div class="col-2 label-input justify-cont-sb">
                                                         <label for="inputRsvUserInfoPrice01_05">회사부담</label>
                                                         <div class="c-input-unit">
-                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_05" value="300,000" readonly="readonly">
+                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_05" value="300,000" readonly="readonly" />
                                                             <span class="unit">원</span>
                                                         </div>
                                                     </div>
                                                     <div class="col-2 label-input justify-cont-sb">
                                                         <label for="inputRsvUserInfoPrice01_06">개인부담</label>
                                                         <div class="c-input-unit">
-                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_06" value="0" readonly="readonly">
+                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_06" value="0" readonly="readonly" />
                                                             <span class="unit">원</span>
                                                         </div>
                                                     </div>
@@ -2209,14 +2222,14 @@
                                                     <div class="col-2 label-input justify-cont-sb">
                                                         <label for="inputRsvUserInfoPrice01_07">회사부담</label>
                                                         <div class="c-input-unit">
-                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_07" value="300,000" readonly="readonly">
+                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_07" value="300,000" readonly="readonly" />
                                                             <span class="unit">원</span>
                                                         </div>
                                                     </div>
                                                     <div class="col-2 label-input justify-cont-sb">
                                                         <label for="inputRsvUserInfoPrice01_08">개인부담</label>
                                                         <div class="c-input-unit">
-                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_08" value="0" readonly="readonly">
+                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_08" value="0" readonly="readonly" />
                                                             <span class="unit">원</span>
                                                         </div>
                                                     </div>
@@ -2238,14 +2251,14 @@
                                                     <div class="col-2 label-input justify-cont-sb">
                                                         <label for="inputRsvUserInfoPrice01_09">회사부담</label>
                                                         <div class="c-input-unit">
-                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_09" value="300,000" readonly="readonly">
+                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_09" value="300,000" readonly="readonly" />
                                                             <span class="unit">원</span>
                                                         </div>
                                                     </div>
                                                     <div class="col-2 label-input justify-cont-sb">
                                                         <label for="inputRsvUserInfoPrice01_10">개인부담</label>
                                                         <div class="c-input-unit">
-                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_10" value="0" readonly="readonly">
+                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_10" value="0" readonly="readonly" />
                                                             <span class="unit">원</span>
                                                         </div>
                                                     </div>
@@ -2267,14 +2280,14 @@
                                                     <div class="col-2 label-input justify-cont-sb">
                                                         <label for="inputRsvUserInfoPrice01_11">회사부담</label>
                                                         <div class="c-input-unit">
-                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_11" value="300,000" readonly="readonly">
+                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_11" value="300,000" readonly="readonly" />
                                                             <span class="unit">원</span>
                                                         </div>
                                                     </div>
                                                     <div class="col-2 label-input justify-cont-sb">
                                                         <label for="inputRsvUserInfoPrice01_12">개인부담</label>
                                                         <div class="c-input-unit">
-                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_12" value="0" readonly="readonly">
+                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_12" value="0" readonly="readonly" />
                                                             <span class="unit">원</span>
                                                         </div>
                                                     </div>
@@ -2282,19 +2295,19 @@
                                                 <div class="row">
                                                     <div class="col-8 label-input">
                                                         <label for="inputRsvUserInfoPrice01_13">추가검사</label>
-                                                        <input type="text" class="c-input" id="inputRsvUserInfoPrice01_13" value="선택없음" readonly="readonly">
+                                                        <input type="text" class="c-input" id="inputRsvUserInfoPrice01_13" value="선택없음" readonly="readonly" />
                                                     </div>
                                                     <div class="col-2 label-input justify-cont-sb">
                                                         <label for="inputRsvUserInfoPrice01_14">회사부담</label>
                                                         <div class="c-input-unit">
-                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_14" value="300,000" readonly="readonly">
+                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_14" value="300,000" readonly="readonly" />
                                                             <span class="unit">원</span>
                                                         </div>
                                                     </div>
                                                     <div class="col-2 label-input justify-cont-sb">
                                                         <label for="inputRsvUserInfoPrice01_15">개인부담</label>
                                                         <div class="c-input-unit">
-                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_15" value="0" readonly="readonly">
+                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_15" value="0" readonly="readonly" />
                                                             <span class="unit">원</span>
                                                         </div>
                                                     </div>
@@ -2303,21 +2316,21 @@
                                                     <div class="col-8 label-input">
                                                         <label for="inputRsvUserInfoPrice01_16">비용 합계</label>
                                                         <div class="c-input-unit">
-                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_16" value="300,000" readonly="readonly">
+                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_16" value="300,000" readonly="readonly" />
                                                             <span class="unit">원</span>
                                                         </div>
                                                     </div>
                                                     <div class="col-2 label-input justify-cont-sb">
                                                         <label for="inputRsvUserInfoPrice01_17">회사부담</label>
                                                         <div class="c-input-unit">
-                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_17" value="300,000" readonly="readonly">
+                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_17" value="300,000" readonly="readonly" />
                                                             <span class="unit">원</span>
                                                         </div>
                                                     </div>
                                                     <div class="col-2 label-input justify-cont-sb">
                                                         <label for="inputRsvUserInfoPrice01_18">개인부담</label>
                                                         <div class="c-input-unit">
-                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_18" value="0" readonly="readonly">
+                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_18" value="0" readonly="readonly" />
                                                             <span class="unit">원</span>
                                                         </div>
                                                     </div>
@@ -2338,17 +2351,15 @@
                                                     <table class="table">
                                                         <caption> 총 검진 금액 : 총 회사 청구 금액, 총 개인 청구 금액 합계 </caption>
                                                         <colgroup>
-                                                            <col width="20%">
-                                                            <col width="40%">
-                                                            <col width="40%">
-                                                            <col>
+                                                            <col width="20%" />
+                                                            <col width="40%" />
+                                                            <col width="40%" />
+                                                            <col />
                                                         </colgroup>
                                                         <tbody>
                                                             <tr class="total">
                                                                 <th scope="row" colspan="2" class="bg-navy-1">총 검진 금액(① + ②)</th>
-                                                                <td class="ta-r">
-                                                                    <em>450,000</em>원
-                                                                </td>
+                                                                <td class="ta-r"><em>450,000</em>원</td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -2357,10 +2368,10 @@
                                                     <table class="table">
                                                         <caption> 총 회사 청구 금액 : 검진상품금액, 추가검사금액, 건강관리 서비스 이용료에 대한 정보 </caption>
                                                         <colgroup>
-                                                            <col width="20%">
-                                                            <col width="40%">
-                                                            <col width="40%">
-                                                            <col>
+                                                            <col width="20%" />
+                                                            <col width="40%" />
+                                                            <col width="40%" />
+                                                            <col />
                                                         </colgroup>
                                                         <tbody>
                                                             <tr>
@@ -2387,25 +2398,25 @@
                                                     <table class="table">
                                                         <caption> 총 개인 청구 금액 : 검진상품금액, 추가검사금액, 건강관리 서비스 이용료에 대한 정보 </caption>
                                                         <colgroup>
-                                                            <col width="20%">
-                                                            <col width="40%">
-                                                            <col width="40%">
-                                                            <col>
+                                                            <col width="20%" />
+                                                            <col width="40%" />
+                                                            <col width="40%" />
+                                                            <col />
                                                         </colgroup>
                                                         <tbody>
                                                             <tr>
                                                                 <th scope="rowgroup" rowspan="3" class="bg-gray-11">개인</th>
-                                                                <th scope="row">검진상품금액(a)<p class="c-fs-sm">현장결제</p>
+                                                                <th scope="row"> 검진상품금액(a) <p class="c-fs-sm">현장결제</p>
                                                                 </th>
                                                                 <td class="ta-r"><span>280,000</span>원</td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">추가검사금액(e)<p class="c-fs-sm">온라인결제</p>
+                                                                <th scope="row"> 추가검사금액(e) <p class="c-fs-sm">온라인결제</p>
                                                                 </th>
                                                                 <td class="ta-r"><span>50,000</span>원</td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">건강관리 서비스 이용료(f)<p class="c-fs-sm">온라인결제</p>
+                                                                <th scope="row"> 건강관리 서비스 이용료(f) <p class="c-fs-sm">온라인결제</p>
                                                                 </th>
                                                                 <td class="ta-r"><span>50,000</span>원</td>
                                                             </tr>
@@ -2430,9 +2441,9 @@
                                                 <table class="table">
                                                     <caption> 메모 리스트 : 날짜, 내용, 등록자에 대한 정보 </caption>
                                                     <colgroup>
-                                                        <col class="date">
-                                                        <col>
-                                                        <col class="name">
+                                                        <col class="date" />
+                                                        <col />
+                                                        <col class="name" />
                                                     </colgroup>
                                                     <thead>
                                                         <tr>
@@ -2563,10 +2574,10 @@
                                                     <table class="table">
                                                         <caption> 변경이력 : 변경날짜, 변경항목, 변경사항, 비고에 대한 정보 </caption>
                                                         <colgroup>
-                                                            <col class="date">
-                                                            <col style="width: 110px">
-                                                            <col>
-                                                            <col>
+                                                            <col class="date" />
+                                                            <col style="width: 110px" />
+                                                            <col />
+                                                            <col />
                                                         </colgroup>
                                                         <thead>
                                                             <tr>
@@ -2720,8 +2731,7 @@
             info: false,
             autoWidth: false,
             destroy: true,
-        }
-
+        };
 
         $('#dTblChkupList01').DataTable(DefaultDateOption);
 
@@ -2733,11 +2743,9 @@
             $('#dTblChkupList01').DataTable(DefaultDateOption).columns.adjust().draw();
         }
 
-
         window.addEventListener('resize', function() {
             resizeTargetExamDataTable();
         });
-
 
         // + UI 화면 확인 전용 스크립트 (상용 소스 내 미적용)
         // 개발 페이지의 경우 조회 버튼 클릭 시 Load
