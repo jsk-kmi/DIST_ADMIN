@@ -161,7 +161,10 @@ type-horizontal 최상위 요소 부여
         }
         // + type03 input - not readonly
         input[type='text'] {
-          padding: 4px 12px;
+          padding: {
+            top: 4px;
+            bottom: 4px;
+          }
         }
         .c-input-mark {
           .is-rate {
@@ -441,6 +444,9 @@ type-horizontal 최상위 요소 부여
             padding: $select-padding;
             line-height: $input-line-height;
             border-radius: $input-border-radius-01;
+          }
+          &::after {
+            right: 4px;
           }
         }
         .c-table,
@@ -771,16 +777,6 @@ type-horizontal 최상위 요소 부여
                   padding-bottom: $row-padding;
                 }
               }
-              & > .type03 {
-                // input[type='text'] {
-                //   padding: 4px 12px;
-                // }
-                // .c-input-mark {
-                //   .is-rate {
-                //     right: 8px;
-                //   }
-                // }
-              }
             }
 
             .c-input-email-group {
@@ -814,8 +810,89 @@ type-horizontal 최상위 요소 부여
             }
           }
         }
+
         .d-tbl-chklist-wrap {
           max-height: 135px;
+        }
+      }
+      // + 검진예약관리 화면개선
+      .left-wrap {
+        // 예약변경설정 검색 input 추가
+        .set-modrsv-tab {
+          &.tab-01,
+          &.tab-02,
+          &.tab-04 {
+            .c-filter-field {
+              .c-input-search {
+                margin-left: 12px;
+              }
+            }
+          }
+          &.tab-02,
+          &.tab-04 {
+            .cont-body {
+              padding-top: 12px;
+              height: calc(100% - 40px);
+            }
+          }
+          &.tab-01 {
+            .c-input-search {
+              margin-right: 12px;
+            }
+          }
+        }
+      }
+
+      .right-wrap {
+        // + 메모 리스트
+        .memo-lists {
+          .memo-list {
+            display: table;
+            table-layout: fixed;
+            align-items: center;
+            width: 100%;
+            cursor: pointer;
+            .memo-cont {
+              display: block;
+              white-space: normal;
+              @include ellipsisMultiline(5, 20px, initial, 100px);
+              white-space: wrap;
+              width: 100%;
+            }
+            .memo-contarea,
+            .memo-btnarea {
+              display: table-cell;
+              vertical-align: middle;
+            }
+            .memo-btnarea {
+              width: 30px;
+            }
+            .memo-cont-btn {
+              background: url(../images/ico/ico_arrow_10.svg) center/8px auto no-repeat;
+              width: 30px;
+              height: 30px;
+              padding: 6px 5px;
+            }
+            &.on {
+              .memo-cont-btn {
+                background-image: url(../images/ico/ico_arrow_11.svg);
+              }
+            }
+          }
+          .name {
+            width: 90px;
+          }
+        }
+        // + 메모 변경이력
+        .memo-lists-mod {
+          td.rsv-mod-cont {
+            text-align: left;
+          }
+        }
+      }
+      .c-article {
+        //+ 메모등록
+        &.target-memo {
         }
       }
     }

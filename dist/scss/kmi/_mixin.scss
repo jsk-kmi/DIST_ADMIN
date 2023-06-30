@@ -25,9 +25,12 @@
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lineCnt;
+
+  height: $height;
   word-wrap: break-word;
   line-height: $lineHeight;
-  height: $height;
   max-height: $maxHeight;
 }
 

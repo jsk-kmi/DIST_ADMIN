@@ -40,11 +40,9 @@
 
                 <!-- reservation-dtl-status-layout -->
                 <div class="c-panel reservation-dtl-status-layout">
-
                     <!-- + left-wrap -->
                     <div class="col in-layout left-wrap">
                         <div class="c-inner">
-
                             <!-- [ mod(230519) ]
 					- 해당 영역 전체 소스 변경 반영 필요 (Source Diff 필)
 					- 메모리스트, 변경이력 Tab -> right-wrap Tab으로 이동
@@ -55,7 +53,6 @@
                                 <div class="c-title-field justify-c-sb">
                                     <h2 class="title-md">검진자 정보</h2>
                                     <div class="buttons justify-cont-sb">
-
                                         <!-- [ mod(230628) ]
 							- 신규등록 버튼 추가
 							- 색상 클래스 변경
@@ -90,6 +87,16 @@
                                             <label for="inputRsvStatusInfo01_05">생년월일</label>
                                             <input type="text" class="c-input" id="inputRsvStatusInfo01_05" value="" placeholder="생년월일" />
                                         </div>
+
+                                        <!-- [ mod(230630) ]
+							- 사원번호 input 추가
+						-->
+                                        <div class="col-3 label-input">
+                                            <label for="inputRsvStatusInfo01_02">사원번호</label>
+                                            <input type="text" class="c-input" id="inputRsvStatusInfo01_02" value="2022050068" placeholder="사원번호" />
+                                        </div>
+
+                                        <!-- [ // mod(230630) ] -->
                                         <div class="col-6 label-input">
                                             <label class="c-label-txt" title="휴대폰 전화번호 앞 3자리 선택">휴대폰 번호</label>
                                             <div class="row inner c-input-phone-group">
@@ -118,10 +125,6 @@
 								<input type="text" class="c-input" id="inputRsvStatusInfo01_03" value="" placeholder="부서">
 							</div> -->
                                     </div>
-
-                                    <!-- <div class="row">
-
-						</div> -->
                                 </div>
                             </div>
 
@@ -140,20 +143,21 @@
 						</div> -->
                                 </div>
                                 <div class="c-table-field type02">
-
                                     <!-- 작업 -->
 
-                                    <!-- [ mod(230519) ]
+                                    <!-- [ mod(230630) ]
 					- 해당 영역 전체 소스 변경 반영 필요 (Source Diff 필)
 					- table 소스 전체 변경
 					-->
                                     <div class="c-table striped c-vertical-scroll d-tbl-chklist-wrap">
                                         <table class="table tbl-examtarget-list c-datatable d-tbl-chklist dataTable no-footer" id="dTblChkupList01" style="width: 100%">
-                                            <caption> 검진 대상자 목록 : 예약 확정일자, 고객사, 검진자, 관계, 생년월일, 휴대폰번호, 예약상태, 비고, 대상자추가에 대한 정보 </caption>
+                                            <caption>
+                                                검진 대상자 목록 : 예약 확정일자, 고객사, 검진자, 관계, 생년월일, 휴대폰번호, 예약상태, 대상자추가에 대한 정보
+                                            </caption>
 
-                                            <!-- [ mod(230519) ]
-					-  table 너비 제어 일괄 변경
-					-->
+                                            <!-- [ mod(230630) ]
+							-  table '비고' 란 삭제
+							-->
                                             <colgroup>
                                                 <col class="max-date" />
                                                 <col style="width: auto" />
@@ -162,7 +166,6 @@
                                                 <col class="max-birthday" />
                                                 <col class="max-phone" />
                                                 <col style="width: 90px; max-width: 90px" />
-                                                <col style="width: 55px; max-width: 55px" />
                                                 <col style="width: 80px; max-width: 80px" />
                                             </colgroup>
                                             <thead>
@@ -174,12 +177,15 @@
                                                     <th scope="col" class="max-birthday">생년월일</th>
                                                     <th scope="col" class="max-phone">휴대폰번호</th>
                                                     <th scope="col" style="width: 90px; max-width: 90px">예약상태</th>
-                                                    <th scope="col" style="width: 55px; max-width: 55px">비고</th>
                                                     <th scope="col" style="width: 80px; max-width: 80px">대상자추가</th>
                                                 </tr>
                                             </thead>
 
-                                            <!-- [ // mod(230519) ] -->
+                                            <!-- [ // mod(230630) ] -->
+
+                                            <!-- [ mod(230630) ]
+							-  table '확인' 내용 삭제
+							-->
                                             <tbody>
                                                 <tr>
                                                     <td>2022-11-11</td>
@@ -189,9 +195,6 @@
                                                     <td>1970-01-01</td>
                                                     <td>010-1111-2222</td>
                                                     <td>검진완료</td>
-                                                    <td>
-                                                        <button type="button" class="c-bs-link"><span>확인</span></button>
-                                                    </td>
                                                     <td>
                                                         <button type="button" class="c-bs-link"><span>추가</span></button>
                                                     </td>
@@ -205,9 +208,6 @@
                                                     <td>010-1111-2222</td>
                                                     <td>예약실패</td>
                                                     <td>
-                                                        <button type="button" class="c-bs-link"><span>확인</span></button>
-                                                    </td>
-                                                    <td>
                                                         <button type="button" class="c-bs-link"><span>추가</span></button>
                                                     </td>
                                                 </tr>
@@ -219,9 +219,6 @@
                                                     <td>1970-01-01</td>
                                                     <td>010-1111-2222</td>
                                                     <td>예약확정</td>
-                                                    <td>
-                                                        <button type="button" class="c-bs-link"><span>확인</span></button>
-                                                    </td>
                                                     <td>
                                                         <button type="button" class="c-bs-link"><span>추가</span></button>
                                                     </td>
@@ -235,9 +232,6 @@
                                                     <td>010-1111-2222</td>
                                                     <td>결제대기</td>
                                                     <td>
-                                                        <button type="button" class="c-bs-link"><span>확인</span></button>
-                                                    </td>
-                                                    <td>
                                                         <button type="button" class="c-bs-link"><span>추가</span></button>
                                                     </td>
                                                 </tr>
@@ -249,9 +243,6 @@
                                                     <td>1970-01-01</td>
                                                     <td>010-1111-2222</td>
                                                     <td>예약취소확정</td>
-                                                    <td>
-                                                        <button type="button" class="c-bs-link"><span>확인</span></button>
-                                                    </td>
                                                     <td>
                                                         <button type="button" class="c-bs-link"><span>추가</span></button>
                                                     </td>
@@ -265,9 +256,6 @@
                                                     <td>010-1111-2222</td>
                                                     <td>미신청</td>
                                                     <td>
-                                                        <button type="button" class="c-bs-link"><span>확인</span></button>
-                                                    </td>
-                                                    <td>
                                                         <button type="button" class="c-bs-link"><span>추가</span></button>
                                                     </td>
                                                 </tr>
@@ -279,9 +267,6 @@
                                                     <td>1970-01-01</td>
                                                     <td>010-1111-2222</td>
                                                     <td>예약확정</td>
-                                                    <td>
-                                                        <button type="button" class="c-bs-link"><span>확인</span></button>
-                                                    </td>
                                                     <td>
                                                         <button type="button" class="c-bs-link"><span>추가</span></button>
                                                     </td>
@@ -295,9 +280,6 @@
                                                     <td>010-1111-2222</td>
                                                     <td>미신청</td>
                                                     <td>
-                                                        <button type="button" class="c-bs-link"><span>확인</span></button>
-                                                    </td>
-                                                    <td>
                                                         <button type="button" class="c-bs-link"><span>추가</span></button>
                                                     </td>
                                                 </tr>
@@ -305,7 +287,7 @@
                                         </table>
                                     </div>
 
-                                    <!-- [ // mod(230519) ] -->
+                                    <!-- [ // mod(230630) ] -->
                                 </div>
                             </div>
 
@@ -327,7 +309,6 @@
                                     </div>
                                     <div class="in-right inner-title">
                                         <div class="buttons">
-
                                             <!-- [ mod(230628) ]
 							- 색상 클래스 변경
 						-->
@@ -342,7 +323,6 @@
                                 <div class="c-article mod-reservation">
                                     <div class="c-inner-left">
                                         <ul class="rsv-mod-list01 c-tab-list" role="tablist">
-
                                             <!-- [Comment]
 														- 탭 활성화 클래스 : on
 													-->
@@ -371,19 +351,28 @@
                                     </div>
                                     <div class="c-inner-right">
                                         <div class="c-tab-contents">
-
                                             <!-- [Comment]
-														- 탭 활성화 클래스 : on
-													-->
+								- 탭 활성화 클래스 : on
+							-->
 
                                             <!-- [ mod(230519) ]
-					-  table 너비 제어 일괄 변경
-					-->
+							-  table 너비 제어 일괄 변경
+							-->
 
                                             <!-- + modRsvTabContent_01 (검진기관)-->
                                             <div class="tab-cont on set-modrsv-tab tab-01" id="modRsvTabContent_01" role="tabpanel" aria-labelledby="modRsvTabList_01">
                                                 <div class="c-inner-field">
                                                     <div class="c-filter-field c-field justify-cont-e">
+                                                        <!-- [ mod(230630) ]
+											검색 input 추가
+										-->
+                                                        <label for="rsvInputSch01">검진기관</label>
+                                                        <div class="c-input-search">
+                                                            <input type="text" id="rsvInputSch01" />
+                                                            <button type="button" class="btn-search"><span class="skip">검진기관 검색</span></button>
+                                                        </div>
+
+                                                        <!-- [ // mod(230630) ] -->
                                                         <label>지역 설정</label>
                                                         <div class="c-select">
                                                             <select title="지역(시) 선택">
@@ -409,7 +398,9 @@
                                                                     <div class="c-table striped tbl-fixed tbl-modrsv-type01">
                                                                         <table class="table">
                                                                             <!--caption 내용 기재 -->
-                                                                            <caption> 검진기관 목록 : 검진기관, 지역에 대한 정보 </caption>
+                                                                            <caption>
+                                                                                검진기관 목록 : 검진기관, 지역에 대한 정보
+                                                                            </caption>
 
                                                                             <!-- [ mod(230519) ] -->
                                                                             <colgroup>
@@ -439,9 +430,7 @@
                                                                                         </div>
                                                                                     </td>
                                                                                     <td class="ta-l in-chklabel">
-                                                                                        <label for="chkChkupInstitution_01" class="tbl-label c-truncate01">한국의학연구소
-                                                                                            광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소
-                                                                                            광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문</label>
+                                                                                        <label for="chkChkupInstitution_01" class="tbl-label c-truncate01">한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문</label>
                                                                                     </td>
                                                                                     <td>서울 종로</td>
 
@@ -607,162 +596,180 @@
 
                                             <!-- + modRsvTabContent_02 (검진항목 상품) -->
                                             <div class="tab-cont set-modrsv-tab tab-02" id="modRsvTabContent_02" role="tabpanel" aria-labelledby="modRsvTabList_02">
-                                                <div class="modrsv-scroll">
-                                                    <div class="inner">
-                                                        <div class="c-inner-field">
-                                                            <div class="c-table-field">
-                                                                <div class="c-table striped tbl-fixed tbl-modrsv-type01">
-                                                                    <table class="table">
-                                                                        <!--caption 내용 기재 -->
-                                                                        <caption> 검진항목 상품 : 상품명, 검진비용액, 세부에 대한 정보 </caption>
+                                                <div class="c-inner-field">
+                                                    <!-- [ mod(230630) ]
+											- 검색 input 추가,
+											- cont-body 클래스 추가
+										-->
+                                                    <div class="c-filter-field c-field justify-cont-e">
+                                                        <label for="rsvInputSch02">상품명</label>
+                                                        <div class="c-input-search">
+                                                            <input type="text" id="rsvInputSch02" />
+                                                            <button type="button" class="btn-search"><span class="skip">상품명 검색</span></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-body">
+                                                        <div class="modrsv-scroll">
+                                                            <div class="inner">
+                                                                <div class="c-inner-field">
+                                                                    <div class="c-table-field">
+                                                                        <div class="c-table striped tbl-fixed tbl-modrsv-type01">
+                                                                            <table class="table">
+                                                                                <!--caption 내용 기재 -->
+                                                                                <caption>
+                                                                                    검진항목 상품 : 상품명, 검진비용액, 세부에 대한 정보
+                                                                                </caption>
 
-                                                                        <!-- [ mod(230519) ] -->
-                                                                        <colgroup>
-                                                                            <col class="max-checkbox02" />
-                                                                            <col />
-                                                                            <col class="max-price" />
-                                                                            <col class="link" style="width: 150px; max-width: 150px" />
-                                                                        </colgroup>
-                                                                        <thead>
-                                                                            <tr>
-                                                                                <th scope="col" class="max-checkbox02"></th>
-                                                                                <th scope="col">상품명</th>
-                                                                                <th scope="col" class="max-price">검진비용액</th>
-                                                                                <th scope="col" style="width: 150px; max-width: 150px">세부</th>
-                                                                            </tr>
-                                                                        </thead>
+                                                                                <!-- [ mod(230519) ] -->
+                                                                                <colgroup>
+                                                                                    <col class="max-checkbox02" />
+                                                                                    <col />
+                                                                                    <col class="max-price" />
+                                                                                    <col class="link" style="width: 150px; max-width: 150px" />
+                                                                                </colgroup>
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th scope="col" class="max-checkbox02"></th>
+                                                                                        <th scope="col">상품명</th>
+                                                                                        <th scope="col" class="max-price">검진비용액</th>
+                                                                                        <th scope="col" style="width: 150px; max-width: 150px">세부</th>
+                                                                                    </tr>
+                                                                                </thead>
 
-                                                                        <!-- [ // mod(230519) ] -->
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td class="in-chkbox">
-                                                                                    <div class="c-chkbox">
-                                                                                        <input type="checkbox" id="chkChkPrd01_01" />
-                                                                                        <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td class="ta-l in-chklabel"><label for="chkChkPrd01_01" class="tbl-label c-truncate01">정밀종합검진 일반형</label></td>
-                                                                                <td class="ta-r">
-                                                                                    <div class="c-in-price">
-                                                                                        <span>500,000</span>
-                                                                                        <span class="unit">원</span>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div class="link">
-                                                                                        <a href="javascript:;" class="c-bs-link">보기</a>
-                                                                                    </div>
-                                                                                </td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td class="in-chkbox">
-                                                                                    <div class="c-chkbox">
-                                                                                        <input type="checkbox" id="chkChkPrd01_02" />
-                                                                                        <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td class="ta-l in-chklabel"><label for="chkChkPrd01_02" class="tbl-label c-truncate01">정밀종합검진 일반형</label></td>
-                                                                                <td class="ta-r">
-                                                                                    <div class="c-in-price">
-                                                                                        <span>500,000</span>
-                                                                                        <span class="unit">원</span>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div class="link">
-                                                                                        <a href="javascript:;" class="c-bs-link">보기</a>
-                                                                                    </div>
-                                                                                </td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td class="in-chkbox">
-                                                                                    <div class="c-chkbox">
-                                                                                        <input type="checkbox" id="chkChkPrd01_03" />
-                                                                                        <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td class="ta-l in-chklabel"><label for="chkChkPrd01_03" class="tbl-label c-truncate01">정밀종합검진 일반형</label></td>
-                                                                                <td class="ta-r">
-                                                                                    <div class="c-in-price">
-                                                                                        <span>500,000</span>
-                                                                                        <span class="unit">원</span>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div class="link">
-                                                                                        <a href="javascript:;" class="c-bs-link">보기</a>
-                                                                                    </div>
-                                                                                </td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td class="in-chkbox">
-                                                                                    <div class="c-chkbox">
-                                                                                        <input type="checkbox" id="chkChkPrd01_04" />
-                                                                                        <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td class="ta-l in-chklabel"><label for="chkChkPrd01_04" class="tbl-label c-truncate01">정밀종합검진 일반형</label></td>
-                                                                                <td class="ta-r">
-                                                                                    <div class="c-in-price">
-                                                                                        <span>500,000</span>
-                                                                                        <span class="unit">원</span>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div class="link">
-                                                                                        <a href="javascript:;" class="c-bs-link">보기</a>
-                                                                                    </div>
-                                                                                </td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td class="in-chkbox">
-                                                                                    <div class="c-chkbox">
-                                                                                        <input type="checkbox" id="chkChkPrd01_05" />
-                                                                                        <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td class="ta-l in-chklabel"><label for="chkChkPrd01_05" class="tbl-label c-truncate01">정밀종합검진 일반형</label></td>
-                                                                                <td class="ta-r">
-                                                                                    <div class="c-in-price">
-                                                                                        <span>500,000</span>
-                                                                                        <span class="unit">원</span>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div class="link">
-                                                                                        <a href="javascript:;" class="c-bs-link">보기</a>
-                                                                                    </div>
-                                                                                </td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td class="in-chkbox">
-                                                                                    <div class="c-chkbox">
-                                                                                        <input type="checkbox" id="chkChkPrd01_06" />
-                                                                                        <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td class="ta-l in-chklabel">
-                                                                                    <label for="chkChkPrd01_06" class="tbl-label c-truncate01">정밀종합검진
-                                                                                        일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형</label>
-                                                                                </td>
-                                                                                <td class="ta-r">
-                                                                                    <div class="c-in-price">
-                                                                                        <span>500,000</span>
-                                                                                        <span class="unit">원</span>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div class="link">
-                                                                                        <a href="javascript:;" class="c-bs-link">보기</a>
-                                                                                    </div>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
+                                                                                <!-- [ // mod(230519) ] -->
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td class="in-chkbox">
+                                                                                            <div class="c-chkbox">
+                                                                                                <input type="checkbox" id="chkChkPrd01_01" />
+                                                                                                <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td class="ta-l in-chklabel"><label for="chkChkPrd01_01" class="tbl-label c-truncate01">정밀종합검진 일반형</label></td>
+                                                                                        <td class="ta-r">
+                                                                                            <div class="c-in-price">
+                                                                                                <span>500,000</span>
+                                                                                                <span class="unit">원</span>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class="link">
+                                                                                                <a href="javascript:;" class="c-bs-link">보기</a>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td class="in-chkbox">
+                                                                                            <div class="c-chkbox">
+                                                                                                <input type="checkbox" id="chkChkPrd01_02" />
+                                                                                                <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td class="ta-l in-chklabel"><label for="chkChkPrd01_02" class="tbl-label c-truncate01">정밀종합검진 일반형</label></td>
+                                                                                        <td class="ta-r">
+                                                                                            <div class="c-in-price">
+                                                                                                <span>500,000</span>
+                                                                                                <span class="unit">원</span>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class="link">
+                                                                                                <a href="javascript:;" class="c-bs-link">보기</a>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td class="in-chkbox">
+                                                                                            <div class="c-chkbox">
+                                                                                                <input type="checkbox" id="chkChkPrd01_03" />
+                                                                                                <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td class="ta-l in-chklabel"><label for="chkChkPrd01_03" class="tbl-label c-truncate01">정밀종합검진 일반형</label></td>
+                                                                                        <td class="ta-r">
+                                                                                            <div class="c-in-price">
+                                                                                                <span>500,000</span>
+                                                                                                <span class="unit">원</span>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class="link">
+                                                                                                <a href="javascript:;" class="c-bs-link">보기</a>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td class="in-chkbox">
+                                                                                            <div class="c-chkbox">
+                                                                                                <input type="checkbox" id="chkChkPrd01_04" />
+                                                                                                <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td class="ta-l in-chklabel"><label for="chkChkPrd01_04" class="tbl-label c-truncate01">정밀종합검진 일반형</label></td>
+                                                                                        <td class="ta-r">
+                                                                                            <div class="c-in-price">
+                                                                                                <span>500,000</span>
+                                                                                                <span class="unit">원</span>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class="link">
+                                                                                                <a href="javascript:;" class="c-bs-link">보기</a>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td class="in-chkbox">
+                                                                                            <div class="c-chkbox">
+                                                                                                <input type="checkbox" id="chkChkPrd01_05" />
+                                                                                                <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td class="ta-l in-chklabel"><label for="chkChkPrd01_05" class="tbl-label c-truncate01">정밀종합검진 일반형</label></td>
+                                                                                        <td class="ta-r">
+                                                                                            <div class="c-in-price">
+                                                                                                <span>500,000</span>
+                                                                                                <span class="unit">원</span>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class="link">
+                                                                                                <a href="javascript:;" class="c-bs-link">보기</a>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td class="in-chkbox">
+                                                                                            <div class="c-chkbox">
+                                                                                                <input type="checkbox" id="chkChkPrd01_06" />
+                                                                                                <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td class="ta-l in-chklabel">
+                                                                                            <label for="chkChkPrd01_06" class="tbl-label c-truncate01">정밀종합검진 일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형</label>
+                                                                                        </td>
+                                                                                        <td class="ta-r">
+                                                                                            <div class="c-in-price">
+                                                                                                <span>500,000</span>
+                                                                                                <span class="unit">원</span>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class="link">
+                                                                                                <a href="javascript:;" class="c-bs-link">보기</a>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
+
+                                                    <!-- [ // mod(230630) ] -->
                                                 </div>
                                             </div>
 
@@ -788,13 +795,13 @@
                                                                                 <input type="text" class="c-input" value="1" readonly="readonly" />
                                                                             </div>
                                                                             <div class="c-table-field">
-
                                                                                 <!-- tbl-modrsv-selectchk -->
                                                                                 <div class="c-table striped tbl-fixed tbl-modrsv-selectchk">
-
                                                                                     <!-- tbl-chkup-category  -->
                                                                                     <table class="table">
-                                                                                        <caption> 선택검사 목록 : 선택항목, 개인추가금, 예약가능일, 연기검사에 대한 정보 </caption>
+                                                                                        <caption>
+                                                                                            선택검사 목록 : 선택항목, 개인추가금, 예약가능일, 연기검사에 대한 정보
+                                                                                        </caption>
 
                                                                                         <!-- [ mod(230519) ] -->
                                                                                         <colgroup>
@@ -824,8 +831,7 @@
                                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                                     </div>
                                                                                                 </td>
-                                                                                                <td class="ta-l in-chklabel" colspan="3"><label for="chkChoiceChkPrd01_01_01">위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영</label>
-                                                                                                </td>
+                                                                                                <td class="ta-l in-chklabel" colspan="3"><label for="chkChoiceChkPrd01_01_01">위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영</label></td>
                                                                                                 <td class="ta-r">
                                                                                                     <div class="c-in-price">
                                                                                                         <span>500,000</span>
@@ -869,13 +875,13 @@
                                                                                 <input type="text" class="c-input" value="2" readonly="readonly" />
                                                                             </div>
                                                                             <div class="c-table-field">
-
                                                                                 <!-- tbl-modrsv-selectchk -->
                                                                                 <div class="c-table striped tbl-fixed tbl-modrsv-selectchk">
-
                                                                                     <!-- tbl-chkup-category  -->
                                                                                     <table class="table">
-                                                                                        <caption> 선택검사 목록 : 선택항목, 개인추가금, 예약가능일, 연기검사에 대한 정보 </caption>
+                                                                                        <caption>
+                                                                                            선택검사 목록 : 선택항목, 개인추가금, 예약가능일, 연기검사에 대한 정보
+                                                                                        </caption>
 
                                                                                         <!-- [ mod(230519) ] -->
                                                                                         <colgroup>
@@ -928,8 +934,7 @@
                                                                                                     </div>
                                                                                                 </td>
                                                                                                 <td class="ta-l in-chklabel" colspan="3">
-                                                                                                    <label for="chkAddChkPrd02_01_02" class="tbl-label">심장초음파 심장초음파 심장초음파 심장초음파
-                                                                                                    </label>
+                                                                                                    <label for="chkAddChkPrd02_01_02" class="tbl-label">심장초음파 심장초음파 심장초음파 심장초음파 </label>
                                                                                                 </td>
                                                                                                 <td class="ta-r">
                                                                                                     <div class="c-in-price">
@@ -1045,13 +1050,13 @@
                                                                                 <input type="text" class="c-input" value="1" readonly="readonly" />
                                                                             </div>
                                                                             <div class="c-table-field">
-
                                                                                 <!-- tbl-modrsv-selectchk -->
                                                                                 <div class="c-table striped tbl-fixed tbl-modrsv-selectchk">
-
                                                                                     <!-- tbl-chkup-category  -->
                                                                                     <table class="table">
-                                                                                        <caption> 선택검사 목록 : 선택항목, 개인추가금, 예약가능일, 연기검사에 대한 정보 </caption>
+                                                                                        <caption>
+                                                                                            선택검사 목록 : 선택항목, 개인추가금, 예약가능일, 연기검사에 대한 정보
+                                                                                        </caption>
 
                                                                                         <!-- [ mod(230519) ] -->
                                                                                         <colgroup>
@@ -1081,8 +1086,7 @@
                                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                                     </div>
                                                                                                 </td>
-                                                                                                <td class="ta-l in-chklabel" colspan="3"><label for="chkChoiceChkPrd03_01_01">위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영</label>
-                                                                                                </td>
+                                                                                                <td class="ta-l in-chklabel" colspan="3"><label for="chkChoiceChkPrd03_01_01">위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영</label></td>
                                                                                                 <td class="ta-r">
                                                                                                     <div class="c-in-price">
                                                                                                         <span>500,000</span>
@@ -1112,74 +1116,93 @@
 
                                             <!-- + modRsvTabContent_04 (추가검사) -->
                                             <div class="tab-cont set-modrsv-tab tab-04" id="modRsvTabContent_04" role="tabpanel" aria-labelledby="modRsvTabList_04">
-                                                <div class="modrsv-scroll">
-                                                    <div class="inner">
-                                                        <div class="c-inner-field">
-                                                            <div class="c-table-field">
-                                                                <div class="c-table striped tbl-fixed tbl-modrsv-type01">
-                                                                    <table class="table">
-                                                                        <caption> 추가검사 목록 : 선택항목, 개인추가금, 예약가능일에 대한 정보 </caption>
+                                                <div class="c-inner-field">
+                                                    <!-- [ mod(230630) ]
+											- 검색 input 추가,
+											- cont-body 클래스 추가
+										-->
+                                                    <div class="c-filter-field c-field justify-cont-e">
+                                                        <label for="rsvInputSch03">선택항목</label>
+                                                        <div class="c-input-search">
+                                                            <input type="text" id="rsvInputSch03" />
+                                                            <button type="button" class="btn-search"><span class="skip">선택항목 검색</span></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-body">
+                                                        <div class="modrsv-scroll">
+                                                            <div class="inner">
+                                                                <div class="c-inner-field">
+                                                                    <div class="c-table-field">
+                                                                        <div class="c-table striped tbl-fixed tbl-modrsv-type01">
+                                                                            <table class="table">
+                                                                                <caption>
+                                                                                    추가검사 목록 : 선택항목, 개인추가금, 예약가능일에 대한 정보
+                                                                                </caption>
 
-                                                                        <!-- [ mod(230519) ] -->
-                                                                        <colgroup>
-                                                                            <col class="max-checkbox02" />
-                                                                            <col />
-                                                                            <col class="price" style="width: 200px; max-width: 200px" />
+                                                                                <!-- [ mod(230519) ] -->
+                                                                                <colgroup>
+                                                                                    <col class="max-checkbox02" />
+                                                                                    <col />
+                                                                                    <col class="price" style="width: 200px; max-width: 200px" />
 
-                                                                            <!-- <col class="date"> -->
-                                                                        </colgroup>
-                                                                        <thead>
-                                                                            <tr>
-                                                                                <th scope="col" class="max-checkbox02"></th>
-                                                                                <th scope="col">선택항목</th>
-                                                                                <th scope="col" style="width: 200px; max-width: 200px">개인추가금</th>
+                                                                                    <!-- <col class="date"> -->
+                                                                                </colgroup>
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th scope="col" class="max-checkbox02"></th>
+                                                                                        <th scope="col">선택항목</th>
+                                                                                        <th scope="col" style="width: 200px; max-width: 200px">개인추가금</th>
 
-                                                                                <!-- <th scope="col">예약가능일</th> -->
-                                                                            </tr>
-                                                                        </thead>
+                                                                                        <!-- <th scope="col">예약가능일</th> -->
+                                                                                    </tr>
+                                                                                </thead>
 
-                                                                        <!-- [ // mod(230519) ] -->
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td class="in-chkbox">
-                                                                                    <div class="c-chkbox">
-                                                                                        <input type="checkbox" id="chkAddChkPrd01_01" />
-                                                                                        <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td class="ta-l in-chklabel"><label for="chkAddChkPrd01_01" class="tbl-label c-truncate01">대장내시경</label></td>
-                                                                                <td class="ta-r">
-                                                                                    <div class="c-in-price">
-                                                                                        <span>500,000</span>
-                                                                                        <span class="unit">원</span>
-                                                                                    </div>
-                                                                                </td>
+                                                                                <!-- [ // mod(230519) ] -->
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td class="in-chkbox">
+                                                                                            <div class="c-chkbox">
+                                                                                                <input type="checkbox" id="chkAddChkPrd01_01" />
+                                                                                                <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td class="ta-l in-chklabel"><label for="chkAddChkPrd01_01" class="tbl-label c-truncate01">대장내시경</label></td>
+                                                                                        <td class="ta-r">
+                                                                                            <div class="c-in-price">
+                                                                                                <span>500,000</span>
+                                                                                                <span class="unit">원</span>
+                                                                                            </div>
+                                                                                        </td>
 
-                                                                                <!-- <td>2022-05-12</td> -->
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td class="in-chkbox">
-                                                                                    <div class="c-chkbox">
-                                                                                        <input type="checkbox" id="chkAddChkPrd01_02" />
-                                                                                        <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td class="ta-l in-chklabel"><label for="chkAddChkPrd01_02" class="tbl-label c-truncate01">대장내시경</label></td>
-                                                                                <td class="ta-r">
-                                                                                    <div class="c-in-price">
-                                                                                        <span>500,000</span>
-                                                                                        <span class="unit">원</span>
-                                                                                    </div>
-                                                                                </td>
+                                                                                        <!-- <td>2022-05-12</td> -->
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td class="in-chkbox">
+                                                                                            <div class="c-chkbox">
+                                                                                                <input type="checkbox" id="chkAddChkPrd01_02" />
+                                                                                                <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td class="ta-l in-chklabel"><label for="chkAddChkPrd01_02" class="tbl-label c-truncate01">대장내시경</label></td>
+                                                                                        <td class="ta-r">
+                                                                                            <div class="c-in-price">
+                                                                                                <span>500,000</span>
+                                                                                                <span class="unit">원</span>
+                                                                                            </div>
+                                                                                        </td>
 
-                                                                                <!-- <td>2022-05-12</td> -->
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
+                                                                                        <!-- <td>2022-05-12</td> -->
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
+
+                                                    <!-- [ // mod(230630) ] -->
                                                 </div>
                                             </div>
 
@@ -1200,7 +1223,6 @@
                                                                     <div class="col label-input">
                                                                         <label class="label-txt">검진 시간 선택</label>
                                                                         <div class="c-m-input-list">
-
                                                                             <!-- <div class="input-col">
 																	<div class="inner">
 																		<div class="c-rdochk">
@@ -1237,8 +1259,7 @@
                                                                                 <div class="inner">
                                                                                     <div class="c-rdochk">
                                                                                         <input type="radio" id="rdoChkupDate02_01" name="rdoChkupDate02" />
-                                                                                        <label for="rdoChkupDate02_01" class="chk-label"><i></i><span>수면 내시경 포함 예약
-                                                                                                진행</span></label>
+                                                                                        <label for="rdoChkupDate02_01" class="chk-label"><i></i><span>수면 내시경 포함 예약 진행</span></label>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1302,7 +1323,6 @@
                                                                     <div class="col label-input">
                                                                         <label class="label-txt">검진 시간 선택</label>
                                                                         <div class="c-m-input-list">
-
                                                                             <!-- <div class="input-col">
 																	<div class="inner">
 																		<div class="c-rdochk">
@@ -1339,8 +1359,7 @@
                                                                                 <div class="inner">
                                                                                     <div class="c-rdochk">
                                                                                         <input type="radio" id="rdoChkupDate04_01" name="rdoChkupDate04" />
-                                                                                        <label for="rdoChkupDate04_01" class="chk-label"><i></i><span>수면 내시경 포함 예약
-                                                                                                진행</span></label>
+                                                                                        <label for="rdoChkupDate04_01" class="chk-label"><i></i><span>수면 내시경 포함 예약 진행</span></label>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1540,7 +1559,9 @@
                                                             <div class="c-table-field">
                                                                 <div class="c-table striped tbl-fixed tbl-cost-dtl">
                                                                     <table class="table">
-                                                                        <caption> 비용내역 상세 : 상품, 세부내역, 비용에 대한 정보 </caption>
+                                                                        <caption>
+                                                                            비용내역 상세 : 상품, 세부내역, 비용에 대한 정보
+                                                                        </caption>
 
                                                                         <!-- [ mod(230519) ] -->
                                                                         <colgroup>
@@ -1750,7 +1771,6 @@
                     <!-- + right-wrap -->
                     <div class="col in-layout right-wrap">
                         <div class="c-inner">
-
                             <!-- [ mod(230519) ]
 					- 해당 영역 전체 소스 변경 반영 필요 (Source Diff 필)
 					- 버튼 위치 수정, 대상자정보/검진예약정보/비용내역/수납내역/메모리스트/변경이력 Tab 형태로 전환
@@ -1758,7 +1778,6 @@
 
                             <!-- c-panel -->
                             <div class="c-panel">
-
                                 <!-- [ mod(230519) ]
 						- 버튼 배치 상단 오른쪽으로 변경
 					-->
@@ -1777,15 +1796,13 @@
                                     <div class="c-tab-field tab-scroll">
                                         <ul class="c-tab-list" role="tablist">
                                             <li class="on" role="presentation">
-                                                <a id="tabList_01" href="javascript:;" role="tab" aria-controls="tabContent_01" aria-selected="true">대상자
-                                                    정보</a>
+                                                <a id="tabList_01" href="javascript:;" role="tab" aria-controls="tabContent_01" aria-selected="true">대상자 정보</a>
                                             </li>
                                             <li role="presentation">
                                                 <a id="tabList_02" href="javascript:;" role="tab" aria-controls="tabContent_02" aria-selected="false">검진예약 정보</a>
                                             </li>
                                             <li role="presentation">
-                                                <a id="tabList_03" href="javascript:;" role="tab" aria-controls="tabContent_03" aria-selected="false">비용
-                                                    내역</a>
+                                                <a id="tabList_03" href="javascript:;" role="tab" aria-controls="tabContent_03" aria-selected="false">비용 내역</a>
                                             </li>
                                             <li role="presentation">
                                                 <a id="tabList_04" href="javascript:;" role="tab" aria-controls="tabContent_04" aria-selected="false">수납내역</a>
@@ -1800,9 +1817,8 @@
                                     </div>
                                 </div>
                                 <div class="c-tab-contents">
-
                                     <!-- + tabContent_01 (대상자 정보) -->
-                                    <div class="tab-cont on" id="tabContent_01" role="tabpanel" aria-labelledby="tabList_01">
+                                    <div class="tab-cont" id="tabContent_01" role="tabpanel" aria-labelledby="tabList_01">
                                         <div class="c-panel">
                                             <div class="c-panel">
                                                 <div class="c-article input-list type03">
@@ -1943,13 +1959,17 @@
                                             </div>
 
                                             <!-- [ // mod(230628) ] -->
+                                            <div class="buttons justify-cont-e">
+                                                <button class="c-btn"><span>메모등록</span></button>
+                                            </div>
+
+                                            <!-- [ // mod(230628) ] -->
                                         </div>
                                     </div>
 
                                     <!-- + tabContent_02 (검진예약 정보) -->
                                     <div class="tab-cont" id="tabContent_02" role="tabpanel" aria-labelledby="tabList_02">
                                         <div class="c-panel">
-
                                             <!-- <div class="c-title-field">
 									<h2 class="title-md">검진예약 정보</h2>
 									<div class="buttons">
@@ -2070,18 +2090,17 @@
                                                 </div>
                                                 <div class="row"></div>
                                                 <div class="row">
-
                                                     <!-- [ mod(230519) ]
 										+ 클래스 추가 col-w-full
 										-->
                                                     <div class="col label-input col-w-full">
                                                         <label for="inputRsvContInfo02_11">요청사항</label>
-                                                        <div class="cont-box request-box"> 온라인 문진표 제공 가능한지 확인 바랍니다.<br /> 월별 SK자체양식의 사후관리소견서 취합이 가능한지
-                                                            확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서
-                                                            취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별
-                                                            SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지
-                                                            확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서
-                                                            취합이 가능한지 확인바랍니다. </div>
+                                                        <div class="cont-box request-box">
+                                                            온라인 문진표 제공 가능한지 확인 바랍니다.<br />
+                                                            월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의
+                                                            사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이
+                                                            가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다.
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2091,7 +2110,6 @@
                                     <!-- + tabContent_03 (비용 내역) -->
                                     <div class="tab-cont" id="tabContent_03" role="tabpanel" aria-labelledby="tabList_03">
                                         <div class="c-panel">
-
                                             <!-- <div class="c-title-field">
 									<h2 class="title-md">비용 내역</h2>
 									<div class="buttons">
@@ -2337,14 +2355,15 @@
                                     <!-- + tabContent_04 (수납내역) -->
                                     <div class="tab-cont" id="tabContent_04" role="tabpanel" aria-labelledby="tabList_04">
                                         <div class="c-panel">
-
                                             <!-- <div class="c-title-field">
 									<h2 class="title-md">수납내역</h2>
 								</div> -->
                                             <div class="c-table-field tbl-price-field">
                                                 <div class="c-table tbl-price-details">
                                                     <table class="table">
-                                                        <caption> 총 검진 금액 : 총 회사 청구 금액, 총 개인 청구 금액 합계 </caption>
+                                                        <caption>
+                                                            총 검진 금액 : 총 회사 청구 금액, 총 개인 청구 금액 합계
+                                                        </caption>
                                                         <colgroup>
                                                             <col width="20%" />
                                                             <col width="40%" />
@@ -2361,7 +2380,9 @@
                                                 </div>
                                                 <div class="c-table tbl-price-details">
                                                     <table class="table">
-                                                        <caption> 총 회사 청구 금액 : 검진상품금액, 추가검사금액, 건강관리 서비스 이용료에 대한 정보 </caption>
+                                                        <caption>
+                                                            총 회사 청구 금액 : 검진상품금액, 추가검사금액, 건강관리 서비스 이용료에 대한 정보
+                                                        </caption>
                                                         <colgroup>
                                                             <col width="20%" />
                                                             <col width="40%" />
@@ -2391,7 +2412,9 @@
                                                 </div>
                                                 <div class="c-table tbl-price-details">
                                                     <table class="table">
-                                                        <caption> 총 개인 청구 금액 : 검진상품금액, 추가검사금액, 건강관리 서비스 이용료에 대한 정보 </caption>
+                                                        <caption>
+                                                            총 개인 청구 금액 : 검진상품금액, 추가검사금액, 건강관리 서비스 이용료에 대한 정보
+                                                        </caption>
                                                         <colgroup>
                                                             <col width="20%" />
                                                             <col width="40%" />
@@ -2401,17 +2424,23 @@
                                                         <tbody>
                                                             <tr>
                                                                 <th scope="rowgroup" rowspan="3" class="bg-gray-11">개인</th>
-                                                                <th scope="row"> 검진상품금액(a) <p class="c-fs-sm">현장결제</p>
+                                                                <th scope="row">
+                                                                    검진상품금액(a)
+                                                                    <p class="c-fs-sm">현장결제</p>
                                                                 </th>
                                                                 <td class="ta-r"><span>280,000</span>원</td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row"> 추가검사금액(e) <p class="c-fs-sm">온라인결제</p>
+                                                                <th scope="row">
+                                                                    추가검사금액(e)
+                                                                    <p class="c-fs-sm">온라인결제</p>
                                                                 </th>
                                                                 <td class="ta-r"><span>50,000</span>원</td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row"> 건강관리 서비스 이용료(f) <p class="c-fs-sm">온라인결제</p>
+                                                                <th scope="row">
+                                                                    건강관리 서비스 이용료(f)
+                                                                    <p class="c-fs-sm">온라인결제</p>
                                                                 </th>
                                                                 <td class="ta-r"><span>50,000</span>원</td>
                                                             </tr>
@@ -2426,15 +2455,17 @@
                                         </div>
                                     </div>
 
-                                    <!-- [ mod(230519) ]
-						- 메모리스트 (left-wrap에서 right-wrap으로 이동)
+                                    <!-- [ mod(230630) ]
+						- 메모리스트 아코디언 추가
 					-->
                                     <!--+ tabMemoListContent -->
-                                    <div class="tab-cont" id="tabMemoListContent" role="tabpanel" aria-labelledby="tabMemoList">
+                                    <div class="tab-cont on" id="tabMemoListContent" role="tabpanel" aria-labelledby="tabMemoList">
                                         <div class="c-table-field">
-                                            <div class="c-table striped">
+                                            <div class="c-table striped tbl-fixed memo-lists">
                                                 <table class="table">
-                                                    <caption> 메모 리스트 : 날짜, 내용, 등록자에 대한 정보 </caption>
+                                                    <caption>
+                                                        메모 리스트 : 날짜, 내용, 등록자에 대한 정보
+                                                    </caption>
                                                     <colgroup>
                                                         <col class="date" />
                                                         <col />
@@ -2448,57 +2479,93 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-
                                                         <!-- input 생성 시  for/id 매칭 -->
+
+                                                        <!-- [ mod(230630) ]
+											- 상세 일정 표기 : yyyymmddhhmmss으로 변경
+											- 메모 컨텐츠, 버튼 추가
+											- 텍스트 최대 5줄, 넘어가는 내용 아코디언 스크립트 처리
+										-->
                                                         <tr>
-                                                            <td>YYYY.MM.DD</td>
-                                                            <td class="ta-l">메모 리스트 내용 01</td>
-                                                            <td>홍길동</td>
+                                                            <td>YYYY.MM.DD <br />HH.MM.SS</td>
+                                                            <td class="ta-l">
+                                                                <div class="memo-list">
+                                                                    <div class="memo-contarea">
+                                                                        <div class="memo-cont">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias reiciendis tenetur in deserunt officiis. Beatae suscipit doloribus consequuntur maxime libero possimus aut veritatis, dolorum, laborum odit reiciendis accusantium ducimus voluptate. Natus vel obcaecati
+                                                                            explicabo, dicta omnis beatae incidunt mollitia ipsum eum corporis necessitatibus nisi ullam aut ab error quidem animi. Repellendus alias nihil expedita impedit, animi ut esse quasi adipisci. Tempore maxime ipsa impedit nesciunt, deleniti modi veritatis ad laboriosam
+                                                                            praesentium, eos earum ducimus inventore dolore magnam culpa quaerat in esse sint atque! Aliquid cupiditate obcaecati quae incidunt provident distinctio! Placeat eaque dolor, sequi voluptates excepturi molestias earum sit minus quod odio autem ratione, aut commodi? Sint
+                                                                            officia perferendis iure, unde, impedit obcaecati nesciunt totam numquam eaque suscipit ipsam consequuntur! Vitae excepturi dolore voluptas adipisci soluta quam eos enim voluptates commodi eum perspiciatis quos quod molestiae, magni hic voluptatibus, fugit sunt maiores
+                                                                            necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem
+                                                                            laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores
+                                                                            voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus!
+                                                                            Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
+                                                                            necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="memo-btnarea">
+                                                                        <button type="button" class="memo-cont-btn"><span class="skip">메모이력보기</span></button>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>홍길동<br />(VITA)</td>
                                                         </tr>
                                                         <tr>
-                                                            <td>YYYY.MM.DD</td>
-                                                            <td class="ta-l">메모 리스트 내용 01</td>
-                                                            <td>홍길동</td>
+                                                            <td>YYYY.MM.DD <br />HH.MM.SS</td>
+                                                            <td class="ta-l">
+                                                                <div class="memo-list">
+                                                                    <div class="memo-contarea">
+                                                                        <div class="memo-cont">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias reiciendis tenetur in deserunt officiis. Beatae suscipit doloribus consequuntur maxime libero possimus aut veritatis, dolorum, laborum odit reiciendis accusantium ducimus voluptate. Natus vel obcaecati
+                                                                            explicabo, dicta omnis beatae incidunt mollitia ipsum eum corporis necessitatibus nisi ullam aut ab error quidem animi. Repellendus alias nihil expedita impedit, animi ut esse quasi adipisci. Tempore maxime ipsa impedit nesciunt, deleniti modi veritatis ad laboriosam
+                                                                            praesentium, eos earum ducimus inventore dolore magnam culpa quaerat in esse sint atque! Aliquid cupiditate obcaecati quae incidunt provident distinctio! Placeat eaque dolor, sequi voluptates excepturi molestias earum sit minus quod odio autem ratione, aut commodi? Sint
+                                                                            officia perferendis iure, unde, impedit obcaecati nesciunt totam numquam eaque suscipit ipsam consequuntur! Vitae excepturi dolore voluptas adipisci soluta quam eos enim voluptates commodi eum perspiciatis quos quod molestiae, magni hic voluptatibus, fugit sunt maiores
+                                                                            necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem
+                                                                            laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores
+                                                                            voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus!
+                                                                            Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
+                                                                            necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="memo-btnarea">
+                                                                        <button type="button" class="memo-cont-btn"><span class="skip">메모이력보기</span></button>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>홍길동<br />(VITA)</td>
                                                         </tr>
                                                         <tr>
-                                                            <td>YYYY.MM.DD</td>
-                                                            <td class="ta-l">메모 리스트 내용 01</td>
-                                                            <td>홍길동</td>
+                                                            <td>YYYY.MM.DD <br />HH.MM.SS</td>
+                                                            <td class="ta-l">
+                                                                <div class="memo-list">
+                                                                    <div class="memo-contarea">
+                                                                        <div class="memo-cont">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias reiciendis tenetur in deserunt officiis. Beatae suscipit doloribus consequuntur maxime</div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>홍길동<br />(VITA)</td>
                                                         </tr>
                                                         <tr>
-                                                            <td>YYYY.MM.DD</td>
-                                                            <td class="ta-l">메모 리스트 내용 01</td>
-                                                            <td>홍길동</td>
+                                                            <td>YYYY.MM.DD <br />HH.MM.SS</td>
+                                                            <td class="ta-l">
+                                                                <div class="memo-list">
+                                                                    <div class="memo-contarea">
+                                                                        <div class="memo-cont">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias reiciendis tenetur in deserunt officiis. Beatae suscipit doloribus consequuntur maxime</div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>홍길동<br />(VITA)</td>
                                                         </tr>
                                                         <tr>
-                                                            <td>YYYY.MM.DD</td>
-                                                            <td class="ta-l">메모 리스트 내용 01</td>
-                                                            <td>홍길동</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>YYYY.MM.DD</td>
-                                                            <td class="ta-l">메모 리스트 내용 01</td>
-                                                            <td>홍길동</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>YYYY.MM.DD</td>
-                                                            <td class="ta-l">메모 리스트 내용 01</td>
-                                                            <td>홍길동</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>YYYY.MM.DD</td>
-                                                            <td class="ta-l">메모 리스트 내용 01</td>
-                                                            <td>홍길동</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>YYYY.MM.DD</td>
-                                                            <td class="ta-l">메모 리스트 내용 01</td>
-                                                            <td>홍길동</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>YYYY.MM.DD</td>
-                                                            <td class="ta-l">메모 리스트 내용 01</td>
-                                                            <td>홍길동</td>
+                                                            <td>YYYY.MM.DD <br />HH.MM.SS</td>
+                                                            <td class="ta-l">
+                                                                <div class="memo-list">
+                                                                    <div class="memo-contarea">
+                                                                        <div class="memo-cont">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias reiciendis tenetur in deserunt officiis. Beatae suscipit doloribus consequuntur maxime</div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>홍길동<br />(VITA)</td>
                                                         </tr>
 
                                                         <!-- + 데이터가 없는 경우 -->
@@ -2551,98 +2618,78 @@
                                             </div>
                                         </div>
 
-                                        <!-- [ mod(230623) ]
-						-  메모관리 버튼 클래스 제거
-					-->
-                                        <div class="buttons justify-cont-e">
-                                            <button class="c-btn"><span>메모관리</span></button>
-                                        </div>
-
-                                        <!-- [ // mod(230519) ] -->
+                                        <!-- [ // mod(230630) ] -->
                                     </div>
 
                                     <!-- + tabModHistoryListContent -->
+
+                                    <!-- [ mod(230630) ]
+						- 변경이력 tab 수정
+						- 상세 일정 표기 : yyyymmddhhmmss으로 변경
+						- 컨텐츠 변경
+					-->
                                     <div class="tab-cont" id="tabModHistoryListContent" role="tabpanel" aria-labelledby="tabModHistoryList">
                                         <div class="c-panel">
                                             <div class="c-table-field">
-                                                <div class="c-table striped tbl-fixed">
+                                                <div class="c-table striped tbl-fixed tbl-type02 memo-lists-mod">
                                                     <table class="table">
-                                                        <caption> 변경이력 : 변경날짜, 변경항목, 변경사항, 비고에 대한 정보 </caption>
+                                                        <caption>
+                                                            변경이력 : 변경일시, 상태값, 변경내용, 담당자에 대한 정보
+                                                        </caption>
                                                         <colgroup>
                                                             <col class="date" />
-                                                            <col style="width: 110px" />
+                                                            <col style="width: 90px" />
                                                             <col />
-                                                            <col />
+                                                            <col style="width: 150px" />
                                                         </colgroup>
                                                         <thead>
                                                             <tr>
-                                                                <th scope="col">변경날짜</th>
-                                                                <th scope="col">변경항목</th>
-                                                                <th scope="col">변경사항</th>
-                                                                <th scope="col">비고</th>
+                                                                <th scope="col">변경일시</th>
+                                                                <th scope="col">상태값</th>
+                                                                <th scope="col">변경내용</th>
+                                                                <th scope="col">담당자</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-
                                                             <!-- input 생성 시  for/id 매칭 -->
                                                             <tr>
-                                                                <td>YYYY.MM.DD</td>
-                                                                <td>상태값</td>
-                                                                <td>미신청자 &gt; 예약접수</td>
-                                                                <td>시스템</td>
+                                                                <td>YYYY.MM.DD<br />HH.MM.SS</td>
+                                                                <td>예약변경확정(예약확정)</td>
+                                                                <td class="rsv-mod-cont">
+                                                                    <div>예약신청일1/예약신청일2/연기검진신청일/검진기관/검진상품/선택항목1/선택항목2/선택항목3/선택항목4/선택항목5/</div>
+                                                                </td>
+                                                                <td>홍길동(우리원헬스 케어)</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>YYYY.MM.DD</td>
-                                                                <td>상태값</td>
-                                                                <td>미신청자 &gt; 예약접수</td>
-                                                                <td>시스템</td>
+                                                                <td>YYYY.MM.DD<br />HH.MM.SS</td>
+                                                                <td>예약변경신청</td>
+                                                                <td class="rsv-mod-cont">
+                                                                    <div>예약확정일/검진기관/검진상품/선택항목1/선택항목2/선택항목3/선택항목4/선택항목5/</div>
+                                                                </td>
+                                                                <td>USER(M)</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>YYYY.MM.DD</td>
-                                                                <td>상태값</td>
-                                                                <td>미신청자 &gt; 예약접수</td>
-                                                                <td>시스템</td>
+                                                                <td>YYYY.MM.DD<br />HH.MM.SS</td>
+                                                                <td>예약확정</td>
+                                                                <td class="rsv-mod-cont">
+                                                                    <div>예약신청일1/예약신청일2/검진기관/검진상품/선택항목1/선택항목2/선택항목3/선택항목4/선택항목5/</div>
+                                                                </td>
+                                                                <td>홍길동(VITA)</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>YYYY.MM.DD</td>
-                                                                <td>상태값</td>
-                                                                <td>미신청자 &gt; 예약접수</td>
-                                                                <td>시스템</td>
+                                                                <td>YYYY.MM.DD<br />HH.MM.SS</td>
+                                                                <td>예약신청</td>
+                                                                <td class="rsv-mod-cont">
+                                                                    <div>예약확정일/검진기관/검진상품/선택항목1/선택항목2/선택항목3/선택항목4/선택항목5/</div>
+                                                                </td>
+                                                                <td>USER(PC)</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>YYYY.MM.DD</td>
+                                                                <td>YYYY.MM.DD<br />HH.MM.SS</td>
                                                                 <td>상태값</td>
-                                                                <td>미신청자 &gt; 예약접수</td>
-                                                                <td>시스템</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>YYYY.MM.DD</td>
-                                                                <td>상태값</td>
-                                                                <td>미신청자 &gt; 예약접수</td>
-                                                                <td>시스템</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>YYYY.MM.DD</td>
-                                                                <td>상태값</td>
-                                                                <td>미신청자 &gt; 예약접수</td>
-                                                                <td>시스템</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>YYYY.MM.DD</td>
-                                                                <td>상태값</td>
-                                                                <td>미신청자 &gt; 예약접수</td>
-                                                                <td>시스템</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>YYYY.MM.DD</td>
-                                                                <td>상태값</td>
-                                                                <td>미신청자 &gt; 예약접수</td>
-                                                                <td>시스템</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>YYYY.MM.DD</td>
-                                                                <td>상태값</td>
-                                                                <td>미신청자 &gt; 예약접수</td>
+                                                                <td class="rsv-mod-cont">
+                                                                    <div>미신청자 &gt; 예약접수</div>
+                                                                </td>
                                                                 <td>시스템</td>
                                                             </tr>
 
@@ -2697,11 +2744,14 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- [ // mod(230630) ] -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </section>
 
             <!-- // Contents -->
