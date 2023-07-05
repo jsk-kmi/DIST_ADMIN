@@ -111,6 +111,16 @@ type-horizontal 최상위 요소 부여
           padding-right: 0;
         }
 
+        .c-input-email-group {
+          .input-email-02 {
+            .c-select {
+              select {
+                width: 100%;
+              }
+            }
+          }
+        }
+
         .col-3 {
           max-width: 50%;
           flex: 0 0 50%;
@@ -551,6 +561,7 @@ type-horizontal 최상위 요소 부여
             }
           }
         }
+
         .reservation-dtl-status-layout {
           @include rowGridSpacing(6px);
           &.c-panel {
@@ -596,7 +607,11 @@ type-horizontal 최상위 요소 부여
                   }
                   input[type='text'] {
                     min-width: $input-min-width;
+                    &.target-num {
+                      min-width: $input-min-width-04;
+                    }
                   }
+
                   .c-input-phone-group:not(.input-phone-01) {
                     input[type='text'] {
                       min-width: $phone-width;
@@ -609,7 +624,7 @@ type-horizontal 최상위 요소 부여
             .c-panel {
               .row {
                 label {
-                  margin-right: $row-margin-03;
+                  margin-right: $row-margin-01;
                 }
               }
             }
@@ -624,6 +639,14 @@ type-horizontal 최상위 요소 부여
             }
 
             .c-input-phone-group {
+              .input-phone-01 {
+                .c-select {
+                  select {
+                    width: $input-min-width-03;
+                    min-width: $input-min-width-03;
+                  }
+                }
+              }
               [class^='col']:not(.input-phone-01) {
                 padding: {
                   left: $col-padding;
@@ -814,9 +837,20 @@ type-horizontal 최상위 요소 부여
         .d-tbl-chklist-wrap {
           max-height: 135px;
         }
+        .right-wrap {
+          .memo-lists {
+            .memo-list {
+              .memo-cont-btn {
+                background-size: 8px;
+              }
+            }
+          }
+        }
       }
       // + 검진예약관리 화면개선
       .left-wrap {
+        overflow: hidden;
+        position: relative;
         // 예약변경설정 검색 input 추가
         .set-modrsv-tab {
           &.tab-01,
@@ -841,6 +875,18 @@ type-horizontal 최상위 요소 부여
             }
           }
         }
+        .mod-rsv-setting-field {
+          .mod-reservation {
+            .c-tab-contents {
+              .tab-cont {
+                display: block;
+                &.on {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
       }
 
       .right-wrap {
@@ -850,15 +896,6 @@ type-horizontal 최상위 요소 부여
             display: table;
             table-layout: fixed;
             align-items: center;
-            width: 100%;
-            cursor: pointer;
-            .memo-cont {
-              display: block;
-              white-space: normal;
-              @include ellipsisMultiline(5, 20px, initial, 100px);
-              white-space: wrap;
-              width: 100%;
-            }
             .memo-contarea,
             .memo-btnarea {
               display: table-cell;
@@ -867,15 +904,35 @@ type-horizontal 최상위 요소 부여
             .memo-btnarea {
               width: 30px;
             }
+            width: 100%;
+            cursor: pointer;
+            .memo-cont {
+              display: block;
+              white-space: normal;
+              @include ellipsisMultiline(5, 20px, initial, 100px);
+              width: 100%;
+              overflow: hidden;
+              transition: max-height 0.3s ease-in;
+            }
+
             .memo-cont-btn {
               background: url(../images/ico/ico_arrow_10.svg) center/8px auto no-repeat;
               width: 30px;
               height: 30px;
               padding: 6px 5px;
+              transition: transform 0.1s ease;
+              transform: rotate(0);
             }
-            &.on {
+
+            &.active {
+              .memo-cont {
+                -webkit-line-clamp: initial;
+                max-height: 300px;
+                transition: max-height 0.3s ease-in;
+              }
               .memo-cont-btn {
                 background-image: url(../images/ico/ico_arrow_11.svg);
+                transform: rotate(-360deg);
               }
             }
           }
@@ -893,6 +950,15 @@ type-horizontal 최상위 요소 부여
       .c-article {
         //+ 메모등록
         &.target-memo {
+          .row {
+            flex: 1 1 auto;
+            .col:nth-of-type(1) {
+              text-align: center;
+            }
+          }
+          .target-cont {
+            flex: 1 1 0;
+          }
         }
       }
     }

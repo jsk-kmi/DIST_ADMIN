@@ -89,8 +89,12 @@ var tabContentsView = function tabContentsView() {
       tabContents = seletedContent.siblings('.tab-cont');
     tabList.removeClass('on').find('a').attr('aria-selected', false);
     target.addClass('on').find('a').attr('aria-selected', true);
-    tabContents.hide();
-    seletedContent.show();
+
+    // tabContents.hide();
+    // seletedContent.show();
+
+    tabContents.removeClass('on');
+    seletedContent.addClass('on');
   });
 };
 
@@ -209,6 +213,21 @@ var toggleAccordion = function toggleAccordion() {
     }
   });
 };
+
+// + 메모리스트 아코디언
+var toggleMemoAccordion = function toggleMemoAccordion() {
+  $('.memo-cont-btn').on('click', function (e) {
+    var target = $(e.currentTarget),
+      accordionList = target.closest('.memo-list');
+    if (accordionList.hasClass('active')) {
+      accordionList.removeClass('active').find('.memo-cont-btn .skip').text('메모이력 펼치기');
+    } else {
+      accordionList.addClass('active').find('.memo-cont-btn .skip').text('메모이력 접기');
+    }
+  });
+};
+
+// =  toggleAccordion
 
 // + side Notify Toggle
 var closeNoticeSideBar = function closeNoticeSideBar() {

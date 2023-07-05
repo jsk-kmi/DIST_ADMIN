@@ -161,7 +161,7 @@
         <!-- [ mod(230207) ]
 		- 클래스 추가 type-callcenter
 		-->
-        <div class="content-wrapper type-horizontal type-callcenter"> <!-- Header-->
+        <div class="content-wrapper type-horizontal type-callcenter"><!-- Header-->
             <header class="header">
                 <div class="wrap">
                     <div class="top-left">
@@ -220,9 +220,11 @@
 
                 <!-- reservation-dtl-status-layout -->
                 <div class="c-panel reservation-dtl-status-layout">
+
                     <!-- + left-wrap -->
                     <div class="col in-layout left-wrap">
                         <div class="c-inner">
+
                             <!-- [ mod(230519) ]
 					- 해당 영역 전체 소스 변경 반영 필요 (Source Diff 필)
 					- 메모리스트, 변경이력 Tab -> right-wrap Tab으로 이동
@@ -233,6 +235,7 @@
                                 <div class="c-title-field justify-c-sb">
                                     <h2 class="title-md">검진자 정보</h2>
                                     <div class="buttons justify-cont-sb">
+
                                         <!-- [ mod(230628) ]
 							- 신규등록 버튼 추가
 							- 색상 클래스 변경
@@ -268,15 +271,16 @@
                                             <input type="text" class="c-input" id="inputRsvStatusInfo01_05" value="" placeholder="생년월일" />
                                         </div>
 
-                                        <!-- [ mod(230630) ]
+                                        <!-- [ mod(230705) ]
 							- 사원번호 input 추가
+							- target-num 클래스 추가
 						-->
                                         <div class="col-3 label-input">
                                             <label for="inputRsvStatusInfo01_02">사원번호</label>
-                                            <input type="text" class="c-input" id="inputRsvStatusInfo01_02" value="2022050068" placeholder="사원번호" />
+                                            <input type="text" class="c-input target-num" id="inputRsvStatusInfo01_02" value="2022050068" placeholder="사원번호" />
                                         </div>
 
-                                        <!-- [ // mod(230630) ] -->
+                                        <!-- [ // mod(230705) ] -->
                                         <div class="col-6 label-input">
                                             <label class="c-label-txt" title="휴대폰 전화번호 앞 3자리 선택">휴대폰 번호</label>
                                             <div class="row inner c-input-phone-group">
@@ -323,6 +327,7 @@
 						</div> -->
                                 </div>
                                 <div class="c-table-field type02">
+
                                     <!-- 작업 -->
 
                                     <!-- [ mod(230630) ]
@@ -331,9 +336,7 @@
 					-->
                                     <div class="c-table striped c-vertical-scroll d-tbl-chklist-wrap">
                                         <table class="table tbl-examtarget-list c-datatable d-tbl-chklist dataTable no-footer" id="dTblChkupList01" style="width: 100%">
-                                            <caption>
-                                                검진 대상자 목록 : 예약 확정일자, 고객사, 검진자, 관계, 생년월일, 휴대폰번호, 예약상태, 대상자추가에 대한 정보
-                                            </caption>
+                                            <caption> 검진 대상자 목록 : 예약 확정일자, 고객사, 검진자, 관계, 생년월일, 휴대폰번호, 예약상태, 대상자추가에 대한 정보 </caption>
 
                                             <!-- [ mod(230630) ]
 							-  table '비고' 란 삭제
@@ -489,6 +492,7 @@
                                     </div>
                                     <div class="in-right inner-title">
                                         <div class="buttons">
+
                                             <!-- [ mod(230628) ]
 							- 색상 클래스 변경
 						-->
@@ -503,6 +507,7 @@
                                 <div class="c-article mod-reservation">
                                     <div class="c-inner-left">
                                         <ul class="rsv-mod-list01 c-tab-list" role="tablist">
+
                                             <!-- [Comment]
 														- 탭 활성화 클래스 : on
 													-->
@@ -531,6 +536,7 @@
                                     </div>
                                     <div class="c-inner-right">
                                         <div class="c-tab-contents">
+
                                             <!-- [Comment]
 								- 탭 활성화 클래스 : on
 							-->
@@ -543,6 +549,7 @@
                                             <div class="tab-cont on set-modrsv-tab tab-01" id="modRsvTabContent_01" role="tabpanel" aria-labelledby="modRsvTabList_01">
                                                 <div class="c-inner-field">
                                                     <div class="c-filter-field c-field justify-cont-e">
+
                                                         <!-- [ mod(230630) ]
 											검색 input 추가
 										-->
@@ -575,12 +582,15 @@
                                                         <div class="modrsv-scroll">
                                                             <div class="inner">
                                                                 <div class="c-table-field">
-                                                                    <div class="c-table striped tbl-fixed tbl-modrsv-type01">
-                                                                        <table class="table">
+                                                                    <div class="c-table striped tbl-fixed tbl-modrsv-type01 tbl-modrsv-wrap">
+
+                                                                        <!-- [ mod(230705) ]
+														- 검진기관 테이블 헤더 고정
+														- datatables-mod-rsv 클래스, 스타일 추가
+														-->
+                                                                        <table class="table datatables-mod-rsv" style="width: 100%">
                                                                             <!--caption 내용 기재 -->
-                                                                            <caption>
-                                                                                검진기관 목록 : 검진기관, 지역에 대한 정보
-                                                                            </caption>
+                                                                            <caption> 검진기관 목록 : 검진기관, 지역에 대한 정보 </caption>
 
                                                                             <!-- [ mod(230519) ] -->
                                                                             <colgroup>
@@ -610,7 +620,9 @@
                                                                                         </div>
                                                                                     </td>
                                                                                     <td class="ta-l in-chklabel">
-                                                                                        <label for="chkChkupInstitution_01" class="tbl-label c-truncate01">한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문</label>
+                                                                                        <label for="chkChkupInstitution_01" class="tbl-label c-truncate01">한국의학연구소
+                                                                                            광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소
+                                                                                            광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문한국의학연구소 광화문</label>
                                                                                     </td>
                                                                                     <td>서울 종로</td>
 
@@ -766,6 +778,8 @@
                                                                                 </tr>
                                                                             </tbody>
                                                                         </table>
+
+                                                                        <!-- [ // mod(230705) ] -->
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -777,6 +791,7 @@
                                             <!-- + modRsvTabContent_02 (검진항목 상품) -->
                                             <div class="tab-cont set-modrsv-tab tab-02" id="modRsvTabContent_02" role="tabpanel" aria-labelledby="modRsvTabList_02">
                                                 <div class="c-inner-field">
+
                                                     <!-- [ mod(230630) ]
 											- 검색 input 추가,
 											- cont-body 클래스 추가
@@ -793,16 +808,19 @@
                                                             <div class="inner">
                                                                 <div class="c-inner-field">
                                                                     <div class="c-table-field">
-                                                                        <div class="c-table striped tbl-fixed tbl-modrsv-type01">
-                                                                            <table class="table">
+                                                                        <div class="c-table striped tbl-fixed tbl-modrsv-type01 tbl-modrsv-wrap">
+
+                                                                            <!-- [ mod(230705) ]
+																- 검진항목 상품 테이블 헤더 고정
+																- datatables-mod-rsv 클래스, 스타일 추가
+																-->
+                                                                            <table class="table datatables-mod-rsv" style="width: 100%">
                                                                                 <!--caption 내용 기재 -->
-                                                                                <caption>
-                                                                                    검진항목 상품 : 상품명, 검진비용액, 세부에 대한 정보
-                                                                                </caption>
+                                                                                <caption> 검진항목 상품 : 상품명, 검진비용액, 세부에 대한 정보 </caption>
 
                                                                                 <!-- [ mod(230519) ] -->
                                                                                 <colgroup>
-                                                                                    <col class="max-checkbox02" />
+                                                                                    <col class=" max-checkbox02" />
                                                                                     <col />
                                                                                     <col class="max-price" />
                                                                                     <col class="link" style="width: 150px; max-width: 150px" />
@@ -926,7 +944,8 @@
                                                                                             </div>
                                                                                         </td>
                                                                                         <td class="ta-l in-chklabel">
-                                                                                            <label for="chkChkPrd01_06" class="tbl-label c-truncate01">정밀종합검진 일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형</label>
+                                                                                            <label for="chkChkPrd01_06" class="tbl-label c-truncate01">정밀종합검진
+                                                                                                일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형일반형</label>
                                                                                         </td>
                                                                                         <td class="ta-r">
                                                                                             <div class="c-in-price">
@@ -942,6 +961,8 @@
                                                                                     </tr>
                                                                                 </tbody>
                                                                             </table>
+
+                                                                            <!-- [ // mod(230705) ] -->
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -975,13 +996,13 @@
                                                                                 <input type="text" class="c-input" value="1" readonly="readonly" />
                                                                             </div>
                                                                             <div class="c-table-field">
+
                                                                                 <!-- tbl-modrsv-selectchk -->
                                                                                 <div class="c-table striped tbl-fixed tbl-modrsv-selectchk">
+
                                                                                     <!-- tbl-chkup-category  -->
                                                                                     <table class="table">
-                                                                                        <caption>
-                                                                                            선택검사 목록 : 선택항목, 개인추가금, 예약가능일, 연기검사에 대한 정보
-                                                                                        </caption>
+                                                                                        <caption> 선택검사 목록 : 선택항목, 개인추가금, 예약가능일, 연기검사에 대한 정보 </caption>
 
                                                                                         <!-- [ mod(230519) ] -->
                                                                                         <colgroup>
@@ -1011,7 +1032,8 @@
                                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                                     </div>
                                                                                                 </td>
-                                                                                                <td class="ta-l in-chklabel" colspan="3"><label for="chkChoiceChkPrd01_01_01">위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영</label></td>
+                                                                                                <td class="ta-l in-chklabel" colspan="3"><label for="chkChoiceChkPrd01_01_01">위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영</label>
+                                                                                                </td>
                                                                                                 <td class="ta-r">
                                                                                                     <div class="c-in-price">
                                                                                                         <span>500,000</span>
@@ -1055,13 +1077,13 @@
                                                                                 <input type="text" class="c-input" value="2" readonly="readonly" />
                                                                             </div>
                                                                             <div class="c-table-field">
+
                                                                                 <!-- tbl-modrsv-selectchk -->
                                                                                 <div class="c-table striped tbl-fixed tbl-modrsv-selectchk">
+
                                                                                     <!-- tbl-chkup-category  -->
                                                                                     <table class="table">
-                                                                                        <caption>
-                                                                                            선택검사 목록 : 선택항목, 개인추가금, 예약가능일, 연기검사에 대한 정보
-                                                                                        </caption>
+                                                                                        <caption> 선택검사 목록 : 선택항목, 개인추가금, 예약가능일, 연기검사에 대한 정보 </caption>
 
                                                                                         <!-- [ mod(230519) ] -->
                                                                                         <colgroup>
@@ -1114,7 +1136,8 @@
                                                                                                     </div>
                                                                                                 </td>
                                                                                                 <td class="ta-l in-chklabel" colspan="3">
-                                                                                                    <label for="chkAddChkPrd02_01_02" class="tbl-label">심장초음파 심장초음파 심장초음파 심장초음파 </label>
+                                                                                                    <label for="chkAddChkPrd02_01_02" class="tbl-label">심장초음파 심장초음파 심장초음파 심장초음파
+                                                                                                    </label>
                                                                                                 </td>
                                                                                                 <td class="ta-r">
                                                                                                     <div class="c-in-price">
@@ -1230,13 +1253,13 @@
                                                                                 <input type="text" class="c-input" value="1" readonly="readonly" />
                                                                             </div>
                                                                             <div class="c-table-field">
+
                                                                                 <!-- tbl-modrsv-selectchk -->
                                                                                 <div class="c-table striped tbl-fixed tbl-modrsv-selectchk">
+
                                                                                     <!-- tbl-chkup-category  -->
                                                                                     <table class="table">
-                                                                                        <caption>
-                                                                                            선택검사 목록 : 선택항목, 개인추가금, 예약가능일, 연기검사에 대한 정보
-                                                                                        </caption>
+                                                                                        <caption> 선택검사 목록 : 선택항목, 개인추가금, 예약가능일, 연기검사에 대한 정보 </caption>
 
                                                                                         <!-- [ mod(230519) ] -->
                                                                                         <colgroup>
@@ -1266,7 +1289,8 @@
                                                                                                         <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                                     </div>
                                                                                                 </td>
-                                                                                                <td class="ta-l in-chklabel" colspan="3"><label for="chkChoiceChkPrd03_01_01">위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영</label></td>
+                                                                                                <td class="ta-l in-chklabel" colspan="3"><label for="chkChoiceChkPrd03_01_01">위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영위장조형촬영</label>
+                                                                                                </td>
                                                                                                 <td class="ta-r">
                                                                                                     <div class="c-in-price">
                                                                                                         <span>500,000</span>
@@ -1297,6 +1321,7 @@
                                             <!-- + modRsvTabContent_04 (추가검사) -->
                                             <div class="tab-cont set-modrsv-tab tab-04" id="modRsvTabContent_04" role="tabpanel" aria-labelledby="modRsvTabList_04">
                                                 <div class="c-inner-field">
+
                                                     <!-- [ mod(230630) ]
 											- 검색 input 추가,
 											- cont-body 클래스 추가
@@ -1313,11 +1338,14 @@
                                                             <div class="inner">
                                                                 <div class="c-inner-field">
                                                                     <div class="c-table-field">
-                                                                        <div class="c-table striped tbl-fixed tbl-modrsv-type01">
-                                                                            <table class="table">
-                                                                                <caption>
-                                                                                    추가검사 목록 : 선택항목, 개인추가금, 예약가능일에 대한 정보
-                                                                                </caption>
+                                                                        <div class="c-table striped tbl-fixed tbl-modrsv-type01 tbl-modrsv-wrap">
+
+                                                                            <!-- [ mod(230705) ]
+																- 추가검사 테이블 헤더 고정
+																- datatables-mod-rsv 클래스, 스타일 추가
+																-->
+                                                                            <table class="table datatables-mod-rsv" style="width: 100%">
+                                                                                <caption> 추가검사 목록 : 선택항목, 개인추가금, 예약가능일에 대한 정보 </caption>
 
                                                                                 <!-- [ mod(230519) ] -->
                                                                                 <colgroup>
@@ -1359,6 +1387,142 @@
                                                                                     <tr>
                                                                                         <td class="in-chkbox">
                                                                                             <div class="c-chkbox">
+                                                                                                <input type="checkbox" id="chkAddChkPrd01_01" />
+                                                                                                <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td class="ta-l in-chklabel"><label for="chkAddChkPrd01_01" class="tbl-label c-truncate01">대장내시경</label></td>
+                                                                                        <td class="ta-r">
+                                                                                            <div class="c-in-price">
+                                                                                                <span>500,000</span>
+                                                                                                <span class="unit">원</span>
+                                                                                            </div>
+                                                                                        </td>
+
+                                                                                        <!-- <td>2022-05-12</td> -->
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td class="in-chkbox">
+                                                                                            <div class="c-chkbox">
+                                                                                                <input type="checkbox" id="chkAddChkPrd01_01" />
+                                                                                                <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td class="ta-l in-chklabel"><label for="chkAddChkPrd01_01" class="tbl-label c-truncate01">대장내시경</label></td>
+                                                                                        <td class="ta-r">
+                                                                                            <div class="c-in-price">
+                                                                                                <span>500,000</span>
+                                                                                                <span class="unit">원</span>
+                                                                                            </div>
+                                                                                        </td>
+
+                                                                                        <!-- <td>2022-05-12</td> -->
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td class="in-chkbox">
+                                                                                            <div class="c-chkbox">
+                                                                                                <input type="checkbox" id="chkAddChkPrd01_01" />
+                                                                                                <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td class="ta-l in-chklabel"><label for="chkAddChkPrd01_01" class="tbl-label c-truncate01">대장내시경</label></td>
+                                                                                        <td class="ta-r">
+                                                                                            <div class="c-in-price">
+                                                                                                <span>500,000</span>
+                                                                                                <span class="unit">원</span>
+                                                                                            </div>
+                                                                                        </td>
+
+                                                                                        <!-- <td>2022-05-12</td> -->
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td class="in-chkbox">
+                                                                                            <div class="c-chkbox">
+                                                                                                <input type="checkbox" id="chkAddChkPrd01_01" />
+                                                                                                <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td class="ta-l in-chklabel"><label for="chkAddChkPrd01_01" class="tbl-label c-truncate01">대장내시경</label></td>
+                                                                                        <td class="ta-r">
+                                                                                            <div class="c-in-price">
+                                                                                                <span>500,000</span>
+                                                                                                <span class="unit">원</span>
+                                                                                            </div>
+                                                                                        </td>
+
+                                                                                        <!-- <td>2022-05-12</td> -->
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td class="in-chkbox">
+                                                                                            <div class="c-chkbox">
+                                                                                                <input type="checkbox" id="chkAddChkPrd01_01" />
+                                                                                                <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td class="ta-l in-chklabel"><label for="chkAddChkPrd01_01" class="tbl-label c-truncate01">대장내시경</label></td>
+                                                                                        <td class="ta-r">
+                                                                                            <div class="c-in-price">
+                                                                                                <span>500,000</span>
+                                                                                                <span class="unit">원</span>
+                                                                                            </div>
+                                                                                        </td>
+
+                                                                                        <!-- <td>2022-05-12</td> -->
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td class="in-chkbox">
+                                                                                            <div class="c-chkbox">
+                                                                                                <input type="checkbox" id="chkAddChkPrd01_01" />
+                                                                                                <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td class="ta-l in-chklabel"><label for="chkAddChkPrd01_01" class="tbl-label c-truncate01">대장내시경</label></td>
+                                                                                        <td class="ta-r">
+                                                                                            <div class="c-in-price">
+                                                                                                <span>500,000</span>
+                                                                                                <span class="unit">원</span>
+                                                                                            </div>
+                                                                                        </td>
+
+                                                                                        <!-- <td>2022-05-12</td> -->
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td class="in-chkbox">
+                                                                                            <div class="c-chkbox">
+                                                                                                <input type="checkbox" id="chkAddChkPrd01_01" />
+                                                                                                <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td class="ta-l in-chklabel"><label for="chkAddChkPrd01_01" class="tbl-label c-truncate01">대장내시경</label></td>
+                                                                                        <td class="ta-r">
+                                                                                            <div class="c-in-price">
+                                                                                                <span>500,000</span>
+                                                                                                <span class="unit">원</span>
+                                                                                            </div>
+                                                                                        </td>
+
+                                                                                        <!-- <td>2022-05-12</td> -->
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td class="in-chkbox">
+                                                                                            <div class="c-chkbox">
+                                                                                                <input type="checkbox" id="chkAddChkPrd01_01" />
+                                                                                                <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td class="ta-l in-chklabel"><label for="chkAddChkPrd01_01" class="tbl-label c-truncate01">대장내시경</label></td>
+                                                                                        <td class="ta-r">
+                                                                                            <div class="c-in-price">
+                                                                                                <span>500,000</span>
+                                                                                                <span class="unit">원</span>
+                                                                                            </div>
+                                                                                        </td>
+
+                                                                                        <!-- <td>2022-05-12</td> -->
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td class="in-chkbox">
+                                                                                            <div class="c-chkbox">
                                                                                                 <input type="checkbox" id="chkAddChkPrd01_02" />
                                                                                                 <label class="chk-label"><i></i><span class="skip">checkbox</span></label>
                                                                                             </div>
@@ -1375,6 +1539,8 @@
                                                                                     </tr>
                                                                                 </tbody>
                                                                             </table>
+
+                                                                            <!-- [ // mod(230705) ] -->
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1403,6 +1569,7 @@
                                                                     <div class="col label-input">
                                                                         <label class="label-txt">검진 시간 선택</label>
                                                                         <div class="c-m-input-list">
+
                                                                             <!-- <div class="input-col">
 																	<div class="inner">
 																		<div class="c-rdochk">
@@ -1439,7 +1606,8 @@
                                                                                 <div class="inner">
                                                                                     <div class="c-rdochk">
                                                                                         <input type="radio" id="rdoChkupDate02_01" name="rdoChkupDate02" />
-                                                                                        <label for="rdoChkupDate02_01" class="chk-label"><i></i><span>수면 내시경 포함 예약 진행</span></label>
+                                                                                        <label for="rdoChkupDate02_01" class="chk-label"><i></i><span>수면 내시경 포함 예약
+                                                                                                진행</span></label>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1503,6 +1671,7 @@
                                                                     <div class="col label-input">
                                                                         <label class="label-txt">검진 시간 선택</label>
                                                                         <div class="c-m-input-list">
+
                                                                             <!-- <div class="input-col">
 																	<div class="inner">
 																		<div class="c-rdochk">
@@ -1539,7 +1708,8 @@
                                                                                 <div class="inner">
                                                                                     <div class="c-rdochk">
                                                                                         <input type="radio" id="rdoChkupDate04_01" name="rdoChkupDate04" />
-                                                                                        <label for="rdoChkupDate04_01" class="chk-label"><i></i><span>수면 내시경 포함 예약 진행</span></label>
+                                                                                        <label for="rdoChkupDate04_01" class="chk-label"><i></i><span>수면 내시경 포함 예약
+                                                                                                진행</span></label>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1664,7 +1834,8 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="row inner">
-                                                                                <div class="col"><input type="text" class="c-input" title="상세주소 입력" placeholder="상세주소" /></div>
+                                                                                <div class="col"><input type="text" class="c-input" title="상세주소 입력" placeholder="상세주소" />
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -1739,9 +1910,7 @@
                                                             <div class="c-table-field">
                                                                 <div class="c-table striped tbl-fixed tbl-cost-dtl">
                                                                     <table class="table">
-                                                                        <caption>
-                                                                            비용내역 상세 : 상품, 세부내역, 비용에 대한 정보
-                                                                        </caption>
+                                                                        <caption> 비용내역 상세 : 상품, 세부내역, 비용에 대한 정보 </caption>
 
                                                                         <!-- [ mod(230519) ] -->
                                                                         <colgroup>
@@ -1951,6 +2120,7 @@
                     <!-- + right-wrap -->
                     <div class="col in-layout right-wrap">
                         <div class="c-inner">
+
                             <!-- [ mod(230519) ]
 					- 해당 영역 전체 소스 변경 반영 필요 (Source Diff 필)
 					- 버튼 위치 수정, 대상자정보/검진예약정보/비용내역/수납내역/메모리스트/변경이력 Tab 형태로 전환
@@ -1958,6 +2128,7 @@
 
                             <!-- c-panel -->
                             <div class="c-panel">
+
                                 <!-- [ mod(230519) ]
 						- 버튼 배치 상단 오른쪽으로 변경
 					-->
@@ -1976,13 +2147,15 @@
                                     <div class="c-tab-field tab-scroll">
                                         <ul class="c-tab-list" role="tablist">
                                             <li class="on" role="presentation">
-                                                <a id="tabList_01" href="javascript:;" role="tab" aria-controls="tabContent_01" aria-selected="true">대상자 정보</a>
+                                                <a id="tabList_01" href="javascript:;" role="tab" aria-controls="tabContent_01" aria-selected="true">대상자
+                                                    정보</a>
                                             </li>
                                             <li role="presentation">
                                                 <a id="tabList_02" href="javascript:;" role="tab" aria-controls="tabContent_02" aria-selected="false">검진예약 정보</a>
                                             </li>
                                             <li role="presentation">
-                                                <a id="tabList_03" href="javascript:;" role="tab" aria-controls="tabContent_03" aria-selected="false">비용 내역</a>
+                                                <a id="tabList_03" href="javascript:;" role="tab" aria-controls="tabContent_03" aria-selected="false">비용
+                                                    내역</a>
                                             </li>
                                             <li role="presentation">
                                                 <a id="tabList_04" href="javascript:;" role="tab" aria-controls="tabContent_04" aria-selected="false">수납내역</a>
@@ -1997,138 +2170,138 @@
                                     </div>
                                 </div>
                                 <div class="c-tab-contents">
+
                                     <!-- + tabContent_01 (대상자 정보) -->
-                                    <div class="tab-cont" id="tabContent_01" role="tabpanel" aria-labelledby="tabList_01">
+                                    <div class="tab-cont on" id="tabContent_01" role="tabpanel" aria-labelledby="tabList_01">
                                         <div class="c-panel">
-                                            <div class="c-panel">
-                                                <div class="c-article input-list type03">
-                                                    <div class="row">
-                                                        <div class="col-3 label-input">
-                                                            <label for="rosterInfo_supGenderCd">고객사명</label>
-                                                            <input type="text" class="c-input" id="rosterInfo_supGenderCd" value="로스트아크로스트아크로스트아크" readonly="readonly" />
-                                                        </div>
-                                                        <div class="col-3 label-input">
-                                                            <label for="rosterInfo_supName">임직원 이름</label>
-                                                            <div class="c-input-mark">
-                                                                <input type="text" class="c-input" id="rosterInfo_supName" value="홍길동홍길동홍길동홍길동홍길동" readonly="readonly" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-3 label-input">
-                                                            <label for="rosterInfo_supBirthday">임직원 생년월일</label>
-                                                            <div class="c-input">
-                                                                <input type="text" class="c-input" id="rosterInfo_supBirthday" value="850102" readonly="readonly" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-3 label-input">
-                                                            <label for="rosterInfo_supDomestic">임직원 부서</label>
-                                                            <input type="text" class="c-input" id="rosterInfo_supDomestic" value="kmi" readonly="readonly" />
+                                            <div class="c-article input-list type03">
+                                                <div class="row">
+                                                    <div class="col-3 label-input">
+                                                        <label for="rosterInfo_supGenderCd">고객사명</label>
+                                                        <input type="text" class="c-input" id="rosterInfo_supGenderCd" value="로스트아크로스트아크로스트아크" readonly="readonly" />
+                                                    </div>
+                                                    <div class="col-3 label-input">
+                                                        <label for="rosterInfo_supName">임직원 이름</label>
+                                                        <div class="c-input-mark">
+                                                            <input type="text" class="c-input" id="rosterInfo_supName" value="홍길동홍길동홍길동홍길동홍길동" readonly="readonly" />
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-3 label-input">
-                                                            <label for="inputRsvUserInfo02_01">이름</label>
-                                                            <div class="c-input-mark">
-                                                                <input type="text" class="c-input" id="inputRsvUserInfo02_01" value="홍길동홍길동홍길동홍길동홍길동" readonly="readonly" />
-                                                                <div class="is-rate"><span class="is-orange-1">VIP</span></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-3 label-input">
-                                                            <label for="inputRsvUserInfo02_02">생년월일</label>
-                                                            <div class="c-input">
-                                                                <input type="text" class="c-input" id="inputRsvUserInfo02_02" value="850102" readonly="readonly" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-3 label-input">
-                                                            <label for="inputRsvUserInfo02_03">성별</label>
-                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_03" value="남" readonly="readonly" />
-                                                        </div>
-                                                        <div class="col-3 label-input">
-                                                            <label for="inputRsvUserInfo02_04">국적</label>
-                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_04" value="내국인" readonly="readonly" />
+                                                    <div class="col-3 label-input">
+                                                        <label for="rosterInfo_supBirthday">임직원 생년월일</label>
+                                                        <div class="c-input">
+                                                            <input type="text" class="c-input" id="rosterInfo_supBirthday" value="850102" readonly="readonly" />
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-3 label-input">
-                                                            <label for="inputRsvUserInfo02_05">검진구분</label>
-                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_05" value="종합검진 / 특수검진" readonly="readonly" />
-                                                        </div>
-                                                        <div class="col-3 label-input">
-                                                            <label for="inputRsvUserInfo02_06">임직원과의 관계</label>
-                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_06" value="본인" readonly="readonly" />
-                                                        </div>
-                                                        <div class="col-3 label-input">
-                                                            <label class="c-label-txt" for="inputRsvUserInfo02_07">휴대폰 전화번호</label>
-                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_07" value="01012341234" readonly="readonly" />
-                                                        </div>
-                                                        <div class="col-3 label-input">
-                                                            <label class="c-label-txt" for="inputRsvUserInfo02_08">전화번호</label>
-                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_08" title="휴대폰 전화번호 앞 3자리 입력" value="01012341234" readonly="readonly" />
+                                                    <div class="col-3 label-input">
+                                                        <label for="rosterInfo_supDomestic">임직원 부서</label>
+                                                        <input type="text" class="c-input" id="rosterInfo_supDomestic" value="kmi" readonly="readonly" />
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-3 label-input">
+                                                        <label for="inputRsvUserInfo02_01">이름</label>
+                                                        <div class="c-input-mark">
+                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_01" value="홍길동홍길동홍길동홍길동홍길동" readonly="readonly" />
+                                                            <div class="is-rate"><span class="is-orange-1">VIP</span></div>
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-3 label-input">
-                                                            <label class="c-label-txt" for="inputRsvUserInfo02_09">회사지원금</label>
-                                                            <div class="c-input-unit">
-                                                                <input type="text" class="c-input" id="inputRsvUserInfo02_09" value="300,000" readonly="readonly" />
-                                                                <span class="unit">원</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-3 label-input">
-                                                            <label class="c-label-txt" for="inputRsvUserInfo02_10">공단대상자</label>
-                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_10" value="대상자" readonly="readonly" />
-                                                        </div>
-                                                        <div class="col-3 label-input">
-                                                            <label class="c-label-txt" for="inputRsvUserInfo02_11">특수검진</label>
-                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_11" value="대상자" readonly="readonly" />
-                                                        </div>
-                                                        <div class="col-3 label-input">
-                                                            <label class="c-label-txt" for="inputRsvUserInfo02_12">출장검진</label>
-                                                            <div class="c-input">
-                                                                <input type="text" class="c-input" id="inputRsvUserInfo02_12" value="대상자 아님" readonly="readonly" />
-                                                            </div>
+                                                    <div class="col-3 label-input">
+                                                        <label for="inputRsvUserInfo02_02">생년월일</label>
+                                                        <div class="c-input">
+                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_02" value="850102" readonly="readonly" />
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-6 label-input">
-                                                            <label class="c-label-txt">이메일</label>
-                                                            <div class="row inner c-input-email-group">
-                                                                <div class="col-6 input-email-01">
-                                                                    <input type="text" class="c-input" title="이메일 계정입력" value="test" readonly="readonly" aria-label="이메일 계정입력" />
-                                                                </div>
-                                                                <div class="col-6 input-email-02">
-                                                                    <div class="row">
-                                                                        <div class="col">
-                                                                            <input type="text" class="c-input" title="이메일 도메인 입력" value="hanmail.net" readonly="readonly" aria-label="이메일 도메인 입력" />
-                                                                        </div>
+                                                    <div class="col-3 label-input">
+                                                        <label for="inputRsvUserInfo02_03">성별</label>
+                                                        <input type="text" class="c-input" id="inputRsvUserInfo02_03" value="남" readonly="readonly" />
+                                                    </div>
+                                                    <div class="col-3 label-input">
+                                                        <label for="inputRsvUserInfo02_04">국적</label>
+                                                        <input type="text" class="c-input" id="inputRsvUserInfo02_04" value="내국인" readonly="readonly" />
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-3 label-input">
+                                                        <label for="inputRsvUserInfo02_05">검진구분</label>
+                                                        <input type="text" class="c-input" id="inputRsvUserInfo02_05" value="종합검진 / 특수검진" readonly="readonly" />
+                                                    </div>
+                                                    <div class="col-3 label-input">
+                                                        <label for="inputRsvUserInfo02_06">임직원과의 관계</label>
+                                                        <input type="text" class="c-input" id="inputRsvUserInfo02_06" value="본인" readonly="readonly" />
+                                                    </div>
+                                                    <div class="col-3 label-input">
+                                                        <label class="c-label-txt" for="inputRsvUserInfo02_07">휴대폰 전화번호</label>
+                                                        <input type="text" class="c-input" id="inputRsvUserInfo02_07" value="01012341234" readonly="readonly" />
+                                                    </div>
+                                                    <div class="col-3 label-input">
+                                                        <label class="c-label-txt" for="inputRsvUserInfo02_08">전화번호</label>
+                                                        <input type="text" class="c-input" id="inputRsvUserInfo02_08" title="휴대폰 전화번호 앞 3자리 입력" value="01012341234" readonly="readonly" />
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-3 label-input">
+                                                        <label class="c-label-txt" for="inputRsvUserInfo02_09">회사지원금</label>
+                                                        <div class="c-input-unit">
+                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_09" value="300,000" readonly="readonly" />
+                                                            <span class="unit">원</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3 label-input">
+                                                        <label class="c-label-txt" for="inputRsvUserInfo02_10">공단대상자</label>
+                                                        <input type="text" class="c-input" id="inputRsvUserInfo02_10" value="대상자" readonly="readonly" />
+                                                    </div>
+                                                    <div class="col-3 label-input">
+                                                        <label class="c-label-txt" for="inputRsvUserInfo02_11">특수검진</label>
+                                                        <input type="text" class="c-input" id="inputRsvUserInfo02_11" value="대상자" readonly="readonly" />
+                                                    </div>
+                                                    <div class="col-3 label-input">
+                                                        <label class="c-label-txt" for="inputRsvUserInfo02_12">출장검진</label>
+                                                        <div class="c-input">
+                                                            <input type="text" class="c-input" id="inputRsvUserInfo02_12" value="대상자 아님" readonly="readonly" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 label-input">
+                                                        <label class="c-label-txt">이메일</label>
+                                                        <div class="row inner c-input-email-group">
+                                                            <div class="col-6 input-email-01">
+                                                                <input type="text" class="c-input" title="이메일 계정입력" value="test" readonly="readonly" aria-label="이메일 계정입력" />
+                                                            </div>
+                                                            <div class="col-6 input-email-02">
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <input type="text" class="c-input" title="이메일 도메인 입력" value="hanmail.net" readonly="readonly" aria-label="이메일 도메인 입력" />
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-6 label-input">
-                                                            <label class="c-label-txt">주소</label>
-                                                            <div class="row inner c-input-address-group">
-                                                                <div class="col input-addr-01">
-                                                                    <input type="text" class="c-input" title="우편번호 입력" placeholder="우편번호" value="03173" readonly="readonly" aria-label="우편번호 입력" />
-                                                                </div>
-                                                                <div class="col input-addr-02">
-                                                                    <input type="text" class="c-input" title="주소 입력" value="서울시 종로구 세종대로 23길 54" readonly="readonly" aria-label="주소 입력" />
-                                                                </div>
+                                                    </div>
+                                                    <div class="col-6 label-input">
+                                                        <label class="c-label-txt">주소</label>
+                                                        <div class="row inner c-input-address-group">
+                                                            <div class="col input-addr-01">
+                                                                <input type="text" class="c-input" title="우편번호 입력" placeholder="우편번호" value="03173" readonly="readonly" aria-label="우편번호 입력" />
                                                             </div>
-                                                        </div>
-
-                                                        <!-- [ mod(230519) ]
-						+ 클래스 추가 col-w-full
-						-->
-                                                        <div class="col label-input col-w-full">
-                                                            <label for="rosterInfo_note">특이사항</label>
-                                                            <div class="c-txtarea-field">
-                                                                <textarea id="rosterInfo_note" class="c-txt-area ta-r-only type03" readonly="readonly"> </textarea>
+                                                            <div class="col input-addr-02">
+                                                                <input type="text" class="c-input" title="주소 입력" value="서울시 종로구 세종대로 23길 54" readonly="readonly" aria-label="주소 입력" />
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
 
+                                                    <!-- [ mod(230519) ]
+						+ 클래스 추가 col-w-full
+						-->
+                                                    <div class="col label-input col-w-full">
+                                                        <label for="rosterInfo_note">특이사항</label>
+                                                        <div class="c-txtarea-field">
+                                                            <textarea id="rosterInfo_note" class="c-txt-area ta-r-only type03" readonly="readonly"> </textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
+
+
 
                                             <!-- [ mod(230628) ]
 							- 수정, 저장 버튼 추가
@@ -2138,13 +2311,62 @@
                                                 <button class="c-btn bg-blue-3"><span>저장</span></button>
                                             </div>
 
-                                            <!-- [ // mod(230628) ] -->
+                                            <!-- [ mod(230705) ]
+								- 메모등록 추가
+							-->
+                                            <div class="c-article input-list memo-lists target-memo">
+                                                <div class="row">
+                                                    <div class="col">YYYY.MM.DD <br />HH.MM.SS</div>
+                                                    <div class="col target-cont">
+                                                        <div class="memo-list">
+                                                            <div class="memo-contarea">
+                                                                <div class="memo-cont"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
+                                                                    reiciendis tenetur in deserunt officiis. Beatae suscipit doloribus consequuntur maxime libero
+                                                                    possimus aut veritatis, dolorum, laborum odit reiciendis accusantium ducimus voluptate. Natus
+                                                                    vel obcaecati explicabo, dicta omnis beatae incidunt mollitia ipsum eum corporis
+                                                                    necessitatibus nisi ullam aut ab error quidem animi. Repellendus alias nihil expedita impedit,
+                                                                    animi ut esse quasi adipisci. Tempore maxime ipsa impedit nesciunt, deleniti modi veritatis ad
+                                                                    laboriosam praesentium, eos earum ducimus inventore dolore magnam culpa quaerat in esse sint
+                                                                    atque! Aliquid cupiditate obcaecati quae incidunt provident distinctio! Placeat eaque dolor,
+                                                                    sequi voluptates excepturi molestias earum sit minus quod odio autem ratione, aut commodi?
+                                                                    Sint officia perferendis iure, unde, impedit obcaecati nesciunt totam numquam eaque suscipit
+                                                                    ipsam consequuntur! Vitae excepturi dolore voluptas adipisci soluta quam eos enim voluptates
+                                                                    commodi eum perspiciatis quos quod molestiae, magni hic voluptatibus, fugit sunt maiores
+                                                                    necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque
+                                                                    maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus
+                                                                    ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam
+                                                                    est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus!
+                                                                    Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores
+                                                                    voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab,
+                                                                    dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
+                                                                    necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque
+                                                                    maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus
+                                                                    ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam
+                                                                    est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus!
+                                                                    Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores
+                                                                    voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab,
+                                                                    dolorem laboriosam est? </div>
+                                                            </div>
+                                                            <div class="memo-btnarea">
+                                                                <button type="button" class="memo-cont-btn"><span class="skip">메모이력보기</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">홍길동<br />(VITA)</div>
+                                                </div>
+                                            </div>
+                                            <div class="buttons justify-cont-e">
+                                                <button class="c-btn"><span>메모등록</span></button>
+                                            </div>
+
+                                            <!-- [ // mod(230705) ] -->
                                         </div>
                                     </div>
 
                                     <!-- + tabContent_02 (검진예약 정보) -->
                                     <div class="tab-cont" id="tabContent_02" role="tabpanel" aria-labelledby="tabList_02">
                                         <div class="c-panel">
+
                                             <!-- <div class="c-title-field">
 									<h2 class="title-md">검진예약 정보</h2>
 									<div class="buttons">
@@ -2265,17 +2487,18 @@
                                                 </div>
                                                 <div class="row"></div>
                                                 <div class="row">
+
                                                     <!-- [ mod(230519) ]
 										+ 클래스 추가 col-w-full
 										-->
                                                     <div class="col label-input col-w-full">
                                                         <label for="inputRsvContInfo02_11">요청사항</label>
-                                                        <div class="cont-box request-box">
-                                                            온라인 문진표 제공 가능한지 확인 바랍니다.<br />
-                                                            월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의
-                                                            사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이
-                                                            가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다.
-                                                        </div>
+                                                        <div class="cont-box request-box"> 온라인 문진표 제공 가능한지 확인 바랍니다.<br /> 월별 SK자체양식의 사후관리소견서 취합이 가능한지
+                                                            확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서
+                                                            취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별
+                                                            SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지
+                                                            확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서 취합이 가능한지 확인바랍니다. 월별 SK자체양식의 사후관리소견서
+                                                            취합이 가능한지 확인바랍니다. </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2285,6 +2508,7 @@
                                     <!-- + tabContent_03 (비용 내역) -->
                                     <div class="tab-cont" id="tabContent_03" role="tabpanel" aria-labelledby="tabList_03">
                                         <div class="c-panel">
+
                                             <!-- <div class="c-title-field">
 									<h2 class="title-md">비용 내역</h2>
 									<div class="buttons">
@@ -2530,15 +2754,14 @@
                                     <!-- + tabContent_04 (수납내역) -->
                                     <div class="tab-cont" id="tabContent_04" role="tabpanel" aria-labelledby="tabList_04">
                                         <div class="c-panel">
+
                                             <!-- <div class="c-title-field">
 									<h2 class="title-md">수납내역</h2>
 								</div> -->
                                             <div class="c-table-field tbl-price-field">
                                                 <div class="c-table tbl-price-details">
                                                     <table class="table">
-                                                        <caption>
-                                                            총 검진 금액 : 총 회사 청구 금액, 총 개인 청구 금액 합계
-                                                        </caption>
+                                                        <caption> 총 검진 금액 : 총 회사 청구 금액, 총 개인 청구 금액 합계 </caption>
                                                         <colgroup>
                                                             <col width="20%" />
                                                             <col width="40%" />
@@ -2555,9 +2778,7 @@
                                                 </div>
                                                 <div class="c-table tbl-price-details">
                                                     <table class="table">
-                                                        <caption>
-                                                            총 회사 청구 금액 : 검진상품금액, 추가검사금액, 건강관리 서비스 이용료에 대한 정보
-                                                        </caption>
+                                                        <caption> 총 회사 청구 금액 : 검진상품금액, 추가검사금액, 건강관리 서비스 이용료에 대한 정보 </caption>
                                                         <colgroup>
                                                             <col width="20%" />
                                                             <col width="40%" />
@@ -2587,9 +2808,7 @@
                                                 </div>
                                                 <div class="c-table tbl-price-details">
                                                     <table class="table">
-                                                        <caption>
-                                                            총 개인 청구 금액 : 검진상품금액, 추가검사금액, 건강관리 서비스 이용료에 대한 정보
-                                                        </caption>
+                                                        <caption> 총 개인 청구 금액 : 검진상품금액, 추가검사금액, 건강관리 서비스 이용료에 대한 정보 </caption>
                                                         <colgroup>
                                                             <col width="20%" />
                                                             <col width="40%" />
@@ -2599,23 +2818,17 @@
                                                         <tbody>
                                                             <tr>
                                                                 <th scope="rowgroup" rowspan="3" class="bg-gray-11">개인</th>
-                                                                <th scope="row">
-                                                                    검진상품금액(a)
-                                                                    <p class="c-fs-sm">현장결제</p>
+                                                                <th scope="row"> 검진상품금액(a) <p class="c-fs-sm">현장결제</p>
                                                                 </th>
                                                                 <td class="ta-r"><span>280,000</span>원</td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">
-                                                                    추가검사금액(e)
-                                                                    <p class="c-fs-sm">온라인결제</p>
+                                                                <th scope="row"> 추가검사금액(e) <p class="c-fs-sm">온라인결제</p>
                                                                 </th>
                                                                 <td class="ta-r"><span>50,000</span>원</td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">
-                                                                    건강관리 서비스 이용료(f)
-                                                                    <p class="c-fs-sm">온라인결제</p>
+                                                                <th scope="row"> 건강관리 서비스 이용료(f) <p class="c-fs-sm">온라인결제</p>
                                                                 </th>
                                                                 <td class="ta-r"><span>50,000</span>원</td>
                                                             </tr>
@@ -2630,17 +2843,16 @@
                                         </div>
                                     </div>
 
-                                    <!-- [ mod(230630) ]
+                                    <!-- [ mod(230705) ]
 						- 메모리스트 아코디언 추가
+						- markup 변경
 					-->
                                     <!--+ tabMemoListContent -->
-                                    <div class="tab-cont on" id="tabMemoListContent" role="tabpanel" aria-labelledby="tabMemoList">
+                                    <div class="tab-cont" id="tabMemoListContent" role="tabpanel" aria-labelledby="tabMemoList">
                                         <div class="c-table-field">
                                             <div class="c-table striped tbl-fixed memo-lists">
                                                 <table class="table">
-                                                    <caption>
-                                                        메모 리스트 : 날짜, 내용, 등록자에 대한 정보
-                                                    </caption>
+                                                    <caption> 메모 리스트 : 날짜, 내용, 등록자에 대한 정보 </caption>
                                                     <colgroup>
                                                         <col class="date" />
                                                         <col />
@@ -2654,6 +2866,7 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
+
                                                         <!-- input 생성 시  for/id 매칭 -->
 
                                                         <!-- [ mod(230630) ]
@@ -2666,17 +2879,33 @@
                                                             <td class="ta-l">
                                                                 <div class="memo-list">
                                                                     <div class="memo-contarea">
-                                                                        <div class="memo-cont">
-                                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias reiciendis tenetur in deserunt officiis. Beatae suscipit doloribus consequuntur maxime libero possimus aut veritatis, dolorum, laborum odit reiciendis accusantium ducimus voluptate. Natus vel obcaecati
-                                                                            explicabo, dicta omnis beatae incidunt mollitia ipsum eum corporis necessitatibus nisi ullam aut ab error quidem animi. Repellendus alias nihil expedita impedit, animi ut esse quasi adipisci. Tempore maxime ipsa impedit nesciunt, deleniti modi veritatis ad laboriosam
-                                                                            praesentium, eos earum ducimus inventore dolore magnam culpa quaerat in esse sint atque! Aliquid cupiditate obcaecati quae incidunt provident distinctio! Placeat eaque dolor, sequi voluptates excepturi molestias earum sit minus quod odio autem ratione, aut commodi? Sint
-                                                                            officia perferendis iure, unde, impedit obcaecati nesciunt totam numquam eaque suscipit ipsam consequuntur! Vitae excepturi dolore voluptas adipisci soluta quam eos enim voluptates commodi eum perspiciatis quos quod molestiae, magni hic voluptatibus, fugit sunt maiores
-                                                                            necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem
-                                                                            laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores
-                                                                            voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus!
-                                                                            Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
-                                                                            necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
-                                                                        </div>
+                                                                        <div class="memo-cont"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
+                                                                            reiciendis tenetur in deserunt officiis. Beatae suscipit doloribus consequuntur maxime
+                                                                            libero possimus aut veritatis, dolorum, laborum odit reiciendis accusantium ducimus
+                                                                            voluptate. Natus vel obcaecati explicabo, dicta omnis beatae incidunt mollitia ipsum eum
+                                                                            corporis necessitatibus nisi ullam aut ab error quidem animi. Repellendus alias nihil
+                                                                            expedita impedit, animi ut esse quasi adipisci. Tempore maxime ipsa impedit nesciunt,
+                                                                            deleniti modi veritatis ad laboriosam praesentium, eos earum ducimus inventore dolore
+                                                                            magnam culpa quaerat in esse sint atque! Aliquid cupiditate obcaecati quae incidunt
+                                                                            provident distinctio! Placeat eaque dolor, sequi voluptates excepturi molestias earum sit
+                                                                            minus quod odio autem ratione, aut commodi? Sint officia perferendis iure, unde, impedit
+                                                                            obcaecati nesciunt totam numquam eaque suscipit ipsam consequuntur! Vitae excepturi dolore
+                                                                            voluptas adipisci soluta quam eos enim voluptates commodi eum perspiciatis quos quod
+                                                                            molestiae, magni hic voluptatibus, fugit sunt maiores necessitatibus! Neque maiores
+                                                                            voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab,
+                                                                            dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam
+                                                                            est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
+                                                                            necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus!
+                                                                            Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores
+                                                                            voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab,
+                                                                            dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam
+                                                                            est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
+                                                                            necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus!
+                                                                            Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores
+                                                                            voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab,
+                                                                            dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam
+                                                                            est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
+                                                                            necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? </div>
                                                                     </div>
                                                                     <div class="memo-btnarea">
                                                                         <button type="button" class="memo-cont-btn"><span class="skip">메모이력보기</span></button>
@@ -2690,17 +2919,33 @@
                                                             <td class="ta-l">
                                                                 <div class="memo-list">
                                                                     <div class="memo-contarea">
-                                                                        <div class="memo-cont">
-                                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias reiciendis tenetur in deserunt officiis. Beatae suscipit doloribus consequuntur maxime libero possimus aut veritatis, dolorum, laborum odit reiciendis accusantium ducimus voluptate. Natus vel obcaecati
-                                                                            explicabo, dicta omnis beatae incidunt mollitia ipsum eum corporis necessitatibus nisi ullam aut ab error quidem animi. Repellendus alias nihil expedita impedit, animi ut esse quasi adipisci. Tempore maxime ipsa impedit nesciunt, deleniti modi veritatis ad laboriosam
-                                                                            praesentium, eos earum ducimus inventore dolore magnam culpa quaerat in esse sint atque! Aliquid cupiditate obcaecati quae incidunt provident distinctio! Placeat eaque dolor, sequi voluptates excepturi molestias earum sit minus quod odio autem ratione, aut commodi? Sint
-                                                                            officia perferendis iure, unde, impedit obcaecati nesciunt totam numquam eaque suscipit ipsam consequuntur! Vitae excepturi dolore voluptas adipisci soluta quam eos enim voluptates commodi eum perspiciatis quos quod molestiae, magni hic voluptatibus, fugit sunt maiores
-                                                                            necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem
-                                                                            laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores
-                                                                            voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus!
-                                                                            Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
-                                                                            necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
-                                                                        </div>
+                                                                        <div class="memo-cont"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
+                                                                            reiciendis tenetur in deserunt officiis. Beatae suscipit doloribus consequuntur maxime
+                                                                            libero possimus aut veritatis, dolorum, laborum odit reiciendis accusantium ducimus
+                                                                            voluptate. Natus vel obcaecati explicabo, dicta omnis beatae incidunt mollitia ipsum eum
+                                                                            corporis necessitatibus nisi ullam aut ab error quidem animi. Repellendus alias nihil
+                                                                            expedita impedit, animi ut esse quasi adipisci. Tempore maxime ipsa impedit nesciunt,
+                                                                            deleniti modi veritatis ad laboriosam praesentium, eos earum ducimus inventore dolore
+                                                                            magnam culpa quaerat in esse sint atque! Aliquid cupiditate obcaecati quae incidunt
+                                                                            provident distinctio! Placeat eaque dolor, sequi voluptates excepturi molestias earum sit
+                                                                            minus quod odio autem ratione, aut commodi? Sint officia perferendis iure, unde, impedit
+                                                                            obcaecati nesciunt totam numquam eaque suscipit ipsam consequuntur! Vitae excepturi dolore
+                                                                            voluptas adipisci soluta quam eos enim voluptates commodi eum perspiciatis quos quod
+                                                                            molestiae, magni hic voluptatibus, fugit sunt maiores necessitatibus! Neque maiores
+                                                                            voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab,
+                                                                            dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam
+                                                                            est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
+                                                                            necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus!
+                                                                            Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores
+                                                                            voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab,
+                                                                            dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam
+                                                                            est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
+                                                                            necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus!
+                                                                            Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores
+                                                                            voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab,
+                                                                            dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam
+                                                                            est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
+                                                                            necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? </div>
                                                                     </div>
                                                                     <div class="memo-btnarea">
                                                                         <button type="button" class="memo-cont-btn"><span class="skip">메모이력보기</span></button>
@@ -2714,7 +2959,36 @@
                                                             <td class="ta-l">
                                                                 <div class="memo-list">
                                                                     <div class="memo-contarea">
-                                                                        <div class="memo-cont">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias reiciendis tenetur in deserunt officiis. Beatae suscipit doloribus consequuntur maxime</div>
+                                                                        <div class="memo-cont"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
+                                                                            reiciendis tenetur in deserunt officiis. Beatae suscipit doloribus consequuntur maxime
+                                                                            libero possimus aut veritatis, dolorum, laborum odit reiciendis accusantium ducimus
+                                                                            voluptate. Natus vel obcaecati explicabo, dicta omnis beatae incidunt mollitia ipsum eum
+                                                                            corporis necessitatibus nisi ullam aut ab error quidem animi. Repellendus alias nihil
+                                                                            expedita impedit, animi ut esse quasi adipisci. Tempore maxime ipsa impedit nesciunt,
+                                                                            deleniti modi veritatis ad laboriosam praesentium, eos earum ducimus inventore dolore
+                                                                            magnam culpa quaerat in esse sint atque! Aliquid cupiditate obcaecati quae incidunt
+                                                                            provident distinctio! Placeat eaque dolor, sequi voluptates excepturi molestias earum sit
+                                                                            minus quod odio autem ratione, aut commodi? Sint officia perferendis iure, unde, impedit
+                                                                            obcaecati nesciunt totam numquam eaque suscipit ipsam consequuntur! Vitae excepturi dolore
+                                                                            voluptas adipisci soluta quam eos enim voluptates commodi eum perspiciatis quos quod
+                                                                            molestiae, magni hic voluptatibus, fugit sunt maiores necessitatibus! Neque maiores
+                                                                            voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab,
+                                                                            dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam
+                                                                            est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
+                                                                            necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus!
+                                                                            Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores
+                                                                            voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab,
+                                                                            dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam
+                                                                            est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
+                                                                            necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus!
+                                                                            Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores
+                                                                            voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab,
+                                                                            dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam
+                                                                            est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
+                                                                            necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? </div>
+                                                                    </div>
+                                                                    <div class="memo-btnarea">
+                                                                        <button type="button" class="memo-cont-btn"><span class="skip">메모이력보기</span></button>
                                                                     </div>
                                                                 </div>
                                                             </td>
@@ -2725,7 +2999,36 @@
                                                             <td class="ta-l">
                                                                 <div class="memo-list">
                                                                     <div class="memo-contarea">
-                                                                        <div class="memo-cont">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias reiciendis tenetur in deserunt officiis. Beatae suscipit doloribus consequuntur maxime</div>
+                                                                        <div class="memo-cont"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
+                                                                            reiciendis tenetur in deserunt officiis. Beatae suscipit doloribus consequuntur maxime
+                                                                            libero possimus aut veritatis, dolorum, laborum odit reiciendis accusantium ducimus
+                                                                            voluptate. Natus vel obcaecati explicabo, dicta omnis beatae incidunt mollitia ipsum eum
+                                                                            corporis necessitatibus nisi ullam aut ab error quidem animi. Repellendus alias nihil
+                                                                            expedita impedit, animi ut esse quasi adipisci. Tempore maxime ipsa impedit nesciunt,
+                                                                            deleniti modi veritatis ad laboriosam praesentium, eos earum ducimus inventore dolore
+                                                                            magnam culpa quaerat in esse sint atque! Aliquid cupiditate obcaecati quae incidunt
+                                                                            provident distinctio! Placeat eaque dolor, sequi voluptates excepturi molestias earum sit
+                                                                            minus quod odio autem ratione, aut commodi? Sint officia perferendis iure, unde, impedit
+                                                                            obcaecati nesciunt totam numquam eaque suscipit ipsam consequuntur! Vitae excepturi dolore
+                                                                            voluptas adipisci soluta quam eos enim voluptates commodi eum perspiciatis quos quod
+                                                                            molestiae, magni hic voluptatibus, fugit sunt maiores necessitatibus! Neque maiores
+                                                                            voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab,
+                                                                            dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam
+                                                                            est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
+                                                                            necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus!
+                                                                            Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores
+                                                                            voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab,
+                                                                            dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam
+                                                                            est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
+                                                                            necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus!
+                                                                            Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores
+                                                                            voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab,
+                                                                            dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam
+                                                                            est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
+                                                                            necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? </div>
+                                                                    </div>
+                                                                    <div class="memo-btnarea">
+                                                                        <button type="button" class="memo-cont-btn"><span class="skip">메모이력보기</span></button>
                                                                     </div>
                                                                 </div>
                                                             </td>
@@ -2736,7 +3039,36 @@
                                                             <td class="ta-l">
                                                                 <div class="memo-list">
                                                                     <div class="memo-contarea">
-                                                                        <div class="memo-cont">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias reiciendis tenetur in deserunt officiis. Beatae suscipit doloribus consequuntur maxime</div>
+                                                                        <div class="memo-cont"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
+                                                                            reiciendis tenetur in deserunt officiis. Beatae suscipit doloribus consequuntur maxime
+                                                                            libero possimus aut veritatis, dolorum, laborum odit reiciendis accusantium ducimus
+                                                                            voluptate. Natus vel obcaecati explicabo, dicta omnis beatae incidunt mollitia ipsum eum
+                                                                            corporis necessitatibus nisi ullam aut ab error quidem animi. Repellendus alias nihil
+                                                                            expedita impedit, animi ut esse quasi adipisci. Tempore maxime ipsa impedit nesciunt,
+                                                                            deleniti modi veritatis ad laboriosam praesentium, eos earum ducimus inventore dolore
+                                                                            magnam culpa quaerat in esse sint atque! Aliquid cupiditate obcaecati quae incidunt
+                                                                            provident distinctio! Placeat eaque dolor, sequi voluptates excepturi molestias earum sit
+                                                                            minus quod odio autem ratione, aut commodi? Sint officia perferendis iure, unde, impedit
+                                                                            obcaecati nesciunt totam numquam eaque suscipit ipsam consequuntur! Vitae excepturi dolore
+                                                                            voluptas adipisci soluta quam eos enim voluptates commodi eum perspiciatis quos quod
+                                                                            molestiae, magni hic voluptatibus, fugit sunt maiores necessitatibus! Neque maiores
+                                                                            voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab,
+                                                                            dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam
+                                                                            est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
+                                                                            necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus!
+                                                                            Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores
+                                                                            voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab,
+                                                                            dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam
+                                                                            est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
+                                                                            necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus!
+                                                                            Neque maiores voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores
+                                                                            voluptatibus ab, dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab,
+                                                                            dolorem laboriosam est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam
+                                                                            est? necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est?
+                                                                            necessitatibus! Neque maiores voluptatibus ab, dolorem laboriosam est? </div>
+                                                                    </div>
+                                                                    <div class="memo-btnarea">
+                                                                        <button type="button" class="memo-cont-btn"><span class="skip">메모이력보기</span></button>
                                                                     </div>
                                                                 </div>
                                                             </td>
@@ -2798,6 +3130,8 @@
 
                                     <!-- + tabModHistoryListContent -->
 
+                                    <!-- [ // mod(230705) ] -->
+
                                     <!-- [ mod(230630) ]
 						- 변경이력 tab 수정
 						- 상세 일정 표기 : yyyymmddhhmmss으로 변경
@@ -2808,9 +3142,7 @@
                                             <div class="c-table-field">
                                                 <div class="c-table striped tbl-fixed tbl-type02 memo-lists-mod">
                                                     <table class="table">
-                                                        <caption>
-                                                            변경이력 : 변경일시, 상태값, 변경내용, 담당자에 대한 정보
-                                                        </caption>
+                                                        <caption> 변경이력 : 변경일시, 상태값, 변경내용, 담당자에 대한 정보 </caption>
                                                         <colgroup>
                                                             <col class="date" />
                                                             <col style="width: 90px" />
@@ -2826,6 +3158,7 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
+
                                                             <!-- input 생성 시  for/id 매칭 -->
                                                             <tr>
                                                                 <td>YYYY.MM.DD<br />HH.MM.SS</td>
@@ -2926,7 +3259,6 @@
                         </div>
                     </div>
                 </div>
-
             </section>
 
             <!-- // Contents -->
@@ -2945,6 +3277,8 @@
 
     <script>
         toggleAccordion();
+        toggleMemoAccordion();
+
         var DefaultDateOption = {
             scrollX: true,
             scrollY: 200,
@@ -2955,8 +3289,21 @@
             info: false,
             autoWidth: false,
             destroy: true,
-        }
+        };
+        var DefaultDateOption02 = {
+            scrollX: false,
+            scrollY: 220,
+            paging: false,
+            searching: false,
+            ordering: false,
+            reponsive: true,
+            info: false,
+            autoWidth: false,
+            destroy: true,
+        };
         $('#dTblChkupList01').DataTable(DefaultDateOption);
+
+        var modRsvDataTables = $('.datatables-mod-rsv').DataTable(DefaultDateOption02);
 
         function initTargetExamDataTable() {
             $('#dTblChkupList01').DataTable(DefaultDateOption);
@@ -2966,9 +3313,12 @@
             $('#dTblChkupList01').DataTable(DefaultDateOption).columns.adjust().draw();
         }
 
+        // 예약 변경 변경 내 테이블 header 고정 스크립트
 
         window.addEventListener('resize', function() {
             resizeTargetExamDataTable();
+
+            modRsvDataTables.columns.adjust().draw();
         });
 
         // Button 클릭 시 dataTable Resizing
@@ -2976,9 +3326,8 @@
         items.forEach(function(e) {
             document.querySelector(e).addEventListener('click', function() {
                 resizeTargetExamDataTable();
-            })
-        })
-
+            });
+        });
 
         // + UI 화면 확인 전용 스크립트 (상용 소스 내 미적용)
         // 개발 페이지의 경우 조회 버튼 클릭 시 Load
