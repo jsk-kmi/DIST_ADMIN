@@ -14459,9 +14459,6 @@ type-horizontal 최상위 요소 부여
 #container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .c-table-field + .buttons {
 		margin-top: 10px;
 }
-#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .d-tbl-chklist-wrap {
-		max-height: 135px;
-}
 #container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .right-wrap .memo-lists .memo-list .memo-cont-btn {
 		background-size: 8px;
 }
