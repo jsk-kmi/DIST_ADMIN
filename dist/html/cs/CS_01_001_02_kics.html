@@ -21,11 +21,10 @@
         <p><a href="#sideNav" tabindex="1">주메뉴 바로가기</a></p>
     </div>
     <!-- [ // mod(220602) ] -->
-    <div id="container">
 
+    <div id="container">
         <!-- Content-Wrapper -->
-        <div class="content-wrapper type-horizontal type-callcenter type-platformsystem">
-            <!-- Contents -->
+        <div class="content-wrapper type-horizontal type-callcenter type-platformsystem"><!-- Contents -->
             <section class="contents">
                 <!-- [ mod(230519) ] -
 		- bread crumb 추가 반영 (design) 및 .c-title-field 위치 변경
@@ -3086,17 +3085,18 @@
         </div>
 
         <!-- // Content-Wrapper -->
-    </div> <!-- [ mod(220818) ] -->
+    </div>
+    <!-- [ mod(220818) ] -->
     <script src="../../lib/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../../js/common.js"></script>
 
     <script>
         toggleAccordion();
+        toggleMemoAccordion();
 
-        // 검진대상자 리스트 Table Table 변경에 따른 script 재 실행 요청
         var DefaultDateOption = {
             scrollX: true,
-            scrollY: 100, // 높이 변경
+            scrollY: 200,
             paging: false,
             searching: false,
             ordering: false,
@@ -3105,8 +3105,20 @@
             autoWidth: false,
             destroy: true,
         };
-
+        var DefaultDateOption02 = {
+            scrollX: false,
+            scrollY: 220,
+            paging: false,
+            searching: false,
+            ordering: false,
+            reponsive: true,
+            info: false,
+            autoWidth: false,
+            destroy: true,
+        };
         $('#dTblChkupList01').DataTable(DefaultDateOption);
+
+        var modRsvDataTables = $('.datatables-mod-rsv').DataTable(DefaultDateOption02);
 
         function initTargetExamDataTable() {
             $('#dTblChkupList01').DataTable(DefaultDateOption);
@@ -3118,21 +3130,18 @@
 
         // 예약 변경 변경 내 테이블 header 고정 스크립트
 
-        // $('.datatables-mod-rsv').DataTable({
-        // 	scrollX: true,
-        // 	scrollY: true,
-        // 	paging: false,
-        // 	searching: false,
-        // 	ordering: false,
-        // 	reponsive: true,
-        // 	info: false,
-        // 	autoWidth: false,
-        // 	destroy: true,
-        // 	fixedHeader: true,
-        // });
-
         window.addEventListener('resize', function() {
             resizeTargetExamDataTable();
+
+            modRsvDataTables.columns.adjust().draw();
+        });
+
+        // Button 클릭 시 dataTable Resizing
+        var items = ['.c-btn-inquiry', '.sidebar-toggle'];
+        items.forEach(function(e) {
+            document.querySelector(e).addEventListener('click', function() {
+                resizeTargetExamDataTable();
+            });
         });
 
         // + UI 화면 확인 전용 스크립트 (상용 소스 내 미적용)
