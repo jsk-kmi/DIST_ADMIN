@@ -162,6 +162,23 @@
   }
   line-height: 20px;
 }
+
+@mixin modalTermsTitle {
+  font: {
+    size: $fs-large;
+    weight: $weight-500;
+  }
+  line-height: 1.45;
+}
+
+@mixin modalTermsTxt {
+  font: {
+    size: $fs-normal;
+    weight: 400;
+  }
+  line-height: 2;
+}
+
 @mixin paddingH($gap) {
   padding: {
     left: $gap;

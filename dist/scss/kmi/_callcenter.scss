@@ -64,11 +64,23 @@ type-horizontal 최상위 요소 부여
     .right-wrap {
       // + type02 비용 내역
       .cost-dtl-list.type02 {
+        overflow: hidden;
+        padding: 0;
         flex-direction: column;
 
         .row {
           padding-right: 0;
+          &:nth-of-type(odd) {
+            background-color: #f6f6f6;
+          }
+          &:nth-of-type(even) {
+            background-color: $color-white-2;
+          }
         }
+        .row ~ .row {
+          // padding-top: 8px;
+        }
+
         .label-input {
           label {
             min-width: 80px;
@@ -79,11 +91,8 @@ type-horizontal 최상위 요소 부여
           flex: 0 0 100%;
           .c-input-badge-group {
             width: 100%;
-            margin-top: -8px;
+            // margin-top: -8px;
             min-height: 33px;
-            .c-badge-detail {
-              padding-top: 10px;
-            }
           }
 
           .c-input-unit {
@@ -782,6 +791,12 @@ type-horizontal 최상위 요소 부여
               margin-bottom: $row-margin-04;
             }
 
+            .cost-dtl-list {
+              &.type02 {
+                padding: 0;
+              }
+            }
+
             .c-badge {
               padding: $c-badge;
               border-radius: $input-border-radius-01;
@@ -823,6 +838,12 @@ type-horizontal 최상위 요소 부여
                     padding-top: $row-padding;
                   }
                 }
+              }
+            }
+            .row ~ .row {
+              margin: {
+                top: 0;
+                bottom: 0;
               }
             }
           }
@@ -893,6 +914,7 @@ type-horizontal 최상위 요소 부여
             display: table;
             table-layout: fixed;
             align-items: center;
+
             .memo-contarea,
             .memo-btnarea {
               display: table-cell;
@@ -902,14 +924,24 @@ type-horizontal 최상위 요소 부여
               width: 30px;
             }
             width: 100%;
-            cursor: pointer;
+            .memo-contarea {
+              max-height: 100px;
+              overflow: hidden;
+              transition: max-height 0.5s ease-in;
+              //width: calc(100% - 30px);
+              display: inline-block;
+            }
             .memo-cont {
               display: block;
               white-space: normal;
-              @include ellipsisMultiline(5, 20px, initial, 100px);
               width: 100%;
               overflow: hidden;
-              transition: max-height 0.3s ease-in;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              word-wrap: break-word;
+              line-height: 20px;
+              animation: close 1s linear 0s forwards;
             }
 
             .memo-cont-btn {
@@ -917,15 +949,19 @@ type-horizontal 최상위 요소 부여
               width: 30px;
               height: 30px;
               padding: 6px 5px;
-              transition: transform 0.1s ease;
-              transform: rotate(0);
+              transition: transform 0.5s ease;
+              transform: rotate(0deg);
+              //transition: all ease-out 0.4s;
             }
 
             &.active {
+              transition: all 0.5s linear;
+              .memo-contarea {
+                max-height: 100rem;
+                transition: max-height 1s linear;
+              }
               .memo-cont {
-                -webkit-line-clamp: initial;
-                max-height: 300px;
-                transition: max-height 0.3s ease-in;
+                animation: open 0.5s linear forwards;
               }
               .memo-cont-btn {
                 background-image: url(../images/ico/ico_arrow_11.svg);
@@ -959,5 +995,23 @@ type-horizontal 최상위 요소 부여
         }
       }
     }
+  }
+}
+
+@keyframes open {
+  from {
+    -webkit-line-clamp: 5;
+  }
+  to {
+    -webkit-line-clamp: initial;
+  }
+}
+
+@keyframes close {
+  from {
+    -webkit-line-clamp: initial;
+  }
+  to {
+    -webkit-line-clamp: 5;
   }
 }

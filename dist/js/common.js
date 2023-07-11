@@ -310,6 +310,7 @@ var formElemAlign = function formElemAlign() {
     }
   }
 };
+
 // window.addEventListener('DOMContentLoaded', () => {
 //   formElemAlign();
 
@@ -324,6 +325,47 @@ var formElemAlign = function formElemAlign() {
 //     });
 //   }
 // });
+
+// + 개인정보수집 약관 modal
+
+var modalBtn = document.querySelectorAll('.c-modal-btn');
+var modalCont = document.querySelector('.c-modal-cont');
+var modalCloseBtn = document.querySelectorAll('.c-modal-wrap .c-popup-close-btn');
+
+// modal open
+Array.prototype.forEach.call(modalBtn, function (btn) {
+  btn.addEventListener('click', function (e) {
+    var modalDataSet = e.currentTarget.dataset.modal;
+    var modalDataValue = document.querySelector(modalDataSet);
+    modalDataValue.parentNode.classList.add('open');
+    modalDataValue.setAttribute('aria-hidden', false);
+  });
+});
+if (!Element.prototype.closest) {
+  if (!Element.prototype.matches) {
+    Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
+  }
+  Element.prototype.closest = function (s) {
+    var el = this;
+    var ancestor = this;
+    if (!document.documentElement.contains(el)) return null;
+    do {
+      if (ancestor.matches(s)) return ancestor;
+      ancestor = ancestor.parentElement;
+    } while (ancestor !== null);
+    return null;
+  };
+}
+
+// modal close
+Array.prototype.forEach.call(modalCloseBtn, function (item) {
+  item.addEventListener('click', function (e) {
+    var modalDataSet2 = e.currentTarget.closest('.c-modal-cont');
+    var modalDataSetValue = modalDataSet2.parentNode;
+    modalDataSetValue.classList.remove('open');
+    modalDataSet2.setAttribute('aria-hidden', true);
+  });
+});
 
 // + DataTable Library Control
 var DefaultDateOptionBasic = {

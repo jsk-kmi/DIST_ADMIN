@@ -400,3 +400,89 @@
     }
   }
 }
+
+// + 개인정보수집 약관 modal
+
+.c-modal-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: none;
+  // visibility: hidden;
+  // opacity: 0;
+
+  .c-modal-cont {
+    // + type06
+    &.type06 {
+      width: 600px;
+      @include position(50%, 50%);
+      background-color: $color-white-1;
+      border-radius: 12px;
+      box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+      animation: animatemodalClose 1s linear;
+      .modal-header {
+        border-top: {
+          left-radius: 12px;
+          right-radius: 12px;
+        }
+
+        .modal-title {
+          color: $color-white-1;
+          padding-right: 50px;
+          @include ellipsisLine01;
+          @include modalTermsTitle;
+        }
+      }
+
+      .modal-footer {
+        padding: 14px 40px;
+      }
+    }
+
+    // + c-terms-area
+    &.c-terms-area {
+      .modal-body {
+        .terms-section ~ .terms-section {
+          margin-top: 20px;
+        }
+        li {
+          color: $color-gray-14;
+          @include modalTermsTxt;
+        }
+      }
+    }
+  }
+  &.open {
+    display: block;
+    // opacity: 1;
+
+    .c-modal-cont {
+      &.type06 {
+        animation: animatemodalOpen 0.25s linear;
+      }
+    }
+  }
+
+  // &.openM {
+  //   .c-modal-cont {
+  //     &.type06 {
+  //       animation: animatemodalClose 0.25s linear;
+  //     }
+  //   }
+  // }
+}
+
+@keyframes animatemodalOpen {
+  from {
+    top: 40%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}

@@ -11578,6 +11578,86 @@ table.dataTable.no-footer {
 		background-color: #253981 !important;
 }
 
+.c-modal-wrap {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: 100;
+		display: none;
+}
+.c-modal-wrap .c-modal-cont.type06 {
+		width: 600px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		    -ms-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
+		background-color: #fff;
+		border-radius: 12px;
+		box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+		-webkit-animation: animatemodalClose 1s linear;
+		        animation: animatemodalClose 1s linear;
+}
+.c-modal-wrap .c-modal-cont.type06 .modal-header {
+		border-top-left-radius: 12px;
+		border-top-right-radius: 12px;
+}
+.c-modal-wrap .c-modal-cont.type06 .modal-header .modal-title {
+		color: #fff;
+		padding-right: 50px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		word-wrap: break-word;
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 1.45;
+}
+.c-modal-wrap .c-modal-cont.type06 .modal-footer {
+		padding: 14px 40px;
+}
+.c-modal-wrap .c-modal-cont.c-terms-area .modal-body .terms-section ~ .terms-section {
+		margin-top: 20px;
+}
+.c-modal-wrap .c-modal-cont.c-terms-area .modal-body li {
+		color: #777676;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 2;
+}
+.c-modal-wrap.open {
+		display: block;
+}
+.c-modal-wrap.open .c-modal-cont.type06 {
+		-webkit-animation: animatemodalOpen 0.25s linear;
+		        animation: animatemodalOpen 0.25s linear;
+}
+
+@-webkit-keyframes animatemodalOpen {
+		from {
+				top: 40%;
+				opacity: 0;
+		}
+		to {
+				top: 50%;
+				opacity: 1;
+		}
+}
+
+@keyframes animatemodalOpen {
+		from {
+				top: 40%;
+				opacity: 0;
+		}
+		to {
+				top: 50%;
+				opacity: 1;
+		}
+}
 /*
 	= Panel
 */
@@ -13881,6 +13961,8 @@ type-horizontal 최상위 요소 부여
 }
 .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02,
 .c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 {
+		overflow: hidden;
+		padding: 0;
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
 		-webkit-flex-direction: column;
@@ -13890,6 +13972,14 @@ type-horizontal 최상위 요소 부여
 .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .row,
 .c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .row {
 		padding-right: 0;
+}
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .row:nth-of-type(odd),
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .row:nth-of-type(odd) {
+		background-color: #f6f6f6;
+}
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .row:nth-of-type(even),
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .row:nth-of-type(even) {
+		background-color: #fcfcfc;
 }
 .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .label-input label,
 .c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .label-input label {
@@ -13906,12 +13996,7 @@ type-horizontal 최상위 요소 부여
 .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-8 .c-input-badge-group,
 .c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-8 .c-input-badge-group {
 		width: 100%;
-		margin-top: -8px;
 		min-height: 33px;
-}
-.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-8 .c-input-badge-group .c-badge-detail,
-.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-8 .c-input-badge-group .c-badge-detail {
-		padding-top: 10px;
 }
 .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-8 .c-input-unit,
 .c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-8 .c-input-unit {
@@ -14425,6 +14510,9 @@ type-horizontal 최상위 요소 부여
 #container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .right-wrap .buttons:first-of-type {
 		margin-bottom: 22px;
 }
+#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 {
+		padding: 0;
+}
 #container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .right-wrap .c-badge {
 		padding: 2px 10px;
 		border-radius: 6px;
@@ -14455,6 +14543,10 @@ type-horizontal 최상위 요소 부여
 }
 #container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-8 .c-input-badge-group .c-badge-detail {
 		padding-top: 2px;
+}
+#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .right-wrap .row ~ .row {
+		margin-top: 0;
+		margin-bottom: 0;
 }
 #container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .c-table-field + .buttons {
 		margin-top: 10px;
@@ -14490,7 +14582,6 @@ type-horizontal 최상위 요소 부여
 		    -ms-flex-align: center;
 		        align-items: center;
 		width: 100%;
-		cursor: pointer;
 }
 #container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists .memo-list .memo-contarea,
 #container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists .memo-list .memo-btnarea {
@@ -14500,41 +14591,51 @@ type-horizontal 최상위 요소 부여
 #container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists .memo-list .memo-btnarea {
 		width: 30px;
 }
+#container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists .memo-list .memo-contarea {
+		max-height: 100px;
+		overflow: hidden;
+		-webkit-transition: max-height 0.5s ease-in;
+		transition: max-height 0.5s ease-in;
+		display: inline-block;
+}
 #container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists .memo-list .memo-cont {
 		display: block;
 		white-space: normal;
+		width: 100%;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 5;
-		height: initial;
 		word-wrap: break-word;
 		line-height: 20px;
-		max-height: 100px;
-		width: 100%;
-		overflow: hidden;
-		-webkit-transition: max-height 0.3s ease-in;
-		transition: max-height 0.3s ease-in;
+		-webkit-animation: close 1s linear 0s forwards;
+		        animation: close 1s linear 0s forwards;
 }
 #container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists .memo-list .memo-cont-btn {
 		background: url(../images/ico/ico_arrow_10.svg) center/8px auto no-repeat;
 		width: 30px;
 		height: 30px;
 		padding: 6px 5px;
-		-webkit-transition: -webkit-transform 0.1s ease;
-		transition: -webkit-transform 0.1s ease;
-		transition: transform 0.1s ease;
-		transition: transform 0.1s ease, -webkit-transform 0.1s ease;
-		-webkit-transform: rotate(0);
-		    -ms-transform: rotate(0);
-		        transform: rotate(0);
+		-webkit-transition: -webkit-transform 0.5s ease;
+		transition: -webkit-transform 0.5s ease;
+		transition: transform 0.5s ease;
+		transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+		-webkit-transform: rotate(0deg);
+		    -ms-transform: rotate(0deg);
+		        transform: rotate(0deg);
+}
+#container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists .memo-list.active {
+		-webkit-transition: all 0.5s linear;
+		transition: all 0.5s linear;
+}
+#container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists .memo-list.active .memo-contarea {
+		max-height: 100rem;
+		-webkit-transition: max-height 1s linear;
+		transition: max-height 1s linear;
 }
 #container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists .memo-list.active .memo-cont {
-		-webkit-line-clamp: initial;
-		max-height: 300px;
-		-webkit-transition: max-height 0.3s ease-in;
-		transition: max-height 0.3s ease-in;
+		-webkit-animation: open 0.5s linear forwards;
+		        animation: open 0.5s linear forwards;
 }
 #container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists .memo-list.active .memo-cont-btn {
 		background-image: url(../images/ico/ico_arrow_11.svg);
@@ -14564,6 +14665,39 @@ type-horizontal 최상위 요소 부여
 		        flex: 1 1 0;
 }
 
+@-webkit-keyframes open {
+		from {
+				-webkit-line-clamp: 5;
+		}
+		to {
+				-webkit-line-clamp: initial;
+		}
+}
+
+@keyframes open {
+		from {
+				-webkit-line-clamp: 5;
+		}
+		to {
+				-webkit-line-clamp: initial;
+		}
+}
+@-webkit-keyframes close {
+		from {
+				-webkit-line-clamp: initial;
+		}
+		to {
+				-webkit-line-clamp: 5;
+		}
+}
+@keyframes close {
+		from {
+				-webkit-line-clamp: initial;
+		}
+		to {
+				-webkit-line-clamp: 5;
+		}
+}
 /*
 	Common
 */
