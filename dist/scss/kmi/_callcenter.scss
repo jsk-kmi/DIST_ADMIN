@@ -239,7 +239,7 @@ type-horizontal 최상위 요소 부여
     }
 
     .buttons:first-of-type {
-      margin-bottom: 14px;
+      //    margin-bottom: 14px;
     }
   }
 
@@ -264,6 +264,13 @@ type-horizontal 최상위 요소 부여
           white-space: nowrap;
         }
       }
+    }
+  }
+
+  // + tab-04
+  .tab-04 {
+    .c-tbl-paging {
+      margin-top: 4px;
     }
   }
 
@@ -711,7 +718,7 @@ type-horizontal 최상위 요소 부여
                       min-width: $input-min-width-02;
                     }
                     [class*='col'] {
-                      padding-bottom: 2px;
+                      // padding-bottom: 2px;
                     }
                   }
                 }
@@ -1013,5 +1020,124 @@ type-horizontal 최상위 요소 부여
   }
   to {
     -webkit-line-clamp: 5;
+  }
+}
+
+// = 검진예약관리 화면 UI 개선 (2305~)
+// + 검진예약 설정
+
+.mod-rsv-setting-title {
+  display: flex;
+  align-items: center;
+  &.type-option {
+    .date-box {
+      display: block;
+    }
+  }
+}
+.content-wrapper {
+  &.type-horizontal {
+    .reservation-dtl-status-layout {
+      .left-wrap {
+        .c-panel {
+          .c-rshopt-field {
+            .label-input {
+              > label {
+                min-width: 40px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+[class*='field'] {
+  & ~ .c-rshopt-field {
+    margin-top: 0;
+  }
+}
+.mod-rsv-setting-field {
+  .c-rshopt-field {
+    &.c-article {
+      padding: {
+        left: 10px;
+        right: 10px;
+      }
+      margin-top: 6px;
+    }
+  }
+}
+.c-rshopt-field {
+  &.c-article {
+    padding: 4px;
+    margin: {
+      top: 0;
+      bottom: 0;
+    }
+  }
+  .row {
+    margin: 0;
+    input[type='text'] {
+      padding: 0 8px;
+      border-radius: 6px;
+    }
+
+    label {
+      min-width: 80px;
+      margin-right: 0;
+    }
+    .row {
+      align-items: flex-start;
+      > .col {
+        padding: {
+          left: 10px;
+          right: 10px;
+        }
+        max-width: fit-content;
+      }
+      .label-input {
+        //display: block;
+        flex-direction: column;
+      }
+      .c-m-input-list {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        .col {
+          .row {
+            margin: 0;
+          }
+        }
+      }
+    }
+    > .col {
+      margin: {
+        top: 2px;
+        bottom: 2px;
+      }
+      padding: {
+        left: 0;
+        right: 0;
+      }
+      display: flex;
+      align-items: center;
+    }
+
+    .input-col {
+      min-width: 100px;
+      label {
+        margin-right: 0;
+      }
+      // min-width: 100px;
+      & ~ .input-col {
+        margin-left: 0;
+      }
+    }
+  }
+  .chk-label {
+    > span {
+      display: inline-block;
+      width: auto;
+    }
   }
 }
