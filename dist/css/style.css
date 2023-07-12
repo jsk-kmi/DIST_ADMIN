@@ -14014,6 +14014,10 @@ type-horizontal 최상위 요소 부여
 .c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 .col-2 .c-input-unit {
 		width: 100%;
 }
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .tab-cont:first-of-type,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .tab-cont:first-of-type {
+		margin-top: -10px;
+}
 .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .label-input label,
 .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .label-input .c-label-txt,
 .c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .type03 .label-input label,
@@ -14645,16 +14649,19 @@ type-horizontal 최상위 요소 부여
 #container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists-mod td.rsv-mod-cont {
 		text-align: left;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .c-article.target-memo .row {
+#container .content-wrapper.type-horizontal.type-callcenter .target-memo-cont {
+		margin-top: 15px;
+}
+#container .content-wrapper.type-horizontal.type-callcenter .target-memo-cont .c-article.target-memo .row {
 		-webkit-box-flex: 1;
 		-webkit-flex: 1 1 auto;
 		    -ms-flex: 1 1 auto;
 		        flex: 1 1 auto;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .c-article.target-memo .row .col:nth-of-type(1) {
+#container .content-wrapper.type-horizontal.type-callcenter .target-memo-cont .c-article.target-memo .row .col:nth-of-type(1) {
 		text-align: center;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .c-article.target-memo .target-cont {
+#container .content-wrapper.type-horizontal.type-callcenter .target-memo-cont .c-article.target-memo .target-cont {
 		-webkit-box-flex: 1;
 		-webkit-flex: 1 1 0;
 		    -ms-flex: 1 1 0px;

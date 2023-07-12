@@ -109,6 +109,9 @@ type-horizontal 최상위 요소 부여
       }
 
       // + type03 대상자 정보
+      .tab-cont:first-of-type {
+        margin-top: -10px;
+      }
       .type03 {
         .label-input {
           label,
@@ -987,17 +990,20 @@ type-horizontal 최상위 요소 부여
           }
         }
       }
-      .c-article {
-        //+ 메모등록
-        &.target-memo {
-          .row {
-            flex: 1 1 auto;
-            .col:nth-of-type(1) {
-              text-align: center;
+      .target-memo-cont {
+        margin-top: 15px;
+        .c-article {
+          //+ 메모등록
+          &.target-memo {
+            .row {
+              flex: 1 1 auto;
+              .col:nth-of-type(1) {
+                text-align: center;
+              }
             }
-          }
-          .target-cont {
-            flex: 1 1 0;
+            .target-cont {
+              flex: 1 1 0;
+            }
           }
         }
       }
