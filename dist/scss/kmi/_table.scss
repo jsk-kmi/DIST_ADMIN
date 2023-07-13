@@ -112,6 +112,9 @@ table {
       &.date {
         width: $tbl-col-w-date;
       }
+      &.date02 {
+        width: $tbl-col-w-date02;
+      }
       &.birthday {
         width: $tbl-col-w-birthday;
       }
@@ -147,6 +150,10 @@ table {
       &.max-date {
         width: $tbl-col-w-date;
         max-width: $tbl-col-w-date;
+      }
+      &.max-date02 {
+        width: $tbl-col-w-date02;
+        max-width: $tbl-col-w-date02;
       }
       &.max-birthday {
         width: $tbl-col-w-birthday;

@@ -10223,6 +10223,11 @@ table {
 .c-table table td.date {
 		width: 110px;
 }
+.c-table table col.date02,
+.c-table table th.date02,
+.c-table table td.date02 {
+		width: 185px;
+}
 .c-table table col.birthday,
 .c-table table th.birthday,
 .c-table table td.birthday {
@@ -10276,6 +10281,12 @@ table {
 .c-table table td.max-date {
 		width: 110px;
 		max-width: 110px;
+}
+.c-table table col.max-date02,
+.c-table table th.max-date02,
+.c-table table td.max-date02 {
+		width: 185px;
+		max-width: 185px;
 }
 .c-table table col.max-birthday,
 .c-table table th.max-birthday,
@@ -11115,7 +11126,7 @@ table.dataTable.no-footer {
 		position: fixed;
 		top: 0;
 		left: 0;
-		z-index: 1050;
+		z-index: 1049;
 		display: none;
 		width: 100%;
 		height: 100%;
@@ -11586,21 +11597,41 @@ table.dataTable.no-footer {
 		height: 100%;
 		background-color: rgba(0, 0, 0, 0.5);
 		z-index: 100;
-		display: none;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		opacity: 0;
+		visibility: hidden;
+		-webkit-transition: all 0.25s linear;
+		transition: all 0.25s linear;
 }
 .c-modal-wrap .c-modal-cont.type06 {
 		width: 600px;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		-webkit-transform: translate(-50%, -50%);
-		    -ms-transform: translate(-50%, -50%);
-		        transform: translate(-50%, -50%);
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 		background-color: #fff;
 		border-radius: 12px;
 		box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
-		-webkit-animation: animatemodalClose 1s linear;
-		        animation: animatemodalClose 1s linear;
+		position: relative;
+		top: -100px;
+		-webkit-transition: top 0.25s linear;
+		transition: top 0.25s linear;
 }
 .c-modal-wrap .c-modal-cont.type06 .modal-header {
 		border-top-left-radius: 12px;
@@ -11630,34 +11661,13 @@ table.dataTable.no-footer {
 		line-height: 2;
 }
 .c-modal-wrap.open {
-		display: block;
+		opacity: 1;
+		visibility: visible;
 }
 .c-modal-wrap.open .c-modal-cont.type06 {
-		-webkit-animation: animatemodalOpen 0.25s linear;
-		        animation: animatemodalOpen 0.25s linear;
+		top: 0;
 }
 
-@-webkit-keyframes animatemodalOpen {
-		from {
-				top: 40%;
-				opacity: 0;
-		}
-		to {
-				top: 50%;
-				opacity: 1;
-		}
-}
-
-@keyframes animatemodalOpen {
-		from {
-				top: 40%;
-				opacity: 0;
-		}
-		to {
-				top: 50%;
-				opacity: 1;
-		}
-}
 /*
 	= Panel
 */
@@ -13959,6 +13969,10 @@ type-horizontal 최상위 요소 부여
 		margin-right: 10px;
 		padding-right: 0;
 }
+.content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .buttons:first-of-type,
+.c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .buttons:first-of-type {
+		margin-bottom: 15px;
+}
 .content-wrapper.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02,
 .c-layer-popup.type-callcenter .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 {
 		overflow: hidden;
@@ -14508,7 +14522,7 @@ type-horizontal 최상위 요소 부여
 		padding-bottom: 6px;
 }
 #container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .right-wrap .buttons:first-of-type {
-		margin-bottom: 22px;
+		margin-bottom: 10px;
 }
 #container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .right-wrap .cost-dtl-list.type02 {
 		padding: 0;
@@ -14701,16 +14715,6 @@ type-horizontal 최상위 요소 부여
 				-webkit-line-clamp: 5;
 		}
 }
-.mod-rsv-setting-title {
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-align: center;
-		-webkit-align-items: center;
-		    -ms-flex-align: center;
-		        align-items: center;
-}
 .mod-rsv-setting-title.type-option .date-box {
 		display: block;
 }
@@ -14719,19 +14723,12 @@ type-horizontal 최상위 요소 부여
 		min-width: 40px;
 }
 
-[class*=field] ~ .c-rshopt-field {
-		margin-top: 0;
-}
-
 .mod-rsv-setting-field .c-rshopt-field.c-article {
-		padding-left: 10px;
-		padding-right: 10px;
 		margin-top: 6px;
 }
 
 .c-rshopt-field.c-article {
 		padding: 4px;
-		margin-top: 0;
 		margin-bottom: 0;
 }
 .c-rshopt-field .row {
@@ -14740,42 +14737,6 @@ type-horizontal 최상위 요소 부여
 .c-rshopt-field .row input[type=text] {
 		padding: 0 8px;
 		border-radius: 6px;
-}
-.c-rshopt-field .row label {
-		min-width: 80px;
-		margin-right: 0;
-}
-.c-rshopt-field .row .row {
-		-webkit-box-align: start;
-		-webkit-align-items: flex-start;
-		    -ms-flex-align: start;
-		        align-items: flex-start;
-}
-.c-rshopt-field .row .row > .col {
-		padding-left: 10px;
-		padding-right: 10px;
-		max-width: -webkit-fit-content;
-		max-width: -moz-fit-content;
-		max-width: fit-content;
-}
-.c-rshopt-field .row .row .label-input {
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		-webkit-flex-direction: column;
-		    -ms-flex-direction: column;
-		        flex-direction: column;
-}
-.c-rshopt-field .row .row .c-m-input-list {
-		-webkit-flex-wrap: wrap;
-		    -ms-flex-wrap: wrap;
-		        flex-wrap: wrap;
-		-webkit-box-align: start;
-		-webkit-align-items: flex-start;
-		    -ms-flex-align: start;
-		        align-items: flex-start;
-}
-.c-rshopt-field .row .row .c-m-input-list .col .row {
-		margin: 0;
 }
 .c-rshopt-field .row > .col {
 		margin-top: 2px;
@@ -14794,15 +14755,98 @@ type-horizontal 최상위 요소 부여
 .c-rshopt-field .row .input-col {
 		min-width: 100px;
 }
-.c-rshopt-field .row .input-col label {
-		margin-right: 0;
-}
-.c-rshopt-field .row .input-col ~ .input-col {
-		margin-left: 0;
-}
 .c-rshopt-field .chk-label > span {
 		display: inline-block;
 		width: auto;
+}
+
+.delayexamination-info-popup .c-title-field {
+		-webkit-box-pack: end;
+		-webkit-justify-content: flex-end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
+}
+.delayexamination-info-popup .input-list {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		    -ms-flex-wrap: wrap;
+		        flex-wrap: wrap;
+		padding-left: 20px;
+		padding-right: 20px;
+}
+.delayexamination-info-popup .input-list [class*=col] {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: row;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+}
+.delayexamination-info-popup .input-list .row {
+		-webkit-box-flex: 1;
+		-webkit-flex: 1 0 auto;
+		    -ms-flex: 1 0 auto;
+		        flex: 1 0 auto;
+		-webkit-flex-wrap: nowrap;
+		    -ms-flex-wrap: nowrap;
+		        flex-wrap: nowrap;
+}
+.delayexamination-info-popup .input-list .col {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+}
+.delayexamination-info-popup .input-list .buttons {
+		-webkit-box-flex: 1;
+		-webkit-flex: 1 1 100%;
+		    -ms-flex: 1 1 100%;
+		        flex: 1 1 100%;
+		-webkit-box-pack: end;
+		-webkit-justify-content: flex-end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+}
+.delayexamination-info-popup .input-list .c-rdochk label {
+		padding-right: 15px;
+}
+.delayexamination-info-popup .c-panel:nth-of-type(2) .col:last-of-type {
+		-webkit-box-flex: 1;
+		-webkit-flex: 1;
+		    -ms-flex: 1;
+		        flex: 1;
+		-webkit-box-pack: end;
+		-webkit-justify-content: flex-end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
+}
+.delayexamination-info-popup .c-panel:nth-of-type(2) .c-input-date {
+		width: 120px;
+}
+.delayexamination-info-popup .c-panel ~ .c-panel {
+		margin-top: 10px;
 }
 
 /*
@@ -19538,5 +19582,9 @@ table.tbl-chkup-category .btn-open-chkup-infotxt {
 }
 .mod-reservation .c-tab-contents .tab-cont.on {
 		z-index: 3;
+}
+
+.dataTables_scrollHead {
+		background-color: #253981;
 }
 /*# sourceMappingURL=maps/style.css.map */

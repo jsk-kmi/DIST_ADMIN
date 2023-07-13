@@ -327,7 +327,6 @@ var formElemAlign = function formElemAlign() {
 // });
 
 // + 개인정보수집 약관 modal
-
 var modalBtn = document.querySelectorAll('.c-modal-btn');
 var modalCont = document.querySelector('.c-modal-cont');
 var modalCloseBtn = document.querySelectorAll('.c-modal-wrap .c-popup-close-btn');
@@ -376,6 +375,21 @@ var DefaultDateOptionBasic = {
   reponsive: true,
   info: false,
   autoWitdh: false
+};
+
+// + 연기 검사 팝업
+var delayExamModal = document.querySelector('.delayexamination-info-popup'),
+  delayPopupStyle = 'display:block; z-index:1049';
+var initDelayExamModal = function initDelayExamModal() {
+  delayExamModal.style.cssText = 'display:block; z-index: -1';
+  document.querySelector('.btn-open-delayexam-popup').addEventListener('click', function () {
+    var showBoolean = delayExamModal.classList.contains('show');
+    if (!showBoolean) {
+      delayExamModal.style.cssText = delayPopupStyle;
+    } else {
+      delayExamModal.style.cssText = '';
+    }
+  });
 };
 
 // = function list
