@@ -1111,6 +1111,20 @@ type-horizontal 최상위 요소 부여
   .c-title-field {
     justify-content: flex-end;
   }
+
+  .label-input {
+    label,
+    .c-label-txt {
+      display: inline-flex;
+      flex: none;
+      width: auto;
+      @supports (min-width: fit-content) {
+        min-width: fit-content;
+      }
+      margin-bottom: 0;
+      padding-right: 10px;
+    }
+  }
   .input-list {
     display: flex;
     flex-wrap: wrap;
