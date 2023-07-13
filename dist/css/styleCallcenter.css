@@ -14766,6 +14766,28 @@ type-horizontal 최상위 요소 부여
 		    -ms-flex-pack: end;
 		        justify-content: flex-end;
 }
+.delayexamination-info-popup .label-input label,
+.delayexamination-info-popup .label-input .c-label-txt {
+		display: -webkit-inline-box;
+		display: -webkit-inline-flex;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+		-webkit-box-flex: 0;
+		-webkit-flex: none;
+		    -ms-flex: none;
+		        flex: none;
+		width: auto;
+		margin-bottom: 0;
+		padding-right: 10px;
+}
+@supports ((min-width: -webkit-fit-content) or (min-width: -moz-fit-content) or (min-width: fit-content)) {
+		.delayexamination-info-popup .label-input label,
+		.delayexamination-info-popup .label-input .c-label-txt {
+				min-width: -webkit-fit-content;
+				min-width: -moz-fit-content;
+				min-width: fit-content;
+		}
+}
 .delayexamination-info-popup .input-list {
 		display: -webkit-box;
 		display: -webkit-flex;
