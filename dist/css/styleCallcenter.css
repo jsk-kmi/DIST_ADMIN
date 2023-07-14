@@ -13476,6 +13476,16 @@ textarea[readonly=readonly]:focus, textarea.ta-r-only:focus {
 		padding: 2px 0;
 }
 
+.c-badge02 {
+		background-color: #ecf1f8;
+		padding: 2px 12px;
+		border-radius: 6px;
+		word-break: keep-all;
+}
+.c-badge02 > span {
+		color: #253981;
+}
+
 .input-list.detail-list {
 		padding: 20px 40px;
 }
@@ -14230,6 +14240,94 @@ type-horizontal 최상위 요소 부여
 		width: auto;
 		min-width: auto;
 }
+.mod-rsv-setting-field .set-modrsv-tab.tab-05 .c-panel:first-of-type .row {
+		margin: 0;
+}
+.mod-rsv-setting-field .set-modrsv-tab.tab-05 .c-panel:first-of-type .col-3 {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 1 auto;
+		    -ms-flex: 0 1 auto;
+		        flex: 0 1 auto;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		padding: 0;
+}
+.mod-rsv-setting-field .set-modrsv-tab.tab-05 .chkup-date {
+		margin-top: 10px;
+		padding-top: 6px;
+		padding-bottom: 6px;
+}
+.mod-rsv-setting-field .set-modrsv-tab.tab-05 .chkup-date > ul {
+		list-style: none;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		padding-left: 10px;
+		padding-right: 10px;
+}
+.mod-rsv-setting-field .set-modrsv-tab.tab-05 .chkup-date > ul > .chkup-date-list {
+		padding: 6px 0;
+}
+.mod-rsv-setting-field .set-modrsv-tab.tab-05 .chkup-date > ul > .chkup-date-list ul {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+}
+.mod-rsv-setting-field .set-modrsv-tab.tab-05 .chkup-date > ul > .chkup-date-list ul li {
+		margin-right: 14px;
+		position: relative;
+}
+.mod-rsv-setting-field .set-modrsv-tab.tab-05 .chkup-date > ul > .chkup-date-list ul li ~ li:not(:last-of-type)::after {
+		display: block;
+		content: "";
+		position: absolute;
+		right: -8px;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		    -ms-transform: translateY(-50%);
+		        transform: translateY(-50%);
+		width: 1px;
+		height: 9px;
+		background-color: #a4a4a4;
+}
+.mod-rsv-setting-field .set-modrsv-tab.tab-05 .chkup-date > ul > .chkup-date-list ul li:first-of-type {
+		margin-right: 8px;
+}
+.mod-rsv-setting-field .set-modrsv-tab.tab-05 .chkup-date > ul > .chkup-date-list ul .exam-detail-info {
+		white-space: nowrap;
+}
+@supports ((min-width: -webkit-fit-content) or (min-width: -moz-fit-content) or (min-width: fit-content)) {
+		.mod-rsv-setting-field .set-modrsv-tab.tab-05 .chkup-date > ul > .chkup-date-list ul .exam-detail-info {
+				min-width: -webkit-fit-content;
+				min-width: -moz-fit-content;
+				min-width: fit-content;
+		}
+}
+.mod-rsv-setting-field .set-modrsv-tab.tab-05 .chkup-date > ul > .chkup-date-list:not(:last-of-type) {
+		border-bottom: 1px solid #e9e9e9;
+		margin-bottom: 2px;
+}
+.mod-rsv-setting-field .set-modrsv-tab.tab-05 .c-badge02 {
+		padding-left: 4px;
+		padding-right: 4px;
+}
 .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list {
 		display: inline-block;
 		width: 100%;
@@ -14486,6 +14584,16 @@ type-horizontal 최상위 요소 부여
 #container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .left-wrap .mod-reservation .tab-05 .c-article.input-list input[type=text] {
 		min-width: 115px;
 }
+#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .left-wrap .mod-reservation .tab-05 .chkup-date > ul {
+		padding-left: 5px;
+		padding-right: 5px;
+}
+#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .left-wrap .mod-reservation .tab-05 .chkup-date > ul > .chkup-date-list:not(:last-of-type) {
+		margin-bottom: 4px;
+}
+#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .left-wrap .mod-reservation .tab-05 .c-panel:first-of-type .col-3 {
+		margin-right: 10px;
+}
 #container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .left-wrap .mod-reservation .tab-06 .c-article {
 		padding-top: 6px;
 		padding-bottom: 8px;
@@ -14737,6 +14845,7 @@ type-horizontal 최상위 요소 부여
 .c-rshopt-field .row input[type=text] {
 		padding: 0 8px;
 		border-radius: 6px;
+		line-height: 1;
 }
 .c-rshopt-field .row > .col {
 		margin-top: 2px;

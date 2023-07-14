@@ -1146,6 +1146,16 @@ textarea {
   padding: 2px 0;
 }
 
+.c-badge02 {
+  background-color: $color-blue-5;
+  padding: 2px 12px;
+  border-radius: $radius-6;
+  word-break: keep-all;
+  > span {
+    color: $color-navy-1;
+  }
+}
+
 // 1= input List Detail
 .input-list {
   &.detail-list {
