@@ -98,6 +98,8 @@
   background-color: $modal-backdrop-bg;
   & + .modal-backdrop {
     opacity: 0;
+    // # 230714 추가
+    z-index: 1052;
   }
   // Fade for backdrop
   &.fade {
@@ -299,6 +301,10 @@
     .modal-body {
       padding-top: 32px;
     }
+    // # 230714 추가
+    // &.modal {
+    //   z-index: 1053;
+    // }
   }
   // = type02
   &.type02 {
@@ -334,7 +340,7 @@
 
     &.modal {
       padding-right: 20px !important;
-      //overflow-x: auto;
+      overflow-y: auto;
     }
 
     .modal-dialog {

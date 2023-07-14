@@ -11260,6 +11260,7 @@ table.dataTable.no-footer {
 }
 .modal-backdrop + .modal-backdrop {
 		opacity: 0;
+		z-index: 1052;
 }
 .modal-backdrop.fade {
 		opacity: 0;
@@ -11518,6 +11519,7 @@ table.dataTable.no-footer {
 }
 .c-layer-popup.type05.modal {
 		padding-right: 20px !important;
+		overflow-y: auto;
 }
 .c-layer-popup.type05 .modal-dialog {
 		min-height: 100%;
