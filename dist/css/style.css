@@ -12343,7 +12343,8 @@ input[type=text].search-input:focus {
 .c-input-pw-row + .c-input-pw-row > [class*=col] {
 		margin-top: -10px;
 }
-.c-input-pw-row .pw-rechk {
+
+.pw-rechk {
 		display: -webkit-box;
 		display: -webkit-flex;
 		display: -ms-flexbox;
@@ -12357,12 +12358,13 @@ input[type=text].search-input:focus {
 		    -ms-flex-preferred-size: 100%;
 		        flex-basis: 100%;
 }
-.c-input-pw-row .c-input-info-txt {
+
+.c-input-info-txt {
 		margin-top: 4px;
 		color: #2f7ad3;
 		line-height: 1;
 }
-.c-input-pw-row .c-input-info-txt.is-error {
+.c-input-info-txt.is-error {
 		color: #ba1d3c;
 }
 

@@ -171,18 +171,18 @@ input[type='text'] {
       margin-top: -10px;
     }
   }
-  .pw-rechk {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-  }
-  .c-input-info-txt {
-    margin-top: 4px;
-    color: $color-blue-1;
-    line-height: 1;
-    &.is-error {
-      color: $color-red-1;
-    }
+}
+.pw-rechk {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+.c-input-info-txt {
+  margin-top: 4px;
+  color: $color-blue-1;
+  line-height: 1;
+  &.is-error {
+    color: $color-red-1;
   }
 }
 
