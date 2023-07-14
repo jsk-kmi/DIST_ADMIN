@@ -312,6 +312,7 @@ type-horizontal 최상위 요소 부여
     .c-panel:first-of-type {
       .row {
         margin: 0;
+        min-height: 38px;
       }
       .col-3 {
         display: flex;
@@ -813,6 +814,9 @@ type-horizontal 최상위 요소 부여
                 }
 
                 .c-panel:first-of-type {
+                  .row {
+                    min-height: 28px;
+                  }
                   .col-3 {
                     margin-right: 10px;
                   }
