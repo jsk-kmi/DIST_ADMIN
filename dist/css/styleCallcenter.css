@@ -14353,6 +14353,37 @@ type-horizontal 최상위 요소 부여
 .mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list .c-input-address-group > .row + .row > .col {
 		width: 100%;
 }
+.mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list .terms-field .c-rdochk label.chk-label {
+		min-width: 30px;
+}
+.mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list .terms-field .terms-list {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		    -ms-flex-wrap: wrap;
+		        flex-wrap: wrap;
+}
+.mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list .terms-field .terms-list .terms-cont {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		padding: 6px 0;
+		margin-right: 10px;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+}
+.mod-rsv-setting-field .set-modrsv-tab.tab-06 .c-article.input-list .terms-field .terms-list .terms-cont .label-txt {
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		min-width: 135px;
+}
 .mod-rsv-setting-field .set-modrsv-tab.tab-07 .c-rdochk {
 		margin-right: 25px;
 }
@@ -14479,6 +14510,10 @@ type-horizontal 최상위 요소 부여
 		padding-left: 6px;
 		padding-right: 6px;
 }
+#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .c-table table th,
+#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .c-table table td {
+		padding: 4px 8px;
+}
 #container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .input-list [class*=col] {
 		padding-top: 6px;
 		padding-bottom: 6px;
@@ -14506,10 +14541,6 @@ type-horizontal 최상위 요소 부여
 }
 #container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout.c-panel {
 		margin-top: 0;
-}
-#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .c-table table th,
-#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .c-table table td {
-		padding: 4px 8px;
 }
 #container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .c-tab-field .c-tab-list > li ~ li {
 		padding-left: 10px;
@@ -14545,12 +14576,6 @@ type-horizontal 최상위 요소 부여
 }
 #container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .left-wrap .c-panel .row label {
 		margin-right: 4px;
-}
-#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .left-wrap table.dataTable tbody th,
-#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .left-wrap table.dataTable tbody td,
-#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .left-wrap table.dataTable thead th,
-#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .left-wrap table.dataTable thead td {
-		padding: 4px 8px;
 }
 #container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .left-wrap .c-input-phone-group .input-phone-01 .c-select select {
 		width: 60px;
@@ -14632,6 +14657,13 @@ type-horizontal 최상위 요소 부여
 #container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .left-wrap .mod-reservation .tab-06 .c-txtarea-field {
 		margin: 4px 0;
 }
+#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .left-wrap .mod-reservation .tab-06 .terms-field .terms-list .terms-cont {
+		padding: 2px 0;
+		margin-right: 8px;
+}
+#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .left-wrap .mod-reservation .tab-06 .terms-field .terms-list .terms-cont .label-txt {
+		min-width: 140px;
+}
 #container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .left-wrap .mod-reservation .tab-07 .c-inner-field .c-article {
 		margin-top: 10px;
 		padding-top: 6px;
@@ -14681,8 +14713,40 @@ type-horizontal 최상위 요소 부여
 #container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .c-table-field + .buttons {
 		margin-top: 10px;
 }
-#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .right-wrap .memo-lists .memo-list .memo-cont-btn {
+#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .memo-lists .memo-list .memo-cont-btn {
 		background-size: 8px;
+}
+#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .memo-lists button.c-btn {
+		padding: 4px 12px;
+		border-radius: 6px;
+		min-width: auto;
+}
+#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .target-memo-cont .c-article {
+		padding: 4px;
+		padding-bottom: 6px;
+}
+#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .target-memo-cont .c-article.input-list .row > [class^=col] {
+		padding-top: 2px;
+		padding-bottom: 2px;
+}
+#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .target-memo-cont .c-article .col {
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+}
+#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .target-memo-cont .c-article .name {
+		width: 85px;
+		text-align: center;
+}
+#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .target-memo-cont .c-article .date {
+		width: 105px;
+}
+#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .target-memo-cont .buttons .c-btn {
+		min-width: auto;
+}
+#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .popup-memo-list .modal-footer .buttons .c-btn {
+		padding: 9px 20px;
 }
 #container .content-wrapper.type-horizontal.type-callcenter .left-wrap {
 		overflow: hidden;
@@ -14704,7 +14768,10 @@ type-horizontal 최상위 요소 부여
 #container .content-wrapper.type-horizontal.type-callcenter .left-wrap .mod-rsv-setting-field .mod-reservation .c-tab-contents .tab-cont.on {
 		display: block;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists .memo-list {
+#container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists-mod td.rsv-mod-cont {
+		text-align: left;
+}
+#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .memo-list {
 		display: table;
 		table-layout: fixed;
 		-webkit-box-align: center;
@@ -14713,22 +14780,22 @@ type-horizontal 최상위 요소 부여
 		        align-items: center;
 		width: 100%;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists .memo-list .memo-contarea,
-#container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists .memo-list .memo-btnarea {
+#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .memo-list .memo-contarea,
+#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .memo-list .memo-btnarea {
 		display: table-cell;
 		vertical-align: middle;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists .memo-list .memo-btnarea {
+#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .memo-list .memo-btnarea {
 		width: 30px;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists .memo-list .memo-contarea {
+#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .memo-list .memo-contarea {
 		max-height: 100px;
 		overflow: hidden;
 		-webkit-transition: max-height 0.5s ease-in;
 		transition: max-height 0.5s ease-in;
 		display: inline-block;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists .memo-list .memo-cont {
+#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .memo-list .memo-cont {
 		display: block;
 		white-space: normal;
 		width: 100%;
@@ -14741,43 +14808,38 @@ type-horizontal 최상위 요소 부여
 		-webkit-animation: close 1s linear 0s forwards;
 		        animation: close 1s linear 0s forwards;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists .memo-list .memo-cont-btn {
+#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .memo-list .memo-cont-btn {
 		background: url(../images/ico/ico_arrow_10.svg) center/8px auto no-repeat;
 		width: 30px;
 		height: 30px;
 		padding: 6px 5px;
-		-webkit-transition: -webkit-transform 0.5s ease;
-		transition: -webkit-transform 0.5s ease;
-		transition: transform 0.5s ease;
-		transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+		-webkit-transition: -webkit-transform 0.3s ease;
+		transition: -webkit-transform 0.3s ease;
+		transition: transform 0.3s ease;
+		transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 		-webkit-transform: rotate(0deg);
 		    -ms-transform: rotate(0deg);
 		        transform: rotate(0deg);
 }
-#container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists .memo-list.active {
+#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .memo-list.active {
 		-webkit-transition: all 0.5s linear;
 		transition: all 0.5s linear;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists .memo-list.active .memo-contarea {
+#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .memo-list.active .memo-contarea {
 		max-height: 100rem;
-		-webkit-transition: max-height 1s linear;
-		transition: max-height 1s linear;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists .memo-list.active .memo-cont {
+#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .memo-list.active .memo-cont {
 		-webkit-animation: open 0.5s linear forwards;
 		        animation: open 0.5s linear forwards;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists .memo-list.active .memo-cont-btn {
-		background-image: url(../images/ico/ico_arrow_11.svg);
-		-webkit-transform: rotate(-360deg);
-		    -ms-transform: rotate(-360deg);
-		        transform: rotate(-360deg);
+#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .memo-list.active .memo-cont-btn {
+		background-image: url(../images/ico/ico_arrow_10.svg);
+		-webkit-transform: rotate(180deg);
+		    -ms-transform: rotate(180deg);
+		        transform: rotate(180deg);
 }
-#container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists .name {
+#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .name {
 		width: 90px;
-}
-#container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists-mod td.rsv-mod-cont {
-		text-align: left;
 }
 #container .content-wrapper.type-horizontal.type-callcenter .target-memo-cont {
 		margin-top: 15px;
