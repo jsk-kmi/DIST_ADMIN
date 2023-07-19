@@ -96,10 +96,14 @@
 
                                 <div class="c-panel">
                                     <div class="c-table-field type02">
-                                        <div class="c-table striped tbl-fixed">
+                                        <!-- [ mod(230719) ]
+												- 클래스 삭제 : tbl-fixed
+												 -->
+                                        <div class="c-table striped">
                                             <table class="table" id="delayExaminationList01" style="width: 100%">
+                                                <!-- [ mod(230719) ] -->
                                                 <caption>
-                                                    연기검사 조회 목록: 연기, 선택, 검진센터, 검사코드, 항목명, 검진일자, 연기일자
+                                                    연기검사 조회 목록: 연기, 선택, 검진센터, 검사코드, 항목명, 검진일자, 연기일자(검진시간, 예약신청일, 예약시간 선택)
                                                 </caption>
                                                 <colgroup>
                                                     <col style="width: 45px; max-width: 45px" />
@@ -108,7 +112,7 @@
                                                     <col style="width: 140px; max-width: 140px" />
                                                     <col />
                                                     <col class="max-date" />
-                                                    <col class="max-date02" />
+                                                    <col style="width: 370px; max-width: 370px; min-width: 370px" />
                                                 </colgroup>
                                                 <thead>
                                                     <tr>
@@ -118,7 +122,7 @@
                                                         <th scope="col" style="width: 140px; max-width: 140px">검사코드</th>
                                                         <th scope="col">항목명</th>
                                                         <th scope="col" class="max-date">검진일자</th>
-                                                        <th scope="col" class="max-date02">연기일자</th>
+                                                        <th scope="col" style="width: 370px; max-width: 370px; min-width: 370px">연기일자</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -137,15 +141,50 @@
                                                         </th>
                                                         <td>KMI 광화문</td>
                                                         <td>T0001</td>
-                                                        <td>뇌 CT</td>
+                                                        <td>뇌 CT뇌 CT뇌 CT뇌 CT뇌 CT뇌 CT</td>
                                                         <td>2023-07-12</td>
                                                         <td>
-                                                            <div class="col label-input">
-                                                                <div class="c-input-date">
-                                                                    <input type="text" class="c-input btn-date-picker" id="examinationDate01" placeholder="YYYY-MM-DD" autocomplete="off" />
-                                                                    <span><i class="date-btn"></i></span>
+                                                            <!-- [ mod(230719) ]
+																	+ 연기일자 : 검진시간, 예약신청일, 예약시간 선택 추가
+																-->
+                                                            <div class="row exam-date">
+                                                                <div class="col">
+                                                                    <div class="c-m-input-list">
+                                                                        <div class="input-col">
+                                                                            <div class="inner">
+                                                                                <div class="c-rdochk">
+                                                                                    <input type="radio" id="examTimeChk_01" name="examTimeChk01" />
+                                                                                    <label for="examTimeChk_01" class="chk-label"><i></i><span>오전</span></label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="input-col">
+                                                                            <div class="inner">
+                                                                                <div class="c-rdochk">
+                                                                                    <input type="radio" id="examTimeChk_02" name="examTimeChk01" />
+                                                                                    <label for="examTimeChk_02" class="chk-label"><i></i><span>오후</span></label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col">
+                                                                    <div class="c-input-date">
+                                                                        <input type="text" class="c-input btn-date-picker" id="examinationDate01" placeholder="YYYY-MM-DD" autocomplete="off" />
+                                                                        <span><i class="date-btn"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="c-select" id="examChkupDate01">
+                                                                        <select title="항목 선택">
+                                                                            <option value="" selected="">AM</option>
+                                                                            <option value="">13:00</option>
+                                                                        </select>
+                                                                    </div>
                                                                 </div>
                                                             </div>
+                                                            <!-- [ // mod(230719) ] -->
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -166,10 +205,41 @@
                                                         <td>심장초음파</td>
                                                         <td>2023-07-12</td>
                                                         <td>
-                                                            <div class="col label-input">
-                                                                <div class="c-input-date">
-                                                                    <input type="text" class="c-input btn-date-picker" id="examinationDate02" placeholder="YYYY-MM-DD" autocomplete="off" />
-                                                                    <span><i class="date-btn"></i></span>
+                                                            <div class="row exam-date">
+                                                                <div class="col">
+                                                                    <div class="c-m-input-list">
+                                                                        <div class="input-col">
+                                                                            <div class="inner">
+                                                                                <div class="c-rdochk">
+                                                                                    <input type="radio" id="examTimeChk_03" name="examTimeChk02" />
+                                                                                    <label for="examTimeChk_03" class="chk-label"><i></i><span>오전</span></label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="input-col">
+                                                                            <div class="inner">
+                                                                                <div class="c-rdochk">
+                                                                                    <input type="radio" id="examTimeChk_04" name="examTimeChk02" />
+                                                                                    <label for="examTimeChk_04" class="chk-label"><i></i><span>오후</span></label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col">
+                                                                    <div class="c-input-date">
+                                                                        <input type="text" class="c-input btn-date-picker" id="examinationDate02" placeholder="YYYY-MM-DD" autocomplete="off" />
+                                                                        <span><i class="date-btn"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="c-select" id="examChkupDate02">
+                                                                        <select title="항목 선택">
+                                                                            <option value="" selected="">AM</option>
+                                                                            <option value="">13:00</option>
+                                                                        </select>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </td>
@@ -192,10 +262,41 @@
                                                         <td>위내시경(수면)</td>
                                                         <td>2023-07-12</td>
                                                         <td>
-                                                            <div class="col label-input">
-                                                                <div class="c-input-date">
-                                                                    <input type="text" class="c-input btn-date-picker" id="examinationDate03" placeholder="YYYY-MM-DD" autocomplete="off" />
-                                                                    <span><i class="date-btn"></i></span>
+                                                            <div class="row exam-date">
+                                                                <div class="col">
+                                                                    <div class="c-m-input-list">
+                                                                        <div class="input-col">
+                                                                            <div class="inner">
+                                                                                <div class="c-rdochk">
+                                                                                    <input type="radio" id="examTimeChk_05" name="examTimeChk03" />
+                                                                                    <label for="examTimeChk_05" class="chk-label"><i></i><span>오전</span></label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="input-col">
+                                                                            <div class="inner">
+                                                                                <div class="c-rdochk">
+                                                                                    <input type="radio" id="examTimeChk_06" name="examTimeChk03" />
+                                                                                    <label for="examTimeChk_06" class="chk-label"><i></i><span>오후</span></label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col">
+                                                                    <div class="c-input-date">
+                                                                        <input type="text" class="c-input btn-date-picker" id="examinationDate03" placeholder="YYYY-MM-DD" autocomplete="off" />
+                                                                        <span><i class="date-btn"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="c-select" id="examChkupDate03">
+                                                                        <select title="항목 선택">
+                                                                            <option value="" selected="">AM</option>
+                                                                            <option value="">13:00</option>
+                                                                        </select>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </td>
@@ -218,10 +319,41 @@
                                                         <td>허리MRI</td>
                                                         <td>2023-07-12</td>
                                                         <td>
-                                                            <div class="col label-input">
-                                                                <div class="c-input-date">
-                                                                    <input type="text" class="c-input btn-date-picker" id="examinationDate04" placeholder="YYYY-MM-DD" autocomplete="off" disabled />
-                                                                    <span><i class="date-btn"></i></span>
+                                                            <div class="row exam-date">
+                                                                <div class="col">
+                                                                    <div class="c-m-input-list">
+                                                                        <div class="input-col">
+                                                                            <div class="inner">
+                                                                                <div class="c-rdochk">
+                                                                                    <input type="radio" id="examTimeChk_07" name="examTimeChk04" />
+                                                                                    <label for="examTimeChk_07" class="chk-label"><i></i><span>오전</span></label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="input-col">
+                                                                            <div class="inner">
+                                                                                <div class="c-rdochk">
+                                                                                    <input type="radio" id="examTimeChk_08" name="examTimeChk04" />
+                                                                                    <label for="examTimeChk_08" class="chk-label"><i></i><span>오후</span></label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col">
+                                                                    <div class="c-input-date">
+                                                                        <input type="text" class="c-input btn-date-picker" id="examinationDate04" placeholder="YYYY-MM-DD" autocomplete="off" />
+                                                                        <span><i class="date-btn"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="c-select" id="examChkupDate04">
+                                                                        <select title="항목 선택">
+                                                                            <option value="" selected="">AM</option>
+                                                                            <option value="">13:00</option>
+                                                                        </select>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </td>
@@ -244,10 +376,41 @@
                                                         <td>유방촬영</td>
                                                         <td>2023-07-12</td>
                                                         <td>
-                                                            <div class="col label-input">
-                                                                <div class="c-input-date">
-                                                                    <input type="text" class="c-input btn-date-picker" id="examinationDate05" placeholder="YYYY-MM-DD" autocomplete="off" disabled />
-                                                                    <span><i class="date-btn"></i></span>
+                                                            <div class="row exam-date">
+                                                                <div class="col">
+                                                                    <div class="c-m-input-list">
+                                                                        <div class="input-col">
+                                                                            <div class="inner">
+                                                                                <div class="c-rdochk">
+                                                                                    <input type="radio" id="examTimeChk_09" name="examTimeChk05" />
+                                                                                    <label for="examTimeChk_09" class="chk-label"><i></i><span>오전</span></label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="input-col">
+                                                                            <div class="inner">
+                                                                                <div class="c-rdochk">
+                                                                                    <input type="radio" id="examTimeChk_10" name="examTimeChk05" />
+                                                                                    <label for="examTimeChk_10" class="chk-label"><i></i><span>오후</span></label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col">
+                                                                    <div class="c-input-date">
+                                                                        <input type="text" class="c-input btn-date-picker" id="examinationDate05" placeholder="YYYY-MM-DD" autocomplete="off" disabled />
+                                                                        <span><i class="date-btn"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="c-select" id="examChkupDate05">
+                                                                        <select title="항목 선택">
+                                                                            <option value="" selected="">AM</option>
+                                                                            <option value="">13:00</option>
+                                                                        </select>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </td>
@@ -270,10 +433,41 @@
                                                         <td>유방촬영</td>
                                                         <td>2023-07-12</td>
                                                         <td>
-                                                            <div class="col label-input">
-                                                                <div class="c-input-date">
-                                                                    <input type="text" class="c-input btn-date-picker" id="examinationDate05" placeholder="YYYY-MM-DD" autocomplete="off" disabled />
-                                                                    <span><i class="date-btn"></i></span>
+                                                            <div class="row exam-date">
+                                                                <div class="col">
+                                                                    <div class="c-m-input-list">
+                                                                        <div class="input-col">
+                                                                            <div class="inner">
+                                                                                <div class="c-rdochk">
+                                                                                    <input type="radio" id="examTimeChk_11" name="examTimeChk06" />
+                                                                                    <label for="examTimeChk_11" class="chk-label"><i></i><span>오전</span></label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="input-col">
+                                                                            <div class="inner">
+                                                                                <div class="c-rdochk">
+                                                                                    <input type="radio" id="examTimeChk_12" name="examTimeChk06" />
+                                                                                    <label for="examTimeChk_12" class="chk-label"><i></i><span>오후</span></label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col">
+                                                                    <div class="c-input-date">
+                                                                        <input type="text" class="c-input btn-date-picker" id="examinationDate06" placeholder="YYYY-MM-DD" autocomplete="off" disabled />
+                                                                        <span><i class="date-btn"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="c-select" id="examChkupDate06">
+                                                                        <select title="항목 선택">
+                                                                            <option value="" selected="">AM</option>
+                                                                            <option value="">13:00</option>
+                                                                        </select>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </td>
@@ -360,7 +554,8 @@
         // 연기 검사 팝업 Data Table 제어
         initDelayExamModal();
         var delayExamDateTableOption = {
-            scrollX: false,
+            // [ mod(230719) ] -옵션 수정
+            scrollX: true,
             scrollY: 270,
             paging: false,
             searching: false,
@@ -372,6 +567,9 @@
         };
 
         $('#delayExaminationList01').DataTable(delayExamDateTableOption);
+
+        // guide 용 소스 스크립트 (DEV 제외)
+        $('.c-btn').trigger('click');
     </script>
 </body>
 

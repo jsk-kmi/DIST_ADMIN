@@ -1359,4 +1359,26 @@ type-horizontal 최상위 요소 부여
   .c-panel ~ .c-panel {
     margin-top: 10px;
   }
+
+  .exam-date {
+    justify-content: center;
+    .col {
+      display: flex;
+      flex: 0 1 auto;
+    }
+    [class^='col'] {
+      padding: {
+        left: 4px;
+        right: 4px;
+      }
+    }
+    &:not(.inner) {
+      margin: 0;
+    }
+    .c-select {
+      select {
+        min-width: 85px;
+      }
+    }
+  }
 }

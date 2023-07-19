@@ -15048,6 +15048,32 @@ type-horizontal 최상위 요소 부여
 .delayexamination-info-popup .c-panel ~ .c-panel {
 		margin-top: 10px;
 }
+.delayexamination-info-popup .exam-date {
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+}
+.delayexamination-info-popup .exam-date .col {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 1 auto;
+		    -ms-flex: 0 1 auto;
+		        flex: 0 1 auto;
+}
+.delayexamination-info-popup .exam-date [class^=col] {
+		padding-left: 4px;
+		padding-right: 4px;
+}
+.delayexamination-info-popup .exam-date:not(.inner) {
+		margin: 0;
+}
+.delayexamination-info-popup .exam-date .c-select select {
+		min-width: 85px;
+}
 
 /*
 	Common
