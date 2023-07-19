@@ -11260,7 +11260,6 @@ table.dataTable.no-footer {
 }
 .modal-backdrop + .modal-backdrop {
 		opacity: 0;
-		z-index: 1052;
 }
 .modal-backdrop.fade {
 		opacity: 0;
