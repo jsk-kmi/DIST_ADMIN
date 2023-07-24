@@ -3098,7 +3098,7 @@
 
         var DefaultDateOption = {
             scrollX: true,
-            scrollY: 100,
+            rows: 5,
             paging: false,
             searching: false,
             ordering: false,
@@ -3106,6 +3106,12 @@
             info: false,
             autoWidth: false,
             destroy: true,
+            language: {
+                zeroRecords: '데이터가 없습니다.',
+                loadingRecods: '로딩중...',
+                processing: '처리중',
+                infoEmpty: '데이터가 없습니다.',
+            },
         };
         var DefaultDateOption02 = {
             scrollX: false,
@@ -3117,6 +3123,12 @@
             info: false,
             autoWidth: false,
             destroy: true,
+            language: {
+                zeroRecords: '데이터가 없습니다.',
+                loadingRecods: '로딩중...',
+                processing: '처리중',
+                infoEmpty: '데이터가 없습니다.',
+            },
         };
         $('#dTblChkupList01').DataTable(DefaultDateOption);
 

@@ -173,6 +173,9 @@
           background: url($image-ico-path + 'ico_arrow_16.svg') center/23px auto no-repeat;
           top: calc(50% - 3px);
         }
+        & + .sidebar-sub-menu {
+          max-height: 500px;
+        }
       }
     }
   }
@@ -180,9 +183,11 @@
 
 // + sidebar sub menu
 .sidebar-sub-menu {
-  display: none;
-  overflow: hidden;
   margin-top: 6px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  will-change: transform;
   > li {
     padding: {
       top: 6px;

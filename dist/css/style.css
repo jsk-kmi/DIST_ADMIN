@@ -9569,11 +9569,17 @@ button.c-btn:disabled:hover {
 		background: url("../images/ico/ico_arrow_16.svg") center/23px auto no-repeat;
 		top: calc(50% - 3px);
 }
+.sidebar-menu > li > a.on + .sidebar-sub-menu {
+		max-height: 500px;
+}
 
 .sidebar-sub-menu {
-		display: none;
-		overflow: hidden;
 		margin-top: 6px;
+		max-height: 0;
+		overflow: hidden;
+		-webkit-transition: max-height 0.5s ease-in-out;
+		transition: max-height 0.5s ease-in-out;
+		will-change: transform;
 }
 .sidebar-sub-menu > li {
 		padding-top: 6px;

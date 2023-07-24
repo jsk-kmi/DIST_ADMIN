@@ -3281,10 +3281,9 @@
     <script>
         toggleAccordion();
         toggleMemoAccordion();
-
         var DefaultDateOption = {
             scrollX: true,
-            scrollY: 200,
+            rows: 5,
             paging: false,
             searching: false,
             ordering: false,
@@ -3292,6 +3291,12 @@
             info: false,
             autoWidth: false,
             destroy: true,
+            language: {
+                zeroRecords: '데이터가 없습니다.',
+                loadingRecods: '로딩중...',
+                processing: '처리중',
+                infoEmpty: '데이터가 없습니다.',
+            },
         };
         var DefaultDateOption02 = {
             scrollX: false,
@@ -3303,7 +3308,15 @@
             info: false,
             autoWidth: false,
             destroy: true,
+            language: {
+                zeroRecords: '데이터가 없습니다.',
+                loadingRecods: '로딩중...',
+                processing: '처리중',
+                infoEmpty: '데이터가 없습니다.',
+            },
         };
+
+
         $('#dTblChkupList01').DataTable(DefaultDateOption);
 
         var modRsvDataTables = $('.datatables-mod-rsv').DataTable(DefaultDateOption02);
@@ -3331,6 +3344,7 @@
                 resizeTargetExamDataTable();
             });
         });
+
         // + UI 화면 확인 전용 스크립트 (상용 소스 내 미적용)
         // 개발 페이지의 경우 조회 버튼 클릭 시 Load
         setTimeout(function() {

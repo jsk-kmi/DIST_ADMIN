@@ -3,6 +3,11 @@
 /*
 	= Common
 */
+
+var isContainElement = function isContainElement(element) {
+  return element === document.body ? false : document.body.contains(element);
+};
+
 // + openUserControl
 var openUserControl = function openUserControl() {
   $('.btn-open-usercontrol').on('click', function () {
@@ -33,35 +38,33 @@ var menuToggle = function menuToggle() {
 };
 
 // + sideMenuToggle
-var sideMenuToggle = function sideMenuToggle() {
-  $('.sidebar-menu > li ').on('click', ' > a', function (e) {
-    e.preventDefault();
-    var seletedMenu = $(e.currentTarget),
-      sideMenuList = $('.sidebar-menu > li > a'),
-      sidebarSubMenuList = $('.sidebar-menu ul');
 
-    // if (seletedMenu.next('.sidebar-sub-menu').length == 0) {
-    //   sideMenuList.removeClass('on');
-    //   seletedMenu.toggleClass('on');
-    //   return 0;
-    // }
-    if (seletedMenu.hasClass('on') && seletedMenu.next().is(':visible')) {
-      sideMenuList.removeClass('on');
-      seletedMenu.next().slideUp();
-    } else {
-      sideMenuList.removeClass('on');
-      seletedMenu.addClass('on');
-      if (seletedMenu.next().is(':visible') == 0) {
-        sidebarSubMenuList.stop().slideUp(300);
-      }
-      seletedMenu.next().stop().slideToggle(300);
-    }
+var sideNavigation = document.querySelector('#sideNav');
+var sideMenuToggle = function sideMenuToggle() {
+  var sideMenuLink = document.querySelectorAll('.sidebar-menu > li > a');
+  var sideMenuLinkArr = [],
+    menuLength = sideMenuLink.length;
+  for (var i = 0; i < menuLength; i++) {
+    sideMenuLinkArr.push(sideMenuLink[i]);
+  }
+  Array.prototype.forEach.call(sideMenuLink, function (selectedLink) {
+    selectedLink.addEventListener('click', function () {
+      var extraSideMenuList = sideMenuLinkArr.filter(function (restLinks) {
+        return restLinks !== selectedLink;
+      });
+      Array.prototype.forEach.call(extraSideMenuList, function (link) {
+        link.classList.remove('on');
+      });
+      selectedLink.classList.toggle('on');
+    });
   });
 };
+isContainElement(sideNavigation) ? sideMenuToggle() : false;
 
 /*
 			= Form control
 	*/
+
 // + input file
 var selectedInputFile = function selectedInputFile() {
   $('.c-input-file').on('change', function (e) {
@@ -213,20 +216,43 @@ var toggleAccordion = function toggleAccordion() {
     }
   });
 };
+if (!Element.prototype.closest) {
+  if (!Element.prototype.matches) {
+    Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
+  }
+  Element.prototype.closest = function (s) {
+    var el = this;
+    var ancestor = this;
+    if (!document.documentElement.contains(el)) return null;
+    do {
+      if (ancestor.matches(s)) return ancestor;
+      ancestor = ancestor.parentElement;
+    } while (ancestor !== null);
+    return null;
+  };
+}
 
 // + 메모리스트 아코디언
 var toggleMemoAccordion = function toggleMemoAccordion() {
-  $('.memo-cont-btn').on('click', function (e) {
-    var target = $(e.currentTarget),
-      accordionList = target.closest('.memo-list');
-    if (accordionList.hasClass('active')) {
-      accordionList.removeClass('active').find('.memo-cont-btn .skip').text('메모이력 펼치기');
-    } else {
-      accordionList.addClass('active').find('.memo-cont-btn .skip').text('메모이력 접기');
-    }
+  var memoContBtn = document.querySelectorAll('.memo-cont-btn');
+  var memoContList = document.querySelectorAll('.memo-list');
+  var memoSkipTxt = document.querySelectorAll('.memo-cont-btn .skip');
+  Array.prototype.forEach.call(memoContBtn, function (btn, index) {
+    btn.addEventListener('click', function (e) {
+      var target = e.currentTarget,
+        memoList = target.closest('.memo-list');
+      memoList.classList.toggle('active');
+      Array.prototype.forEach.call(memoContList, function (memoList, index2) {
+        if (index !== index2) {
+          memoList.classList.remove('active');
+        }
+      });
+      Array.prototype.forEach.call(memoSkipTxt, function (txt, index) {
+        memoContList[index].classList.contains('active') ? txt.innerText = '메모이력접기' : txt.innerText = '메모이력보기';
+      });
+    });
   });
 };
-
 // =  toggleAccordion
 
 // + side Notify Toggle
@@ -340,21 +366,6 @@ Array.prototype.forEach.call(modalBtn, function (btn) {
     modalDataValue.setAttribute('aria-hidden', false);
   });
 });
-if (!Element.prototype.closest) {
-  if (!Element.prototype.matches) {
-    Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
-  }
-  Element.prototype.closest = function (s) {
-    var el = this;
-    var ancestor = this;
-    if (!document.documentElement.contains(el)) return null;
-    do {
-      if (ancestor.matches(s)) return ancestor;
-      ancestor = ancestor.parentElement;
-    } while (ancestor !== null);
-    return null;
-  };
-}
 
 // modal close
 Array.prototype.forEach.call(modalCloseBtn, function (item) {
@@ -374,7 +385,13 @@ var DefaultDateOptionBasic = {
   ordering: false,
   reponsive: true,
   info: false,
-  autoWitdh: false
+  autoWitdh: false,
+  language: {
+    zeroRecords: '데이터가 없습니다.',
+    loadingRecods: '로딩중...',
+    processing: '처리중',
+    infoEmpty: '데이터가 없습니다.'
+  }
 };
 
 // + 연기 검사 팝업
@@ -395,7 +412,6 @@ var initDelayExamModal = function initDelayExamModal() {
 // = function list
 openUserControl();
 menuToggle();
-sideMenuToggle();
 tabContentsView();
 memoDetailToggle();
 tableCheckBg();
