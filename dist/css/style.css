@@ -19527,6 +19527,7 @@ table.tbl-chkup-category .btn-open-chkup-infotxt {
 }
 .login-field.membership-join .login-input + .c-chkbox {
 		margin-top: 10px;
+		display: inline-block;
 }
 .login-field.membership-join h1 {
 		font-size: 20px;
