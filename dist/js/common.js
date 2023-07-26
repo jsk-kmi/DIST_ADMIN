@@ -55,7 +55,9 @@ var sideMenuToggle = function sideMenuToggle() {
       Array.prototype.forEach.call(extraSideMenuList, function (link) {
         link.classList.remove('on');
       });
-      selectedLink.classList.toggle('on');
+      setTimeout(function () {
+        selectedLink.classList.toggle('on');
+      }, 200);
     });
   });
 };

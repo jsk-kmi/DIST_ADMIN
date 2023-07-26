@@ -9571,14 +9571,18 @@ button.c-btn:disabled:hover {
 }
 .sidebar-menu > li > a.on + .sidebar-sub-menu {
 		max-height: 500px;
+		opacity: 1;
+		-webkit-transition: max-height 0.5s ease-in-out;
+		transition: max-height 0.5s ease-in-out;
 }
 
 .sidebar-sub-menu {
 		margin-top: 6px;
 		max-height: 0;
 		overflow: hidden;
-		-webkit-transition: max-height 0.5s ease-in-out;
-		transition: max-height 0.5s ease-in-out;
+		opacity: 0;
+		-webkit-transition: max-height 0 ease-in-out;
+		transition: max-height 0 ease-in-out;
 		will-change: transform;
 }
 .sidebar-sub-menu > li {

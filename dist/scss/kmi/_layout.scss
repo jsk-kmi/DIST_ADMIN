@@ -175,6 +175,8 @@
         }
         & + .sidebar-sub-menu {
           max-height: 500px;
+          opacity: 1;
+          transition: max-height 0.5s ease-in-out;
         }
       }
     }
@@ -186,7 +188,8 @@
   margin-top: 6px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
+  opacity: 0;
+  transition: max-height 0 ease-in-out;
   will-change: transform;
   > li {
     padding: {
