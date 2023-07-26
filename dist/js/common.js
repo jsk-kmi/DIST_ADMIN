@@ -9,16 +9,20 @@ var isContainElement = function isContainElement(element) {
 };
 
 // + openUserControl
+
+var eleOpenUserControl = document.querySelector('.btn-open-usercontrol');
 var openUserControl = function openUserControl() {
   $('.btn-open-usercontrol').on('click', function () {
     $('.user-control').toggleClass('on');
   });
 };
+isContainElement(eleOpenUserControl) ? openUserControl() : false;
 
 /*
  = Side Navigation
  */
 // + menu Toggle
+
 var menuToggle = function menuToggle() {
   var sideNav = $('#sideNav');
   var contentsWrap = $('.content-wrapper');
@@ -104,6 +108,7 @@ var tabContentsView = function tabContentsView() {
 };
 
 // + 검진항목 테이블 bg
+var eleTblCheckBg = document.querySelector('.tbl-chkup-category');
 var tableCheckBg = function tableCheckBg() {
   $('.tbl-chkup-category').children('tbody').find('td:first-child input').on('change', function () {
     // $(this).closest('tr').toggleClass('highlight', this.checked);
@@ -127,6 +132,7 @@ var tableCheckBg = function tableCheckBg() {
     }
   });
 };
+isContainElement(eleTblCheckBg) ? tableCheckBg() : false;
 
 // + 검진항목 전체 선택 시 Background 제어
 var tableAllCheckBg = function tableAllCheckBg() {
@@ -198,6 +204,7 @@ function memoCardDetail() {
 }
 
 // =  toggleAccordion
+var eleToggleAccordion = document.querySelector('.co-accrodion-list');
 var toggleAccordion = function toggleAccordion() {
   $('.co-accrodion-list').on('click', 'a.btn-accrodion', function (e) {
     e.preventDefault();
@@ -218,6 +225,7 @@ var toggleAccordion = function toggleAccordion() {
     }
   });
 };
+isContainElement(eleToggleAccordion) ? toggleAccordion() : false;
 if (!Element.prototype.closest) {
   if (!Element.prototype.matches) {
     Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
@@ -258,18 +266,21 @@ var toggleMemoAccordion = function toggleMemoAccordion() {
 // =  toggleAccordion
 
 // + side Notify Toggle
+var eleNoticeSideBar = document.querySelector('#noticeSideNav');
 var closeNoticeSideBar = function closeNoticeSideBar() {
   var noticeSideNav = $('#noticeSideNav');
   $('.btn-close-notice-sidebar').on('click', function () {
     noticeSideNav.removeClass('open');
   });
 };
+isContainElement(eleNoticeSideBar) ? closeNoticeSideBar() : false;
 var openNoticeSideBar = function openNoticeSideBar() {
   var noticeSideNav = $('#noticeSideNav');
   $('.btn-open-notice-sidebar').on('click', function () {
     noticeSideNav.addClass('open');
   });
 };
+isContainElement(eleNoticeSideBar) ? openNoticeSideBar() : false;
 var modRsvScrollbarCustom = function modRsvScrollbarCustom() {
   var temsScrollCnt = $('.rsvdtl-popup-type01 .modrsv-scroll').length;
   if (temsScrollCnt > 0) {
@@ -412,13 +423,9 @@ var initDelayExamModal = function initDelayExamModal() {
 };
 
 // = function list
-openUserControl();
 menuToggle();
 tabContentsView();
 memoDetailToggle();
-tableCheckBg();
-openNoticeSideBar();
-closeNoticeSideBar();
 // basicScrollbarCustom();
 modRsvScrollbarCustom();
 tableVhScroll();
