@@ -231,7 +231,6 @@ var toggleAccordion = function toggleAccordion() {
     }
   });
 };
-isContainElement(eleToggleAccordion) ? toggleAccordion() : false;
 if (!Element.prototype.closest) {
   if (!Element.prototype.matches) {
     Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
@@ -432,6 +431,8 @@ var initDelayExamModal = function initDelayExamModal() {
 isContainElement(delayExamModal) ? initDelayExamModal() : false;
 
 // = function list
+
+toggleAccordion();
 // basicScrollbarCustom();
 modRsvScrollbarCustom();
 //# sourceMappingURL=maps/common.js.map
