@@ -431,8 +431,6 @@ var initDelayExamModal = function initDelayExamModal() {
 isContainElement(delayExamModal) ? initDelayExamModal() : false;
 
 // = function list
-
-toggleAccordion();
 // basicScrollbarCustom();
 modRsvScrollbarCustom();
 //# sourceMappingURL=maps/common.js.map
