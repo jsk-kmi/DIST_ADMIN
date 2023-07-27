@@ -23,8 +23,8 @@ isContainElement(eleOpenUserControl) ? openUserControl() : false;
  */
 // + menu Toggle
 
+var sideNav = document.querySelector('#sideNav');
 var menuToggle = function menuToggle() {
-  var sideNav = $('#sideNav');
   var contentsWrap = $('.content-wrapper');
   var headerWrap = $('.header .wrap');
   var sidebarWidth = 220;
@@ -40,6 +40,7 @@ var menuToggle = function menuToggle() {
     }
   });
 };
+isContainElement(sideNav) ? menuToggle() : false;
 
 // + sideMenuToggle
 
@@ -89,6 +90,7 @@ var selectedListDelFile = function selectedListDelFile() {
 };
 
 // + tabContentsView
+var eleTabContentsView = document.querySelector('.c-tab-list');
 var tabContentsView = function tabContentsView() {
   $('.c-tab-list').on('click', 'li', function (e) {
     var target = $(e.currentTarget),
@@ -106,6 +108,7 @@ var tabContentsView = function tabContentsView() {
     seletedContent.addClass('on');
   });
 };
+isContainElement(eleTabContentsView) ? tabContentsView() : false;
 
 // + 검진항목 테이블 bg
 var eleTblCheckBg = document.querySelector('.tbl-chkup-category');
@@ -169,6 +172,7 @@ var floatingRightBox = function floatingRightBox() {
 };
 
 // 고객사 상세보기 (CT_01_002)
+var eleMemoDetail = document.querySelector('.c-memo-card');
 var memoDetailToggle = function memoDetailToggle() {
   $('.c-memo-card > a').on('click', function (e) {
     e.preventDefault();
@@ -191,6 +195,8 @@ var memoDetailToggle = function memoDetailToggle() {
     }
   });
 };
+isContainElement(eleMemoDetail) ? memoDetailToggle() : false;
+
 // init
 function memoCardDetail() {
   $('.c-memo-card').find('.detail-cont').each(function (e) {
@@ -309,6 +315,7 @@ var noticeEnrollment = function noticeEnrollment() {
 };
 
 // + Table Vh Scroll
+var eleTblVhField = document.querySelector('.c-tbl-vh-field');
 var tableVhScroll = function tableVhScroll() {
   var table = document.querySelector('.c-table-field');
   if (table === null) {
@@ -324,6 +331,7 @@ var tableVhScroll = function tableVhScroll() {
     }
   }
 };
+isContainElement(eleTblVhField) ? tableVhScroll() : false;
 
 // + Form Element Align
 var formElemAlign = function formElemAlign() {
@@ -421,12 +429,9 @@ var initDelayExamModal = function initDelayExamModal() {
     }
   });
 };
+isContainElement(delayExamModal) ? initDelayExamModal() : false;
 
 // = function list
-menuToggle();
-tabContentsView();
-memoDetailToggle();
 // basicScrollbarCustom();
 modRsvScrollbarCustom();
-tableVhScroll();
 //# sourceMappingURL=maps/common.js.map
