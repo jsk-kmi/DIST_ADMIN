@@ -23,8 +23,9 @@ isContainElement(eleOpenUserControl) ? openUserControl() : false;
  */
 // + menu Toggle
 
-var sideNav = document.querySelector('#sideNav');
+var eleSideNav = document.querySelector('#sideNav');
 var menuToggle = function menuToggle() {
+  var sideNav = $('#sideNav');
   var contentsWrap = $('.content-wrapper');
   var headerWrap = $('.header .wrap');
   var sidebarWidth = 220;
@@ -40,7 +41,7 @@ var menuToggle = function menuToggle() {
     }
   });
 };
-isContainElement(sideNav) ? menuToggle() : false;
+isContainElement(eleSideNav) ? menuToggle() : false;
 
 // + sideMenuToggle
 
