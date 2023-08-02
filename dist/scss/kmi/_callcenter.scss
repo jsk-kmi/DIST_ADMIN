@@ -1382,3 +1382,18 @@ type-horizontal 최상위 요소 부여
     }
   }
 }
+
+.modal-tool {
+  width: auto;
+  height: auto;
+  background: none;
+  position: absolute;
+  transition: none;
+  transform: translateY(-50%);
+
+  .c-modal-cont {
+    &.type06 {
+      transition: none;
+    }
+  }
+}

@@ -3,7 +3,6 @@
 /*
 	= Common
 */
-
 var isContainElement = function isContainElement(element) {
   return element === document.body ? false : document.body.contains(element);
 };
@@ -39,6 +38,9 @@ var menuToggle = function menuToggle() {
       contentsWrap.css('padding-left', 0);
       headerWrap.css('padding-left', 0);
     }
+    setTimeout(function () {
+      modalTool();
+    }, 0);
   });
 };
 isContainElement(eleSideNav) ? menuToggle() : false;
@@ -374,28 +376,63 @@ var formElemAlign = function formElemAlign() {
 // });
 
 // + 개인정보수집 약관 modal
-var modalBtn = document.querySelectorAll('.c-modal-btn');
-var modalCont = document.querySelector('.c-modal-cont');
-var modalCloseBtn = document.querySelectorAll('.c-modal-wrap .c-popup-close-btn');
+var modalTerms = function modalTerms() {
+  var modalBtn = document.querySelectorAll('.c-modal-btn');
+  var modalCloseBtn = document.querySelectorAll('.c-modal-wrap .c-popup-close-btn');
+  var modalTool = document.querySelectorAll('.modal-tool');
+  var modalWrap = document.querySelector('.c-modal-wrap');
 
-// modal open
-Array.prototype.forEach.call(modalBtn, function (btn) {
-  btn.addEventListener('click', function (e) {
-    var modalDataSet = e.currentTarget.dataset.modal;
-    var modalDataValue = document.querySelector(modalDataSet);
-    modalDataValue.parentNode.classList.add('open');
-    modalDataValue.setAttribute('aria-hidden', false);
+  // modal open
+  Array.prototype.forEach.call(modalBtn, function (btn) {
+    btn.addEventListener('click', function (e) {
+      var modalDataSet = e.currentTarget.dataset.modal;
+      var modalDataValue = document.querySelector(modalDataSet);
+      modalDataValue.parentNode.classList.add('open');
+      modalDataValue.setAttribute('aria-hidden', false);
+      if (modalTool.length > 0) {
+        var btnTop = btn.getBoundingClientRect().top;
+        var btnRight = btn.getBoundingClientRect().right;
+        var btnLeftX = btnRight + "px";
+        var btnTopY = btnTop + "px";
+        modalWrap.style.top = btnTopY;
+        modalWrap.style.left = btnLeftX;
+      }
+    });
   });
-});
 
-// modal close
-Array.prototype.forEach.call(modalCloseBtn, function (item) {
-  item.addEventListener('click', function (e) {
-    var modalDataSet2 = e.currentTarget.closest('.c-modal-cont');
-    var modalDataSetValue = modalDataSet2.parentNode;
-    modalDataSetValue.classList.remove('open');
-    modalDataSet2.setAttribute('aria-hidden', true);
+  // modal close
+  Array.prototype.forEach.call(modalCloseBtn, function (item) {
+    item.addEventListener('click', function (e) {
+      var modalDataSet2 = e.currentTarget.closest('.c-modal-cont');
+      var modalDataSetValue = modalDataSet2.parentNode;
+      modalDataSetValue.classList.remove('open');
+      modalDataSet2.setAttribute('aria-hidden', true);
+      modalWrap.removeAttribute('style');
+    });
   });
+};
+
+// modal tool open
+var modalToolWrap = document.querySelector('.modal-tool');
+var modalTool = function modalTool() {
+  var modalToolOpen = document.querySelector('.modal-tool.open');
+  if (modalToolOpen) {
+    var modalId = document.querySelector('.modal-tool.open .c-modal-cont').id,
+      dataModal = document.querySelector("[data-modal=\"#".concat(modalId, "\"")),
+      // 버튼
+      dataModalRect = dataModal.getBoundingClientRect(),
+      btnPosY2 = dataModalRect.top,
+      btnPosX3 = dataModalRect.right,
+      modalIdStyle = document.querySelector("#".concat(modalId)).parentNode.style;
+    modalIdStyle.top = "".concat(btnPosY2, "px");
+    modalIdStyle.left = "".concat(btnPosX3, "px");
+  } else {
+    return 0;
+  }
+};
+isContainElement(modalToolWrap) ? modalTool() : false;
+window.addEventListener('resize', function () {
+  modalTool();
 });
 
 // + DataTable Library Control
@@ -417,21 +454,29 @@ var DefaultDateOptionBasic = {
 
 // + 연기 검사 팝업
 var delayExamModal = document.querySelector('.delayexamination-info-popup'),
-  delayPopupStyle = 'display:block; z-index:1049';
+  delayExamModalList = document.querySelectorAll('.delayexamination-info-popup'),
+  btndelayExamModal = document.querySelectorAll('.btn-open-delayexam-popup'),
+  delayPopupStyle = 'display:block; z-index:1049',
+  delayDefatuPopupStyle = 'display:block; z-index:-1';
+delayExamModalList.forEach(function (e) {
+  e.style.cssText = delayDefatuPopupStyle;
+});
 var initDelayExamModal = function initDelayExamModal() {
-  delayExamModal.style.cssText = 'display:block; z-index: -1';
-  document.querySelector('.btn-open-delayexam-popup').addEventListener('click', function () {
-    var showBoolean = delayExamModal.classList.contains('show');
-    if (!showBoolean) {
-      delayExamModal.style.cssText = delayPopupStyle;
-    } else {
-      delayExamModal.style.cssText = '';
-    }
+  btndelayExamModal.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var modallTaget = btn.dataset.target,
+        showBoolean = delayExamModal.classList.contains('show');
+      if (!showBoolean) {
+        document.querySelector("".concat(modallTaget)).style.cssText = delayPopupStyle;
+      } else {
+        document.querySelector("".concat(modallTaget)).style.cssText = '';
+      }
+    });
   });
 };
 isContainElement(delayExamModal) ? initDelayExamModal() : false;
 
 // = function list
-// basicScrollbarCustom();
 modRsvScrollbarCustom();
+modalTerms();
 //# sourceMappingURL=maps/common.js.map
