@@ -15085,6 +15085,22 @@ type-horizontal 최상위 요소 부여
 		min-width: 85px;
 }
 
+.modal-tool {
+		width: auto;
+		height: auto;
+		background: none;
+		position: absolute;
+		-webkit-transition: none;
+		transition: none;
+		-webkit-transform: translateY(-50%);
+		    -ms-transform: translateY(-50%);
+		        transform: translateY(-50%);
+}
+.modal-tool .c-modal-cont.type06 {
+		-webkit-transition: none;
+		transition: none;
+}
+
 /*
 	Common
 */
@@ -17879,6 +17895,7 @@ table.tbl-chkup-category .btn-open-chkup-infotxt {
 		-webkit-justify-content: center;
 		    -ms-flex-pack: center;
 		        justify-content: center;
+		text-align: center;
 }
 .c-loading-wrapper .is-loading .spinner-field {
 		position: absolute;
