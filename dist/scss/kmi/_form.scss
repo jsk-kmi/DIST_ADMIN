@@ -472,7 +472,6 @@ input[type='text'] {
 
       i {
         cursor: pointer;
-        margin-right: 8px;
         content: '';
         display: inline-block;
         width: $input-check-size;
@@ -481,6 +480,9 @@ input[type='text'] {
           position: 0 0;
           size: auto 18px;
           repeat: no-repeat;
+        }
+        & + span:not(.skip) {
+          margin-left: 8px;
         }
       }
     }

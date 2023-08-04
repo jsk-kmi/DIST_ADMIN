@@ -12708,7 +12708,6 @@ input[type=text].search-input:focus {
 .c-rdochk input + .chk-label i,
 .c-rdochk input + label.chk-label i {
 		cursor: pointer;
-		margin-right: 8px;
 		content: "";
 		display: inline-block;
 		width: 18px;
@@ -12716,6 +12715,11 @@ input[type=text].search-input:focus {
 		background-position: 0 0;
 		background-size: auto 18px;
 		background-repeat: no-repeat;
+}
+.c-chkbox input + .chk-label i + span:not(.skip), .c-chkbox input + label.chk-label i + span:not(.skip),
+.c-rdochk input + .chk-label i + span:not(.skip),
+.c-rdochk input + label.chk-label i + span:not(.skip) {
+		margin-left: 8px;
 }
 .c-chkbox .chk-label,
 .c-chkbox label.chk-label,
@@ -13881,6 +13885,10 @@ textarea[readonly=readonly]:focus, textarea.ta-r-only:focus {
 		    -ms-transform: translateY(-50%);
 		        transform: translateY(-50%);
 		bottom: 0;
+}
+.content-wrapper.type-horizontal .o-chkbox .chk-label,
+.c-layer-popup.type-horizontal .o-chkbox .chk-label {
+		margin: 0 auto;
 }
 .content-wrapper.type-horizontal .input-button .c-btn.input-btn > span,
 .c-layer-popup.type-horizontal .input-button .c-btn.input-btn > span {
