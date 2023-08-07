@@ -35,7 +35,6 @@
                                 </div>
                                 <button type="button" class="popup-cls-btn btn-close-delayexam-popup" data-dismiss="modal"><span class="skip">팝업 닫기</span></button>
                             </div>
-
                             <!-- Modal body -->
                             <div class="modal-body">
                                 <!-- 팝업에 따른 title 부여 -->
@@ -93,7 +92,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="c-panel">
                                     <div class="c-table-field type02">
                                         <!-- [ mod(230719) ]
@@ -102,9 +100,7 @@
                                         <div class="c-table striped">
                                             <table class="table" id="delayExaminationList01" style="width: 100%">
                                                 <!-- [ mod(230719) ] -->
-                                                <caption>
-                                                    연기검사 조회 목록: 연기, 선택, 검진센터, 검사코드, 항목명, 검진일자, 연기일자(검진시간, 예약신청일, 예약시간 선택)
-                                                </caption>
+                                                <caption> 연기검사 조회 목록: 연기, 선택, 검진센터, 검사코드, 항목명, 검진일자, 연기일자(검진시간, 예약신청일, 예약시간 선택) </caption>
                                                 <colgroup>
                                                     <col style="width: 45px; max-width: 45px" />
                                                     <col style="width: 45px; max-width: 45px" />
@@ -168,7 +164,6 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-
                                                                 <div class="col">
                                                                     <div class="c-input-date">
                                                                         <input type="text" class="c-input btn-date-picker" id="examinationDate01" placeholder="YYYY-MM-DD" autocomplete="off" />
@@ -226,7 +221,6 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-
                                                                 <div class="col">
                                                                     <div class="c-input-date">
                                                                         <input type="text" class="c-input btn-date-picker" id="examinationDate02" placeholder="YYYY-MM-DD" autocomplete="off" />
@@ -283,7 +277,6 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-
                                                                 <div class="col">
                                                                     <div class="c-input-date">
                                                                         <input type="text" class="c-input btn-date-picker" id="examinationDate03" placeholder="YYYY-MM-DD" autocomplete="off" />
@@ -340,7 +333,6 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-
                                                                 <div class="col">
                                                                     <div class="c-input-date">
                                                                         <input type="text" class="c-input btn-date-picker" id="examinationDate04" placeholder="YYYY-MM-DD" autocomplete="off" />
@@ -397,7 +389,6 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-
                                                                 <div class="col">
                                                                     <div class="c-input-date">
                                                                         <input type="text" class="c-input btn-date-picker" id="examinationDate05" placeholder="YYYY-MM-DD" autocomplete="off" disabled />
@@ -454,7 +445,6 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-
                                                                 <div class="col">
                                                                     <div class="c-input-date">
                                                                         <input type="text" class="c-input btn-date-picker" id="examinationDate06" placeholder="YYYY-MM-DD" autocomplete="off" disabled />
@@ -478,7 +468,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!-- // modal body -->
                             <div class="modal-footer">
                                 <div class="buttons">
@@ -490,18 +479,14 @@
                 </div>
                 <!-- = // Popup Source -->
             </section>
-
             <!-- // Contents -->
         </div>
-
         <!-- // Content-Wrapper -->
     </div>
     <script src="../../lib/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../../js/common.js"></script>
 
-
     <script src="../../js/date.js"></script>
-
     <script>
         window.addEventListener('DOMContentLoaded', function() {
             var delayExamScroll = document.querySelector('.dataTables_scroll');
@@ -552,7 +537,6 @@
         }
 
         // 연기 검사 팝업 Data Table 제어
-        initDelayExamModal();
         var delayExamDateTableOption = {
             // [ mod(230719) ] -옵션 수정
             scrollX: true,
@@ -567,9 +551,6 @@
         };
 
         $('#delayExaminationList01').DataTable(delayExamDateTableOption);
-
-        // guide 용 소스 스크립트 (DEV 제외)
-        $('.c-btn').trigger('click');
     </script>
 </body>
 

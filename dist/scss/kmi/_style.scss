@@ -3075,3 +3075,17 @@ $preferenceChartWidth: 300px;
 .dataTables_scrollHead {
   background-color: $color-navy-1;
 }
+
+.popup-memo-list {
+  z-index: -1;
+  opacity: 0;
+  display: block;
+  &.fade {
+    transition: all 0s;
+  }
+  &.show {
+    opacity: 1;
+    z-index: 1049;
+    display: block;
+  }
+}

@@ -638,15 +638,15 @@ type-horizontal 최상위 요소 부여
             }
           }
         }
-        // + table th,td 공통
-        .c-table {
-          table {
-            th,
-            td {
-              padding: $table-padding;
-            }
-          }
-        }
+        // // + table th,td 공통
+        // .c-table {
+        //   table {
+        //     th,
+        //     td {
+        //       padding: $table-padding;
+        //     }
+        //   }
+        // }
         .input-list {
           [class*='col'] {
             padding: {
@@ -1106,88 +1106,185 @@ type-horizontal 최상위 요소 부여
           }
         }
       }
+    }
+  }
+}
 
-      // + 메모 리스트
-      .memo-lists {
-        .memo-list {
-          display: table;
-          table-layout: fixed;
-          align-items: center;
+.content-wrapper.type-callcenter.type-horizontal,
+.c-layer-popup.type-callcenter.type-horizontal {
+  // + 메모 리스트
+  // .memo-lists {
+  //   .memo-list {
+  //     display: table;
+  //     table-layout: fixed;
+  //     align-items: center;
 
-          .memo-contarea,
-          .memo-btnarea {
-            display: table-cell;
-            vertical-align: middle;
-          }
-          .memo-btnarea {
-            width: 30px;
-          }
-          width: 100%;
-          .memo-contarea {
-            max-height: 100px;
-            overflow: hidden;
-            transition: max-height 0.5s ease-in;
-            //width: calc(100% - 30px);
-            display: inline-block;
-          }
-          .memo-cont {
-            display: block;
-            white-space: normal;
-            width: 100%;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            word-wrap: break-word;
-            line-height: 20px;
-            animation: close 1s linear 0s forwards;
-          }
+  //     .memo-contarea,
+  //     .memo-btnarea {
+  //       display: table-cell;
+  //       vertical-align: middle;
+  //     }
+  //     .memo-btnarea {
+  //       width: 30px;
+  //     }
+  //     width: 100%;
+  //     .memo-contarea {
+  //       max-height: 100px;
+  //       overflow: hidden;
+  //       transition: max-height 0.5s ease-in;
+  //       display: inline-block;
+  //     }
+  //     .memo-cont {
+  //       display: block;
+  //       white-space: normal;
+  //       width: 100%;
+  //       overflow: hidden;
+  //       text-overflow: ellipsis;
+  //       display: -webkit-box;
+  //       -webkit-box-orient: vertical;
+  //       word-wrap: break-word;
+  //       line-height: 20px;
+  //       animation: close 1s linear 0s forwards;
+  //     }
 
-          .memo-cont-btn {
-            background: url(../images/ico/ico_arrow_10.svg) center/8px auto no-repeat;
-            width: 30px;
-            height: 30px;
-            padding: 6px 5px;
-            transition: transform 0.3s ease;
-            transform: rotate(0deg);
-            //transition: all ease-out 0.4s;
-          }
+  //     .memo-cont-btn {
+  //       background: url(../images/ico/ico_arrow_10.svg) center/8px auto no-repeat;
+  //       width: 30px;
+  //       height: 30px;
+  //       padding: 6px 5px;
+  //       transition: transform 0.2s linear;
+  //       transform: rotate(0deg);
+  //     }
 
-          &.active {
-            transition: all 0.5s linear;
-            .memo-contarea {
-              max-height: 100rem;
-              //ransition: max-height 1s linear;
-            }
-            .memo-cont {
-              animation: open 0.5s linear forwards;
-            }
-            .memo-cont-btn {
-              background-image: url(../images/ico/ico_arrow_10.svg);
-              transform: rotate(180deg);
-              //  transform: rotate(-360deg);
-            }
-          }
+  //     &.active {
+  //       transition: all 0.3s ease;
+  //       .memo-contarea {
+  //         max-height: 100rem;
+  //       }
+  //       .memo-cont {
+  //         animation: open 0.5s linear forwards;
+  //       }
+  //       .memo-cont-btn {
+  //         background-image: url(../images/ico/ico_arrow_10.svg);
+  //         transform: rotate(180deg);
+  //       }
+  //     }
+  //   }
+  //   .name {
+  //     width: 90px;
+  //   }
+  // }
+  // .target-memo-cont {
+  //   margin-top: 15px;
+  //   .c-article {
+  //     //+ 메모등록
+  //     &.target-memo {
+  //       .row {
+  //         flex: 1 1 auto;
+  //         .col:nth-of-type(1) {
+  //           text-align: center;
+  //         }
+  //       }
+  //       .target-cont {
+  //         flex: 1 1 0;
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+// + 메모 리스트
+.memo-lists {
+  display: flex;
+  flex-wrap: wrap;
+  .memo-list {
+    display: table;
+    table-layout: fixed;
+    align-items: center;
+
+    .memo-contarea,
+    .memo-btnarea {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .memo-btnarea {
+      width: 30px;
+    }
+    width: 100%;
+    .memo-contarea {
+      max-height: 100px;
+      overflow: hidden;
+      transition: max-height 0.5s ease-in;
+      display: inline-block;
+    }
+    .memo-cont {
+      display: block;
+      white-space: normal;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      // -webkit-box-orient: vertical;
+      word-wrap: break-word;
+      line-height: 20px;
+      animation: close 1s linear 0s forwards;
+    }
+
+    .memo-cont-btn {
+      background: url(../images/ico/ico_arrow_10.svg) center/8px auto no-repeat;
+      width: 30px;
+      height: 30px;
+      padding: 6px 5px;
+      transition: transform 0.2s linear;
+      transform: rotate(0deg);
+    }
+
+    &.active {
+      transition: all 0.3s ease;
+      .memo-contarea {
+        max-height: 100rem;
+      }
+      .memo-cont {
+        animation: open 0.5s linear forwards;
+      }
+      .memo-cont-btn {
+        background-image: url(../images/ico/ico_arrow_10.svg);
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .name {
+    width: 110px;
+  }
+  .date {
+    width: 110px;
+  }
+}
+.target-memo-cont {
+  margin-top: 15px;
+  .c-article {
+    //+ 메모등록
+    &.target-memo {
+      .row {
+        flex: 1 1 auto;
+        align-items: center;
+        flex-wrap: nowrap;
+        .col:nth-of-type(1) {
+          text-align: center;
         }
-        .name {
-          width: 90px;
+        .col {
+          display: flex;
+          flex: 0 1 auto;
+          justify-content: center;
+          &.target-cont {
+            flex: 1 1 0;
+          }
         }
       }
-      .target-memo-cont {
-        margin-top: 15px;
-        .c-article {
-          //+ 메모등록
-          &.target-memo {
-            .row {
-              flex: 1 1 auto;
-              .col:nth-of-type(1) {
-                text-align: center;
-              }
-            }
-            .target-cont {
-              flex: 1 1 0;
-            }
-          }
+      .row:not(.inner) > [class^='col'] {
+        padding: {
+          left: 10px;
+          right: 10px;
         }
       }
     }
@@ -1209,6 +1306,35 @@ type-horizontal 최상위 요소 부여
   }
   to {
     -webkit-line-clamp: 5;
+  }
+}
+
+.type-platformsystem,
+.c-layer-popup.type-platformsystem {
+  // + table th,td 공통
+  .c-table {
+    table {
+      th,
+      td {
+        padding: $table-padding;
+      }
+    }
+  }
+}
+.type-platformsystem {
+  .target-memo-cont {
+    .c-article {
+      padding: {
+        top: 0;
+        bottom: 0;
+      }
+    }
+    .input-list [class*='col'] {
+      padding: {
+        top: 4px;
+        bottom: 4px;
+      }
+    }
   }
 }
 

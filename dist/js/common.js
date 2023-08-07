@@ -250,27 +250,54 @@ if (!Element.prototype.closest) {
   };
 }
 
-// + 메모리스트 아코디언
-var toggleMemoAccordion = function toggleMemoAccordion() {
-  var memoContBtn = document.querySelectorAll('.memo-cont-btn');
-  var memoContList = document.querySelectorAll('.memo-list');
-  var memoSkipTxt = document.querySelectorAll('.memo-cont-btn .skip');
+//  = MemoAccordion
+
+// + coMemoToggle
+var memoContToggle = function memoContToggle(memoContBtn, memoContList, memoSkipTxt) {
   Array.prototype.forEach.call(memoContBtn, function (btn, index) {
+    var memeContList = btn.closest('.memo-list').querySelector('.memo-cont');
+    if (memeContList.clientHeight <= 100) {
+      btn.style.display = 'none';
+    }
     btn.addEventListener('click', function (e) {
       var target = e.currentTarget,
-        memoList = target.closest('.memo-list');
-      memoList.classList.toggle('active');
-      Array.prototype.forEach.call(memoContList, function (memoList, index2) {
-        if (index !== index2) {
-          memoList.classList.remove('active');
-        }
-      });
-      Array.prototype.forEach.call(memoSkipTxt, function (txt, index) {
-        memoContList[index].classList.contains('active') ? txt.innerText = '메모이력접기' : txt.innerText = '메모이력보기';
-      });
+        memoList = target.closest('.memo-list'),
+        contArea = memoList.querySelector('.memo-cont');
+      console.log(memoList);
+      console.log(contArea.clientHeight);
+      if (contArea.clientHeight < 100) {
+        return 0;
+      } else {
+        memoList.classList.toggle('active');
+        Array.prototype.forEach.call(memoContList, function (memoList, index2) {
+          if (index !== index2) {
+            memoList.classList.remove('active');
+          }
+        });
+        Array.prototype.forEach.call(memoSkipTxt, function (txt, index) {
+          memoContList[index].classList.contains('active') ? txt.innerText = '메모이력접기' : txt.innerText = '메모이력보기';
+        });
+      }
     });
   });
 };
+
+// + targetMemoAccordion()
+var targetMemoAccordion = function targetMemoAccordion() {
+  var memoContBtn = document.querySelectorAll('.target-memo-cont .memo-cont-btn'),
+    memoContList = document.querySelectorAll('.target-memo-cont .memo-list'),
+    memoSkipTxt = document.querySelectorAll('.target-memo-cont .memo-cont-btn .skip');
+  memoContToggle(memoContBtn, memoContList, memoSkipTxt);
+};
+
+// + targetMemoAccordion()
+var tblToggleMemoAccordion = function tblToggleMemoAccordion() {
+  var tblMemoContBtn = document.querySelectorAll('.c-table.memo-lists .memo-cont-btn'),
+    tblMemoContList = document.querySelectorAll('.c-table.memo-lists .memo-list'),
+    tblMemoSkipTxt = document.querySelectorAll('.c-table.memo-lists .memo-cont-btn .skip');
+  memoContToggle(tblMemoContBtn, tblMemoContList, tblMemoSkipTxt);
+};
+
 // =  toggleAccordion
 
 // + side Notify Toggle

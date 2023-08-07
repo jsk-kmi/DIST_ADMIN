@@ -14527,10 +14527,6 @@ type-horizontal 최상위 요소 부여
 		padding-left: 6px;
 		padding-right: 6px;
 }
-#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .c-table table th,
-#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .c-table table td {
-		padding: 4px 8px;
-}
 #container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .input-list [class*=col] {
 		padding-top: 6px;
 		padding-bottom: 6px;
@@ -14788,7 +14784,17 @@ type-horizontal 최상위 요소 부여
 #container .content-wrapper.type-horizontal.type-callcenter .right-wrap .memo-lists-mod td.rsv-mod-cont {
 		text-align: left;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .memo-list {
+
+.memo-lists {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		    -ms-flex-wrap: wrap;
+		        flex-wrap: wrap;
+}
+.memo-lists .memo-list {
 		display: table;
 		table-layout: fixed;
 		-webkit-box-align: center;
@@ -14797,84 +14803,112 @@ type-horizontal 최상위 요소 부여
 		        align-items: center;
 		width: 100%;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .memo-list .memo-contarea,
-#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .memo-list .memo-btnarea {
+.memo-lists .memo-list .memo-contarea,
+.memo-lists .memo-list .memo-btnarea {
 		display: table-cell;
 		vertical-align: middle;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .memo-list .memo-btnarea {
+.memo-lists .memo-list .memo-btnarea {
 		width: 30px;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .memo-list .memo-contarea {
+.memo-lists .memo-list .memo-contarea {
 		max-height: 100px;
 		overflow: hidden;
 		-webkit-transition: max-height 0.5s ease-in;
 		transition: max-height 0.5s ease-in;
 		display: inline-block;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .memo-list .memo-cont {
+.memo-lists .memo-list .memo-cont {
 		display: block;
 		white-space: normal;
 		width: 100%;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		display: -webkit-box;
-		-webkit-box-orient: vertical;
 		word-wrap: break-word;
 		line-height: 20px;
 		-webkit-animation: close 1s linear 0s forwards;
 		        animation: close 1s linear 0s forwards;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .memo-list .memo-cont-btn {
+.memo-lists .memo-list .memo-cont-btn {
 		background: url(../images/ico/ico_arrow_10.svg) center/8px auto no-repeat;
 		width: 30px;
 		height: 30px;
 		padding: 6px 5px;
-		-webkit-transition: -webkit-transform 0.3s ease;
-		transition: -webkit-transform 0.3s ease;
-		transition: transform 0.3s ease;
-		transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+		-webkit-transition: -webkit-transform 0.2s linear;
+		transition: -webkit-transform 0.2s linear;
+		transition: transform 0.2s linear;
+		transition: transform 0.2s linear, -webkit-transform 0.2s linear;
 		-webkit-transform: rotate(0deg);
 		    -ms-transform: rotate(0deg);
 		        transform: rotate(0deg);
 }
-#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .memo-list.active {
-		-webkit-transition: all 0.5s linear;
-		transition: all 0.5s linear;
+.memo-lists .memo-list.active {
+		-webkit-transition: all 0.3s ease;
+		transition: all 0.3s ease;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .memo-list.active .memo-contarea {
+.memo-lists .memo-list.active .memo-contarea {
 		max-height: 100rem;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .memo-list.active .memo-cont {
+.memo-lists .memo-list.active .memo-cont {
 		-webkit-animation: open 0.5s linear forwards;
 		        animation: open 0.5s linear forwards;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .memo-list.active .memo-cont-btn {
+.memo-lists .memo-list.active .memo-cont-btn {
 		background-image: url(../images/ico/ico_arrow_10.svg);
 		-webkit-transform: rotate(180deg);
 		    -ms-transform: rotate(180deg);
 		        transform: rotate(180deg);
 }
-#container .content-wrapper.type-horizontal.type-callcenter .memo-lists .name {
-		width: 90px;
+.memo-lists .name {
+		width: 110px;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .target-memo-cont {
+.memo-lists .date {
+		width: 110px;
+}
+
+.target-memo-cont {
 		margin-top: 15px;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .target-memo-cont .c-article.target-memo .row {
+.target-memo-cont .c-article.target-memo .row {
 		-webkit-box-flex: 1;
 		-webkit-flex: 1 1 auto;
 		    -ms-flex: 1 1 auto;
 		        flex: 1 1 auto;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-webkit-flex-wrap: nowrap;
+		    -ms-flex-wrap: nowrap;
+		        flex-wrap: nowrap;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .target-memo-cont .c-article.target-memo .row .col:nth-of-type(1) {
+.target-memo-cont .c-article.target-memo .row .col:nth-of-type(1) {
 		text-align: center;
 }
-#container .content-wrapper.type-horizontal.type-callcenter .target-memo-cont .c-article.target-memo .target-cont {
+.target-memo-cont .c-article.target-memo .row .col {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 1 auto;
+		    -ms-flex: 0 1 auto;
+		        flex: 0 1 auto;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+}
+.target-memo-cont .c-article.target-memo .row .col.target-cont {
 		-webkit-box-flex: 1;
 		-webkit-flex: 1 1 0;
 		    -ms-flex: 1 1 0px;
 		        flex: 1 1 0;
+}
+.target-memo-cont .c-article.target-memo .row:not(.inner) > [class^=col] {
+		padding-left: 10px;
+		padding-right: 10px;
 }
 
 @-webkit-keyframes open {
@@ -14910,6 +14944,22 @@ type-horizontal 최상위 요소 부여
 				-webkit-line-clamp: 5;
 		}
 }
+.type-platformsystem .c-table table th,
+.type-platformsystem .c-table table td,
+.c-layer-popup.type-platformsystem .c-table table th,
+.c-layer-popup.type-platformsystem .c-table table td {
+		padding: 4px 8px;
+}
+
+.type-platformsystem .target-memo-cont .c-article {
+		padding-top: 0;
+		padding-bottom: 0;
+}
+.type-platformsystem .target-memo-cont .input-list [class*=col] {
+		padding-top: 4px;
+		padding-bottom: 4px;
+}
+
 .mod-rsv-setting-title.type-option .date-box {
 		display: block;
 }
@@ -19848,5 +19898,20 @@ table.tbl-chkup-category .btn-open-chkup-infotxt {
 
 .dataTables_scrollHead {
 		background-color: #253981;
+}
+
+.popup-memo-list {
+		z-index: -1;
+		opacity: 0;
+		display: block;
+}
+.popup-memo-list.fade {
+		-webkit-transition: all 0s;
+		transition: all 0s;
+}
+.popup-memo-list.show {
+		opacity: 1;
+		z-index: 1049;
+		display: block;
 }
 /*# sourceMappingURL=maps/style.css.map */
