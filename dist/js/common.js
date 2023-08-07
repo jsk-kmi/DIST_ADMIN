@@ -146,7 +146,6 @@ var tableAllCheckBg = function tableAllCheckBg() {
     var target = $(e.currentTarget),
       targetTblList = target.closest('thead').next('tbody');
     if (target.is(':checked')) {
-      console.log('checked');
       targetTblList.find('tr').addClass('highlight');
     } else if (!target.is(':checked')) {
       targetTblList.find('tr').removeClass('highlight');
@@ -215,7 +214,7 @@ function memoCardDetail() {
 // =  toggleAccordion
 var eleToggleAccordion = document.querySelector('.co-accrodion-list');
 var toggleAccordion = function toggleAccordion() {
-  $('.co-accrodion-list').on('click', 'a.btn-accrodion', function (e) {
+  $(document).on('click', 'a.btn-accrodion', function (e) {
     e.preventDefault();
     var target = $(e.currentTarget),
       accordionBox = target.closest('.co-accordion'),
@@ -263,8 +262,6 @@ var memoContToggle = function memoContToggle(memoContBtn, memoContList, memoSkip
       var target = e.currentTarget,
         memoList = target.closest('.memo-list'),
         contArea = memoList.querySelector('.memo-cont');
-      console.log(memoList);
-      console.log(contArea.clientHeight);
       if (contArea.clientHeight < 100) {
         return 0;
       } else {
@@ -366,7 +363,6 @@ isContainElement(eleTblVhField) ? tableVhScroll() : false;
 var formElemAlign = function formElemAlign() {
   var elem = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'default';
   var target = arguments.length > 1 ? arguments[1] : undefined;
-  console.log(elem);
   var addWrapSelector = '',
     inputListSelecotor = '.c-article.input-list',
     inputListSelecotor02 = '.c-article.input-list02';
@@ -376,7 +372,6 @@ var formElemAlign = function formElemAlign() {
   if (elem === 'default') {
     addWrapSelector = 'section.contents';
     if (document.querySelectorAll(inputListSelecotor).length > 0) {
-      console.log('input List 존재');
       document.querySelector(addWrapSelector).classList.add('type-horizontal');
     }
   } else if (elem === 'modal') {
@@ -395,7 +390,6 @@ var formElemAlign = function formElemAlign() {
 //     document.querySelector('[data-toggle="modal"]').addEventListener('click', (e) => {
 //       let elem = e.currentTarget,
 //         curElemTarget = elem.dataset.target.replace('#', '');
-//       console.log(curElemTarget);
 
 //       formElemAlign('modal', curElemTarget);
 //     });

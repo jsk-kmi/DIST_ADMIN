@@ -1004,57 +1004,57 @@ type-horizontal 최상위 요소 부여
         }
 
         // + 메모리스트
-        .memo-lists {
-          .memo-list {
-            .memo-cont-btn {
-              background-size: 8px;
-            }
-          }
+        // .memo-lists {
+        //   .memo-list {
+        //     .memo-cont-btn {
+        //       background-size: 8px;
+        //     }
+        //   }
 
-          button {
-            &.c-btn {
-              padding: $c-btn-padding;
-              border-radius: $input-border-radius-01;
-              min-width: auto;
-            }
-          }
-        }
-        .target-memo-cont {
-          .c-article {
-            padding: $row-padding-01;
-            padding-bottom: $c-article-padding-01;
-            &.input-list {
-              .row > [class^='col'] {
-                padding-top: $row-padding;
-                padding-bottom: $row-padding;
-              }
-            }
-            .col {
-              justify-content: center;
-            }
-            .name {
-              width: 85px;
-              text-align: center;
-            }
-            .date {
-              width: 105px;
-            }
-          }
-          .buttons {
-            .c-btn {
-              min-width: auto;
-            }
-          }
-        }
-        .popup-memo-list {
-          .modal-footer {
-            .buttons {
-              .c-btn {
-                padding: 9px 20px;
-              }
-            }
-          }
-        }
+        //   button {
+        //     &.c-btn {
+        //       padding: $c-btn-padding;
+        //       border-radius: $input-border-radius-01;
+        //       min-width: auto;
+        //     }
+        //   }
+        // }
+        // .target-memo-cont {
+        //   .c-article {
+        //     padding: $row-padding-01;
+        //     padding-bottom: $c-article-padding-01;
+        //     &.input-list {
+        //       .row > [class^='col'] {
+        //         padding-top: $row-padding;
+        //         padding-bottom: $row-padding;
+        //       }
+        //     }
+        //     .col {
+        //       justify-content: center;
+        //     }
+        //     .name {
+        //       width: 85px;
+        //       text-align: center;
+        //     }
+        //     .date {
+        //       width: 105px;
+        //     }
+        //   }
+        //   .buttons {
+        //     .c-btn {
+        //       min-width: auto;
+        //     }
+        //   }
+        // }
+        // .popup-memo-list {
+        //   .modal-footer {
+        //     .buttons {
+        //       .c-btn {
+        //         padding: 9px 20px;
+        //       }
+        //     }
+        //   }
+        // }
       }
       // + 검진예약관리 화면개선
       .left-wrap {
@@ -1108,89 +1108,6 @@ type-horizontal 최상위 요소 부여
       }
     }
   }
-}
-
-.content-wrapper.type-callcenter.type-horizontal,
-.c-layer-popup.type-callcenter.type-horizontal {
-  // + 메모 리스트
-  // .memo-lists {
-  //   .memo-list {
-  //     display: table;
-  //     table-layout: fixed;
-  //     align-items: center;
-
-  //     .memo-contarea,
-  //     .memo-btnarea {
-  //       display: table-cell;
-  //       vertical-align: middle;
-  //     }
-  //     .memo-btnarea {
-  //       width: 30px;
-  //     }
-  //     width: 100%;
-  //     .memo-contarea {
-  //       max-height: 100px;
-  //       overflow: hidden;
-  //       transition: max-height 0.5s ease-in;
-  //       display: inline-block;
-  //     }
-  //     .memo-cont {
-  //       display: block;
-  //       white-space: normal;
-  //       width: 100%;
-  //       overflow: hidden;
-  //       text-overflow: ellipsis;
-  //       display: -webkit-box;
-  //       -webkit-box-orient: vertical;
-  //       word-wrap: break-word;
-  //       line-height: 20px;
-  //       animation: close 1s linear 0s forwards;
-  //     }
-
-  //     .memo-cont-btn {
-  //       background: url(../images/ico/ico_arrow_10.svg) center/8px auto no-repeat;
-  //       width: 30px;
-  //       height: 30px;
-  //       padding: 6px 5px;
-  //       transition: transform 0.2s linear;
-  //       transform: rotate(0deg);
-  //     }
-
-  //     &.active {
-  //       transition: all 0.3s ease;
-  //       .memo-contarea {
-  //         max-height: 100rem;
-  //       }
-  //       .memo-cont {
-  //         animation: open 0.5s linear forwards;
-  //       }
-  //       .memo-cont-btn {
-  //         background-image: url(../images/ico/ico_arrow_10.svg);
-  //         transform: rotate(180deg);
-  //       }
-  //     }
-  //   }
-  //   .name {
-  //     width: 90px;
-  //   }
-  // }
-  // .target-memo-cont {
-  //   margin-top: 15px;
-  //   .c-article {
-  //     //+ 메모등록
-  //     &.target-memo {
-  //       .row {
-  //         flex: 1 1 auto;
-  //         .col:nth-of-type(1) {
-  //           text-align: center;
-  //         }
-  //       }
-  //       .target-cont {
-  //         flex: 1 1 0;
-  //       }
-  //     }
-  //   }
-  // }
 }
 
 // + 메모 리스트
@@ -1253,11 +1170,12 @@ type-horizontal 최상위 요소 부여
       }
     }
   }
-  .name {
-    width: 110px;
-  }
-  .date {
-    width: 110px;
+  &.c-table {
+    table {
+      col.name {
+        width: 90px;
+      }
+    }
   }
 }
 .target-memo-cont {
@@ -1288,6 +1206,12 @@ type-horizontal 최상위 요소 부여
         }
       }
     }
+  }
+  .name {
+    width: 90px;
+  }
+  .date {
+    width: 110px;
   }
 }
 
@@ -1321,18 +1245,22 @@ type-horizontal 최상위 요소 부여
     }
   }
 }
+
 .type-platformsystem {
   .target-memo-cont {
     .c-article {
-      padding: {
-        top: 0;
-        bottom: 0;
-      }
+      padding: $table-padding;
     }
     .input-list [class*='col'] {
       padding: {
         top: 4px;
         bottom: 4px;
+      }
+    }
+    .row:not(.inner) {
+      margin: {
+        left: -10px;
+        right: -10px;
       }
     }
   }

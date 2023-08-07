@@ -12719,7 +12719,7 @@ input[type=text].search-input:focus {
 .c-chkbox input + .chk-label i + span:not(.skip), .c-chkbox input + label.chk-label i + span:not(.skip),
 .c-rdochk input + .chk-label i + span:not(.skip),
 .c-rdochk input + label.chk-label i + span:not(.skip) {
-		margin-left: 8px;
+		padding-left: 8px;
 }
 .c-chkbox .chk-label,
 .c-chkbox label.chk-label,
@@ -14726,41 +14726,6 @@ type-horizontal 최상위 요소 부여
 #container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .reservation-dtl-status-layout .c-table-field + .buttons {
 		margin-top: 10px;
 }
-#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .memo-lists .memo-list .memo-cont-btn {
-		background-size: 8px;
-}
-#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .memo-lists button.c-btn {
-		padding: 4px 12px;
-		border-radius: 6px;
-		min-width: auto;
-}
-#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .target-memo-cont .c-article {
-		padding: 4px;
-		padding-bottom: 6px;
-}
-#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .target-memo-cont .c-article.input-list .row > [class^=col] {
-		padding-top: 2px;
-		padding-bottom: 2px;
-}
-#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .target-memo-cont .c-article .col {
-		-webkit-box-pack: center;
-		-webkit-justify-content: center;
-		    -ms-flex-pack: center;
-		        justify-content: center;
-}
-#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .target-memo-cont .c-article .name {
-		width: 85px;
-		text-align: center;
-}
-#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .target-memo-cont .c-article .date {
-		width: 105px;
-}
-#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .target-memo-cont .buttons .c-btn {
-		min-width: auto;
-}
-#container .content-wrapper.type-horizontal.type-callcenter.type-platformsystem .popup-memo-list .modal-footer .buttons .c-btn {
-		padding: 9px 20px;
-}
 #container .content-wrapper.type-horizontal.type-callcenter .left-wrap {
 		overflow: hidden;
 		position: relative;
@@ -14860,11 +14825,8 @@ type-horizontal 최상위 요소 부여
 		    -ms-transform: rotate(180deg);
 		        transform: rotate(180deg);
 }
-.memo-lists .name {
-		width: 110px;
-}
-.memo-lists .date {
-		width: 110px;
+.memo-lists.c-table table col.name {
+		width: 90px;
 }
 
 .target-memo-cont {
@@ -14910,6 +14872,12 @@ type-horizontal 최상위 요소 부여
 		padding-left: 10px;
 		padding-right: 10px;
 }
+.target-memo-cont .name {
+		width: 90px;
+}
+.target-memo-cont .date {
+		width: 110px;
+}
 
 @-webkit-keyframes open {
 		from {
@@ -14952,12 +14920,15 @@ type-horizontal 최상위 요소 부여
 }
 
 .type-platformsystem .target-memo-cont .c-article {
-		padding-top: 0;
-		padding-bottom: 0;
+		padding: 4px 8px;
 }
 .type-platformsystem .target-memo-cont .input-list [class*=col] {
 		padding-top: 4px;
 		padding-bottom: 4px;
+}
+.type-platformsystem .target-memo-cont .row:not(.inner) {
+		margin-left: -10px;
+		margin-right: -10px;
 }
 
 .mod-rsv-setting-title.type-option .date-box {
