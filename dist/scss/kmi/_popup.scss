@@ -478,3 +478,16 @@
     }
   }
 }
+
+// + 검진예약일괄처리 발송이력 팝업
+.rsv-confirm {
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .c-chkbox {
+      margin-top: 10px;
+    }
+  }
+}

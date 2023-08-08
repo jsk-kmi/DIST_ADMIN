@@ -638,15 +638,7 @@ type-horizontal 최상위 요소 부여
             }
           }
         }
-        // // + table th,td 공통
-        // .c-table {
-        //   table {
-        //     th,
-        //     td {
-        //       padding: $table-padding;
-        //     }
-        //   }
-        // }
+
         .input-list {
           [class*='col'] {
             padding: {
@@ -691,14 +683,7 @@ type-horizontal 최상위 요소 부여
           &.c-panel {
             margin-top: 0;
           }
-          // .c-table {
-          //   table {
-          //     th,
-          //     td {
-          //       padding: $table-padding;
-          //     }
-          //   }
-          // }
+
           .c-tab-field {
             .c-tab-list {
               > li ~ li {
@@ -1002,59 +987,6 @@ type-horizontal 최상위 요소 부여
             }
           }
         }
-
-        // + 메모리스트
-        // .memo-lists {
-        //   .memo-list {
-        //     .memo-cont-btn {
-        //       background-size: 8px;
-        //     }
-        //   }
-
-        //   button {
-        //     &.c-btn {
-        //       padding: $c-btn-padding;
-        //       border-radius: $input-border-radius-01;
-        //       min-width: auto;
-        //     }
-        //   }
-        // }
-        // .target-memo-cont {
-        //   .c-article {
-        //     padding: $row-padding-01;
-        //     padding-bottom: $c-article-padding-01;
-        //     &.input-list {
-        //       .row > [class^='col'] {
-        //         padding-top: $row-padding;
-        //         padding-bottom: $row-padding;
-        //       }
-        //     }
-        //     .col {
-        //       justify-content: center;
-        //     }
-        //     .name {
-        //       width: 85px;
-        //       text-align: center;
-        //     }
-        //     .date {
-        //       width: 105px;
-        //     }
-        //   }
-        //   .buttons {
-        //     .c-btn {
-        //       min-width: auto;
-        //     }
-        //   }
-        // }
-        // .popup-memo-list {
-        //   .modal-footer {
-        //     .buttons {
-        //       .c-btn {
-        //         padding: 9px 20px;
-        //       }
-        //     }
-        //   }
-        // }
       }
       // + 검진예약관리 화면개선
       .left-wrap {

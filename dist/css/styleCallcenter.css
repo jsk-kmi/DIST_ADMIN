@@ -11679,6 +11679,25 @@ table.dataTable.no-footer {
 		top: 0;
 }
 
+.rsv-confirm .modal-body {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+}
+.rsv-confirm .modal-body .c-chkbox {
+		margin-top: 10px;
+}
+
 /*
 	= Panel
 */
@@ -15364,6 +15383,10 @@ a.c-bs-link > span,
 
 .bg-gray-10 {
 		background-color: #c0c4d1 !important;
+}
+
+.c-highlight-txt {
+		color: #2f7ad3;
 }
 
 .skip-navigation {

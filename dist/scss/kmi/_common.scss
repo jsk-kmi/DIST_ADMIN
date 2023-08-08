@@ -105,6 +105,11 @@ $color-list: (
   }
 }
 
+// + font-color
+.c-highlight-txt {
+  color: $color-blue-1;
+}
+
 // = skip-navigation
 .skip-navigation {
   position: absolute;
