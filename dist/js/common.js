@@ -233,6 +233,7 @@ var toggleAccordion = function toggleAccordion() {
     }
   });
 };
+isContainElement(eleToggleAccordion) ? toggleAccordion() : false;
 if (!Element.prototype.closest) {
   if (!Element.prototype.matches) {
     Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
@@ -257,6 +258,8 @@ var memoContToggle = function memoContToggle(memoContBtn, memoContList, memoSkip
     var memeContList = btn.closest('.memo-list').querySelector('.memo-cont');
     if (memeContList.clientHeight <= 100) {
       btn.style.display = 'none';
+    } else {
+      btn.style.display = 'inline-block';
     }
     btn.addEventListener('click', function (e) {
       var target = e.currentTarget,
@@ -287,7 +290,7 @@ var targetMemoAccordion = function targetMemoAccordion() {
   memoContToggle(memoContBtn, memoContList, memoSkipTxt);
 };
 
-// + targetMemoAccordion()
+// + tblToggleMemoAccordion()
 var tblToggleMemoAccordion = function tblToggleMemoAccordion() {
   var tblMemoContBtn = document.querySelectorAll('.c-table.memo-lists .memo-cont-btn'),
     tblMemoContList = document.querySelectorAll('.c-table.memo-lists .memo-list'),
@@ -479,7 +482,7 @@ var delayExamModal = document.querySelector('.delayexamination-info-popup'),
   btndelayExamModal = document.querySelectorAll('.btn-open-delayexam-popup'),
   delayPopupStyle = 'display:block; z-index:1049',
   delayDefatuPopupStyle = 'display:block; z-index:-1';
-delayExamModalList.forEach(function (e) {
+Array.prototype.forEach.call(delayExamModalList, function (e) {
   e.style.cssText = delayDefatuPopupStyle;
 });
 var initDelayExamModal = function initDelayExamModal() {
