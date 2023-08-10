@@ -212,7 +212,7 @@ function memoCardDetail() {
 }
 
 // =  toggleAccordion
-var eleToggleAccordion = $('.co-accrodion-list');
+var eleToggleAccordion = document.querySelector('.co-accrodion-list');
 var toggleAccordion = function toggleAccordion() {
   $(document).on('click', 'a.btn-accrodion', function (e) {
     e.preventDefault();
