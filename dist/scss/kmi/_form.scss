@@ -699,19 +699,17 @@ textarea {
 .c-select {
   position: relative;
   &:after {
-    background: {
-      image: url($image-ico-path + 'ico_arrow_04.svg');
-      position: right center;
-      size: 20px auto;
-      repeat: no-repeat;
-    }
-    position: absolute;
-    right: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
     content: '';
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #a3a2a3;
+    border-radius: 3px;
+    position: absolute;
+    right: 11px;
+    top: 15px;
   }
 
   select {
@@ -742,6 +740,8 @@ textarea {
     margin-left: 8px;
   }
 }
+
+// # 230810
 
 .c-select-list {
   display: flex;

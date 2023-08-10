@@ -258,6 +258,16 @@ type-horizontal 최상위 요소 부여
       margin-top: 20px;
     }
   }
+
+  .right-wrap {
+    .c-tab-contents {
+      .c-select {
+        select {
+          background-position-x: 96%;
+        }
+      }
+    }
+  }
 }
 
 // + 예약 변경 설정
@@ -1112,9 +1122,11 @@ type-horizontal 최상위 요소 부여
 }
 .target-memo-cont {
   margin-top: 15px;
+
   .c-article {
     //+ 메모등록
     &.target-memo {
+      padding: 0;
       .row {
         flex: 1 1 auto;
         align-items: center;
@@ -1182,6 +1194,7 @@ type-horizontal 최상위 요소 부여
   .target-memo-cont {
     .c-article {
       padding: $table-padding;
+      padding: 0;
     }
     .input-list [class*='col'] {
       padding: {

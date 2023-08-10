@@ -12974,19 +12974,17 @@ textarea[readonly=readonly]:focus, textarea.ta-r-only:focus {
 		position: relative;
 }
 .c-select:after {
-		background-image: url("../images/ico/ico_arrow_04.svg");
-		background-position: right center;
-		background-size: 20px auto;
-		background-repeat: no-repeat;
-		position: absolute;
-		right: 8px;
-		top: 50%;
-		-webkit-transform: translateY(-50%);
-		    -ms-transform: translateY(-50%);
-		        transform: translateY(-50%);
-		width: 20px;
-		height: 20px;
 		content: "";
+		width: 0;
+		height: 0;
+		pointer-events: none;
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+		border-top: 8px solid #a3a2a3;
+		border-radius: 3px;
+		position: absolute;
+		right: 11px;
+		top: 15px;
 }
 .c-select select {
 		min-width: 120px;
@@ -14243,6 +14241,10 @@ type-horizontal 최상위 요소 부여
 .c-layer-popup.type-callcenter .c-table-field + .buttons {
 		margin-top: 20px;
 }
+.content-wrapper.type-callcenter .right-wrap .c-tab-contents .c-select select,
+.c-layer-popup.type-callcenter .right-wrap .c-tab-contents .c-select select {
+		background-position-x: 96%;
+}
 
 .mod-rsv-setting-field .set-modrsv-tab.tab-03 .c-table.tbl-modrsv-selectchk tbody td {
 		white-space: nowrap;
@@ -14851,6 +14853,9 @@ type-horizontal 최상위 요소 부여
 .target-memo-cont {
 		margin-top: 15px;
 }
+.target-memo-cont .c-article.target-memo {
+		padding: 0;
+}
 .target-memo-cont .c-article.target-memo .row {
 		-webkit-box-flex: 1;
 		-webkit-flex: 1 1 auto;
@@ -14940,6 +14945,7 @@ type-horizontal 최상위 요소 부여
 
 .type-platformsystem .target-memo-cont .c-article {
 		padding: 4px 8px;
+		padding: 0;
 }
 .type-platformsystem .target-memo-cont .input-list [class*=col] {
 		padding-top: 4px;
