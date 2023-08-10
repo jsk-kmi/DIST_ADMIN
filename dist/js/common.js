@@ -212,7 +212,7 @@ function memoCardDetail() {
 }
 
 // =  toggleAccordion
-var eleToggleAccordion = document.querySelector('.co-accrodion-list');
+var eleToggleAccordion = $('.co-accrodion-list');
 var toggleAccordion = function toggleAccordion() {
   $(document).on('click', 'a.btn-accrodion', function (e) {
     e.preventDefault();
@@ -291,6 +291,7 @@ var targetMemoAccordion = function targetMemoAccordion() {
 };
 
 // + tblToggleMemoAccordion()
+
 var tblToggleMemoAccordion = function tblToggleMemoAccordion() {
   var tblMemoContBtn = document.querySelectorAll('.c-table.memo-lists .memo-cont-btn'),
     tblMemoContList = document.querySelectorAll('.c-table.memo-lists .memo-list'),
@@ -486,7 +487,7 @@ Array.prototype.forEach.call(delayExamModalList, function (e) {
   e.style.cssText = delayDefatuPopupStyle;
 });
 var initDelayExamModal = function initDelayExamModal() {
-  Array.prototype.forEach.call(btn, function () {
+  Array.prototype.forEach.call(btndelayExamModal, function (btn) {
     btn.addEventListener('click', function () {
       var modallTaget = btn.dataset.target,
         showBoolean = delayExamModal.classList.contains('show');
