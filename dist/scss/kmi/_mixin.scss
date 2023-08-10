@@ -504,25 +504,7 @@
 
 // = Responsive
 @mixin responsive($device) {
-  @if ($device == 'laptopHD') {
-    @media screen and (max-width: 1280px) {
-      @content;
-    }
-  } @else if ($device == 'laptopMedium') {
-    @media screen and (max-width: 1366px) {
-      @content;
-    }
-  } @else if($device == 'laptopHigh') {
-    @media screen and (max-width: 1440px) {
-      @content;
-    }
-  } @else if($device == 'laptopFhd') {
-    @media screen and (max-width: 1536px) {
-      @content;
-    }
-  } @else if($device == 'desktopFhd') {
-    @media screen and (max-width: 1660px) {
-      @content;
-    }
+  @media screen and (max-width: $key) {
+    @content;
   }
 }

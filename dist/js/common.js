@@ -486,7 +486,7 @@ Array.prototype.forEach.call(delayExamModalList, function (e) {
   e.style.cssText = delayDefatuPopupStyle;
 });
 var initDelayExamModal = function initDelayExamModal() {
-  btndelayExamModal.forEach(function (btn) {
+  Array.prototype.forEach.call(btn, function () {
     btn.addEventListener('click', function () {
       var modallTaget = btn.dataset.target,
         showBoolean = delayExamModal.classList.contains('show');
