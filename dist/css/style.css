@@ -14853,9 +14853,6 @@ type-horizontal 최상위 요소 부여
 .target-memo-cont {
 		margin-top: 15px;
 }
-.target-memo-cont .c-article.target-memo {
-		padding: 0;
-}
 .target-memo-cont .c-article.target-memo .row {
 		-webkit-box-flex: 1;
 		-webkit-flex: 1 1 auto;
