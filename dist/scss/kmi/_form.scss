@@ -740,6 +740,12 @@ textarea {
   & + .c-select {
     margin-left: 8px;
   }
+
+  &.min-wa {
+    select {
+      min-width: auto;
+    }
+  }
 }
 
 // # 230810

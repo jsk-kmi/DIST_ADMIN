@@ -13017,6 +13017,9 @@ textarea[readonly=readonly]:focus, textarea.ta-r-only:focus {
 .c-select + .c-select {
 		margin-left: 8px;
 }
+.c-select.min-wa select {
+		min-width: auto;
+}
 
 .c-select-list {
 		display: -webkit-box;
@@ -16444,6 +16447,10 @@ a.c-bs-link > span,
 		-webkit-flex: 1 1 100% !important;
 		    -ms-flex: 1 1 100% !important;
 		        flex: 1 1 100% !important;
+}
+
+.c-min-w-auto {
+		min-width: auto;
 }
 
 /*
