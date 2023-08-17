@@ -1304,6 +1304,12 @@ type-horizontal 최상위 요소 부여
       padding-right: 10px;
     }
   }
+
+  .c-field {
+    > .input-list {
+      @include colOuterHSpacingSmall;
+    }
+  }
   .input-list {
     display: flex;
     flex-wrap: wrap;
@@ -1350,9 +1356,9 @@ type-horizontal 최상위 요소 부여
       flex: 1;
       justify-content: flex-end;
     }
-    .c-input-date {
-      width: 120px;
-    }
+    // .c-input-date {
+    //   width: 120px;
+    // }
   }
   .c-panel ~ .c-panel {
     margin-top: 10px;

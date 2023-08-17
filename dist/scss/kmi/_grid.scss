@@ -232,9 +232,12 @@
   ~ .c-field {
     margin-top: $gap-20;
   }
-  .label-input {
-    + .label-input {
-      margin-left: $gap-12;
+
+  :not(.row) {
+    > .label-input {
+      + .label-input {
+        margin-left: $gap-12;
+      }
     }
   }
   .c-input-search {
