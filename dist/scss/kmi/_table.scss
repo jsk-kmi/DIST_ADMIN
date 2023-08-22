@@ -896,3 +896,9 @@ table.dataTable {
 .dataTables_scrollHeadInner {
   width: 100%;
 }
+
+.in-chkbox02 {
+  > .c-chkbox {
+    display: inline-block;
+  }
+}
