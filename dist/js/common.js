@@ -64,7 +64,11 @@ var sideMenuToggle = function sideMenuToggle() {
         link.classList.remove('on');
       });
       setTimeout(function () {
-        selectedLink.classList.toggle('on');
+        if (selectedLink.classList.contains('on')) {
+          selectedLink.classList.remove('on');
+        } else {
+          selectedLink.classList.add('on');
+        }
       }, 200);
     });
   });
