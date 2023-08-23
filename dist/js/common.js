@@ -59,6 +59,8 @@ var sideMenuToggle = function sideMenuToggle() {
     selectedLink.addEventListener('click', function () {
       var sideSubMenu = document.querySelectorAll('.sidebar-sub-menu > li > a');
       var chkSubOnchk = false;
+
+      // + Dev 환경 전용 Script (230823)
       for (var i = 0; i < sideSubMenu.length; i++) {
         if (sideSubMenu[i].classList.contains('on')) {
           chkSubOnchk = true;
@@ -303,7 +305,7 @@ var memoContToggle = function memoContToggle(memoContBtn, memoContList, memoSkip
 var targetMemoAccordion = function targetMemoAccordion() {
   var memoContBtn = document.querySelectorAll('.target-memo-cont .memo-cont-btn'),
     memoContList = document.querySelectorAll('.target-memo-cont .memo-list'),
-    memoSkipTxt = document.querySelNectorAll('.target-memo-cont .memo-cont-btn .skip');
+    memoSkipTxt = document.querySelectorAll('.target-memo-cont .memo-cont-btn .skip');
   memoContToggle(memoContBtn, memoContList, memoSkipTxt);
 };
 
