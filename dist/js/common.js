@@ -57,19 +57,32 @@ var sideMenuToggle = function sideMenuToggle() {
   }
   Array.prototype.forEach.call(sideMenuLink, function (selectedLink) {
     selectedLink.addEventListener('click', function () {
+      var sideSubMenu = document.querySelectorAll('.sidebar-sub-menu > li > a');
+      var chkSubOnchk = false;
+      for (var i = 0; i < sideSubMenu.length; i++) {
+        if (sideSubMenu[i].classList.contains('on')) {
+          chkSubOnchk = true;
+          break;
+        }
+      }
       var extraSideMenuList = sideMenuLinkArr.filter(function (restLinks) {
         return restLinks !== selectedLink;
       });
       Array.prototype.forEach.call(extraSideMenuList, function (link) {
         link.classList.remove('on');
       });
-      setTimeout(function () {
-        if (selectedLink.classList.contains('on')) {
-          selectedLink.classList.remove('on');
-        } else {
-          selectedLink.classList.add('on');
-        }
-      }, 200);
+
+      // + UI DEV용 Script
+      // setTimeout(function () {
+      //   selectedLink.classList.toggle('on');
+      // }, 200);
+
+      // + Dev 환경 전용 Script (230823)
+      if (!chkSubOnchk) {
+        setTimeout(function () {
+          selectedLink.classList.toggle('on');
+        }, 200);
+      }
     });
   });
 };
@@ -290,7 +303,7 @@ var memoContToggle = function memoContToggle(memoContBtn, memoContList, memoSkip
 var targetMemoAccordion = function targetMemoAccordion() {
   var memoContBtn = document.querySelectorAll('.target-memo-cont .memo-cont-btn'),
     memoContList = document.querySelectorAll('.target-memo-cont .memo-list'),
-    memoSkipTxt = document.querySelectorAll('.target-memo-cont .memo-cont-btn .skip');
+    memoSkipTxt = document.querySelNectorAll('.target-memo-cont .memo-cont-btn .skip');
   memoContToggle(memoContBtn, memoContList, memoSkipTxt);
 };
 
