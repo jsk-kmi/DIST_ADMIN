@@ -2691,6 +2691,27 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
+                                                                <!-- [ mod(230828) ] -->
+                                                                <div class="row">
+                                                                    <div class="col-8 label-input">
+                                                                        <label for="inputRsvUserInfoPrice01_22">대체 검사</label>
+                                                                        <input type="text" class="c-input" id="inputRsvUserInfoPrice01_22" value="알레르기 107종 검사" readonly="readonly" />
+                                                                    </div>
+                                                                    <div class="col-2 label-input justify-cont-sb">
+                                                                        <label for="inputRsvUserInfoPrice01_23">회사부담</label>
+                                                                        <div class="c-input-unit">
+                                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_23" value="300,000" readonly="readonly" />
+                                                                            <span class="unit">원</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-2 label-input justify-cont-sb">
+                                                                        <label for="inputRsvUserInfoPrice01_24">개인부담</label>
+                                                                        <div class="c-input-unit">
+                                                                            <input type="text" class="c-input" id="inputRsvUserInfoPrice01_24" value="0" readonly="readonly" />
+                                                                            <span class="unit">원</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                                 <div class="row">
                                                                     <div class="col-8 label-input">
                                                                         <label for="inputRsvUserInfoPrice01_16">비용 합계</label>
@@ -2997,10 +3018,104 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- [ // mod(230712) ]
-							- 메모 영역 변경에 따른 div 추가
-						-->
-                                                    <!-- [ // mod(230630) ] -->
+                                                    <!-- [ mod(230828) ] -->
+                                                    <div class="c-field">
+                                                        <div class="c-tab-field tab-scroll">
+                                                            <ul class="c-tab-list type02" role="tablist">
+                                                                <li class="on" role="presentation">
+                                                                    <a id="tabExamList_01" href="javascript:;" role="tab" aria-controls="tabExamContents_01" aria-selected="true">선택/추가검사</a>
+                                                                </li>
+                                                                <li role="presentation">
+                                                                    <a id="tabExamList_02" href="javascript:;" role="tab" aria-controls="tabExamContents_02" aria-selected="false">대체검사</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!--class add : type02 -->
+                                                    <div class="c-tab-contents type02">
+                                                        <!-- 선택/추가검사 -->
+                                                        <div class="tab-cont on" id="tabExamContents_01" role="tabpanel" aria-labelledby="tabExamList_01">
+                                                            <div class="c-panel">
+                                                                <div class="c-table-field">
+                                                                    <div class="c-table striped tbl-fixed tbl-type02">
+                                                                        <table class="table">
+                                                                            <caption> 선택/추가검사 : 선택 검사 번호, 선택 항목, 개인추가금에 대한 정보 </caption>
+                                                                            <colgroup>
+                                                                                <col style="width:100px">
+                                                                                <col>
+                                                                                <col style="width:150px">
+                                                                            </colgroup>
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th scope="col">선택 검사 번호</th>
+                                                                                    <th scope="col">선택 항목</th>
+                                                                                    <th scope="col">개인추가금</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>1</td>
+                                                                                    <td>위내시경 (일반)</td>
+                                                                                    <td>10,000,000원 </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>1</td>
+                                                                                    <td>위내시경 (일반)</td>
+                                                                                    <td>10,000,000원 </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>1</td>
+                                                                                    <td>위내시경 (일반)</td>
+                                                                                    <td>10,000,000원 </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- 대체 검사 -->
+                                                        <div class="tab-cont" id="tabExamContents_02" role="tabpanel" aria-labelledby="tabExamList_02">
+                                                            <div class="c-panel">
+                                                                <div class="c-table-field">
+                                                                    <div class="c-table striped tbl-fixed tbl-type02">
+                                                                        <table class="table">
+                                                                            <caption>대체검사 : 원검진 항목명, 대체검진 항목명, 대체자(userName), 대체일자에 대한 정보</caption>
+                                                                            <colgroup>
+                                                                                <col>
+                                                                                <col>
+                                                                                <col style="width:200px">
+                                                                                <col style="width:180px">
+                                                                            </colgroup>
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th scope="col">원검진 항목명</th>
+                                                                                    <th scope="col">대체검진 항목명</th>
+                                                                                    <th scope="col">대체자(userName)</th>
+                                                                                    <th scope="col">대체일자</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>위내시경(일반)</td>
+                                                                                    <td>알레르기 107종 검사</td>
+                                                                                    <td>정성욱(서비스운영팀)</td>
+                                                                                    <td>yyyy-mm-dd-hh-mm-ss</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>위내시경(일반)</td>
+                                                                                    <td>알레르기 107종 검사</td>
+                                                                                    <td>정성욱(서비스운영팀)</td>
+                                                                                    <td>yyyy-mm-dd-hh-mm-ss</td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- [ // mod(230828) ]-->
                                                 </div>
                                             </div>
                                         </div>
@@ -3281,7 +3396,7 @@
                                                         </div>
                                                         <div class="target-memo-cont">
                                                             <div class="buttons justify-cont-e">
-                                                                <button class="c-btn is-outline-navy-1"><span>버튼</span></button>
+                                                                <button class="c-btn is-outline-navy-1"><span>메모이력</span></button>
                                                                 <button class="c-btn"><span>메모등록</span></button>
                                                             </div>
                                                             <div class="c-article input-list memo-lists target-memo">

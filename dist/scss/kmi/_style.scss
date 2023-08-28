@@ -145,6 +145,14 @@
         line-height: $input-basic-lineheight;
       }
     }
+
+    &.type02 {
+      > li {
+        a {
+          padding: 2px 4px;
+        }
+      }
+    }
   }
 
   // + tab-scroll
@@ -159,12 +167,22 @@
     overflow-y: hidden;
     padding-bottom: 5px;
   }
+
+  &.type02 {
+    & + .c-tab-contents {
+      margin-top: 0;
+    }
+  }
 }
 
 [class*='-field'] {
   & ~ [class*='-field'],
   & + .c-tab-contents {
     margin-top: $gap-12;
+  }
+
+  & + .c-tab-contents.type02 {
+    margin-top: 0;
   }
 }
 .c-tab-contents {

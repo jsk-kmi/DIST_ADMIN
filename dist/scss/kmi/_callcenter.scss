@@ -112,9 +112,6 @@ type-horizontal 최상위 요소 부여
       }
 
       // + type03 대상자 정보
-      .tab-cont:first-of-type {
-        margin-top: -10px;
-      }
       .type03 {
         .label-input {
           label,
@@ -604,8 +601,13 @@ type-horizontal 최상위 요소 부여
           height: $textarea-height;
           padding: $col-padding-02;
         }
-        [class*='-field'] + .c-tab-contents {
-          margin-top: $row-margin-02;
+        [class*='-field'] {
+          & + .c-tab-contents {
+            margin-top: $row-margin-02;
+            &.type02 {
+              margin-top: 0;
+            }
+          }
         }
         .c-tab-field {
           .c-tab-list {
