@@ -127,7 +127,8 @@
         padding-left: 12px;
       }
       &.on {
-        a {
+        a,
+        button {
           color: $color-white-1;
           border-color: $color-blue-1;
           background-color: $color-blue-1;
@@ -143,6 +144,16 @@
         border: 0.5px solid $color-gray-4;
         border-radius: $radius-8;
         line-height: $input-basic-lineheight;
+        display: inline-block;
+
+        &.is-disable {
+          background-color: $color-white-1;
+          border-color: $color-gray-4;
+          color: $color-gray-4;
+          &:hover {
+            cursor: no-drop;
+          }
+        }
       }
     }
 
@@ -150,6 +161,19 @@
       > li {
         a {
           padding: 2px 4px;
+        }
+      }
+    }
+
+    &.type03 {
+      > li {
+        & ~ li {
+          padding-left: 0;
+        }
+        a {
+          padding: 6px 8px;
+          border-bottom: 0;
+          border-radius: 0;
         }
       }
     }

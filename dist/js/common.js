@@ -117,17 +117,22 @@ var tabContentsView = function tabContentsView() {
   $('.c-tab-list').on('click', 'li', function (e) {
     var target = $(e.currentTarget),
       tabList = target.siblings('li'),
-      selectedTab = target.children('a').attr('aria-controls'),
+      selectedTabLink = target.children('a'),
+      selectedTab = selectedTabLink.attr('aria-controls'),
       seletedContent = $('.tab-cont').siblings("#".concat(selectedTab)),
       tabContents = seletedContent.siblings('.tab-cont');
-    tabList.removeClass('on').find('a').attr('aria-selected', false);
-    target.addClass('on').find('a').attr('aria-selected', true);
+    if (selectedTabLink.hasClass('is-disable')) {
+      return 0;
+    } else {
+      tabList.removeClass('on').find('a').attr('aria-selected', false);
+      target.addClass('on').find('a').attr('aria-selected', true);
 
-    // tabContents.hide();
-    // seletedContent.show();
+      // tabContents.hide();
+      // seletedContent.show();
 
-    tabContents.removeClass('on');
-    seletedContent.addClass('on');
+      tabContents.removeClass('on');
+      seletedContent.addClass('on');
+    }
   });
 };
 isContainElement(eleTabContentsView) ? tabContentsView() : false;

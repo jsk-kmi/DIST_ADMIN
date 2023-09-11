@@ -87,6 +87,14 @@ button {
       }
     }
   }
+  &.btn-is-disable {
+    background-color: $color-white-1;
+    border-color: $color-gray-4;
+    color: $color-gray-4;
+    &:hover {
+      cursor: no-drop;
+    }
+  }
 }
 
 .c-btn-refresh {

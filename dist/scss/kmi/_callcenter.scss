@@ -29,7 +29,7 @@ type-horizontal 최상위 요소 부여
   }
 }
 
-// + type-callcenter
+// = type-callcenter
 .content-wrapper.type-callcenter,
 .c-layer-popup.type-callcenter {
   .c-panel ~ .c-panel {
@@ -261,6 +261,18 @@ type-horizontal 최상위 요소 부여
       .c-select {
         select {
           background-position-x: 96%;
+        }
+      }
+    }
+  }
+
+  .mod-rsv-setting-field {
+    .c-tab-contents {
+      &.multiple-rsv-contents {
+        > .tab-cont {
+          &.on {
+            display: flex;
+          }
         }
       }
     }
@@ -601,24 +613,6 @@ type-horizontal 최상위 요소 부여
           height: $textarea-height;
           padding: $col-padding-02;
         }
-        [class*='-field'] {
-          & + .c-tab-contents {
-            margin-top: $row-margin-02;
-            &.type02 {
-              margin-top: 0;
-            }
-          }
-        }
-        .c-tab-field {
-          .c-tab-list {
-            > li {
-              a {
-                padding: $tab-list-padding;
-                border-radius: $input-border-radius-01;
-              }
-            }
-          }
-        }
         .c-panel ~ .c-panel {
           margin-top: $c-panel-margin-top;
         }
@@ -689,316 +683,6 @@ type-horizontal 최상위 요소 부여
             }
           }
         }
-
-        .reservation-dtl-status-layout {
-          @include rowGridSpacing(6px);
-          &.c-panel {
-            margin-top: 0;
-          }
-
-          .c-tab-field {
-            .c-tab-list {
-              > li ~ li {
-                padding-left: $row-padding-03;
-              }
-            }
-          }
-          .c-btn-refresh {
-            width: $c-btn-refresh;
-            height: $c-btn-refresh;
-            border-radius: $input-border-radius-01;
-            > span {
-              width: $refresh-size;
-              height: $refresh-size;
-              background-size: 100% 100%;
-            }
-          }
-          .left-wrap {
-            .c-panel:first-of-type {
-              .c-article {
-                padding: {
-                  left: $c-article-padding;
-                  right: $c-article-padding;
-                  top: 0;
-                  bottom: 0;
-                }
-                .row {
-                  label {
-                    min-width: 0;
-                  }
-                  input[type='text'] {
-                    min-width: $input-min-width;
-                    &.target-num {
-                      min-width: $input-min-width-04;
-                    }
-                  }
-
-                  .c-input-phone-group:not(.input-phone-01) {
-                    input[type='text'] {
-                      min-width: $phone-width;
-                      width: $phone-width;
-                    }
-                  }
-                }
-              }
-            }
-            .c-panel {
-              .row {
-                label {
-                  margin-right: $row-margin-01;
-                }
-              }
-            }
-            // table.dataTable {
-            //   tbody,
-            //   thead {
-            //     th,
-            //     td {
-            //       padding: $table-padding;
-            //     }
-            //   }
-            // }
-
-            .c-input-phone-group {
-              .input-phone-01 {
-                .c-select {
-                  select {
-                    width: $input-min-width-03;
-                    min-width: $input-min-width-03;
-                  }
-                }
-              }
-              [class^='col']:not(.input-phone-01) {
-                padding: {
-                  left: $col-padding;
-                  right: $col-padding;
-                }
-              }
-            }
-            .c-input-address-group {
-              .c-btn {
-                padding: $input-padding;
-              }
-            }
-            .mod-reservation {
-              padding: {
-                top: $col-padding-03;
-                bottom: $col-padding-03;
-              }
-              .rsv-mod-list01 {
-                > li {
-                  > a {
-                    padding: $mod-reservation-padding;
-                  }
-                }
-              }
-
-              .co-accordion {
-                .btn-accrodion {
-                  padding: $mod-reservation-padding;
-                  border-radius: $input-border-radius-01;
-                }
-                .accrodion-panel {
-                  .panel-cont {
-                    padding: $col-padding-04;
-                  }
-                }
-              }
-              .co-accrodion-list.type01 {
-                .accrodion-panel {
-                  border-radius: $input-border-radius-02;
-                }
-              }
-
-              .tab-05 {
-                .c-article {
-                  padding: {
-                    top: 0;
-                    bottom: $col-padding;
-                    left: $c-article-padding-02;
-                    right: $c-article-padding-02;
-                  }
-                  &.input-list {
-                    input[type='text'] {
-                      min-width: $input-min-width-02;
-                    }
-                    [class*='col'] {
-                      // padding-bottom: 2px;
-                    }
-                  }
-                }
-                .chkup-date {
-                  > ul {
-                    padding: {
-                      left: 5px;
-                      right: 5px;
-                    }
-
-                    > .chkup-date-list:not(:last-of-type) {
-                      margin-bottom: 4px;
-                    }
-                  }
-                }
-
-                .c-panel:first-of-type {
-                  .row {
-                    min-height: 28px;
-                  }
-                  .col-3 {
-                    margin-right: 10px;
-                  }
-                }
-              }
-              .tab-06 {
-                .c-article {
-                  padding: {
-                    top: $col-padding-01;
-                    bottom: $col-padding-02;
-                  }
-                  margin: {
-                    top: 0;
-                    bottom: 0;
-                  }
-                }
-
-                .row {
-                  label,
-                  .c-label-txt {
-                    margin-right: 0;
-                  }
-                }
-
-                .input-list {
-                  [class*='col'] {
-                    padding: {
-                      top: $col-padding;
-                      bottom: $col-padding;
-                    }
-                  }
-
-                  .c-input-address-group {
-                    > .row ~ .row {
-                      margin-top: 0;
-                    }
-
-                    .row:nth-of-type(2) {
-                      .c-input {
-                        width: $email-width;
-                        margin-top: $row-margin-02;
-                      }
-                    }
-                  }
-                  .c-input-email-group {
-                    .col-6.input-email-02 {
-                      > .row {
-                        > .col-6:first-of-type {
-                          padding-left: $col-padding-05;
-                        }
-                      }
-                    }
-                    .input-email-01::after {
-                      right: -8px;
-                    }
-                  }
-                }
-                .c-txtarea-field {
-                  margin: 4px 0;
-                }
-
-                .terms-field {
-                  .terms-list {
-                    .terms-cont {
-                      padding: 2px 0;
-                      margin-right: 8px;
-                      .label-txt {
-                        min-width: 140px;
-                      }
-                    }
-                  }
-                }
-              }
-              .tab-07 {
-                .c-inner-field {
-                  .c-article {
-                    margin-top: $c-article-padding-02;
-                    padding: {
-                      top: $col-padding-01;
-                      bottom: $col-padding-01;
-                    }
-                  }
-                }
-              }
-            }
-          }
-
-          .right-wrap {
-            .buttons:first-of-type {
-              margin-bottom: 10px;
-            }
-
-            .cost-dtl-list {
-              &.type02 {
-                padding: 0;
-              }
-            }
-
-            .c-badge {
-              padding: $c-badge;
-              border-radius: $input-border-radius-01;
-              font-size: 0;
-              > span {
-                font-size: $c-badge-font;
-                line-height: 1;
-              }
-            }
-            .c-article {
-              padding: $row-padding-01;
-              padding-bottom: $c-article-padding-01;
-              &.input-list {
-                .row > [class^='col'] {
-                  padding-top: $row-padding;
-                  padding-bottom: $row-padding;
-                }
-              }
-            }
-
-            .c-input-email-group {
-              [class^='col'] {
-                padding: {
-                  left: $col-padding-02;
-                  right: $col-padding-02;
-                }
-              }
-            }
-
-            .cost-dtl-list.type02 {
-              .col-8 {
-                .c-input-badge-group {
-                  margin-top: $badge-margin;
-                  padding: $input-padding;
-                  .badge-card {
-                    padding: $row-padding;
-                  }
-                  .c-badge-detail {
-                    padding-top: $row-padding;
-                  }
-                }
-              }
-            }
-            .row ~ .row {
-              margin: {
-                top: 0;
-                bottom: 0;
-              }
-            }
-          }
-
-          .c-table-field {
-            & + .buttons {
-              margin-top: 10px;
-            }
-          }
-        }
       }
       // + 검진예약관리 화면개선
       .left-wrap {
@@ -1047,6 +731,23 @@ type-horizontal 최상위 요소 부여
         .memo-lists-mod {
           td.rsv-mod-cont {
             text-align: left;
+          }
+        }
+      }
+
+      // = 다중예약  UI 추가
+      .c-tab-wrap-field03 {
+        > .c-tab-field.tab-scroll {
+          padding-bottom: 0;
+        }
+
+        & + .multiple-rsv-contents {
+          margin-top: 0;
+          > .mod-reservation {
+            margin-top: 0;
+          }
+          .c-article {
+            border-top-left-radius: 0;
           }
         }
       }
@@ -1178,6 +879,7 @@ type-horizontal 최상위 요소 부여
   }
 }
 
+// = type-platformsystem
 .type-platformsystem,
 .c-layer-popup.type-platformsystem {
   // + table th,td 공통
@@ -1186,6 +888,26 @@ type-horizontal 최상위 요소 부여
       th,
       td {
         padding: $table-padding;
+      }
+    }
+  }
+
+  [class*='c-field'] {
+    & + .c-tab-contents {
+      margin-top: $row-margin-02;
+      &.type02 {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .c-tab-field {
+    .c-tab-list {
+      > li {
+        a {
+          padding: $tab-list-padding;
+          border-radius: $input-border-radius-01;
+        }
       }
     }
   }
