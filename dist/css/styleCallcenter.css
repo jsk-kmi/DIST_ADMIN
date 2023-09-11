@@ -15103,10 +15103,10 @@ type-horizontal 최상위 요소 부여
 		        flex: 0 0 auto;
 }
 .delayexamination-info-popup .input-list .buttons {
-		-webkit-box-flex: 1;
-		-webkit-flex: 1 1 100%;
-		    -ms-flex: 1 1 100%;
-		        flex: 1 1 100%;
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 auto;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
 		-webkit-box-pack: end;
 		-webkit-justify-content: flex-end;
 		    -ms-flex-pack: end;
@@ -15118,16 +15118,6 @@ type-horizontal 최상위 요소 부여
 }
 .delayexamination-info-popup .input-list .c-rdochk label {
 		padding-right: 15px;
-}
-.delayexamination-info-popup .c-panel:nth-of-type(2) .col:last-of-type {
-		-webkit-box-flex: 1;
-		-webkit-flex: 1;
-		    -ms-flex: 1;
-		        flex: 1;
-		-webkit-box-pack: end;
-		-webkit-justify-content: flex-end;
-		    -ms-flex-pack: end;
-		        justify-content: flex-end;
 }
 .delayexamination-info-popup .c-panel ~ .c-panel {
 		margin-top: 10px;
@@ -15158,7 +15148,6 @@ type-horizontal 최상위 요소 부여
 .delayexamination-info-popup .exam-date .c-select select {
 		min-width: 85px;
 }
-
 .modal-tool {
 		width: auto;
 		height: auto;

@@ -1343,7 +1343,7 @@ type-horizontal 최상위 요소 부여
     }
 
     .buttons {
-      flex: 1 1 100%;
+      flex: 0 0 auto;
       justify-content: flex-end;
       align-items: center;
     }
@@ -1352,15 +1352,6 @@ type-horizontal 최상위 요소 부여
         padding-right: 15px;
       }
     }
-  }
-  .c-panel:nth-of-type(2) {
-    .col:last-of-type {
-      flex: 1;
-      justify-content: flex-end;
-    }
-    // .c-input-date {
-    //   width: 120px;
-    // }
   }
   .c-panel ~ .c-panel {
     margin-top: 10px;
@@ -1385,6 +1376,11 @@ type-horizontal 최상위 요소 부여
       select {
         min-width: 85px;
       }
+    }
+  }
+
+  .c-panel {
+    .delay-popup-type02 {
     }
   }
 }
