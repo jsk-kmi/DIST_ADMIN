@@ -57,11 +57,10 @@ var sideMenuToggle = function sideMenuToggle() {
   }
   Array.prototype.forEach.call(sideMenuLink, function (selectedLink) {
     selectedLink.addEventListener('click', function () {
-      console.log(selectedLink.parentNode);
       var sideSubMenu = document.querySelectorAll('.sidebar-sub-menu > li > a');
       var chkSubOnchk = false;
 
-      // + 개발자 요청에 따른 개발환경 스크립트 추가 (230823)
+      // + 개발자 요청에 따른 개발환경 소스 추가 (230823)
       for (var i = 0; i < sideSubMenu.length; i++) {
         if (sideSubMenu[i].classList.contains('on')) {
           chkSubOnchk = true;
@@ -74,14 +73,14 @@ var sideMenuToggle = function sideMenuToggle() {
       Array.prototype.forEach.call(extraSideMenuList, function (link) {
         link.classList.remove('on');
       });
-      // + 개발자 요청에 따른 개발환경 스크립트 추가 (230823)
+      // + 개발자 요청에 따른 개발환경 소스 추가 (230823)
       if (!chkSubOnchk) {
         setTimeout(function () {
           selectedLink.classList.toggle('on');
         }, 200);
       }
       // + UI DEV용 Script (UI개발환경에서 이벤트 정상처리를 위한 조건문 추가 )
-      // superTitle 클래스 개발 환경에서 추가로 부여된 소스로 개발소스와 UI개발 소스를 구분하기 위함
+      // superTitle 클래스 개발 환경에서 추가로 부여된 소스로 개발환경 소스와 UI개발 소스를 구분하기 위함
       else if (!selectedLink.parentElement.classList.contains('superTitle')) {
         setTimeout(function () {
           selectedLink.classList.toggle('on');
