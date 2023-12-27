@@ -551,6 +551,10 @@
         };
 
         $('#delayExaminationList01').DataTable(delayExamDateTableOption);
+        $(function() {
+            // Guide전용 스크립트 (개발 소스 적용 X)
+            $('[data-target]').trigger('click');
+        });
     </script>
 </body>
 

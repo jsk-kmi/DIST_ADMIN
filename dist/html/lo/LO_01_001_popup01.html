@@ -16,17 +16,14 @@
 
 <body>
     <div id="container">
-
         <!-- Contents -->
         <section class="contents">
             <button type="button" class="c-btn bg-blue-1" data-toggle="modal" data-target="#popupReSearch_01"><span>비밀번호
                     재설정</span></button>
-
             <!-- = popup Source  -->
             <div class="c-layer-popup type04 modal fade pw-sch-cont" id="popupReSearch_01" role="dialog" aria-labelledby="popupReSearch_Label01" aria-hidden="true" data-backdrop="static" data-keyboard="false">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
-
                         <!-- modal Header -->
                         <div class="modal-header">
                             <div class="c-modal-title-field">
@@ -34,7 +31,6 @@
                             </div>
                             <button type="button" class="popup-cls-btn" data-dismiss="modal"><span class="skip">팝업 닫기</span></button>
                         </div>
-
                         <!-- Modal body -->
                         <div class="modal-body">
                             <div class="pw-sch-txt">
@@ -54,13 +50,11 @@
                                     <label for="pwSearch03" class="rechk-label">새 비밀번호 확인<i class="is-nec">필수입력</i></label>
                                     <div class="pw-rechk">
                                         <input type="password" id="pwSearch03">
-
                                         <!-- [ comment (230622) ]
 
 								일치하지 않을 경우 class: is-error 추가
 							-->
                                         <p class="c-input-info-txt">일치합니다.</p>
-
                                         <!-- <p class="c-input-info-txt is-error"> 일치하지 않습니다. </p> -->
                                     </div>
                                 </div>
@@ -75,7 +69,6 @@
                                 </ul>
                             </div>
                         </div>
-
                         <!-- // modal body -->
                         <div class="modal-footer">
                             <div class="buttons">
@@ -86,13 +79,18 @@
                     </div>
                 </div>
             </div>
-
             <!-- = // popup Source -->
         </section>
     </div>
     <script src="../../lib/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../../js/common.js"></script>
 
+    <script>
+        $(function() {
+            // Guide전용 스크립트 (개발 소스 적용 X)
+            $('[data-target]').trigger('click');
+        });
+    </script>
 </body>
 
 </html>
